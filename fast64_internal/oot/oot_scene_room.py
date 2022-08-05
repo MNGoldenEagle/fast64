@@ -151,36 +151,24 @@ class OOTExitProperty(bpy.types.PropertyGroup):
     exitIndex: bpy.props.EnumProperty(items=ootEnumExitIndex, default="Default")
     exitIndexCustom: bpy.props.StringProperty(default="0x0000")
 
-    # These are used when adding an entry to gEntranceTable
-    scene: bpy.props.EnumProperty(items=ootEnumSceneID, default="SCENE_YDAN")
-    sceneCustom: bpy.props.StringProperty(default="SCENE_YDAN")
-
-    # These are used when adding an entry to gEntranceTable
-    continueBGM: bpy.props.BoolProperty(default=False)
-    displayTitleCard: bpy.props.BoolProperty(default=True)
-    fadeInAnim: bpy.props.EnumProperty(items=ootEnumTransitionAnims, default="0x02")
-    fadeInAnimCustom: bpy.props.StringProperty(default="0x02")
-    fadeOutAnim: bpy.props.EnumProperty(items=ootEnumTransitionAnims, default="0x02")
-    fadeOutAnimCustom: bpy.props.StringProperty(default="0x02")
-
+    scene : bpy.props.EnumProperty(items = ootEnumSceneID, default = "SCENE_YDAN")
+    entranceId : bpy.props.IntProperty(min = 0, max = 255)
+    continueBGM : bpy.props.BoolProperty(default = False)
+    fadeOutAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = '0x02')
 
 def drawExitProperty(layout, exitProp, index, headerIndex, objName):
     box = layout.box()
-    box.prop(
-        exitProp, "expandTab", text="Exit " + str(index + 1), icon="TRIA_DOWN" if exitProp.expandTab else "TRIA_RIGHT"
-    )
+    box.prop(exitProp, 'expandTab', text = 'Exit ' + \
+        str(index + 1), icon = 'TRIA_DOWN' if exitProp.expandTab else \
+        'TRIA_RIGHT')
     if exitProp.expandTab:
         drawCollectionOps(box, index, "Exit", headerIndex, objName)
-        drawEnumWithCustom(box, exitProp, "exitIndex", "Exit Index", "")
-        if exitProp.exitIndex != "Custom":
-            box.label(text='This is unfinished, use "Custom".')
-            exitGroup = box.column()
-            exitGroup.enabled = False
-            drawEnumWithCustom(exitGroup, exitProp, "scene", "Scene", "")
-            exitGroup.prop(exitProp, "continueBGM", text="Continue BGM")
-            exitGroup.prop(exitProp, "displayTitleCard", text="Display Title Card")
-            drawEnumWithCustom(exitGroup, exitProp, "fadeInAnim", "Fade In Animation", "")
-            drawEnumWithCustom(exitGroup, exitProp, "fadeOutAnim", "Fade Out Animation", "")
+        exitGroup = box.column()
+        #exitGroup.enabled = False
+        exitGroup.prop(exitProp, "scene", text = "Scene")
+        exitGroup.prop(exitProp, "entranceId", text = "Entrance ID")
+        exitGroup.prop(exitProp, "continueBGM", text = "Continue BGM")
+        drawEnumWithCustom(exitGroup, exitProp, "fadeOutAnim","Fade Out Animation", "")
 
 
 class OOTObjectProperty(bpy.types.PropertyGroup):
