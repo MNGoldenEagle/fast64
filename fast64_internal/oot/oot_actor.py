@@ -177,13 +177,20 @@ def drawTransitionActorProperty(layout, transActorProp, altSceneProp, roomObj, o
 class OOTEntranceProperty(bpy.types.PropertyGroup):
 	# This is also used in entrance list, and roomIndex is obtained from the room this empty is parented to.
 	spawnIndex : bpy.props.IntProperty(min = 0)
+	fadeInAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = '0x02')
+
+	# Cutscene ID options
+	showTitlecard : bpy.props.BoolProperty(name = "Show Title Card?")
+	startCutscene : bpy.props.BoolProperty(name = "Start Cutscene?")
+	cutsceneId : bpy.props.IntProperty(min = 0)
+
 	customActor : bpy.props.BoolProperty(name = "Use Custom Actor")
 	actor : bpy.props.PointerProperty(type = OOTActorProperty)
 
 def drawEntranceProperty(layout, obj, altSceneProp, objName):
 	box = layout.column()
-	#box.box().label(text = "Properties")
 	roomObj = getRoomObj(obj)
+	sceneObj = getSceneObj(obj).ootSceneHeader
 	if roomObj is not None:
 		split = box.split(factor = 0.5)
 		split.label(text = "Room Index")
@@ -191,10 +198,24 @@ def drawEntranceProperty(layout, obj, altSceneProp, objName):
 	else:
 		box.label(text = "This must be part of a Room empty's hierarchy.", icon = 'OUTLINER')
 
+	#box.box().label(text = "Properties")
+
 	entranceProp = obj.ootEntranceProperty
 	prop_split(box, entranceProp, "spawnIndex", "Spawn Index")
 	prop_split(box, entranceProp.actor, "actorParam", "Actor Param")
-	box.prop(entranceProp, "customActor")
+	prop_split(box, entranceProp, "fadeInAnim", "Fade In Animation")
+	prop_split(box, entranceProp, "showTitlecard", "Show Title Card?")
+
+	if not entranceProp.showTitlecard:
+		prop_split(box, entranceProp, "startCutscene", "Start Cutscene?")
+
+		if entranceProp.startCutscene:
+			prop_split(box, entranceProp, "cutsceneId", "Cutscene ID")
+
+			if entranceProp.cutsceneId > len(sceneObj.extraCutscenes):
+				box.label(text = "The cutscene ID exceeds the number of cutscenes that exist in the scene.", icon = 'ERROR')
+
+	prop_split(box, entranceProp, "customActor", "Use Custom Actor?")
 	if entranceProp.customActor:
 		prop_split(box, entranceProp.actor, "actorIDCustom", "Actor ID Custom")
 	
