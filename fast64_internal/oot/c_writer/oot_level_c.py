@@ -570,7 +570,7 @@ def ootEntranceListToC(scene, headerIndex):
 
 
 def ootExitToC(exit):
-    return f"{ {exit.sceneId}, {exit.entranceIndex}, {exit.transitionType}, {exit.flags} },\n"
+    return f'{{ {exit.scene}, {exit.spawn}, {exit.transitionType}, {{ {"true" if exit.continueBgm else "false"} }} }},\n'
 
 
 def ootExitListToC(scene, headerIndex):

@@ -155,6 +155,7 @@ class OOTScene:
         self.rooms = {}
         self.transitionActorList = set()
         self.entranceList = set()
+        self.titleCard = None
         self.startPositions = {}
         self.lights = []
         self.model = model
@@ -509,7 +510,7 @@ def addStartPosition(scene, index, actor, actorProp, actorObjName):
                     actorObjName
                     + " uses a cutscene header index that is outside the range of the current number of cutscene headers."
                 )
-            addAtStartPosIndex(scene.cutsceneHeaders[cutsceneHeader.headerIndex - 4].startPositions, index, actor)
+            addStartPosAtIndex(scene.cutsceneHeaders[cutsceneHeader.headerIndex - 4].startPositions, index, actor)
     else:
         raise PluginError("Unhandled scene setup preset: " + str(sceneSetup.sceneSetupPreset))
 

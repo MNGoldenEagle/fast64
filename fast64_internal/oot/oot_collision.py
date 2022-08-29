@@ -561,13 +561,13 @@ def oot_col_register():
 	bpy.types.Scene.ootColExportPath = bpy.props.StringProperty(
 		name = 'Directory', subtype = 'FILE_PATH')
 	bpy.types.Scene.ootColExportLevel = bpy.props.EnumProperty(items = ootEnumSceneID, 
-		name = 'Level Used By Collision', default = 'SCENE_YDAN')
+		name = 'Level Used By Collision', default = 'SCENE_MABE_VILLAGE')
 	bpy.types.Scene.ootColIncludeChildren = bpy.props.BoolProperty(
 		name = 'Include child objects', default = True)
 	bpy.types.Scene.ootColName = bpy.props.StringProperty(
 		name = 'Name', default = 'collision')
 	bpy.types.Scene.ootColLevelName = bpy.props.StringProperty(
-		name = 'Name', default = 'SCENE_YDAN')
+		name = 'Name', default = 'SCENE_MABE_VILLAGE')
 	bpy.types.Scene.ootColCustomExport = bpy.props.BoolProperty(
 		name = 'Custom Export Path')
 	bpy.types.Scene.ootColFolder = bpy.props.StringProperty(
