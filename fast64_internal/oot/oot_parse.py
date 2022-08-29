@@ -1,15 +1,6 @@
 import re
 from ..utility import *
 
-class BlenderEnumItem:
-	def __init__(self, key, name, description):
-		self.key = key
-		self.name = name
-		self.description = description
-	
-	def toC(self):
-		return '\t("' + self.key + '", "' + self.name + '", "' + self.description + '"),\n'
-
 def createEnum(enumName, enumList):
 	enumData = enumName + ' = [\n'
 	for item in enumList:
@@ -19,7 +10,7 @@ def createEnum(enumName, enumList):
 
 def parseEnumFile(data, enumName, enumPrefix, ignoreList, includeCustom):
 	if includeCustom:
-		enumList = [BlenderEnumItem("Custom", "Custom", "Custom")]
+		enumList = [("Custom", "Custom", "Custom", -1)]
 	else:
 		enumList = []
 
@@ -28,7 +19,10 @@ def parseEnumFile(data, enumName, enumPrefix, ignoreList, includeCustom):
 		raise ValueError("Cannot find enum by name: " + str(enumName))
 	enumData = checkResult.group(1)
 
-	for matchResult in re.finditer(enumPrefix + '\_(.*),*', enumData):
+	i = 0
+	for matchResult in re.finditer(rf'{enumPrefix}\_(\S*)\s?=?\s?(\d*),\s?/?/?\s*([^\n]*)', enumData):
+		if matchResult.group(2):
+			i = int(matchResult.group(2))
 		oldName = matchResult.group(1)
 		if oldName[:5] == "UNSET" or oldName in ignoreList:
 			continue
@@ -36,7 +30,11 @@ def parseEnumFile(data, enumName, enumPrefix, ignoreList, includeCustom):
 		words = spacedName.split(" ")
 		capitalizedWords = [word.capitalize() for word in words]
 		newName = " ".join(capitalizedWords)
-		enumList.append(BlenderEnumItem(enumPrefix + "_" + oldName, newName, newName))
+		desc = newName
+		if matchResult.group(3):
+			desc = matchResult.group(3).replace("//", "").strip()
+		enumList.append((f"{enumPrefix}_{oldName}", newName, desc, i))
+		i = i + 1
 
 	return enumList
 

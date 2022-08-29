@@ -224,7 +224,6 @@ class Fast64_GlobalToolsPanel(bpy.types.Panel):
         col = self.layout.column()
         col.operator(ArmatureApplyWithMeshOperator.bl_idname)
         # col.operator(CreateMetarig.bl_idname)
-        addon_updater_ops.update_notice_box_ui(self, context)
 
 
 class Fast64Settings_Properties(bpy.types.PropertyGroup):
@@ -367,13 +366,6 @@ class UpgradeF3DMaterialsDialog(bpy.types.Operator):
 # 	scene.currentGameEditorMode = scene.gameEditorMode
 
 
-class ExampleAddonPreferences(bpy.types.AddonPreferences, addon_updater_ops.AddonUpdaterPreferences):
-    bl_idname = __package__
-
-    def draw(self, context):
-        addon_updater_ops.update_settings_ui(self, context)
-
-
 classes = (
     Fast64Settings_Properties,
     Fast64RenderSettings_Properties,
@@ -435,11 +427,6 @@ def register():
         print(msg)
         unsupported_exc = Exception("\n\n" + msg)
         raise unsupported_exc
-
-    # Register addon updater first,
-    # this way if a broken version fails to register the user can still pick another version.
-    register_class(ExampleAddonPreferences)
-    addon_updater_ops.register(bl_info)
 
     utility_anim_register()
     mat_register()
@@ -508,6 +495,3 @@ def unregister():
         unregister_class(cls)
 
     bpy.app.handlers.load_post.remove(after_load)
-
-    addon_updater_ops.unregister()
-    unregister_class(ExampleAddonPreferences)

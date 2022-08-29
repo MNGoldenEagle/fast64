@@ -1,8 +1,9 @@
+import os
 import bpy
 from typing import Callable
 from ..render_settings import on_update_oot_render_settings
 from ..utility import ootGetSceneOrRoomHeader, prop_split
-from .oot_utility import drawAddButton, drawCollectionOps, drawEnumWithCustom, getEnumName, getSceneObj, getRoomObj
+from .oot_utility import drawAddButton, drawCollectionOps, drawEnumWithCustom, getEnumName, getSceneObj, getRoomObj, getImageSize
 from .oot_cutscene import OOTCSListProperty, drawCSListProperty, drawCSAddButtons
 from .oot_actor import setAllActorsVisibility
 
@@ -56,7 +57,7 @@ class OOT_SearchMusicSeqEnumOperator(bpy.types.Operator):
     bl_property = "ootMusicSeq"
     bl_options = {"REGISTER", "UNDO"}
 
-    ootMusicSeq: bpy.props.EnumProperty(items=ootEnumMusicSeq, default="0x02")
+    ootMusicSeq: bpy.props.EnumProperty(items=ootEnumMusicSeq, default="NA_BGM_OVERWORLD")
     headerIndex: bpy.props.IntProperty(default=0, min=0)
     objName: bpy.props.StringProperty()
 
@@ -101,18 +102,11 @@ class OOT_SearchSceneEnumOperator(bpy.types.Operator):
     bl_property = "ootSceneID"
     bl_options = {"REGISTER", "UNDO"}
 
-    ootSceneID: bpy.props.EnumProperty(items=ootEnumSceneID, default="SCENE_YDAN")
+    ootSceneID: bpy.props.EnumProperty(items=ootEnumSceneID, default="SCENE_MABE_VILLAGE")
     opName: bpy.props.StringProperty(default="Export")
 
     def execute(self, context):
-        if self.opName == "Export":
-            context.scene.ootSceneExportSettings.option = self.ootSceneID
-        elif self.opName == "Import":
-            context.scene.ootSceneImportSettings.option = self.ootSceneID
-        elif self.opName == "Remove":
-            context.scene.ootSceneRemoveSettings.option = self.ootSceneID
-        else:
-            raise Exception(f'Invalid OOT scene search operator name: "{self.opName}"')
+        context.scene.ootSceneExportSettings.option = self.ootSceneID
 
         bpy.context.region.tag_redraw()
         self.report({"INFO"}, "Selected: " + self.ootSceneID)
@@ -148,13 +142,11 @@ def drawAlternateRoomHeaderProperty(layout, headerProp, objName):
 class OOTExitProperty(bpy.types.PropertyGroup):
     expandTab: bpy.props.BoolProperty(name="Expand Tab")
 
-    exitIndex: bpy.props.EnumProperty(items=ootEnumExitIndex, default="Default")
-    exitIndexCustom: bpy.props.StringProperty(default="0x0000")
-
-    scene : bpy.props.EnumProperty(items = ootEnumSceneID, default = "SCENE_YDAN")
-    entranceId : bpy.props.IntProperty(min = 0, max = 255)
+    scene : bpy.props.EnumProperty(items = ootEnumSceneID, default = "SCENE_MABE_VILLAGE")
+    spawnId : bpy.props.IntProperty(min = 0, max = 255)
     continueBGM : bpy.props.BoolProperty(default = False)
-    fadeOutAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = '0x02')
+    fadeOutAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = 'TRANS_TYPE_FADE_BLACK')
+    fadeOutAnimCustom : bpy.props.StringProperty(default = '0x00')
 
 def drawExitProperty(layout, exitProp, index, headerIndex, objName):
     box = layout.box()
@@ -166,7 +158,7 @@ def drawExitProperty(layout, exitProp, index, headerIndex, objName):
         exitGroup = box.column()
         #exitGroup.enabled = False
         exitGroup.prop(exitProp, "scene", text = "Scene")
-        exitGroup.prop(exitProp, "entranceId", text = "Entrance ID")
+        exitGroup.prop(exitProp, "spawnId", text = "Spawn ID")
         exitGroup.prop(exitProp, "continueBGM", text = "Continue BGM")
         drawEnumWithCustom(exitGroup, exitProp, "fadeOutAnim","Fade Out Animation", "")
 
@@ -302,11 +294,11 @@ def drawLightProperty(layout, lightProp, name, showExpandTab, index, sceneHeader
         prop_split(box, lightProp, "fogFar", "Fog Far")
         prop_split(box, lightProp, "transitionSpeed", "Transition Speed")
 
-
 class OOTSceneTableEntryProperty(bpy.types.PropertyGroup):
     drawConfig: bpy.props.EnumProperty(items=ootEnumDrawConfig, name="Scene Draw Config", default="SDC_DEFAULT")
     drawConfigCustom: bpy.props.StringProperty(name="Scene Draw Config Custom")
-    hasTitle: bpy.props.BoolProperty(default=True)
+    hasTitle : bpy.props.BoolProperty(name = "Has Title Card?", default = False)
+    titleCard : bpy.props.StringProperty(name = "Title Card File", subtype = "FILE_PATH")
 
 
 class OOTExtraCutsceneProperty(bpy.types.PropertyGroup):
@@ -367,7 +359,7 @@ class OOTSceneHeaderProperty(bpy.types.PropertyGroup):
     usePreviousHeader: bpy.props.BoolProperty(name="Use Previous Header", default=True)
 
     globalObject: bpy.props.EnumProperty(
-        name="Global Object", default="OBJECT_GAMEPLAY_DANGEON_KEEP", items=ootEnumGlobalObject
+        name="Global Object", default="OBJECT_GAMEPLAY_FIELD_KEEP", items=ootEnumGlobalObject
     )
     globalObjectCustom: bpy.props.StringProperty(name="Global Object Custom", default="0x00")
     naviCup: bpy.props.EnumProperty(name="Navi Hints", default="0x00", items=ootEnumNaviHints)
@@ -433,6 +425,13 @@ class OOTSceneHeaderProperty(bpy.types.PropertyGroup):
 
 def drawSceneTableEntryProperty(layout, sceneTableEntryProp):
     drawEnumWithCustom(layout, sceneTableEntryProp, "drawConfig", "Draw Config", "")
+    layout.prop(sceneTableEntryProp, "hasTitle")
+    if sceneTableEntryProp.hasTitle:
+        layout.prop(sceneTableEntryProp, "titleCard")
+        if not os.path.exists(sceneTableEntryProp.titleCard) or \
+            not sceneTableEntryProp.titleCard.endswith(".png") or \
+            len(getImageSize(sceneTableEntryProp.titleCard)) != 2:
+            layout.box().label(icon = "ERROR", text = "File is an invalid image!")
 
 
 def drawSceneHeaderProperty(layout, sceneProp, dropdownLabel, headerIndex, objName):

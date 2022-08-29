@@ -860,18 +860,9 @@ class OOT_ExportScene(bpy.types.Operator):
             raisePluginError(self, e)
             return {"CANCELLED"}
         try:
-            settings = context.scene.ootSceneExportSettings
-            levelName = settings.name
-            option = settings.option
-            if settings.customExport:
-                exportInfo = ExportInfo(True, bpy.path.abspath(settings.exportPath), None, levelName)
-            else:
-                if option == "Custom":
-                    subfolder = "assets/scenes/" + settings.subFolder + "/"
-                else:
-                    levelName = sceneNameFromID(option)
-                    subfolder = None
-                exportInfo = ExportInfo(False, bpy.path.abspath(context.scene.ootDecompPath), subfolder, levelName)
+            levelName = context.scene.ootSceneName
+            subfolder = f"assets/scenes/{context.scene.ootSceneSubFolder}/"
+            exportInfo = ExportInfo(False, bpy.path.abspath(context.scene.ootDecompPath), subfolder, levelName)
 
             bootOptions = context.scene.fast64.oot.bootupSceneOptions
             hackerFeaturesEnabled = context.scene.fast64.oot.hackerFeaturesEnabled
@@ -911,42 +902,6 @@ def ootRemoveSceneC(exportInfo):
     deleteSceneFiles(exportInfo)
 
 
-class OOT_RemoveScene(bpy.types.Operator):
-    """Remove an OOT scene from an existing decomp directory."""
-
-    bl_idname = "object.oot_remove_level"
-    bl_label = "OOT Remove Scene"
-    bl_options = {"REGISTER", "UNDO"}
-
-    def execute(self, context):
-        settings: OOTRemoveSceneSettingsProperty = context.scene.ootSceneRemoveSettings
-        levelName = settings.name
-        option = settings.option
-
-        if settings.customExport:
-            self.report({"ERROR"}, "You can only remove scenes from your decomp path.")
-            return {"FINISHED"}
-
-        if option == "Custom":
-            subfolder = "assets/scenes/" + settings.subFolder + "/"
-        else:
-            levelName = sceneNameFromID(option)
-            subfolder = None
-        exportInfo = ExportInfo(False, bpy.path.abspath(context.scene.ootDecompPath), subfolder, levelName)
-
-        ootRemoveSceneC(exportInfo)
-
-        self.report({"INFO"}, "Success!")
-        return {"FINISHED"}
-
-    def invoke(self, context, event):
-        return context.window_manager.invoke_props_dialog(self, width=300)
-
-    def draw(self, context):
-        layout = self.layout
-        layout.label(text="Are you sure you want to remove this scene?")
-
-
 class OOT_ExportScenePanel(OOT_Panel):
     bl_idname = "OOT_PT_export_level"
     bl_label = "OOT Scene Exporter"
@@ -962,15 +917,9 @@ class OOT_ExportScenePanel(OOT_Panel):
         # if not bpy.context.scene.ignoreTextureRestrictions:
         # 	col.prop(context.scene, 'saveTextures')
         settings: OOTExportSceneSettingsProperty = context.scene.ootSceneExportSettings
-        if settings.customExport:
-            prop_split(col, settings, "exportPath", "Directory")
-            prop_split(col, settings, "name", "Name")
-            customExportWarning(col)
-        else:
-            self.drawSceneSearchOp(col, context, settings.option, "Export")
-            if settings.option == "Custom":
-                prop_split(col, settings, "subFolder", "Subfolder")
-                prop_split(col, settings, "name", "Name")
+        self.drawSceneSearchOp(col, context, settings.option, "Export")
+        prop_split(col, context.scene, "subFolder", "Subfolder")
+        prop_split(col, context.scene, "name", "Name")
 
         prop_split(col, context.scene, "ootSceneExportObj", "Scene Object")
 
@@ -995,21 +944,9 @@ class OOT_ExportScenePanel(OOT_Panel):
         col.prop(settings, "singleFile")
         col.prop(settings, "customExport")
 
-        importSettings: OOTImportSceneSettingsProperty = context.scene.ootSceneImportSettings
-        importOp: OOT_ImportScene = col.operator(OOT_ImportScene.bl_idname)
-        if not importSettings.isCustomDest:
-            self.drawSceneSearchOp(col, context, importSettings.option, "Import")
-        importSettings.draw(col, importSettings.option)
-
-        removeSettings: OOTRemoveSceneSettingsProperty = context.scene.ootSceneRemoveSettings
-        removeOp: OOT_RemoveScene = col.operator(OOT_RemoveScene.bl_idname, text="Remove Scene")
-        self.drawSceneSearchOp(col, context, removeSettings.option, "Remove")
-
 
 oot_level_classes = (
     OOT_ExportScene,
-    OOT_ImportScene,
-    OOT_RemoveScene,
 )
 
 oot_level_panel_classes = (OOT_ExportScenePanel,)

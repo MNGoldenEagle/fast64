@@ -98,7 +98,10 @@ class OOT_SearchActorIDEnumOperator(bpy.types.Operator):
     bl_property = "actorID"
     bl_options = {"REGISTER", "UNDO"}
 
-    actorID: bpy.props.EnumProperty(items=ootEnumActorID, default="ACTOR_PLAYER")
+    def actorItems(self, _):
+        return ootEnumTransitionActorID if self.actorUser == "Transition Actor" else ootEnumActorID
+
+    actorID: bpy.props.EnumProperty(items=actorItems, default="ACTOR_PLAYER")
     actorUser: bpy.props.StringProperty(default="Actor")
     objName: bpy.props.StringProperty()
 
@@ -111,10 +114,10 @@ class OOT_SearchActorIDEnumOperator(bpy.types.Operator):
         elif self.actorUser == "Entrance":
             obj.ootEntranceProperty.actor.actorID = self.actorID
         else:
-            raise PluginError("Invalid actor user for search: " + str(self.actorUser))
+            raise PluginError(f"Invalid actor user for search: {self.actorUser}")
 
         bpy.context.region.tag_redraw()
-        self.report({"INFO"}, "Selected: " + self.actorID)
+        self.report({"INFO"}, f"Selected: {self.actorID}")
         return {"FINISHED"}
 
     def invoke(self, context, event):
@@ -205,7 +208,7 @@ def drawActorHeaderItemProperty(layout, propUser, headerItemProp, index, altProp
 
 
 class OOTActorProperty(bpy.types.PropertyGroup):
-    actorID: bpy.props.EnumProperty(name="Actor", items=ootEnumActorID, default="ACTOR_PLAYER")
+    actorID: bpy.props.EnumProperty(name="Actor", items=getActors, default="ACTOR_PLAYER")
     actorIDCustom: bpy.props.StringProperty(name="Actor ID", default="ACTOR_PLAYER")
     actorParam: bpy.props.StringProperty(name="Actor Parameter", default="0x0000")
     rotOverride: bpy.props.BoolProperty(name="Override Rotation", default=False)
@@ -289,13 +292,13 @@ def drawTransitionActorProperty(layout, transActorProp, altSceneProp, roomObj, o
 
 class OOTEntranceProperty(bpy.types.PropertyGroup):
     # This is also used in entrance list, and roomIndex is obtained from the room this empty is parented to.
-    spawnIndex : bpy.props.IntProperty(min = 0)
-    fadeInAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = '0x02')
+    spawnIndex : bpy.props.IntProperty(min = 0, max = 255)
+    fadeInAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = 'TRANS_TYPE_FADE_BLACK')
 
     # Cutscene ID options
     showTitlecard : bpy.props.BoolProperty(name = "Show Title Card?")
     startCutscene : bpy.props.BoolProperty(name = "Start Cutscene?")
-    cutsceneId : bpy.props.IntProperty(min = 0)
+    cutsceneId : bpy.props.IntProperty(min = 0, max = 127)
 
     customActor : bpy.props.BoolProperty(name = "Use Custom Actor")
     actor : bpy.props.PointerProperty(type = OOTActorProperty)

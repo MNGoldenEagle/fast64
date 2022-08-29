@@ -155,6 +155,7 @@ class OOTScene:
         self.rooms = {}
         self.transitionActorList = set()
         self.entranceList = set()
+        self.titleCard = None
         self.startPositions = {}
         self.lights = []
         self.model = model
