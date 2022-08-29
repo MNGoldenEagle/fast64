@@ -13,13 +13,17 @@ class OOT_SearchActorIDEnumOperator(bpy.types.Operator):
 	bl_idname = "object.oot_search_actor_id_enum_operator"
 	bl_label = "Select Actor ID"
 	bl_property = "actorID"
-	bl_options = {'REGISTER', 'UNDO'} 
+	bl_options = {'REGISTER', 'UNDO'}
 
-	actorID : bpy.props.EnumProperty(items = ootEnumActorID, default = "ACTOR_PLAYER")
 	actorUser : bpy.props.StringProperty(default = "Actor")
-	objName : bpy.props.StringProperty()
 
-	def execute(self, context):
+	def actorItems(self, _):
+		return ootEnumTransitionActorID if self.actorUser == "Transition Actor" else ootEnumActorID
+
+	objName : bpy.props.StringProperty()
+	actorID : bpy.props.EnumProperty(items = actorItems, default = 0)
+
+	def execute(self, _):
 		obj = bpy.data.objects[self.objName]
 		if self.actorUser == "Transition Actor":
 			obj.ootTransitionActorProperty.actor.actorID = self.actorID
@@ -34,7 +38,7 @@ class OOT_SearchActorIDEnumOperator(bpy.types.Operator):
 		self.report({'INFO'}, "Selected: " + self.actorID)
 		return {'FINISHED'}
 
-	def invoke(self, context, event):
+	def invoke(self, context, _):
 		context.window_manager.invoke_search_popup(self)
 		return {'RUNNING_MODAL'}
 
@@ -97,9 +101,12 @@ def drawActorHeaderItemProperty(layout, propUser, headerItemProp, index, altProp
 		prop_split(box, headerItemProp, 'headerIndex', 'Header Index')
 		if altProp is not None and headerItemProp.headerIndex >= len(altProp.cutsceneHeaders) + 4:
 			box.label(text = "Header does not exist.", icon = 'QUESTION')
-		
+
+def getActors(s, c):
+	return ootDefaultEnumActorID
+
 class OOTActorProperty(bpy.types.PropertyGroup):
-	actorID : bpy.props.EnumProperty(name = 'Actor', items = ootEnumActorID, default = 'ACTOR_PLAYER')
+	actorID : bpy.props.EnumProperty(name = 'Actor', items = getActors, default = 0)
 	actorIDCustom : bpy.props.StringProperty(name = 'Actor ID', default = 'ACTOR_PLAYER')
 	actorParam : bpy.props.StringProperty(name = 'Actor Parameter', default = '0x0000')
 	rotOverride : bpy.props.BoolProperty(name = 'Override Rotation', default = False)
@@ -109,9 +116,9 @@ class OOTActorProperty(bpy.types.PropertyGroup):
 	headerSettings : bpy.props.PointerProperty(type = OOTActorHeaderProperty)
 
 def drawActorProperty(layout, actorProp, altRoomProp, objName):
-	#prop_split(layout, actorProp, 'actorID', 'Actor')
+	# prop_split(layout, actorProp, 'actorID', 'Actor')
 	actorIDBox = layout.column()
-	#actorIDBox.box().label(text = "Settings")
+	# actorIDBox.box().label(text = "Settings")
 	searchOp = actorIDBox.operator(OOT_SearchActorIDEnumOperator.bl_idname, icon = 'VIEWZOOM')
 	searchOp.actorUser = "Actor"
 	searchOp.objName = objName
@@ -119,7 +126,7 @@ def drawActorProperty(layout, actorProp, altRoomProp, objName):
 	split = actorIDBox.split(factor = 0.5)
 	split.label(text = "Actor ID")
 	split.label(text = getEnumName(ootEnumActorID, actorProp.actorID))
-
+	print(actorProp.actorID)
 	if actorProp.actorID == 'Custom':
 		#actorIDBox.prop(actorProp, 'actorIDCustom', text = 'Actor ID')
 		prop_split(actorIDBox, actorProp, 'actorIDCustom', '')
@@ -176,9 +183,10 @@ def drawTransitionActorProperty(layout, transActorProp, altSceneProp, roomObj, o
 	
 class OOTEntranceProperty(bpy.types.PropertyGroup):
 	# This is also used in entrance list, and roomIndex is obtained from the room this empty is parented to.
-	spawnIndex : bpy.props.IntProperty(min = 0)
+	spawnIndex : bpy.props.IntProperty(min = 0, max = 255)
 	customActor : bpy.props.BoolProperty(name = "Use Custom Actor")
 	actor : bpy.props.PointerProperty(type = OOTActorProperty)
+	fadeInAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = 'TRANS_TYPE_FADE_BLACK')
 
 def drawEntranceProperty(layout, obj, altSceneProp, objName):
 	box = layout.column()

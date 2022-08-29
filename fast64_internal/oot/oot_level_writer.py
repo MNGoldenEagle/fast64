@@ -626,15 +626,8 @@ class OOT_ExportScene(bpy.types.Operator):
             return {"CANCELLED"}
         try:
             levelName = context.scene.ootSceneName
-            if context.scene.ootSceneCustomExport:
-                exportInfo = ExportInfo(True, bpy.path.abspath(context.scene.ootSceneExportPath), None, levelName)
-            else:
-                if context.scene.ootSceneOption == "Custom":
-                    subfolder = "assets/scenes/" + context.scene.ootSceneSubFolder + "/"
-                else:
-                    levelName = sceneNameFromID(context.scene.ootSceneOption)
-                    subfolder = None
-                exportInfo = ExportInfo(False, bpy.path.abspath(context.scene.ootDecompPath), subfolder, levelName)
+            subfolder = "assets/scenes/" + context.scene.ootSceneSubFolder + "/"
+            exportInfo = ExportInfo(False, bpy.path.abspath(context.scene.ootDecompPath), subfolder, levelName)
 
             ootExportSceneToC(
                 obj,
@@ -671,30 +664,6 @@ def ootRemoveSceneC(exportInfo):
     deleteSceneFiles(exportInfo)
 
 
-class OOT_RemoveScene(bpy.types.Operator):
-    bl_idname = "object.oot_remove_level"
-    bl_label = "Remove Scene"
-    bl_options = {"REGISTER", "UNDO", "PRESET"}
-
-    def execute(self, context):
-        levelName = context.scene.ootSceneName
-        if context.scene.ootSceneCustomExport:
-            operator.report({"ERROR"}, "You can only remove scenes from your decomp path.")
-            return {"FINISHED"}
-
-        if context.scene.ootSceneOption == "Custom":
-            subfolder = "assets/scenes/" + context.scene.ootSceneSubFolder + "/"
-        else:
-            levelName = sceneNameFromID(context.scene.ootSceneOption)
-            subfolder = None
-        exportInfo = ExportInfo(False, bpy.path.abspath(context.scene.ootDecompPath), subfolder, levelName)
-
-        ootRemoveSceneC(exportInfo)
-
-        self.report({"INFO"}, "Success!")
-        return {"FINISHED"}
-
-
 class OOT_ExportScenePanel(OOT_Panel):
     bl_idname = "OOT_PT_export_level"
     bl_label = "OOT Scene Exporter"
@@ -702,23 +671,10 @@ class OOT_ExportScenePanel(OOT_Panel):
     def draw(self, context):
         col = self.layout.column()
         col.operator(OOT_ExportScene.bl_idname)
-        # if not bpy.context.scene.ignoreTextureRestrictions:
-        # 	col.prop(context.scene, 'saveTextures')
         prop_split(col, context.scene, "ootSceneExportObj", "Scene Object")
         col.prop(context.scene, "ootSceneSingleFile")
-        col.prop(context.scene, "ootSceneCustomExport")
-        if context.scene.ootSceneCustomExport:
-            prop_split(col, context.scene, "ootSceneExportPath", "Directory")
-            prop_split(col, context.scene, "ootSceneName", "Name")
-            customExportWarning(col)
-        else:
-            col.operator(OOT_SearchSceneEnumOperator.bl_idname, icon="VIEWZOOM")
-            col.box().column().label(text=getEnumName(ootEnumSceneID, context.scene.ootSceneOption))
-            # col.prop(context.scene, 'ootSceneOption')
-            if context.scene.ootSceneOption == "Custom":
-                prop_split(col, context.scene, "ootSceneSubFolder", "Subfolder")
-                prop_split(col, context.scene, "ootSceneName", "Name")
-            col.operator(OOT_RemoveScene.bl_idname)
+        prop_split(col, context.scene, "ootSceneSubFolder", "Subfolder")
+        prop_split(col, context.scene, "ootSceneName", "Name")
 
 
 def isSceneObj(self, obj):
@@ -727,7 +683,6 @@ def isSceneObj(self, obj):
 
 oot_level_classes = (
     OOT_ExportScene,
-    OOT_RemoveScene,
 )
 
 oot_level_panel_classes = (OOT_ExportScenePanel,)
@@ -749,15 +704,7 @@ def oot_level_register():
 
     bpy.types.Scene.ootSceneName = bpy.props.StringProperty(name="Name", default="spot03")
     bpy.types.Scene.ootSceneSubFolder = bpy.props.StringProperty(name="Subfolder", default="overworld")
-    bpy.types.Scene.ootSceneOption = bpy.props.EnumProperty(name="Scene", items=ootEnumSceneID, default="SCENE_YDAN")
-    bpy.types.Scene.ootSceneExportPath = bpy.props.StringProperty(name="Directory", subtype="FILE_PATH")
-    bpy.types.Scene.ootSceneCustomExport = bpy.props.BoolProperty(name="Custom Export Path")
     bpy.types.Scene.ootSceneExportObj = bpy.props.PointerProperty(type=bpy.types.Object, poll=isSceneObj)
-    bpy.types.Scene.ootSceneSingleFile = bpy.props.BoolProperty(
-        name="Export as Single File",
-        default=False,
-        description="Does not split the scene and rooms into multiple files.",
-    )
 
 
 def oot_level_unregister():
@@ -765,8 +712,5 @@ def oot_level_unregister():
         unregister_class(cls)
 
     del bpy.types.Scene.ootSceneName
-    del bpy.types.Scene.ootSceneExportPath
-    del bpy.types.Scene.ootSceneCustomExport
-    del bpy.types.Scene.ootSceneOption
     del bpy.types.Scene.ootSceneSubFolder
-    del bpy.types.Scene.ootSceneSingleFile
+    del bpy.types.Scene.ootSceneExportObj

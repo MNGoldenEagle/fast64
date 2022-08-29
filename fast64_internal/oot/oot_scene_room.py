@@ -27,7 +27,7 @@ class OOT_SearchMusicSeqEnumOperator(bpy.types.Operator):
 	bl_property = "ootMusicSeq"
 	bl_options = {'REGISTER', 'UNDO'} 
 
-	ootMusicSeq : bpy.props.EnumProperty(items = ootEnumMusicSeq, default = "0x02")
+	ootMusicSeq : bpy.props.EnumProperty(items = ootEnumMusicSeq, default = "NA_BGM_FIELD_LOGIC")
 	headerIndex : bpy.props.IntProperty(default = 0, min = 0)
 	objName : bpy.props.StringProperty()
 
@@ -92,7 +92,7 @@ class OOT_SearchSceneEnumOperator(bpy.types.Operator):
 	bl_property = "ootSceneID"
 	bl_options = {'REGISTER', 'UNDO'} 
 
-	ootSceneID : bpy.props.EnumProperty(items = ootEnumSceneID, default = "SCENE_YDAN")
+	ootSceneID : bpy.props.EnumProperty(items = ootEnumSceneID, default = 10)
 
 	def execute(self, context):
 		context.scene.ootSceneOption = self.ootSceneID
@@ -128,20 +128,11 @@ def drawAlternateRoomHeaderProperty(layout, headerProp, objName):
 class OOTExitProperty(bpy.types.PropertyGroup):
 	expandTab : bpy.props.BoolProperty(name = "Expand Tab")
 
-	exitIndex : bpy.props.EnumProperty(items = ootEnumExitIndex, default = "Default")
-	exitIndexCustom : bpy.props.StringProperty(default = '0x0000')
-
-	# These are used when adding an entry to gEntranceTable
-	scene : bpy.props.EnumProperty(items = ootEnumSceneID, default = "SCENE_YDAN")
-	sceneCustom : bpy.props.StringProperty(default = "SCENE_YDAN")
-
-	# These are used when adding an entry to gEntranceTable
+	scene : bpy.props.EnumProperty(items = ootEnumSceneID, default = 10)
+	spawnId : bpy.props.IntProperty(min = 0, max = 255)
 	continueBGM : bpy.props.BoolProperty(default = False)
-	displayTitleCard : bpy.props.BoolProperty(default = True)
-	fadeInAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = '0x02')
-	fadeInAnimCustom : bpy.props.StringProperty(default = '0x02')
-	fadeOutAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = '0x02')
-	fadeOutAnimCustom : bpy.props.StringProperty(default = '0x02')
+	fadeOutAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = 2)
+	fadeOutAnimCustom : bpy.props.StringProperty(default = '0x00')
 
 def drawExitProperty(layout, exitProp, index, headerIndex, objName):
 	box = layout.box()
@@ -149,22 +140,17 @@ def drawExitProperty(layout, exitProp, index, headerIndex, objName):
 		str(index + 1), icon = 'TRIA_DOWN' if exitProp.expandTab else \
 		'TRIA_RIGHT')
 	if exitProp.expandTab:
-		drawCollectionOps(box, index, "Exit", headerIndex, objName)
-		drawEnumWithCustom(box, exitProp, "exitIndex", "Exit Index", "")
-		if exitProp.exitIndex != "Custom":
-			box.label(text = "This is unfinished, use \"Custom\".")
-			exitGroup = box.column()
-			exitGroup.enabled = False
-			drawEnumWithCustom(exitGroup, exitProp, "scene", "Scene", "")
-			exitGroup.prop(exitProp, "continueBGM", text = "Continue BGM")
-			exitGroup.prop(exitProp, "displayTitleCard", text = "Display Title Card")
-			drawEnumWithCustom(exitGroup, exitProp, "fadeInAnim", "Fade In Animation", "")
-			drawEnumWithCustom(exitGroup, exitProp, "fadeOutAnim", "Fade Out Animation", "")
+		exitGroup = box.column()
+		drawEnumWithCustom(exitGroup, exitProp, "scene", "Scene", "")
+		exitGroup.prop(exitProp, "spawnId", text = "Spawn ID")
+		exitGroup.prop(exitProp, "continueBGM", text = "Continue BGM")
+		drawEnumWithCustom(exitGroup, exitProp, "fadeOutAnim", "Fade Out Animation", "")
+	drawCollectionOps(box, index, "Exit", headerIndex, objName)
 
 
 class OOTObjectProperty(bpy.types.PropertyGroup):
 	expandTab : bpy.props.BoolProperty(name = "Expand Tab")
-	objectID : bpy.props.EnumProperty(items = ootEnumObjectID, default = 'OBJECT_HUMAN')
+	objectID : bpy.props.EnumProperty(items = ootEnumObjectID, default = 199)
 	objectIDCustom : bpy.props.StringProperty(default = 'OBJECT_HUMAN')
 
 def drawObjectProperty(layout, objectProp, headerIndex, index, objName):
@@ -257,10 +243,10 @@ def drawLightProperty(layout, lightProp, name, showExpandTab, index, sceneHeader
 		prop_split(box, lightProp, 'fogFar', 'Fog Far')
 		prop_split(box, lightProp, 'transitionSpeed', 'Transition Speed')
 
-
 class OOTSceneTableEntryProperty(bpy.types.PropertyGroup):
-	drawConfig : bpy.props.IntProperty(name = "Scene Draw Config", min = 0)
-	hasTitle : bpy.props.BoolProperty(default = True)
+	drawConfig : bpy.props.EnumProperty(name = "Scene Draw Config", items = ootDrawConfigNames, default = 0)
+	hasTitle : bpy.props.BoolProperty(name = "Has Title Card?", default = False)
+	titleCard : bpy.props.StringProperty(name = "Title Card File", subtype = "FILE_PATH")
 
 class OOTExtraCutsceneProperty(bpy.types.PropertyGroup):
 	csObject : bpy.props.PointerProperty(name = "Cutscene Object", type = bpy.types.Object)
@@ -269,7 +255,7 @@ class OOTSceneHeaderProperty(bpy.types.PropertyGroup):
 	expandTab : bpy.props.BoolProperty(name = "Expand Tab")
 	usePreviousHeader : bpy.props.BoolProperty(name = "Use Previous Header", default = True)
 
-	globalObject : bpy.props.EnumProperty(name = "Global Object", default = "0x0002", items = ootEnumGlobalObject)
+	globalObject : bpy.props.EnumProperty(name = "Global Object", default = 2, items = ootEnumGlobalObject)
 	globalObjectCustom : bpy.props.StringProperty(name = "Global Object Custom", default = "0x00")
 	naviCup : bpy.props.EnumProperty(name = "Navi Hints", default = '0x00', items = ootEnumNaviHints)
 	naviCupCustom : bpy.props.StringProperty(name = "Navi Hints Custom", default = '0x00')
@@ -286,12 +272,12 @@ class OOTSceneHeaderProperty(bpy.types.PropertyGroup):
 	cameraMode : bpy.props.EnumProperty(name = "Camera Mode", items = ootEnumCameraMode, default = "0x00")
 	cameraModeCustom : bpy.props.StringProperty(name = "Camera Mode Custom", default = '0x00')
 
-	musicSeq : bpy.props.EnumProperty(name = "Music Sequence", items = ootEnumMusicSeq, default = '0x02')
+	musicSeq : bpy.props.EnumProperty(name = "Music Sequence", items = ootEnumMusicSeq, default = 2)
 	musicSeqCustom : bpy.props.StringProperty(name = "Music Sequence ID", default = '0x00')
-	nightSeq : bpy.props.EnumProperty(name = "Nighttime SFX", items = ootEnumNightSeq, default = "0x00")
+	nightSeq : bpy.props.EnumProperty(name = "Nighttime SFX", items = ootEnumNightSeq, default = 0)
 	nightSeqCustom : bpy.props.StringProperty(name = "Nighttime SFX ID", default = '0x00')
-	audioSessionPreset : bpy.props.EnumProperty(name = "Audio Session Preset", items = ootEnumAudioSessionPreset, default = "0x00")
-	audioSessionPresetCustom : bpy.props.StringProperty(name = "Audio Session Preset", default = "0x00")
+	audioSessionPreset : bpy.props.EnumProperty(name = "Audio Settings ID", items = ootEnumAudioSessionPreset, default = "0x00")
+	audioSessionPresetCustom : bpy.props.StringProperty(name = "Audio Settings ID", default = "0x00")
 
 	timeOfDayLights : bpy.props.PointerProperty(type = OOTLightGroupProperty, name = "Time Of Day Lighting")
 	lightList : bpy.props.CollectionProperty(type = OOTLightProperty, name = 'Lighting List')
@@ -318,9 +304,6 @@ class OOTSceneHeaderProperty(bpy.types.PropertyGroup):
 
 	menuTab : bpy.props.EnumProperty(name = "Menu", items = ootEnumSceneMenu)
 	altMenuTab : bpy.props.EnumProperty(name = "Menu", items = ootEnumSceneMenuAlternate)
-
-def drawSceneTableEntryProperty(layout, sceneTableEntryProp):
-	prop_split(layout, sceneTableEntryProp, "drawConfig", "Draw Config")
 	
 def drawSceneHeaderProperty(layout, sceneProp, dropdownLabel, headerIndex, objName):
 	if dropdownLabel is not None:
@@ -347,7 +330,15 @@ def drawSceneHeaderProperty(layout, sceneProp, dropdownLabel, headerIndex, objNa
 		general = layout.column()
 		general.box().label(text = "General")
 		if headerIndex is None or headerIndex == 0:
-			drawSceneTableEntryProperty(layout, sceneProp.sceneTableEntry)
+			general.prop(sceneProp.sceneTableEntry, "drawConfig", text = "Draw Config")
+			general.prop(sceneProp.sceneTableEntry, "hasTitle")
+			if sceneProp.sceneTableEntry.hasTitle:
+				general.prop(sceneProp.sceneTableEntry, "titleCard")
+				if not os.path.exists(sceneProp.sceneTableEntry.titleCard) or \
+					not sceneProp.sceneTableEntry.titleCard.endswith(".png") or \
+					len(get_image_size(sceneProp.sceneTableEntry.titleCard)) != 2:
+					general.box().label(icon = "ERROR", text = "File is an invalid image!")
+
 		drawEnumWithCustom(general, sceneProp, 'globalObject', "Global Object", "")
 		drawEnumWithCustom(general, sceneProp, 'naviCup', "Navi Hints", "")
 

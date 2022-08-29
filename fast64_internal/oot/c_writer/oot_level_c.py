@@ -58,11 +58,8 @@ def cmdColHeader(scene, header, cmdCount):
 
 def cmdEntranceList(scene, header, cmdCount):
     cmd = CData()
-    cmd.source = (
-        "\tSCENE_CMD_ENTRANCE_LIST("
-        + (scene.entranceListName(header) if len(scene.entranceList) > 0 else "NULL")
-        + "),\n"
-    )
+    cmd.source = f'\tSCENE_CMD_ENTRANCE_LIST({len(scene.entranceList)}, {scene.entranceListName(header) if len(scene.entranceList) > 0 else "NULL"}),\n'
+    
     return cmd
 
 
@@ -108,7 +105,7 @@ def cmdSkyboxSettings(scene, header, cmdCount):
 
 def cmdExitList(scene, header, cmdCount):
     cmd = CData()
-    cmd.source = "\tSCENE_CMD_EXIT_LIST(" + scene.exitListName(header) + "),\n"
+    cmd.source = f"\tSCENE_CMD_EXIT_LIST({len(scene.exitList)}, {scene.exitListName(header)}),\n"
     return cmd
 
 
@@ -560,7 +557,7 @@ def ootRoomListHeaderToC(scene):
 
 
 def ootEntranceToC(entrance):
-    return "{ " + str(entrance.startPositionIndex) + ", " + str(entrance.roomIndex) + " },\n"
+    return f"{{ {entrance.roomIndex}, {entrance.startPositionIndex}, {entrance.transitionType}, {entrance.cutsceneType} }},\n"
 
 
 def ootEntranceListToC(scene, headerIndex):
@@ -573,12 +570,16 @@ def ootEntranceListToC(scene, headerIndex):
     return data
 
 
+def ootExitToC(exit):
+    return f'{{ {exit.scene}, {exit.spawn}, {exit.transitionType}, {{ {"true" if exit.continueBgm else "false"} }} }},\n'
+
+
 def ootExitListToC(scene, headerIndex):
     data = CData()
     data.header = "extern u16 " + scene.exitListName(headerIndex) + "[" + str(len(scene.exitList)) + "];\n"
     data.source = "u16 " + scene.exitListName(headerIndex) + "[" + str(len(scene.exitList)) + "] = {\n"
     for exitEntry in scene.exitList:
-        data.source += "\t" + str(exitEntry.index) + ",\n"
+        data.source += "\t" + ootExitToC(exitEntry)
     data.source += "};\n\n"
     return data
 
