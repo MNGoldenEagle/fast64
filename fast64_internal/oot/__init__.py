@@ -4,6 +4,7 @@ import bpy
 from .c_writer import OOTBootupSceneOptions
 from ..panels import OOT_Panel
 from bpy.utils import register_class, unregister_class
+from bpy.app.handlers import persistent
 from .oot_level import oot_obj_panel_register, oot_obj_panel_unregister, oot_obj_register, oot_obj_unregister
 from .oot_anim import oot_anim_panel_register, oot_anim_panel_unregister, oot_anim_register, oot_anim_unregister
 from .oot_collision import oot_col_panel_register, oot_col_panel_unregister, oot_col_register, oot_col_unregister
@@ -85,6 +86,10 @@ class OOT_RefreshAssetEnums(bpy.types.Operator):
         
         return False
 
+    def check(self, context):
+        print("Check asset enum")
+        return True
+
     # Called on demand (i.e. button press, menu item)
     def execute(self, context):
         repoPath = context.scene.ootDecompPath
@@ -127,6 +132,7 @@ class OOT_RefreshAssetEnums(bpy.types.Operator):
                     sceneName = scene.group(1).replace("_scene", "").replace("_", " ").title()
                     scenes[i] = (scene.group(2), sceneName, scene.group(1), i)
                 scenes.insert(0, ('Custom', 'Custom', 'Custom', -1))
+                scenes.append(('SCENE_SPC_RETURN', 'Return from Grotto', 'Return from Grotto', 254))
                 print(scenes)
             with open(os.path.join(includesPath, "sequence.h"), 'r') as seq_h:
                 data = seq_h.read()
@@ -197,13 +203,12 @@ class OOT_RefreshAssetEnums(bpy.types.Operator):
             oot_constants.ootEnumNightSeq.extend(ambience)
             oot_constants.ootEnumTransitionAnims.clear()
             oot_constants.ootEnumTransitionAnims.extend(transitions)
-            oot_constants.ootDrawConfigNames.clear()
-            oot_constants.ootDrawConfigNames.extend(scene_draws)
+            oot_constants.ootEnumDrawConfig.clear()
+            oot_constants.ootEnumDrawConfig.extend(scene_draws)
             return {'FINISHED'}
         except Exception as e:
             raisePluginError(self, e)
             return {'CANCELLED'} # must return a set
-
 
 
 class OOT_FileSettingsPanel(OOT_Panel):
@@ -324,3 +329,10 @@ def oot_unregister(unregisterPanels):
 
     del bpy.types.Scene.ootBlenderScale
     del bpy.types.Scene.ootDecompPath
+
+@persistent
+def load_handler(_):
+    if bpy.ops.scene.refresh_enums.poll():
+        bpy.ops.scene.refresh_enums()
+
+bpy.app.handlers.load_post.append(load_handler)

@@ -290,7 +290,8 @@ ootEnumTransitionAnims = ootDefaultEnumTransitionAnims
 ootDefaultEnumSceneID = [
 	("Custom", "Custom", "Custom", -1),
 	("SCENE_BMORI1", "Forest Temple", "Forest Temple", 0),
-	("SCENE_MABE_VILLAGE", "Mabe Village", "Mabe Village", 10)
+	("SCENE_MABE_VILLAGE", "Mabe Village", "Mabe Village", 10),
+	("SCENE_SPC_RETURN", "Grotto Return", "Return from Grotto", 254)
 ]
 
 ootEnumSceneID = ootDefaultEnumSceneID

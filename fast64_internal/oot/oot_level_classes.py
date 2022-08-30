@@ -32,14 +32,19 @@ class OOTTransitionActor:
 
 
 class OOTExit:
-    def __init__(self, index):
-        self.index = index
+    def __init__(self, sceneIndex, entranceIndex, continueBGM, fadeOutAnim):
+        self.sceneIndex = sceneIndex
+        self.entranceIndex = entranceIndex
+        self.continueBGM = continueBGM
+        self.fadeOutAnim = fadeOutAnim
 
 
 class OOTEntrance:
-    def __init__(self, roomIndex, startPositionIndex):
+    def __init__(self, roomIndex, startPositionIndex, fadeInAnim, cutsceneID):
         self.roomIndex = roomIndex
         self.startPositionIndex = startPositionIndex
+        self.fadeInAnim = fadeInAnim
+        self.cutsceneID = cutsceneID
 
 
 class OOTLight:
@@ -146,6 +151,8 @@ class OOTCutscene:
 class OOTSceneTableEntry:
     def __init__(self):
         self.drawConfig = 0
+        self.titleCard = None
+        self.titleCardType = "IA8"
 
 
 class OOTScene:
@@ -155,7 +162,6 @@ class OOTScene:
         self.rooms = {}
         self.transitionActorList = set()
         self.entranceList = set()
-        self.titleCard = None
         self.startPositions = {}
         self.lights = []
         self.model = model

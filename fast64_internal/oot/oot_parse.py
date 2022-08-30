@@ -20,7 +20,7 @@ def parseEnumFile(data, enumName, enumPrefix, ignoreList, includeCustom):
 	enumData = checkResult.group(1)
 
 	i = 0
-	for matchResult in re.finditer(rf'{enumPrefix}\_(\S*)\s?=?\s?(\d*),\s?/?/?\s*([^\n]*)', enumData):
+	for matchResult in re.finditer(rf'{enumPrefix}\_(\S*)[ \t]*=?[ \t]*(\d*),[ \t]*/?/?[ \t]*([^\n]*)', enumData, flags = re.UNICODE):
 		if matchResult.group(2):
 			i = int(matchResult.group(2))
 		oldName = matchResult.group(1)

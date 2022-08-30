@@ -33,6 +33,7 @@ from .oot_constants import (
     ootEnumRoomShapeType,
     ootEnumHeaderMenu,
     ootEnumDrawConfig,
+    enumTexFormat,
 )
 
 
@@ -142,10 +143,10 @@ def drawAlternateRoomHeaderProperty(layout, headerProp, objName):
 class OOTExitProperty(bpy.types.PropertyGroup):
     expandTab: bpy.props.BoolProperty(name="Expand Tab")
 
-    scene : bpy.props.EnumProperty(items = ootEnumSceneID, default = "SCENE_MABE_VILLAGE")
-    spawnId : bpy.props.IntProperty(min = 0, max = 255)
+    scene : bpy.props.EnumProperty(items = lambda s, c: ootEnumSceneID, default = "SCENE_MABE_VILLAGE")
+    entranceId : bpy.props.IntProperty(min = 0, max = 255)
     continueBGM : bpy.props.BoolProperty(default = False)
-    fadeOutAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = 'TRANS_TYPE_FADE_BLACK')
+    fadeOutAnim : bpy.props.EnumProperty(items = lambda s, c: ootEnumTransitionAnims, default = 'TRANS_TYPE_FADE_BLACK')
     fadeOutAnimCustom : bpy.props.StringProperty(default = '0x00')
 
 def drawExitProperty(layout, exitProp, index, headerIndex, objName):
@@ -158,10 +159,9 @@ def drawExitProperty(layout, exitProp, index, headerIndex, objName):
         exitGroup = box.column()
         #exitGroup.enabled = False
         exitGroup.prop(exitProp, "scene", text = "Scene")
-        exitGroup.prop(exitProp, "spawnId", text = "Spawn ID")
+        exitGroup.prop(exitProp, "entranceId", text = "Entrance ID")
         exitGroup.prop(exitProp, "continueBGM", text = "Continue BGM")
         drawEnumWithCustom(exitGroup, exitProp, "fadeOutAnim","Fade Out Animation", "")
-
 
 class OOTObjectProperty(bpy.types.PropertyGroup):
     expandTab: bpy.props.BoolProperty(name="Expand Tab")
@@ -299,6 +299,7 @@ class OOTSceneTableEntryProperty(bpy.types.PropertyGroup):
     drawConfigCustom: bpy.props.StringProperty(name="Scene Draw Config Custom")
     hasTitle : bpy.props.BoolProperty(name = "Has Title Card?", default = False)
     titleCard : bpy.props.StringProperty(name = "Title Card File", subtype = "FILE_PATH")
+    titleCardType : bpy.props.EnumProperty(name = "Format", items = enumTexFormat, default = "IA8")
 
 
 class OOTExtraCutsceneProperty(bpy.types.PropertyGroup):
@@ -529,12 +530,15 @@ def drawSceneHeaderProperty(layout, sceneProp, dropdownLabel, headerIndex, objNa
                 drawAddButton(cutscene, 0, "extraCutscenes", 0, objName)
 
     elif menuTab == "Exits":
-        exitBox = layout.column()
-        exitBox.box().label(text="Exit List")
-        for i in range(len(sceneProp.exitList)):
-            drawExitProperty(exitBox, sceneProp.exitList[i], i, headerIndex, objName)
+        if headerIndex is None or headerIndex == 0:
+            exitBox = layout.column()
+            exitBox.box().label(text="Exit List")
+            for i in range(len(sceneProp.exitList)):
+                drawExitProperty(exitBox, sceneProp.exitList[i], i, headerIndex, objName)
 
-        drawAddButton(exitBox, len(sceneProp.exitList), "Exit", headerIndex, objName)
+            drawAddButton(exitBox, len(sceneProp.exitList), "Exit", headerIndex, objName)
+        else:
+            layout.label(text = 'Exits are edited in main header.')
 
 
 class OOTBGProperty(bpy.types.PropertyGroup):

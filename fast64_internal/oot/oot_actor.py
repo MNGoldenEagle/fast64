@@ -1,5 +1,5 @@
 import bpy
-from .oot_constants import ootEnumActorID, ootEnumSceneSetupPreset, ootEnumCamTransition, ootEnumTransitionAnims
+from .oot_constants import ootEnumActorID, ootEnumTransitionActorID, ootEnumSceneSetupPreset, ootEnumCamTransition, ootEnumTransitionAnims
 from ..utility import PluginError, prop_split, label_split
 from .oot_utility import (
     getRoomObj,
@@ -207,6 +207,10 @@ def drawActorHeaderItemProperty(layout, propUser, headerItemProp, index, altProp
         box.label(text="Above header does not exist.", icon="QUESTION")
 
 
+def getActors(s, c):
+    return ootEnumActorID
+
+
 class OOTActorProperty(bpy.types.PropertyGroup):
     actorID: bpy.props.EnumProperty(name="Actor", items=getActors, default="ACTOR_PLAYER")
     actorIDCustom: bpy.props.StringProperty(name="Actor ID", default="ACTOR_PLAYER")
@@ -293,7 +297,7 @@ def drawTransitionActorProperty(layout, transActorProp, altSceneProp, roomObj, o
 class OOTEntranceProperty(bpy.types.PropertyGroup):
     # This is also used in entrance list, and roomIndex is obtained from the room this empty is parented to.
     spawnIndex : bpy.props.IntProperty(min = 0, max = 255)
-    fadeInAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = 'TRANS_TYPE_FADE_BLACK')
+    fadeInAnim : bpy.props.EnumProperty(items = lambda s, c: ootEnumTransitionAnims, default = 'TRANS_TYPE_FADE_BLACK')
 
     # Cutscene ID options
     showTitlecard : bpy.props.BoolProperty(name = "Show Title Card?")

@@ -622,7 +622,7 @@ def ootRoomListHeaderToC(scene):
 
 
 def ootEntranceToC(entrance):
-    return f"{{ {entrance.roomIndex}, {entrance.startPositionIndex}, {entrance.transitionType}, {entrance.cutsceneType} }},\n"
+    return f"{{ {entrance.roomIndex}, {entrance.startPositionIndex}, {entrance.fadeInAnim}, {entrance.cutsceneID} }},\n"
 
 
 def ootEntranceListToC(scene, headerIndex):
@@ -636,7 +636,7 @@ def ootEntranceListToC(scene, headerIndex):
 
 
 def ootExitToC(exit):
-    return f'{{ {exit.scene}, {exit.spawn}, {exit.transitionType}, {{ {"true" if exit.continueBgm else "false"} }} }},\n'
+    return f'{{ {exit.sceneIndex}, {exit.entranceIndex}, {exit.fadeOutAnim}, {{ {"true" if exit.continueBGM else "false"} }} }},\n'
 
 
 def ootExitListToC(scene, headerIndex):
