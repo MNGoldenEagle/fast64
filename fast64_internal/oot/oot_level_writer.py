@@ -241,7 +241,7 @@ def writeExternalProperties(levelPath, scene):
                 f"    #include \"{textureFilenameInc}\"\n",
                 "};\n"
             ])
-        baseName = textureFilename.name
+        baseName = textureFilename.name.with_suffix(f".{tableEntry.titleCardType.lower()}{textureFilename.suffix}")
         shutil.copy2(str(tableEntry.titleCard), os.path.join(levelPath, "title_cards", baseName))
 
 
