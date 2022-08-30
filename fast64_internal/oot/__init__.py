@@ -17,6 +17,7 @@ from ..utility import prop_split, raisePluginError
 
 import bpy
 from bpy.utils import register_class, unregister_class
+from bpy.app.handlers import persistent
 import os
 import os.path
 
@@ -42,6 +43,10 @@ class OOT_RefreshAssetEnums(bpy.types.Operator):
 				os.path.exists(os.path.join(repoPath, 'build', 'include', 'tables', 'scene_table.h'))
 		
 		return False
+
+	def check(self, context):
+		print("Check asset enum")
+		return True
 
 	# Called on demand (i.e. button press, menu item)
 	def execute(self, context):
@@ -85,6 +90,7 @@ class OOT_RefreshAssetEnums(bpy.types.Operator):
 					sceneName = scene.group(1).replace("_scene", "").replace("_", " ").title()
 					scenes[i] = (scene.group(2), sceneName, scene.group(1), i)
 				scenes.insert(0, ('Custom', 'Custom', 'Custom', -1))
+				scenes.append(('SCENE_SPC_RETURN', 'Return from Grotto', 'Return from Grotto', 254))
 				print(scenes)
 			with open(os.path.join(includesPath, "sequence.h"), 'r') as seq_h:
 				data = seq_h.read()
@@ -269,3 +275,10 @@ def oot_unregister(unregisterPanels):
 	del bpy.types.Scene.ootBlenderScale
 	del bpy.types.Scene.ootActorBlenderScale
 	del bpy.types.Scene.ootDecompPath
+
+@persistent
+def load_handler(_):
+	if bpy.ops.scene.refresh_enums.poll():
+		bpy.ops.scene.refresh_enums()
+
+bpy.app.handlers.load_post.append(load_handler)

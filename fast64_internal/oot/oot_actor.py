@@ -184,7 +184,9 @@ def drawTransitionActorProperty(layout, transActorProp, altSceneProp, roomObj, o
 class OOTEntranceProperty(bpy.types.PropertyGroup):
 	# This is also used in entrance list, and roomIndex is obtained from the room this empty is parented to.
 	spawnIndex : bpy.props.IntProperty(min = 0)
-	fadeInAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = '0x02')
+	customActor : bpy.props.BoolProperty(name = "Use Custom Actor")
+	actor : bpy.props.PointerProperty(type = OOTActorProperty)
+	fadeInAnim : bpy.props.EnumProperty(items = lambda s, c: ootEnumTransitionAnims, default = 2)
 
 	# Cutscene ID options
 	showTitlecard : bpy.props.BoolProperty(name = "Show Title Card?")

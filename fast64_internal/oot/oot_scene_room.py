@@ -128,10 +128,10 @@ def drawAlternateRoomHeaderProperty(layout, headerProp, objName):
 class OOTExitProperty(bpy.types.PropertyGroup):
 	expandTab : bpy.props.BoolProperty(name = "Expand Tab")
 
-	scene : bpy.props.EnumProperty(items = ootEnumSceneID, default = "SCENE_YDAN")
+	scene : bpy.props.EnumProperty(items = lambda s, c: ootEnumSceneID, default = 10)
 	entranceId : bpy.props.IntProperty(min = 0, max = 255)
 	continueBGM : bpy.props.BoolProperty(default = False)
-	fadeOutAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = '0x02')
+	fadeOutAnim : bpy.props.EnumProperty(items = lambda s, c: ootEnumTransitionAnims, default = 2)
 
 def drawExitProperty(layout, exitProp, index, headerIndex, objName):
 	box = layout.box()
@@ -145,7 +145,6 @@ def drawExitProperty(layout, exitProp, index, headerIndex, objName):
 		exitGroup.prop(exitProp, "continueBGM", text = "Continue BGM")
 		exitGroup.prop(exitProp, "fadeOutAnim", text = "Fade Out Animation")
 	drawCollectionOps(box, index, "Exit", headerIndex, objName)
-
 
 class OOTObjectProperty(bpy.types.PropertyGroup):
 	expandTab : bpy.props.BoolProperty(name = "Expand Tab")
@@ -246,6 +245,7 @@ class OOTSceneTableEntryProperty(bpy.types.PropertyGroup):
 	drawConfig : bpy.props.EnumProperty(name = "Scene Draw Config", items = ootDrawConfigNames, default = 0)
 	hasTitle : bpy.props.BoolProperty(name = "Has Title Card?", default = False)
 	titleCard : bpy.props.StringProperty(name = "Title Card File", subtype = "FILE_PATH")
+	titleCardType : bpy.props.EnumProperty(name = "Format", items = enumTexFormat, default = "IA8")
 
 class OOTExtraCutsceneProperty(bpy.types.PropertyGroup):
 	csObject : bpy.props.PointerProperty(name = "Cutscene Object", type = bpy.types.Object)
@@ -333,6 +333,7 @@ def drawSceneHeaderProperty(layout, sceneProp, dropdownLabel, headerIndex, objNa
 			general.prop(sceneProp.sceneTableEntry, "hasTitle")
 			if sceneProp.sceneTableEntry.hasTitle:
 				general.prop(sceneProp.sceneTableEntry, "titleCard")
+				general.prop(sceneProp.sceneTableEntry, "titleCardType")
 				if not os.path.exists(sceneProp.sceneTableEntry.titleCard) or \
 					not sceneProp.sceneTableEntry.titleCard.endswith(".png") or \
 					len(get_image_size(sceneProp.sceneTableEntry.titleCard)) != 2:
