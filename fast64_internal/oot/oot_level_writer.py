@@ -129,7 +129,6 @@ def ootExportSceneToC(
     exportPath = exportInfo.exportPath
 
     scene = ootConvertScene(originalSceneObj, transformMatrix, f3dType, isHWv1, sceneName, DLFormat, not savePNG)
-
     exportSubdir = ""
     if exportInfo.customSubPath is not None:
         exportSubdir = exportInfo.customSubPath
@@ -173,12 +172,21 @@ def ootExportSceneToC(
                 ootPreprendSceneIncludes(scene, levelC.sceneCutscenesC[i]),
                 os.path.join(levelPath, scene.sceneName() + "_cs_" + str(i) + ".c.inc"),
             )
+    with open(os.path.join(levelPath, scene.sceneName() + ".c"), "a") as scenec:
+        scenec.write(f'#include "{exportSubdir}{sceneName}/{scene.sceneName()}_col.c.inc"\n')
+        if levelC.sceneCutscenesIsUsed():
+            scenec.write(f'#include "{exportSubdir}{sceneName}/{scene.sceneName()}_cs_{i}.c.inc"\n')
+        if levelC.sceneTexturesIsUsed():
+            scenec.write(f'#include "{exportSubdir}{sceneName}/{scene.sceneName()}_tex.c.inc"\n')
 
     # Export the room segment .c files
     for roomName, roomMainC in levelC.roomMainC.items():
         writeCDataSourceOnly(
             ootPreprendSceneIncludes(scene, roomMainC), os.path.join(levelPath, roomName + ".c")
         )
+        with open(os.path.join(levelPath, roomName + ".c"), "a") as roomc:
+            roomc.write(f'#include "{exportSubdir}{sceneName}/{roomName}_model.c.inc"\n')
+            roomc.write(f'#include "{exportSubdir}{sceneName}/{roomName}_model_info.c.inc"\n')
     for roomName, roomMeshInfoC in levelC.roomMeshInfoC.items():
         writeCDataSourceOnly(
             ootPreprendSceneIncludes(scene, roomMeshInfoC), os.path.join(levelPath, roomName + "_model_info.c.inc")
@@ -191,7 +199,7 @@ def ootExportSceneToC(
     # Export the scene .h file
     writeCDataHeaderOnly(ootCreateSceneHeader(levelC), os.path.join(levelPath, scene.sceneName() + ".h"))
 
-    writeExternalProperties(levelPath, scene)
+    writeExternalProperties(levelPath, f"{exportSubdir}{sceneName}", scene)
 
 #    if not isCustomExport:
 #        writeOtherSceneProperties(scene, exportInfo, levelC)
@@ -206,7 +214,7 @@ def ootExportSceneToC(
         )
 
 
-def writeExternalProperties(levelPath, scene):
+def writeExternalProperties(levelPath, relExportPath, scene):
     tableEntry = scene.sceneTableEntry
     if tableEntry.drawConfig:
         with open(os.path.join(levelPath, "scene.yaml"), "w") as sceneConfig:
@@ -226,24 +234,24 @@ def writeExternalProperties(levelPath, scene):
                 f"extern u64 g{titleCardName}TitleCardFRATex[];\n",
             ])
         textureFilename = Path(tableEntry.titleCard)
-        textureFilenameInc = textureFilename.with_suffix(f".{tableEntry.titleCardType.lower()}.inc.c")
+        textureFilenameInc = os.path.basename(textureFilename.with_suffix(f".{tableEntry.titleCardType.lower()}.inc.c"))
         with open(os.path.join(titleCardPath, f"{titleCardName}TitleCard.c"), "w") as titleCardC:
-            titleCardPath = titleCardPath.replace("\\", "/")
+            relativePath = relExportPath.replace("\\", "/")
             titleCardC.writelines([ \
                 f"#include \"{titleCardName}TitleCard.h\"\n\n",
                 f"u64 g{titleCardName}TitleCardENGTex[] = {{\n",
-                f"    #include \"{textureFilenameInc}\"\n",
+                f'    #include "{relativePath}/{textureFilenameInc}"\n',
                 "};\n\n",
                 f"u64 g{titleCardName}TitleCardGERTex[] = {{\n",
-                f"    #include \"{textureFilenameInc}\"\n",
+                f'    #include "{relativePath}/{textureFilenameInc}"\n',
                 "};\n\n",
                 f"u64 g{titleCardName}TitleCardFRATex[] = {{\n",
-                f"    #include \"{textureFilenameInc}\"\n",
+                f'    #include "{relativePath}/{textureFilenameInc}"\n',
                 "};\n"
             ])
         type = tableEntry.titleCardType.lower()
         suffix = f".{type}{textureFilename.suffix}" if type in textureFilename.name else textureFilename.suffix
-        baseName = textureFilename.name.with_suffix(suffix)
+        baseName = textureFilename.with_suffix(suffix)
         shutil.copy2(str(tableEntry.titleCard), os.path.join(levelPath, "title_cards", baseName))
 
 
