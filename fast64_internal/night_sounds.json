@@ -1,0 +1,23 @@
+[
+	["Custom", "Custom", "Custom"],
+	["NATURE_ID_GENERAL_NIGHT", "Standard night [day and night cycle]", "0x00"],
+	["NATURE_ID_MARKET_ENTRANCE", "Standard night [Kakariko]", "0x01"],
+	["NATURE_ID_KAKARIKO_REGION", "Distant storm [Graveyard]", "0x02"],
+	["NATURE_ID_MARKET_RUINS", "Howling wind and cawing [Ganon's Castle]", "0x03"],
+	["NATURE_ID_KOKIRI_REGION", "Wind + night birds [Kokiri]", "0x04"],
+	["NATURE_ID_MARKET_NIGHT", "Wind + crickets", "0x05"],
+	["NATURE_ID_06", "Wind", "0x06"],
+	["NATURE_ID_GANONS_LAIR", "Howlingwind", "0x07"],
+	["NATURE_ID_08", "Wind + crickets", "0x08"],
+	["NATURE_ID_09", "Wind + crickets", "0x09"],
+	["NATURE_ID_WASTELAND", "Tubed howling wind [Wasteland]", "0x0A"],
+	["NATURE_ID_COLOSSUS", "Tubed howling wind [Colossus]", "0x0B"],
+	["NATURE_ID_DEATH_MOUNTAIN_TRAIL", "Wind", "0x0C"],
+	["NATURE_ID_0D", "Wind + crickets", "0x0D"],
+	["NATURE_ID_0E", "Wind + crickets", "0x0E"],
+	["NATURE_ID_0F", "Wind + birds", "0x0F"],
+	["NATURE_ID_10", "Wind + crickets", "0x10"],
+	["NATURE_ID_11", "?", "0x11"],
+	["NATURE_ID_12", "Wind + crickets", "0x12"],
+	["NATURE_ID_NONE", "Day music always playing", "0x13"]
+]

@@ -6,6 +6,7 @@ from ..utility import ootGetSceneOrRoomHeader, prop_split
 from .oot_utility import drawAddButton, drawCollectionOps, drawEnumWithCustom, getEnumName, getSceneObj, getRoomObj, getImageSize
 from .oot_cutscene import OOTCSListProperty, drawCSListProperty, drawCSAddButtons
 from .oot_actor import setAllActorsVisibility
+from ..f3d.f3d_enums import enumTexFormat
 
 from .oot_constants import (
     ootEnumObjectID,
@@ -33,7 +34,6 @@ from .oot_constants import (
     ootEnumRoomShapeType,
     ootEnumHeaderMenu,
     ootEnumDrawConfig,
-    enumTexFormat,
 )
 
 
@@ -143,10 +143,10 @@ def drawAlternateRoomHeaderProperty(layout, headerProp, objName):
 class OOTExitProperty(bpy.types.PropertyGroup):
     expandTab: bpy.props.BoolProperty(name="Expand Tab")
 
-    scene : bpy.props.EnumProperty(items = lambda s, c: ootEnumSceneID, default = "SCENE_MABE_VILLAGE")
+    scene : bpy.props.EnumProperty(items = ootEnumSceneID, default = "SCENE_MABE_VILLAGE")
     entranceId : bpy.props.IntProperty(min = 0, max = 255)
     continueBGM : bpy.props.BoolProperty(default = False)
-    fadeOutAnim : bpy.props.EnumProperty(items = lambda s, c: ootEnumTransitionAnims, default = 'TRANS_TYPE_FADE_BLACK')
+    fadeOutAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = 'TRANS_TYPE_FADE_BLACK')
     fadeOutAnimCustom : bpy.props.StringProperty(default = '0x00')
 
 def drawExitProperty(layout, exitProp, index, headerIndex, objName):
@@ -382,9 +382,9 @@ class OOTSceneHeaderProperty(bpy.types.PropertyGroup):
     cameraMode: bpy.props.EnumProperty(name="Camera Mode", items=ootEnumCameraMode, default="0x00")
     cameraModeCustom: bpy.props.StringProperty(name="Camera Mode Custom", default="0x00")
 
-    musicSeq: bpy.props.EnumProperty(name="Music Sequence", items=ootEnumMusicSeq, default="0x02")
+    musicSeq: bpy.props.EnumProperty(name="Music Sequence", items=ootEnumMusicSeq, default="NA_BGM_OVERWORLD")
     musicSeqCustom: bpy.props.StringProperty(name="Music Sequence ID", default="0x00")
-    nightSeq: bpy.props.EnumProperty(name="Nighttime SFX", items=ootEnumNightSeq, default="0x00")
+    nightSeq: bpy.props.EnumProperty(name="Nighttime SFX", items=ootEnumNightSeq, default="NATURE_ID_GENERAL_NIGHT")
     nightSeqCustom: bpy.props.StringProperty(name="Nighttime SFX ID", default="0x00")
     audioSessionPreset: bpy.props.EnumProperty(
         name="Audio Session Preset", items=ootEnumAudioSessionPreset, default="0x00"

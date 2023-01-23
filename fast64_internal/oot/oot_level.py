@@ -200,7 +200,7 @@ class OOTRemoveSceneSettingsProperty(bpy.types.PropertyGroup):
     name: bpy.props.StringProperty(name="Name", default="spot03")
     subFolder: bpy.props.StringProperty(name="Subfolder", default="overworld")
     customExport: bpy.props.BoolProperty(name="Custom Export Path")
-    option: bpy.props.EnumProperty(items=ootEnumSceneID, default="SCENE_YDAN")
+    option: bpy.props.EnumProperty(items=ootEnumSceneID, default="SCENE_MABE_VILLAGE")
 
 
 class OOTExportSceneSettingsProperty(bpy.types.PropertyGroup):
@@ -213,7 +213,7 @@ class OOTExportSceneSettingsProperty(bpy.types.PropertyGroup):
         default=False,
         description="Does not split the scene and rooms into multiple files.",
     )
-    option: bpy.props.EnumProperty(items=ootEnumSceneID, default="SCENE_YDAN")
+    option: bpy.props.EnumProperty(items=ootEnumSceneID, default="SCENE_MABE_VILLAGE")
 
 
 class OOTImportSceneSettingsProperty(bpy.types.PropertyGroup):
@@ -229,7 +229,7 @@ class OOTImportSceneSettingsProperty(bpy.types.PropertyGroup):
     includeCameras: bpy.props.BoolProperty(name="Cameras", default=True)
     includePaths: bpy.props.BoolProperty(name="Paths", default=True)
     includeWaterBoxes: bpy.props.BoolProperty(name="Water Boxes", default=True)
-    option: bpy.props.EnumProperty(items=ootEnumSceneID, default="SCENE_YDAN")
+    option: bpy.props.EnumProperty(items=ootEnumSceneID, default="SCENE_MABE_VILLAGE")
 
     def draw(self, layout: bpy.types.UILayout, sceneOption: str):
         col = layout.column()

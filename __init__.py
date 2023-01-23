@@ -1,6 +1,5 @@
 import bpy
 from bpy.utils import register_class, unregister_class
-from . import addon_updater_ops
 from .fast64_internal.operators import AddWaterBox
 from .fast64_internal.panels import SM64_Panel
 from .fast64_internal.utility import PluginError, raisePluginError, attemptModifierApply, prop_split

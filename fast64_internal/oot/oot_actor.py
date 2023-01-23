@@ -101,7 +101,7 @@ class OOT_SearchActorIDEnumOperator(bpy.types.Operator):
     def actorItems(self, _):
         return ootEnumTransitionActorID if self.actorUser == "Transition Actor" else ootEnumActorID
 
-    actorID: bpy.props.EnumProperty(items=actorItems, default="ACTOR_PLAYER")
+    actorID: bpy.props.EnumProperty(items=actorItems)
     actorUser: bpy.props.StringProperty(default="Actor")
     objName: bpy.props.StringProperty()
 
@@ -207,12 +207,8 @@ def drawActorHeaderItemProperty(layout, propUser, headerItemProp, index, altProp
         box.label(text="Above header does not exist.", icon="QUESTION")
 
 
-def getActors(s, c):
-    return ootEnumActorID
-
-
 class OOTActorProperty(bpy.types.PropertyGroup):
-    actorID: bpy.props.EnumProperty(name="Actor", items=getActors, default="ACTOR_PLAYER")
+    actorID: bpy.props.EnumProperty(name="Actor", items=ootEnumActorID, default="ACTOR_PLAYER")
     actorIDCustom: bpy.props.StringProperty(name="Actor ID", default="ACTOR_PLAYER")
     actorParam: bpy.props.StringProperty(name="Actor Parameter", default="0x0000")
     rotOverride: bpy.props.BoolProperty(name="Override Rotation", default=False)
@@ -297,7 +293,7 @@ def drawTransitionActorProperty(layout, transActorProp, altSceneProp, roomObj, o
 class OOTEntranceProperty(bpy.types.PropertyGroup):
     # This is also used in entrance list, and roomIndex is obtained from the room this empty is parented to.
     spawnIndex : bpy.props.IntProperty(min = 0, max = 255)
-    fadeInAnim : bpy.props.EnumProperty(items = lambda s, c: ootEnumTransitionAnims, default = 'TRANS_TYPE_FADE_BLACK')
+    fadeInAnim : bpy.props.EnumProperty(items = ootEnumTransitionAnims, default = 'TRANS_TYPE_FADE_BLACK')
 
     # Cutscene ID options
     showTitlecard : bpy.props.BoolProperty(name = "Show Title Card?")
