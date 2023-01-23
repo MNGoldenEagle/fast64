@@ -101,14 +101,6 @@ oot_classes = (
 
 decompPath = ""
 
-def oot_set_repo_path(self, path):
-    self["path"] = path
-    if bpy.ops.scene.refresh_enums.poll():
-        bpy.ops.scene.refresh_enums()
-
-def oot_get_repo_path(self):
-    return self.get("path", "")
-
 def oot_panel_register():
     oot_operator_panel_register()
     oot_dl_writer_panel_register()
@@ -154,7 +146,7 @@ def oot_register(registerPanels):
     bpy.types.Scene.ootBlenderScale = bpy.props.FloatProperty(
         name="Blender To OOT Scale", default=10, update=on_update_render_settings
     )
-    bpy.types.Scene.ootDecompPath = bpy.props.StringProperty(name="Repo Folder", subtype="DIR_PATH", get=oot_get_repo_path, set=oot_set_repo_path)
+    bpy.types.Scene.ootDecompPath = bpy.props.StringProperty(name="Repo Folder", subtype="DIR_PATH")
 
 
 def oot_unregister(unregisterPanels):
@@ -177,10 +169,3 @@ def oot_unregister(unregisterPanels):
 
     del bpy.types.Scene.ootBlenderScale
     del bpy.types.Scene.ootDecompPath
-
-@persistent
-def load_handler(_):
-    if bpy.ops.scene.refresh_enums.poll():
-        bpy.ops.scene.refresh_enums()
-
-bpy.app.handlers.load_post.append(load_handler)

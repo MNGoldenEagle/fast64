@@ -306,7 +306,6 @@ class OOTEntranceProperty(bpy.types.PropertyGroup):
 def drawEntranceProperty(layout, obj, altSceneProp, objName):
     box = layout.column()
     roomObj = getRoomObj(obj)
-    sceneObj = getSceneObj(obj).ootSceneHeader
 
     if roomObj is not None:
         split = box.split(factor = 0.5)
@@ -314,6 +313,9 @@ def drawEntranceProperty(layout, obj, altSceneProp, objName):
         split.label(text = str(roomObj.ootRoomHeader.roomIndex))
     else:
         box.label(text = "This must be part of a Room empty's hierarchy.", icon = 'OUTLINER')
+        return
+
+    sceneObj = getSceneObj(obj).ootSceneHeader
 
     entranceProp = obj.ootEntranceProperty
     prop_split(box, entranceProp, "spawnIndex", "Spawn Index")
