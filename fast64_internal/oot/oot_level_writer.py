@@ -136,6 +136,8 @@ def ootExportSceneToC(
         exportSubdir = os.path.dirname(getSceneDirFromLevelName(sceneName))
 
     sceneInclude = exportSubdir + "/" + sceneName + "/"
+    print(exportPath)
+    print(exportSubdir)
     levelPath = ootGetPath(exportPath, isCustomExport, exportSubdir, sceneName, True, True)
     levelC = ootLevelToC(scene, TextureExportSettings(False, savePNG, sceneInclude, levelPath))
 
@@ -223,7 +225,7 @@ def writeExternalProperties(levelPath, relExportPath, scene):
     if tableEntry.titleCard:
         titleCardPath = os.path.join(levelPath, "title_cards")
         tcTemp = scene.sceneName().replace("_scene", "").split("_")
-        titleCardName = tcTemp[0] + ''.join(word.title() for word in tcTemp[1:])
+        titleCardName = ''.join(word.title() for word in tcTemp)
         os.makedirs(titleCardPath, exist_ok=True)
         with open(os.path.join(titleCardPath, f"{titleCardName}TitleCard.h"), "w") as titleCardH:
             titleCardH.writelines([ \
@@ -234,7 +236,7 @@ def writeExternalProperties(levelPath, relExportPath, scene):
                 f"extern u64 g{titleCardName}TitleCardFRATex[];\n",
             ])
         textureFilename = Path(tableEntry.titleCard)
-        textureFilenameInc = os.path.basename(textureFilename.with_suffix(f".{tableEntry.titleCardType.lower()}.inc.c"))
+        textureFilenameInc = os.path.basename(textureFilename.with_suffix(f".inc.c"))
         with open(os.path.join(titleCardPath, f"{titleCardName}TitleCard.c"), "w") as titleCardC:
             relativePath = relExportPath.replace("\\", "/")
             titleCardC.writelines([ \
@@ -283,7 +285,7 @@ def writeOtherSceneProperties(scene, exportInfo, levelC):
 
 def readSceneData(scene, scene_properties, sceneHeader, alternateSceneHeaders):
     scene.write_dummy_room_list = scene_properties.write_dummy_room_list
-    scene.sceneTableEntry.drawConfig = getCustomProperty(sceneHeader, "drawConfig")
+    scene.sceneTableEntry.drawConfig = getCustomProperty(sceneHeader.sceneTableEntry, "drawConfig")
     scene.sceneTableEntry.titleCard = sceneHeader.sceneTableEntry.titleCard if sceneHeader.sceneTableEntry.hasTitle else None
     scene.sceneTableEntry.titleCardType = sceneHeader.sceneTableEntry.titleCardType
     scene.globalObject = getCustomProperty(sceneHeader, "globalObject")
@@ -907,8 +909,9 @@ class OOT_ExportScene(bpy.types.Operator):
             raisePluginError(self, e)
             return {"CANCELLED"}
         try:
-            levelName = context.scene.ootSceneName
-            subfolder = f"assets/scenes/{context.scene.ootSceneSubFolder}/"
+            settings = context.scene.ootSceneExportSettings
+            levelName = settings.name
+            subfolder = f"assets/scenes/{settings.subFolder}/"
             exportInfo = ExportInfo(False, bpy.path.abspath(context.scene.ootDecompPath), subfolder, levelName)
 
             bootOptions = context.scene.fast64.oot.bootupSceneOptions
@@ -965,8 +968,8 @@ class OOT_ExportScenePanel(OOT_Panel):
         # 	col.prop(context.scene, 'saveTextures')
         settings: OOTExportSceneSettingsProperty = context.scene.ootSceneExportSettings
         self.drawSceneSearchOp(col, context, settings.option, "Export")
-        prop_split(col, context.scene, "subFolder", "Subfolder")
-        prop_split(col, context.scene, "name", "Name")
+        prop_split(col, settings, "subFolder", "Subfolder")
+        prop_split(col, settings, "name", "Name")
 
         prop_split(col, context.scene, "ootSceneExportObj", "Scene Object")
 

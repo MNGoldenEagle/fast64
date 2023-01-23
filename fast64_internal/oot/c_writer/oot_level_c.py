@@ -622,7 +622,13 @@ def ootRoomListHeaderToC(scene):
 
 
 def ootEntranceToC(entrance):
-    return f"{{ {entrance.roomIndex}, {entrance.startPositionIndex}, {entrance.fadeInAnim}, {entrance.cutsceneID} }},\n"
+    if entrance.cutsceneID == -1:
+        cID = 'CUTSCENE_SHOW_TITLECARD'
+    elif entrance.cutsceneID == -2:
+        cID = 'CUTSCENE_NONE'
+    else:
+        cID = entrance.cutsceneID
+    return f"{{ {entrance.roomIndex}, {entrance.startPositionIndex}, {entrance.fadeInAnim}, {cID} }},\n"
 
 
 def ootEntranceListToC(scene, headerIndex):

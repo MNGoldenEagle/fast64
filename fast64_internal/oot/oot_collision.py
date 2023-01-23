@@ -1,4 +1,4 @@
-import bpy, os, math, mathutils
+import bpy, os, math, mathutils, random
 from bpy.utils import register_class, unregister_class
 from ..panels import OOT_Panel
 from .oot_constants import ootEnumSceneID
@@ -402,7 +402,7 @@ def ootCameraDataToC(camData):
     posC = CData()
     camC = CData()
     if len(camData.camPosDict) > 0:
-
+        camName = camData.camDataName()
         camDataName = "CamData " + camData.camDataName() + "[" + str(len(camData.camPosDict)) + "]"
 
         camC.source = camDataName + " = {\n"
@@ -432,8 +432,14 @@ def ootCameraDataToC(camData):
             posC.source = posDataName + " = {\n" + posC.source
         else:
             posC = CData()
+    else:
+        # The game requires cam data regardless in order to avoid constant error messages, so this
+        # ensures we always have one set.  Since it's just meant as a placeholder, we won't extern
+        # it.
+        camName = f"placeholderCamData{random.randint(0, 1000)}"
+        camC.source = f"CamData {camName}[1] = {{\n\t{{ 0, 0, NULL }}\n}};\n\n"
 
-    return posC, camC
+    return posC, camC, camName
 
 
 def ootCameraPosToC(camPos):
@@ -494,10 +500,7 @@ def ootCrawlspaceEntryToC(camItem: OOTCrawlspaceData, camData: OOTCameraData, ca
 
 def ootCollisionToC(collision):
     data = CData()
-    posC, camC = ootCameraDataToC(collision.cameraData)
-
-    data.append(posC)
-    data.append(camC)
+    posC, camC, camName = ootCameraDataToC(collision.cameraData)
 
     if len(collision.polygonGroups) > 0:
         data.header += "extern SurfaceType " + collision.polygonTypesName() + "[];\n"
@@ -547,11 +550,6 @@ def ootCollisionToC(collision):
     else:
         waterBoxesName = "0"
 
-    if len(collision.cameraData.camPosDict) > 0:
-        camDataName = collision.camDataName()
-    else:
-        camDataName = "0"
-
     data.header += "extern CollisionHeader " + collision.headerName() + ";\n"
     data.source += "CollisionHeader " + collision.headerName() + " = {\n"
 
@@ -561,6 +559,9 @@ def ootCollisionToC(collision):
                 data.source += "\t" + str(collision.bounds[bound][field]) + ",\n"
     else:
         data.source += "0, 0, 0, 0, 0, 0, "
+
+    data.append(posC)
+    data.append(camC)
 
     data.source += (
         "\t"
@@ -579,7 +580,7 @@ def ootCollisionToC(collision):
         + polygonTypesName
         + ",\n"
         + "\t"
-        + camDataName
+        + camName
         + ",\n"
         + "\t"
         + str(len(collision.waterBoxes))
