@@ -550,6 +550,10 @@ def ootCollisionToC(collision):
     else:
         waterBoxesName = "0"
 
+    data.append(posC)
+    data.append(camC)
+
+
     data.header += "extern CollisionHeader " + collision.headerName() + ";\n"
     data.source += "CollisionHeader " + collision.headerName() + " = {\n"
 
@@ -559,9 +563,6 @@ def ootCollisionToC(collision):
                 data.source += "\t" + str(collision.bounds[bound][field]) + ",\n"
     else:
         data.source += "0, 0, 0, 0, 0, 0, "
-
-    data.append(posC)
-    data.append(camC)
 
     data.source += (
         "\t"
