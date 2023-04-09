@@ -1,14 +1,21 @@
 [
 	["SCENE_HIDEOUT", "Hideout", "Hideout"],
 	["SCENE_MABE_HOMES", "Mabe Homes", "Mabe Homes"],
+	["SCENE_MABE_LIBRARY", "Mabe Library", "Mabe Library"],
+	["SCENE_MABE_MEOWMEOW", "Mabe Meowmeow", "Mabe Meowmeow"],
+	["SCENE_MABE_QUINTUPLETS", "Mabe Quintuplets", "Mabe Quintuplets"],
+	["SCENE_MABE_TARIN", "Mabe Tarin", "Mabe Tarin"],
+	["SCENE_MABE_ULRIRA", "Mabe Ulrira", "Mabe Ulrira"],
 	["SCENE_WINDFISH_DEMO", "Windfish Demo", "Windfish Demo"],
 	["SCENE_GRAVEYARD", "Graveyard", "Graveyard"],
 	["SCENE_KANALET_CASTLE", "Richards Castle", "Richards Castle"],
 	["SCENE_MABE_VILLAGE", "Mabe Village", "Mabe Village"],
+	["SCENE_MYSTERIOUS_WOODS", "Mysterious Woods", "Mysterious Woods"],
 	["SCENE_SOUTH_OF_MABE", "South Of Mabe", "South Of Mabe"],
 	["SCENE_TAL_TAL_HEIGHTS", "Tal Tal Heights", "Tal Tal Heights"],
 	["SCENE_TORONBO2", "Toronbo2", "Toronbo2"],
 	["SCENE_TORONBO_SHORE", "Toronbo Shore", "Toronbo Shore"],
+	["SCENE_DUNGEON", "Dungeon", "Dungeon"],
 	["SCENE_EAGLE_TEST_FIELD", "Eagletest", "Eagletest"],
 	["SCENE_TESTZ", "Testz", "Testz"]
 ]

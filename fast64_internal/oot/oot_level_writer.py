@@ -238,7 +238,7 @@ def writeExternalProperties(levelPath, relExportPath, scene):
         textureFilename = Path(tableEntry.titleCard)
         textureFilenameInc = os.path.basename(textureFilename.with_suffix(f".inc.c"))
         with open(os.path.join(titleCardPath, f"{titleCardName}TitleCard.c"), "w") as titleCardC:
-            relativePath = relExportPath.replace("\\", "/")
+            relativePath = os.path.join(relExportPath, "title_cards").replace("\\", "/")
             titleCardC.writelines([ \
                 f"#include \"{titleCardName}TitleCard.h\"\n\n",
                 f"u64 g{titleCardName}TitleCardENGTex[] = {{\n",
