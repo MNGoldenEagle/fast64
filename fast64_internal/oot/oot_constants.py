@@ -1,6 +1,6 @@
 import json, os
 
-addon_path = os.path.dirname(os.path.realpath(os.path.join(__file__, '..')))
+addon_path = os.path.dirname(os.path.realpath(os.path.join(__file__, '..', '..')))
 
 def readJsonFile(filename):
 	with open(os.path.join(addon_path, filename)) as file:
