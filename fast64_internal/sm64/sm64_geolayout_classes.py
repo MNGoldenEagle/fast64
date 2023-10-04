@@ -1,9 +1,56 @@
-from .sm64_geolayout_constants import *
-from .sm64_geolayout_utility import *
-from .sm64_constants import *
+from __future__ import annotations
+
+import bpy
+from struct import pack
+from copy import copy
 from .sm64_function_map import func_map
-from ..utility import *
-import struct, copy
+
+from ..utility import (
+    PluginError,
+    CData,
+    toAlnum,
+    encodeSegmentedAddr,
+    writeVectorToShorts,
+    convertFloatToShort,
+    writeEulerVectorToShorts,
+    writeFloatToShort,
+    convertEulerFloatToShort,
+    join_c_args,
+    radians_to_s16,
+    geoNodeRotateOrder,
+)
+from ..f3d.f3d_bleed import BleedGraphics
+from ..f3d.f3d_gbi import FModel
+
+from .sm64_geolayout_constants import (
+    nodeGroupCmds,
+    GEO_END,
+    GEO_RETURN,
+    GEO_NODE_OPEN,
+    GEO_NODE_CLOSE,
+    GEO_BRANCH,
+    GEO_CALL_ASM,
+    GEO_HELD_OBJECT,
+    GEO_START,
+    GEO_SWITCH,
+    GEO_TRANSLATE_ROTATE,
+    GEO_TRANSLATE,
+    GEO_ROTATE,
+    GEO_BILLBOARD,
+    GEO_LOAD_DL,
+    GEO_START_W_SHADOW,
+    GEO_START_W_RENDERAREA,
+    GEO_SET_RENDER_RANGE,
+    GEO_LOAD_DL_W_OFFSET,
+    GEO_SCALE,
+    GEO_SET_RENDER_AREA,
+    GEO_SET_ORTHO,
+    GEO_SET_CAMERA_FRUSTRUM,
+    GEO_SET_Z_BUF,
+    GEO_CAMERA,
+    GEO_SETUP_OBJ_RENDER,
+    GEO_SET_BG,
+)
 
 drawLayerNames = {
     0: "LAYER_FORCE",
@@ -96,7 +143,7 @@ class GeolayoutGraph:
                         raise PluginError("Circular geolayout dependency." + str(callOrder))
                 else:
                     geolayoutList.insert(geolayoutList.index(geolayout), calledGeolayout)
-                    callOrder = copy.copy(callOrder)
+                    callOrder = copy(callOrder)
                     callOrder.append(calledGeolayout)
                     self.sortGeolayouts(geolayoutList, calledGeolayout, callOrder)
         return geolayoutList
@@ -404,6 +451,41 @@ class JumpNode:
         return "GEO_BRANCH(" + ("1, " if self.storeReturn else "0, ") + geo_name + "),"
 
 
+class GeoLayoutBleed(BleedGraphics):
+    def bleed_geo_layout_graph(self, fModel: FModel, geo_layout_graph: GeolayoutGraph, use_rooms: bool = False):
+        last_materials = dict()  # last used material should be kept track of per layer
+        
+        def walk(node, last_materials):
+            base_node = node.node
+            if type(base_node) == JumpNode:
+                if base_node.geolayout:
+                    for node in base_node.geolayout.nodes:
+                        last_materials = walk(node, last_materials if not use_rooms else dict()) if not use_rooms else dict()
+                else:
+                    last_materials = dict()
+            fMesh = getattr(base_node, "fMesh", None)
+            if fMesh:
+                cmd_list = fMesh.drawMatOverrides.get(base_node.override_hash, None) or fMesh.draw
+                lastMat = last_materials.get(base_node.drawLayer, None)
+                default_render_mode = fModel.getRenderMode(base_node.drawLayer)
+                lastMat = self.bleed_fmesh(fModel.f3d, fMesh, lastMat, cmd_list, default_render_mode)
+                # if the mesh has culling, it can be culled, and create invalid combinations of f3d to represent the current full DL
+                if fMesh.cullVertexList:
+                    last_materials[base_node.drawLayer] = None
+                else:
+                    last_materials[base_node.drawLayer] = lastMat
+            # don't carry over lastmat if it is a switch node or geo asm node
+            if type(base_node) in [SwitchNode, FunctionNode]:
+                last_materials = dict()
+            for child in node.children:
+                last_materials = walk(child, last_materials)
+            return last_materials
+        
+        for node in geo_layout_graph.startGeolayout.nodes:
+            last_materials = walk(node, last_materials)
+        self.clear_gfx_lists(fModel)
+
+
 def convertAddrToFunc(addr):
     if addr == "":
         raise PluginError("Geolayout node cannot have an empty function name/address.")
@@ -535,6 +617,8 @@ class TranslateRotateNode(BaseDisplayListNode):
         self.fMesh = None
         self.DLmicrocode = None
         self.dlRef = dlRef
+        # exists to get the override DL from an fMesh
+        self.override_hash = None
 
     def get_ptr_offsets(self):
         if self.hasDL:
@@ -633,6 +717,8 @@ class TranslateNode(BaseDisplayListNode):
         self.fMesh = None
         self.DLmicrocode = None
         self.dlRef = dlRef
+        # exists to get the override DL from an fMesh
+        self.override_hash = None
 
     def get_ptr_offsets(self):
         return [8] if self.hasDL else []
@@ -675,6 +761,8 @@ class RotateNode(BaseDisplayListNode):
         self.fMesh = None
         self.DLmicrocode = None
         self.dlRef = dlRef
+        # exists to get the override DL from an fMesh
+        self.override_hash = None
 
     def get_ptr_offsets(self):
         return [8] if self.hasDL else []
@@ -715,6 +803,8 @@ class BillboardNode(BaseDisplayListNode):
         self.fMesh = None
         self.DLmicrocode = None
         self.dlRef = dlRef
+        # exists to get the override DL from an fMesh
+        self.override_hash = None
 
     def get_ptr_offsets(self):
         return [8] if self.hasDL else []
@@ -752,6 +842,8 @@ class DisplayListNode(BaseDisplayListNode):
         self.fMesh = None
         self.DLmicrocode = None
         self.dlRef = dlRef
+        # exists to get the override DL from an fMesh
+        self.override_hash = None
 
     def get_ptr_offsets(self):
         return [4]
@@ -806,6 +898,8 @@ class ScaleNode(BaseDisplayListNode):
         self.fMesh = None
         self.DLmicrocode = None
         self.dlRef = dlRef
+        # exists to get the override DL from an fMesh
+        self.override_hash = None
 
     def get_ptr_offsets(self):
         return [8] if self.hasDL else []
@@ -883,6 +977,8 @@ class DisplayListWithOffsetNode(BaseDisplayListNode):
         self.fMesh = None
         self.DLmicrocode = None
         self.dlRef = dlRef
+        # exists to get the override DL from an fMesh
+        self.override_hash = None
 
     def size(self):
         return 12
@@ -967,7 +1063,7 @@ class OrthoNode:
     def to_binary(self, segmentData):
         command = bytearray([GEO_SET_ORTHO, 0x00])
         # FIX: This should be f32.
-        command.extend(bytearray(struct.pack(">f", self.scale)))
+        command.extend(bytearray(pack(">f", self.scale)))
         return command
 
     def to_c(self):
@@ -987,7 +1083,7 @@ class FrustumNode:
 
     def to_binary(self, segmentData):
         command = bytearray([GEO_SET_CAMERA_FRUSTRUM, 0x01 if self.useFunc else 0x00])
-        command.extend(bytearray(struct.pack(">f", self.fov)))
+        command.extend(bytearray(pack(">f", self.fov)))
         command.extend(self.near.to_bytes(2, "big", signed=True))  # Conversion?
         command.extend(self.far.to_bytes(2, "big", signed=True))  # Conversion?
 
@@ -1139,6 +1235,8 @@ class CustomAnimatedNode(BaseDisplayListNode):
         self.fMesh = None
         self.DLmicrocode = None
         self.dlRef = dlRef
+        # exists to get the override DL from an fMesh
+        self.override_hash = None
 
     def size(self):
         return 16

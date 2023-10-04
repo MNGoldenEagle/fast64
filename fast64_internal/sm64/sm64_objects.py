@@ -1,14 +1,49 @@
-import math, os, bpy, bmesh, mathutils
+import math, bpy, mathutils
 from bpy.utils import register_class, unregister_class
-from io import BytesIO
-
-from .sm64_constants import *
+from re import findall
 from .sm64_function_map import func_map
-from .sm64_spline import *
-from .sm64_geolayout_classes import *
 
-from ..utility import *
-from ..f3d.f3d_material import sm64EnumDrawLayers
+from ..utility import (
+    PluginError,
+    CData,
+    Vector,
+    toAlnum,
+    convertRadiansToS16,
+    checkIdentityRotation,
+    obj_scale_is_unified,
+    all_values_equal_x,
+    checkIsSM64PreInlineGeoLayout,
+    prop_split,
+)
+
+from .sm64_constants import (
+    levelIDNames,
+    enumLevelNames,
+    enumModelIDs,
+    enumMacrosNames,
+    enumSpecialsNames,
+    enumBehaviourPresets,
+    groupsSeg5,
+    groupsSeg6,
+)
+
+from .sm64_spline import (
+    assertCurveValid,
+    convertSplineObject,
+)
+
+from .sm64_geolayout_classes import (
+    DisplayListNode,
+    JumpNode,
+    TranslateNode,
+    RotateNode,
+    TranslateRotateNode,
+    FunctionNode,
+    CustomNode,
+    BillboardNode,
+    ScaleNode,
+)
+
 
 enumTerrain = [
     ("Custom", "Custom", "Custom"),
@@ -1224,6 +1259,8 @@ class SM64ObjectPanel(bpy.types.Panel):
                 # box.box().label(text = 'Background IDs defined in include/geo_commands.h.')
             box.prop(obj, "actSelectorIgnore")
             box.prop(obj, "setAsStartLevel")
+            grid = box.grid_flow(columns=2)
+            obj.fast64.sm64.segment_loads.draw(grid)
             prop_split(box, obj, "acousticReach", "Acoustic Reach")
             obj.starGetCutscenes.draw(box)
 
@@ -1794,6 +1831,61 @@ class SM64_GameObjectProperties(bpy.types.PropertyGroup):
         return self.bparams
 
 
+class SM64_SegmentProperties(bpy.types.PropertyGroup):
+    seg5_load_custom: bpy.props.StringProperty(name="Segment 5 Seg")
+    seg5_group_custom: bpy.props.StringProperty(name="Segment 5 Group")
+    seg6_load_custom: bpy.props.StringProperty(name="Segment 6 Seg")
+    seg6_group_custom: bpy.props.StringProperty(name="Segment 6 Group")
+    seg5_enum: bpy.props.EnumProperty(name="Segment 5 Group", default="Do Not Write", items=groupsSeg5)
+    seg6_enum: bpy.props.EnumProperty(name="Segment 6 Group", default="Do Not Write", items=groupsSeg6)
+
+    def draw(self, layout):
+        col = layout.column()
+        prop_split(col, self, "seg5_enum", "Segment 5 Select")
+        if self.seg5_enum == "Custom":
+            prop_split(col, self, "seg5_load_custom", "Segment 5 Seg")
+            prop_split(col, self, "seg5_group_custom", "Segment 5 Group")
+        col = layout.column()
+        prop_split(col, self, "seg6_enum", "Segment 6 Select")
+        if self.seg6_enum == "Custom":
+            prop_split(col, self, "seg6_load_custom", "Segment 6 Seg")
+            prop_split(col, self, "seg6_group_custom", "Segment 6 Group")
+
+    def jump_link_from_enum(self, grp):
+        if grp == "Do Not Write":
+            return grp
+        num = int(grp.removeprefix("group")) + 1
+        return f"script_func_global_{num}"
+
+    @property
+    def seg5(self):
+        if self.seg5_enum == "Custom":
+            return self.seg5_load_custom
+        else:
+            return self.seg5_enum
+
+    @property
+    def seg6(self):
+        if self.seg6_enum == "Custom":
+            return self.seg6_load_custom
+        else:
+            return self.seg6_enum
+
+    @property
+    def group5(self):
+        if self.seg5_enum == "Custom":
+            return self.seg5_group_custom
+        else:
+            return self.jump_link_from_enum(self.seg5_enum)
+
+    @property
+    def group6(self):
+        if self.seg6_enum == "Custom":
+            return self.seg6_group_custom
+        else:
+            return self.jump_link_from_enum(self.seg6_enum)
+
+
 class SM64_ObjectProperties(bpy.types.PropertyGroup):
     version: bpy.props.IntProperty(name="SM64_ObjectProperties Version", default=0)
     cur_version = 3  # version after property migration
@@ -1802,6 +1894,7 @@ class SM64_ObjectProperties(bpy.types.PropertyGroup):
     level: bpy.props.PointerProperty(type=SM64_LevelProperties)
     area: bpy.props.PointerProperty(type=SM64_AreaProperties)
     game_object: bpy.props.PointerProperty(type=SM64_GameObjectProperties)
+    segment_loads: bpy.props.PointerProperty(type=SM64_SegmentProperties)
 
     @staticmethod
     def upgrade_changed_props():
@@ -1828,6 +1921,7 @@ sm64_obj_classes = (
     SM64_LevelProperties,
     SM64_AreaProperties,
     SM64_GameObjectProperties,
+    SM64_SegmentProperties,
     SM64_ObjectProperties,
 )
 

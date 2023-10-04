@@ -3,3 +3,5 @@ __pycache__/
 *.blend1
 /.venv
 *.json
+fast64_updater/
+.python-version
