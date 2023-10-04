@@ -154,9 +154,12 @@ class OOT_ObjectProperties(bpy.types.PropertyGroup):
     @staticmethod
     def upgrade_changed_props():
         for obj in bpy.data.objects:
-            if obj.data is None:
+            if obj.type == "EMPTY":
                 if obj.ootEmptyType == "Room":
                     OOTObjectProperty.upgrade_object(obj)
+
+                if obj.ootEmptyType == "Cutscene":
+                    OOTCutsceneProperty.upgrade_object(obj)
 
 
 class OOTCullGroupProperty(bpy.types.PropertyGroup):

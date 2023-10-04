@@ -2,13 +2,12 @@ from ...oot_utility import getCutsceneName, getCustomProperty
 
 from .classes import (
     OOTCSList,
-    OOTCSTextbox,
-    OOTCSLighting,
+    OOTCSText,
+    OOTCSLightSettings,
     OOTCSTime,
-    OOTCSBGM,
+    OOTCSSeq,
     OOTCSMisc,
-    OOTCS0x09,
-    OOTCSUnk,
+    OOTCSRumble,
     OOTCutscene,
 )
 
@@ -17,88 +16,84 @@ def readCutsceneData(csParentOut, csParentIn):
     for listIn in csParentIn.csLists:
         listOut = OOTCSList()
         listOut.listType = listIn.listType
-        listOut.unkType, listOut.fxType, listOut.fxStartFrame, listOut.fxEndFrame = (
-            listIn.unkType,
-            listIn.fxType,
-            listIn.fxStartFrame,
-            listIn.fxEndFrame,
+
+        listOut.transitionType, listOut.transitionStartFrame, listOut.transitionEndFrame = (
+            getCustomProperty(listIn, "transitionType"),
+            listIn.transitionStartFrame,
+            listIn.transitionEndFrame,
         )
+
         listData = []
-        if listOut.listType == "Textbox":
-            for entryIn in listIn.textbox:
-                entryOut = OOTCSTextbox()
+        if listOut.listType == "TextList":
+            for entryIn in listIn.textList:
+                entryOut = OOTCSText()
                 entryOut.textboxType = entryIn.textboxType
-                entryOut.messageId = entryIn.messageId
-                entryOut.ocarinaSongAction = entryIn.ocarinaSongAction
+                entryOut.textID = entryIn.textID
+                entryOut.ocarinaAction = getCustomProperty(entryIn, "ocarinaAction")
                 entryOut.startFrame = entryIn.startFrame
                 entryOut.endFrame = entryIn.endFrame
-                entryOut.type = entryIn.type
-                entryOut.topOptionBranch = entryIn.topOptionBranch
-                entryOut.bottomOptionBranch = entryIn.bottomOptionBranch
+                entryOut.textType = getCustomProperty(entryIn, "csTextType")
+
+                if entryOut.textType == "CS_TEXT_CHOICE":
+                    entryOut.topOptionTextID = entryIn.topOptionTextID
+                    entryOut.bottomOptionTextID = entryIn.bottomOptionTextID
+
                 entryOut.ocarinaMessageId = entryIn.ocarinaMessageId
                 listOut.entries.append(entryOut)
-        elif listOut.listType == "Lighting":
-            for entryIn in listIn.lighting:
-                entryOut = OOTCSLighting()
-                entryOut.index = entryIn.index
+        elif listOut.listType == "LightSettingsList":
+            for entryIn in listIn.lightSettingsList:
+                entryOut = OOTCSLightSettings()
+                entryOut.lightSettingsIndex = entryIn.lightSettingsIndex
                 entryOut.startFrame = entryIn.startFrame
                 listOut.entries.append(entryOut)
-        elif listOut.listType == "Time":
-            for entryIn in listIn.time:
+        elif listOut.listType == "TimeList":
+            for entryIn in listIn.timeList:
                 entryOut = OOTCSTime()
                 entryOut.startFrame = entryIn.startFrame
                 entryOut.hour = entryIn.hour
                 entryOut.minute = entryIn.minute
                 listOut.entries.append(entryOut)
-        elif listOut.listType in {"PlayBGM", "StopBGM", "FadeBGM"}:
-            for entryIn in listIn.bgm:
-                entryOut = OOTCSBGM()
-                entryOut.value = entryIn.value
+        elif listOut.listType in {"StartSeqList", "StopSeqList", "FadeOutSeqList"}:
+            for entryIn in listIn.seqList:
+                entryOut = OOTCSSeq()
+                entryOut.csSeqID = getCustomProperty(entryIn, "csSeqID")
+                entryOut.csSeqPlayer = getCustomProperty(entryIn, "csSeqPlayer")
+                print(entryOut.csSeqPlayer)
                 entryOut.startFrame = entryIn.startFrame
                 entryOut.endFrame = entryIn.endFrame
                 listOut.entries.append(entryOut)
-        elif listOut.listType == "Misc":
-            for entryIn in listIn.misc:
+        elif listOut.listType == "MiscList":
+            for entryIn in listIn.miscList:
                 entryOut = OOTCSMisc()
-                entryOut.operation = entryIn.operation
+                entryOut.csMiscType = getCustomProperty(entryIn, "csMiscType")
                 entryOut.startFrame = entryIn.startFrame
                 entryOut.endFrame = entryIn.endFrame
                 listOut.entries.append(entryOut)
-        elif listOut.listType == "0x09":
-            for entryIn in listIn.nine:
-                entryOut = OOTCS0x09()
+        elif listOut.listType == "RumbleList":
+            for entryIn in listIn.rumbleList:
+                entryOut = OOTCSRumble()
                 entryOut.startFrame = entryIn.startFrame
-                entryOut.unk2 = entryIn.unk2
-                entryOut.unk3 = entryIn.unk3
-                entryOut.unk4 = entryIn.unk4
-                listOut.entries.append(entryOut)
-        elif listOut.listType == "Unk":
-            for entryIn in listIn.unk:
-                entryOut = OOTCSUnk()
-                entryOut.unk1 = entryIn.unk1
-                entryOut.unk2 = entryIn.unk2
-                entryOut.unk3 = entryIn.unk3
-                entryOut.unk4 = entryIn.unk4
-                entryOut.unk5 = entryIn.unk5
-                entryOut.unk6 = entryIn.unk6
-                entryOut.unk7 = entryIn.unk7
-                entryOut.unk8 = entryIn.unk8
-                entryOut.unk9 = entryIn.unk9
-                entryOut.unk10 = entryIn.unk10
-                entryOut.unk11 = entryIn.unk11
-                entryOut.unk12 = entryIn.unk12
+                entryOut.rumbleSourceStrength = entryIn.rumbleSourceStrength
+
+                # the duration's unit are vertical retraces, this happens 3 times per frame
+                # so we're multiplying the value by 3 to get a frame unit on the UI
+                # to keep consistency between start frame and duration
+                entryOut.rumbleDuration = entryIn.rumbleDuration * 3
+
+                entryOut.rumbleDecreaseRate = entryIn.rumbleDecreaseRate
                 listOut.entries.append(entryOut)
         csParentOut.csLists.append(listOut)
 
 
 def convertCutsceneObject(obj):
     cs = OOTCutscene()
+
     cs.name = getCutsceneName(obj)
     csprop = obj.ootCutsceneProperty
     cs.csEndFrame = getCustomProperty(csprop, "csEndFrame")
-    cs.csWriteTerminator = getCustomProperty(csprop, "csWriteTerminator")
-    cs.csTermIdx = getCustomProperty(csprop, "csTermIdx")
-    cs.csTermStart = getCustomProperty(csprop, "csTermStart")
-    cs.csTermEnd = getCustomProperty(csprop, "csTermEnd")
+    cs.csUseDestination = getCustomProperty(csprop, "csUseDestination")
+    cs.csDestination = getCustomProperty(csprop, "csDestination")
+    cs.csDestinationStartFrame = getCustomProperty(csprop, "csDestinationStartFrame")
     readCutsceneData(cs, csprop)
+
     return cs

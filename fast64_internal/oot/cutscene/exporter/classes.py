@@ -1,19 +1,19 @@
-class OOTCSTextbox:
+class OOTCSText:
     def __init__(self):
-        self.textboxType = None
-        self.messageId = "0x0000"
-        self.ocarinaSongAction = "0x0000"
+        self.textboxType = "0x0000"
+        self.textID = "0x0000"
+        self.ocarinaAction = "0x0000"
         self.startFrame = 0
         self.endFrame = 1
-        self.type = "0x0000"
-        self.topOptionBranch = "0x0000"
-        self.bottomOptionBranch = "0x0000"
+        self.textType = "0x0000"
+        self.topOptionTextID = "0x0000"
+        self.bottomOptionTextID = "0x0000"
         self.ocarinaMessageId = "0x0000"
 
 
-class OOTCSLighting:
+class OOTCSLightSettings:
     def __init__(self):
-        self.index = 1
+        self.lightSettingsIndex = 1
         self.startFrame = 0
 
 
@@ -24,60 +24,43 @@ class OOTCSTime:
         self.minute = 59
 
 
-class OOTCSBGM:
+class OOTCSSeq:
     def __init__(self):
-        self.value = "0x0000"
+        self.csSeqID = "0x0000"
+        self.csSeqPlayer = "0x0000"
         self.startFrame = 0
         self.endFrame = 1
 
 
 class OOTCSMisc:
     def __init__(self):
-        self.operation = 1
+        self.csMiscType = 1
         self.startFrame = 0
         self.endFrame = 1
 
 
-class OOTCS0x09:
+class OOTCSRumble:
     def __init__(self):
         self.startFrame = 0
-        self.unk2 = "0x00"
-        self.unk3 = "0x00"
-        self.unk4 = "0x00"
-
-
-class OOTCSUnk:
-    def __unk__(self):
-        self.unk1 = "0x00000000"
-        self.unk2 = "0x00000000"
-        self.unk3 = "0x00000000"
-        self.unk4 = "0x00000000"
-        self.unk5 = "0x00000000"
-        self.unk6 = "0x00000000"
-        self.unk7 = "0x00000000"
-        self.unk8 = "0x00000000"
-        self.unk9 = "0x00000000"
-        self.unk10 = "0x00000000"
-        self.unk11 = "0x00000000"
-        self.unk12 = "0x00000000"
+        self.rumbleSourceStrength = "0x00"
+        self.rumbleDuration = "0x00"
+        self.rumbleDecreaseRate = "0x00"
 
 
 class OOTCSList:
     def __init__(self):
         self.listType = None
         self.entries = []
-        self.unkType = "0x0001"
-        self.fxType = "1"
-        self.fxStartFrame = 0
-        self.fxEndFrame = 0
+        self.transitionType = "1"
+        self.transitionStartFrame = 0
+        self.transitionEndFrame = 0
 
 
 class OOTCutscene:
     def __init__(self):
         self.name = ""
         self.csEndFrame = 100
-        self.csWriteTerminator = False
-        self.csTermIdx = 0
-        self.csTermStart = 99
-        self.csTermEnd = 100
+        self.csUseDestination = False
+        self.csDestination = 0
+        self.csDestinationStartFrame = 99
         self.csLists = []

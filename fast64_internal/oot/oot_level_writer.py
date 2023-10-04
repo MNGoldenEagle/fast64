@@ -3,6 +3,7 @@ from ..f3d.f3d_gbi import TextureExportSettings
 import bpy, os, math, mathutils, shutil
 from ..f3d.f3d_gbi import TextureExportSettings
 from ..f3d.f3d_writer import TriangleConverterInfo, saveStaticModel, getInfoDict
+from .scene.properties import OOTSceneProperties, OOTSceneHeaderProperty, OOTAlternateSceneHeaderProperty
 from .room.properties import OOTRoomHeaderProperty, OOTAlternateRoomHeaderProperty
 from .oot_constants import ootData
 from .cutscene.exporter import convertCutsceneObject, readCutsceneData
@@ -275,7 +276,12 @@ def writeOtherSceneProperties(scene, exportInfo, levelC):
     modifySceneFiles(scene, exportInfo)
 
 
-def readSceneData(scene, scene_properties, sceneHeader, alternateSceneHeaders):
+def readSceneData(
+    scene: OOTScene,
+    scene_properties: OOTSceneProperties,
+    sceneHeader: OOTSceneHeaderProperty,
+    alternateSceneHeaders: OOTAlternateSceneHeaderProperty,
+):
     scene.write_dummy_room_list = scene_properties.write_dummy_room_list
     scene.sceneTableEntry.drawConfig = getCustomProperty(sceneHeader.sceneTableEntry, "drawConfig")
     scene.sceneTableEntry.titleCard = sceneHeader.sceneTableEntry.titleCard if sceneHeader.sceneTableEntry.hasTitle else None
@@ -312,15 +318,16 @@ def readSceneData(scene, scene_properties, sceneHeader, alternateSceneHeaders):
     scene.writeCutscene = getCustomProperty(sceneHeader, "writeCutscene")
     if scene.writeCutscene:
         scene.csWriteType = getattr(sceneHeader, "csWriteType")
+
         if scene.csWriteType == "Embedded":
             scene.csEndFrame = getCustomProperty(sceneHeader, "csEndFrame")
-            scene.csWriteTerminator = getCustomProperty(sceneHeader, "csWriteTerminator")
-            scene.csTermIdx = getCustomProperty(sceneHeader, "csTermIdx")
-            scene.csTermStart = getCustomProperty(sceneHeader, "csTermStart")
-            scene.csTermEnd = getCustomProperty(sceneHeader, "csTermEnd")
+            scene.csUseDestination = getCustomProperty(sceneHeader, "csUseDestination")
+            scene.csDestinationStartFrame = getCustomProperty(sceneHeader, "csDestinationStartFrame")
             readCutsceneData(scene, sceneHeader)
+
         elif scene.csWriteType == "Custom":
             scene.csWriteCustom = getCustomProperty(sceneHeader, "csWriteCustom")
+
         elif scene.csWriteType == "Object":
             if sceneHeader.csWriteObject is None:
                 raise PluginError("No object selected for cutscene reference")

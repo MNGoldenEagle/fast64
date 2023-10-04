@@ -265,10 +265,9 @@ class OOTSceneHeaderProperty(PropertyGroup):
     # not been removed as doing so would break any existing scenes made with this
     # type of cutscene data.
     csEndFrame: IntProperty(name="End Frame", min=0, default=100)
-    csWriteTerminator: BoolProperty(name="Write Terminator (Code Execution)")
-    csTermIdx: IntProperty(name="Index", min=0)
-    csTermStart: IntProperty(name="Start Frm", min=0, default=99)
-    csTermEnd: IntProperty(name="End Frm", min=0, default=100)
+    csUseDestination: BoolProperty(name="Write Terminator (Code Execution)")
+    csDestination: IntProperty(name="Index", min=0)
+    csDestinationStartFrame: IntProperty(name="Start Frm", min=0, default=99)
     csLists: CollectionProperty(type=OOTCSListProperty, name="Cutscene Lists")
 
     extraCutscenes: CollectionProperty(type=OOTExtraCutsceneProperty, name="Extra Cutscenes")
@@ -352,16 +351,18 @@ class OOTSceneHeaderProperty(PropertyGroup):
                     # of cutscene data.
                     cutscene.label(text='Embedded cutscenes are deprecated. Please use "Object" instead.')
                     cutscene.prop(self, "csEndFrame", text="End Frame")
-                    cutscene.prop(self, "csWriteTerminator", text="Write Terminator (Code Execution)")
-                    if self.csWriteTerminator:
+                    cutscene.prop(self, "csUseDestination", text="Write Terminator (Code Execution)")
+                    if self.csUseDestination:
                         r = cutscene.row()
-                        r.prop(self, "csTermIdx", text="Index")
-                        r.prop(self, "csTermStart", text="Start Frm")
-                        r.prop(self, "csTermEnd", text="End Frm")
+                        r.prop(self, "csDestination", text="Index")
+                        r.prop(self, "csDestinationStartFrame", text="Start Frm")
                     collectionType = "CSHdr." + str(0 if headerIndex is None else headerIndex)
+
+                    drawCSListAddOp(cutscene, objName, collectionType)
+
                     for i, p in enumerate(self.csLists):
                         p.draw_props(cutscene, i, objName, collectionType)
-                    drawCSListAddOp(cutscene, objName, collectionType)
+
             if headerIndex is None or headerIndex == 0:
                 cutscene.label(text="Extra cutscenes (not in any header):")
                 for i in range(len(self.extraCutscenes)):

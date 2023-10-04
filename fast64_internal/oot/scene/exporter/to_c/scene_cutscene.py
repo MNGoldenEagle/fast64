@@ -1,144 +1,95 @@
-from .....utility import CData, PluginError
+from .....utility import CData, PluginError, indent
 from ....oot_level_classes import OOTScene
 from ....cutscene.constants import ootEnumCSTextboxTypeEntryC, ootEnumCSListTypeListC, ootEnumCSListTypeEntryC
+from ....cutscene.exporter import OOTCutscene
 
 
-def ootCutsceneDataToC(csParent, csName):
-    # csParent can be OOTCutscene or OOTScene
-    data = CData()
-    data.header = "extern CutsceneData " + csName + "[];\n"
-    data.source = "CutsceneData " + csName + "[] = {\n"
-    nentries = len(csParent.csLists) + (1 if csParent.csWriteTerminator else 0)
-    data.source += "\tCS_BEGIN_CUTSCENE(" + str(nentries) + ", " + str(csParent.csEndFrame) + "),\n"
-    if csParent.csWriteTerminator:
-        data.source += (
-            "\tCS_TERMINATOR("
-            + str(csParent.csTermIdx)
-            + ", "
-            + str(csParent.csTermStart)
-            + ", "
-            + str(csParent.csTermEnd)
+def ootCutsceneDataToC(csParent: OOTCutscene | OOTScene, csName: str):
+    csData = CData()
+    declarationBase = f"CutsceneData {csName}[]"
+    nentries = len(csParent.csLists) + (1 if csParent.csUseDestination else 0)
+
+    # .h
+    csData.header = f"extern {declarationBase};\n"
+
+    # .c
+    csData.source = (
+        declarationBase
+        + " = {\n"
+        + (indent + f"CS_BEGIN_CUTSCENE({nentries}, {csParent.csEndFrame}),\n")
+        + (
+            (indent * 2) + f"CS_DESTINATION({csParent.csDestination}, {csParent.csDestinationStartFrame}, 0),\n"
+            if csParent.csUseDestination
+            else ""
+        )
+    )
+
+    for list in csParent.csLists:
+        # CS "XXXX List" Command
+        csData.source += (
+            (indent * 2)
+            + ootEnumCSListTypeListC[list.listType]
+            + "("
+            + (
+                f"{list.transitionType}, {list.transitionStartFrame}, {list.transitionEndFrame}"
+                if list.listType == "Transition"
+                else str(len(list.entries))
+            )
             + "),\n"
         )
-    for list in csParent.csLists:
-        data.source += "\t" + ootEnumCSListTypeListC[list.listType] + "("
-        if list.listType == "Unk":
-            data.source += list.unkType + ", "
-        if list.listType == "FX":
-            data.source += list.fxType + ", " + str(list.fxStartFrame) + ", " + str(list.fxEndFrame)
-        else:
-            data.source += str(len(list.entries))
-        data.source += "),\n"
+
         for e in list.entries:
-            data.source += "\t\t"
-            if list.listType == "Textbox":
-                data.source += ootEnumCSTextboxTypeEntryC[e.textboxType]
-            else:
-                data.source += ootEnumCSListTypeEntryC[list.listType]
-            data.source += "("
-            if list.listType == "Textbox":
+            csData.source += (
+                indent * 3
+                + (
+                    ootEnumCSTextboxTypeEntryC[e.textboxType]
+                    # @TODO make a separate variable for ``ootEnumCSListTypeEntryC``
+                    if list.listType == "TextList"
+                    else ootEnumCSListTypeEntryC[list.listType.replace("List", "")]
+                )
+                + "("
+            )
+
+            if list.listType == "TextList":
                 if e.textboxType == "Text":
-                    data.source += (
-                        e.messageId
-                        + ", "
-                        + str(e.startFrame)
-                        + ", "
-                        + str(e.endFrame)
-                        + ", "
-                        + e.type
-                        + ", "
-                        + e.topOptionBranch
-                        + ", "
-                        + e.bottomOptionBranch
-                    )
+                    csData.source += f"{e.textID}, {e.startFrame}, {e.endFrame}, {e.textType}, {e.topOptionTextID}, {e.bottomOptionTextID}"
+
                 elif e.textboxType == "None":
-                    data.source += str(e.startFrame) + ", " + str(e.endFrame)
-                elif e.textboxType == "LearnSong":
-                    data.source += (
-                        e.ocarinaSongAction
-                        + ", "
-                        + str(e.startFrame)
-                        + ", "
-                        + str(e.endFrame)
-                        + ", "
-                        + e.ocarinaMessageId
-                    )
-            elif list.listType == "Lighting":
-                data.source += (
-                    str(e.index) + ", " + str(e.startFrame) + ", " + str(e.startFrame + 1) + ", 0, 0, 0, 0, 0, 0, 0, 0"
+                    csData.source += f"{e.startFrame}, {e.endFrame}"
+
+                elif e.textboxType == "OcarinaAction":
+                    csData.source += f"{e.ocarinaAction}, {e.startFrame}, {e.endFrame}, {e.ocarinaMessageId}"
+
+            elif list.listType == "LightSettingsList":
+                # the endFrame variable is not used in the implementation of the command
+                # so the value doesn't matter
+                csData.source += f"{e.lightSettingsIndex}, {e.startFrame}" + (", 0" * 9)
+
+            elif list.listType == "TimeList":
+                # same as above
+                csData.source += f"0, {e.startFrame}, 0, {e.hour}, {e.minute}"
+
+            elif list.listType == "RumbleList":
+                # same as above
+                csData.source += (
+                    f"0, {e.startFrame}, 0, {e.rumbleSourceStrength}, {e.rumbleDuration}, {e.rumbleDecreaseRate}, 0, 0"
                 )
-            elif list.listType == "Time":
-                data.source += (
-                    "1, "
-                    + str(e.startFrame)
-                    + ", "
-                    + str(e.startFrame + 1)
-                    + ", "
-                    + str(e.hour)
-                    + ", "
-                    + str(e.minute)
-                    + ", 0"
-                )
-            elif list.listType in ["PlayBGM", "StopBGM", "FadeBGM"]:
-                data.source += e.value
-                if list.listType != "FadeBGM":
-                    data.source += " + 1"  # Game subtracts 1 to get actual seq
-                data.source += ", " + str(e.startFrame) + ", " + str(e.endFrame) + ", 0, 0, 0, 0, 0, 0, 0, 0"
-            elif list.listType == "Misc":
-                data.source += (
-                    str(e.operation)
-                    + ", "
-                    + str(e.startFrame)
-                    + ", "
-                    + str(e.endFrame)
-                    + ", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0"
-                )
-            elif list.listType == "0x09":
-                data.source += (
-                    "0, "
-                    + str(e.startFrame)
-                    + ", "
-                    + str(e.startFrame + 1)
-                    + ", "
-                    + e.unk2
-                    + ", "
-                    + e.unk3
-                    + ", "
-                    + e.unk4
-                    + ", 0, 0"
-                )
-            elif list.listType == "Unk":
-                data.source += (
-                    e.unk1
-                    + ", "
-                    + e.unk2
-                    + ", "
-                    + e.unk3
-                    + ", "
-                    + e.unk4
-                    + ", "
-                    + e.unk5
-                    + ", "
-                    + e.unk6
-                    + ", "
-                    + e.unk7
-                    + ", "
-                    + e.unk8
-                    + ", "
-                    + e.unk9
-                    + ", "
-                    + e.unk10
-                    + ", "
-                    + e.unk11
-                    + ", "
-                    + e.unk12
-                )
+
+            elif list.listType in ["StartSeqList", "StopSeqList", "FadeOutSeqList"]:
+                endFrame = e.endFrame if list.listType == "FadeOutSeqList" else "0"
+                firstArg = e.csSeqPlayer if list.listType == "FadeOutSeqList" else e.csSeqID
+                csData.source += f"{firstArg}, {e.startFrame}, {endFrame}" + (", 0" * 8)
+
+            elif list.listType == "MiscList":
+                csData.source += f"{e.csMiscType}, {e.startFrame}, {e.endFrame}" + (", 0" * 11)
+
             else:
                 raise PluginError("Internal error: invalid cutscene list type " + list.listType)
-            data.source += "),\n"
-    data.source += "\tCS_END(),\n"
-    data.source += "};\n\n"
-    return data
+
+            csData.source += "),\n"
+
+    csData.source += indent + "CS_END(),\n};\n\n"
+    return csData
 
 
 def getSceneCutscenes(outScene: OOTScene):
