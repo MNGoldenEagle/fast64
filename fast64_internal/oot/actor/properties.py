@@ -102,8 +102,8 @@ class OOTActorHeaderProperty(PropertyGroup):
 
 
 class OOTActorProperty(PropertyGroup):
-    actorID: EnumProperty(name="Actor", items=ootData.actorData.ootEnumActorID, default="ACTOR_PLAYER")
-    actorIDCustom: StringProperty(name="Actor ID", default="ACTOR_PLAYER")
+    actorID: EnumProperty(name="Actor", items=ootData.actorData.ootEnumActorID, default="ACTOR_LINK")
+    actorIDCustom: StringProperty(name="Actor ID", default="ACTOR_LINK")
     actorParam: StringProperty(name="Actor Parameter", default="0x0000")
     rotOverride: BoolProperty(name="Override Rotation", default=False)
     rotOverrideX: StringProperty(name="Rot X", default="0")

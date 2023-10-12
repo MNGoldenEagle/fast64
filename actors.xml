@@ -1,0 +1,420 @@
+<?xml version="1.0" ?>
+<Table KeyType="System.UInt16" ValueType="System.String">
+	<Actor Index="1" Category="ACTORCAT_BOSS" ID="ACTOR_BOSS_BARINADE" Key="boss_barinade" Name="Barinade" ObjectKey="object_bv"/>
+	<Actor Index="2" Category="ACTORCAT_BOSS" ID="ACTOR_BOSS_BONGO" Key="boss_bongo" Name="Bongo Bongo" ObjectKey="object_sst"/>
+	<Actor Index="3" Category="ACTORCAT_BG" ID="ACTOR_BOSS_BONGO_DRUM" Key="boss_bongo_drum" Name="Bongo Bongo's drum" ObjectKey="object_sst"/>
+	<Actor Index="4" Category="ACTORCAT_ITEMACTION" ID="ACTOR_BOSS_BONGO_SHADOW" Key="boss_bongo_shadow" Name="Bongo Bongo's Shadow" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="5" Category="ACTORCAT_BOSS" ID="ACTOR_BOSS_GANON" Key="boss_ganon" Name="Ganon" ObjectKey="object_ganon2"/>
+	<Actor Index="6" Category="ACTORCAT_BOSS" ID="ACTOR_BOSS_GOHMA" Key="boss_gohma" Name="Gohma" ObjectKey="object_goma"/>
+	<Actor Index="7" Category="ACTORCAT_BOSS" ID="ACTOR_BOSS_MORPHA" Key="boss_morpha" Name="Morpha" ObjectKey="object_mo"/>
+	<Actor Index="8" Category="ACTORCAT_BOSS" ID="ACTOR_BOSS_PHANTOM" Key="boss_phantom" Name="Phantom Ganon" ObjectKey="object_gnd"/>
+	<Actor Index="9" Category="ACTORCAT_BOSS" ID="ACTOR_BOSS_PHANTOM_BALL" Key="boss_phantom_ball" Name="Phantom Ganon's Lighting Attack" ObjectKey="object_fhg"/>
+	<Actor Index="10" Category="ACTORCAT_BG" ID="ACTOR_BOSS_PHANTOM_HORSE" Key="boss_phantom_horse" Name="Phantom Ganon's Horse" ObjectKey="object_fhg"/>
+	<Actor Index="11" Category="ACTORCAT_BOSS" ID="ACTOR_BOSS_TWINROVA" Key="boss_twinrova" Name="Twinrova" ObjectKey="object_tw"/>
+	<Actor Index="12" Category="ACTORCAT_BG" ID="ACTOR_BOSS_VOLVAGIA_BRIDGE" Key="boss_volvagia_bridge" Name="Volvagia's platform" ObjectKey="object_fd"/>
+	<Actor Index="13" Category="ACTORCAT_BOSS" ID="ACTOR_BOSS_VOLVAGIA_FLY" Key="boss_volvagia_fly" Name="Volvagia, flying form" ObjectKey="object_fd"/>
+	<Actor Index="14" Category="ACTORCAT_BOSS" ID="ACTOR_BOSS_VOLVAGIA_HOLE" Key="boss_volvagia_hole" Name="Volvagia, hole form" ObjectKey="object_fd2"/>
+	<Actor Index="15" Category="ACTORCAT_BOSS" ID="ACTOR_BOSS_VOLVAGIA_PARTICLES" Key="boss_volvagia_particles" Name="Volvagia's rocks and bones" ObjectKey="object_fd"/>
+	<Actor Index="16" Category="ACTORCAT_ENEMY" ID="ACTOR_MINI_BIGOCTO" Key="mini_bigocto" Name="BigOcto" ObjectKey="object_bigokuta"/>
+	<Actor Index="17" Category="ACTORCAT_BOSS" ID="ACTOR_MINI_DARK_LINK" Key="mini_dark_link" Name="Dark Link" ObjectKey="object_torch2"/>
+	<Actor Index="18" Category="ACTORCAT_ENEMY" ID="ACTOR_MINI_DEADHAND" Key="mini_deadhand" Name="Deadhand" ObjectKey="object_dh"/>
+	<Actor Index="19" Category="ACTORCAT_ENEMY" ID="ACTOR_MINI_DEADHAND_HAND" Key="mini_deadhand_hand" Name="Dead Hand's Hand" ObjectKey="object_dh"/>
+	<Actor Index="20" Category="ACTORCAT_ENEMY" ID="ACTOR_MINI_POE_SISTERS" Key="mini_poe_sisters" Name="Forest Temple Four Poe Sisters" ObjectKey="object_po_sisters"/>
+	<Actor Index="21" Category="ACTORCAT_BOSS" ID="ACTOR_MINI_ROLLING_BONES" Key="mini_rolling_bones" Name="Rolling Bones Miniboss (Tail Cave)" ObjectKey="object_rolling_bones"/>
+	<Actor Index="22" Category="ACTORCAT_PROP" ID="ACTOR_MINI_ROLLING_BONES_ROLLER" Key="mini_rolling_bones_roller" Name="Rolling Bones Miniboss (Tail Cave)" ObjectKey="object_rolling_bones"/>
+	<Actor Index="23" Category="ACTORCAT_ITEMACTION" ID="ACTOR_CSN_ACTORS" Key="csn_actors" Name="Cutscene Actors" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="24" Category="ACTORCAT_ITEMACTION" ID="ACTOR_CSN_CHEST_LIGHT" Key="csn_chest_light" Name="Chest Light" ObjectKey="object_box"/>
+	<Actor Index="25" Category="ACTORCAT_NPC" ID="ACTOR_CSN_CREDITS" Key="csn_credits" Name="Credits revelers in Lon Lon" ObjectKey="object_ec"/>
+	<Actor Index="26" Category="ACTORCAT_PROP" ID="ACTOR_CSN_DEKUMASK" Key="csn_dekumask" Name="Forest Stage minigame" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="27" Category="ACTORCAT_BG" ID="ACTOR_CSN_EFFECTS" Key="csn_effects" Name="Effects" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="28" Category="ACTORCAT_PROP" ID="ACTOR_CSN_GANON_RUBBLE" Key="csn_ganon_rubble" Name="Ganon battle rubble." ObjectKey="object_gj"/>
+	<Actor Index="29" Category="ACTORCAT_PROP" ID="ACTOR_CSN_GANON_TOWER" Key="csn_ganon_tower" Name="Ganon Tower" ObjectKey="object_gt"/>
+	<Actor Index="30" Category="ACTORCAT_NPC" ID="ACTOR_CSN_GORON" Key="csn_goron" Name="Gorons (Cutscene)" ObjectKey="object_of1d_map"/>
+	<Actor Index="31" Category="ACTORCAT_PROP" ID="ACTOR_CSN_GREAT_FAIRY" Key="csn_great_fairy" Name="Great Fairy" ObjectKey="object_dy_obj"/>
+	<Actor Index="32" Category="ACTORCAT_NPC" ID="ACTOR_CSN_KNUCKLE" Key="csn_knuckle" Name="Knuckle" ObjectKey="object_ik"/>
+	<Actor Index="33" Category="ACTORCAT_PROP" ID="ACTOR_CSN_MASTER_SWORD" Key="csn_master_sword" Name="Master Sword (Contains Cutscenes)" ObjectKey="object_toki_objects"/>
+	<Actor Index="34" Category="ACTORCAT_BOSS" ID="ACTOR_CSN_RUBBLE" Key="csn_rubble" Name="Ganon's Lair Rubble Fragment" ObjectKey="object_geff"/>
+	<Actor Index="35" Category="ACTORCAT_BG" ID="ACTOR_CSN_SACRED" Key="csn_sacred" Name="Sacred" ObjectKey="object_efc_tw"/>
+	<Actor Index="36" Category="ACTORCAT_PROP" ID="ACTOR_CSN_SAGES" Key="csn_sages" Name="Sages, balls of light (cutscene)" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="37" Category="ACTORCAT_NPC" ID="ACTOR_CSN_SARIA" Key="csn_saria" Name="Saria (Cutscene)" ObjectKey="object_sa"/>
+	<Actor Index="38" Category="ACTORCAT_NPC" ID="ACTOR_CSN_VORTEX" Key="csn_vortex" Name="Magic Vortex in Silver Gauntlets Cutscene" ObjectKey="object_fhg"/>
+	<Actor Index="39" Category="ACTORCAT_PROP" ID="ACTOR_CSN_WINDFISH" Key="csn_windfish" Name="The Windfish (and associated cutscene data)" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="40" Category="ACTORCAT_NPC" ID="ACTOR_CSN_ZELDA" Key="csn_zelda" Name="Adult Zelda (Cutscenes)" ObjectKey="object_zl2"/>
+	<Actor Index="41" Category="ACTORCAT_ITEMACTION" ID="ACTOR_DOOR_GROTTO" Key="door_grotto" Name="Grotto" ObjectKey="object_gameplay_field_keep"/>
+	<Actor Index="42" Category="ACTORCAT_DOOR" ID="ACTOR_DOOR_HALL" Key="door_hall" Name="Hall" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="43" Category="ACTORCAT_DOOR" ID="ACTOR_DOOR_NORMAL" Key="door_normal" Name="Doors with handles" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="44" Category="ACTORCAT_DOOR" ID="ACTOR_DOOR_SHUTTER" Key="door_shutter" Name="Sliding doors, Phantom Ganon room bars, Gohma room rock slab" ObjectKey="object_ouke_haka"/>
+	<Actor Index="45" Category="ACTORCAT_ITEMACTION" ID="ACTOR_DOOR_WARP" Key="door_warp" Name="Warp" ObjectKey="object_warp1"/>
+	<Actor Index="46" Category="ACTORCAT_MISC" ID="ACTOR_EFF_DEKUNUT_SPARK" Key="eff_dekunut_spark" Name="Deku Nut Hitbox" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="47" Category="ACTORCAT_NPC" ID="ACTOR_EFF_DUST" Key="eff_dust" Name="Dust effects" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="48" Category="ACTORCAT_ITEMACTION" ID="ACTOR_EFF_ENVIRONMENT" Key="eff_environment" Name="Environmental Effects" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="49" Category="ACTORCAT_PROP" ID="ACTOR_EFF_FAIRY_MAGIC" Key="eff_fairy_magic" Name="Spiral Beams (Great Fairy Fountains)" ObjectKey="object_dy_obj"/>
+	<Actor Index="50" Category="ACTORCAT_ITEMACTION" ID="ACTOR_EFF_LAVA" Key="eff_lava" Name="Lava" ObjectKey="object_efc_erupc"/>
+	<Actor Index="51" Category="ACTORCAT_ITEMACTION" ID="ACTOR_EFF_MIRROR_RAY" Key="eff_mirror_ray" Name="Reflectable Light Beam and reflections" ObjectKey="object_mir_ray"/>
+	<Actor Index="52" Category="ACTORCAT_ITEMACTION" ID="ACTOR_EFF_PARTICLES" Key="eff_particles" Name="Effect spawner for enemies' death" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="53" Category="ACTORCAT_ITEMACTION" ID="ACTOR_EFF_SONG_EPONA" Key="eff_song_epona" Name="Epona's Song Effect" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="54" Category="ACTORCAT_ITEMACTION" ID="ACTOR_EFF_SONG_LULLABY" Key="eff_song_lullaby" Name="Zelda's Lullaby and Song of Time Ocarina Effect" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="55" Category="ACTORCAT_ITEMACTION" ID="ACTOR_EFF_SONG_SARIA" Key="eff_song_saria" Name="Saria's Song Effect" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="56" Category="ACTORCAT_ITEMACTION" ID="ACTOR_EFF_SONG_SCARECROW" Key="eff_song_scarecrow" Name="Scarecrow's Song and an unused Ocarina Effect" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="57" Category="ACTORCAT_ITEMACTION" ID="ACTOR_EFF_SONG_STORM" Key="eff_song_storm" Name="Song of Storms Effect" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="58" Category="ACTORCAT_ITEMACTION" ID="ACTOR_EFF_SONG_SUN" Key="eff_song_sun" Name="Sun's Song Effect" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="59" Category="ACTORCAT_ITEMACTION" ID="ACTOR_EFF_SPIN_ATTACK" Key="eff_spin_attack" Name="Spin Attack" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="60" Category="ACTORCAT_NPC" ID="ACTOR_EFF_ZELDA_MAGIC" Key="eff_zelda_magic" Name="Zelda's magic effect when opening gates in castle collapse" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="61" Category="ACTORCAT_SWITCH" ID="ACTOR_EN_ANUBIS" Key="en_anubis" Name="Spawns and manages the Anubis enemy" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="62" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_ANUBIS_BODY" Key="en_anubis_body" Name="Anubis Body" ObjectKey="object_anubice"/>
+	<Actor Index="63" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_ANUBIS_FIRE" Key="en_anubis_fire" Name="Anubis Fire Attack" ObjectKey="object_anubice"/>
+	<Actor Index="64" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_ARMOS" Key="en_armos" Name="Armos" ObjectKey="object_am"/>
+	<Actor Index="65" Category="ACTORCAT_BOSS" ID="ACTOR_EN_ARWING" Key="en_arwing" Name="Arwing" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="66" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_BABY_DODONGO" Key="en_baby_dodongo" Name="Baby Dodongo" ObjectKey="object_dodojr"/>
+	<Actor Index="67" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_BARI" Key="en_bari" Name="Bari (Big Jellyfish)" ObjectKey="object_vali"/>
+	<Actor Index="68" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_BEAMOS" Key="en_beamos" Name="Beamos" ObjectKey="object_vm"/>
+	<Actor Index="69" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_BEETLE" Key="en_beetle" Name="Hard Hat Beetle" ObjectKey="object_beetle"/>
+	<Actor Index="70" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_BIRI" Key="en_biri" Name="Biri (small jellyfish-like enemy)" ObjectKey="object_bl"/>
+	<Actor Index="71" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_BUBBLE" Key="en_bubble" Name="Bubble (Flying Skull Enemy)" ObjectKey="object_bb"/>
+	<Actor Index="72" Category="ACTORCAT_NPC" ID="ACTOR_EN_CASTLE_GUARD" Key="en_castle_guard" Name="Courtyard Guards" ObjectKey="object_sd"/>
+	<Actor Index="73" Category="ACTORCAT_NPC" ID="ACTOR_EN_CASTLE_GUARD2" Key="en_castle_guard2" Name="Hyrule Castle Guard" ObjectKey="object_sd"/>
+	<Actor Index="74" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_CUCCO" Key="en_cucco" Name="Attacking Cucco, not solid" ObjectKey="object_niw"/>
+	<Actor Index="75" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_DEKU_BABA" Key="en_deku_baba" Name="Deku Baba" ObjectKey="object_dekubaba"/>
+	<Actor Index="76" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_DEKU_SCOUT" Key="en_deku_scout" Name="Mad Scrub" ObjectKey="object_dekunuts"/>
+	<Actor Index="77" Category="ACTORCAT_PROP" ID="ACTOR_EN_DEKU_SCOUT_NUT" Key="en_deku_scout_nut" Name="Projectile fired by deku scrubs" ObjectKey="object_dnk"/>
+	<Actor Index="78" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_DODONGO" Key="en_dodongo" Name="Dodongo" ObjectKey="object_dodongo"/>
+	<Actor Index="79" Category="ACTORCAT_BG" ID="ACTOR_EN_DOOR" Key="en_door" Name="Fake doors which attack player" ObjectKey="object_door_killer"/>
+	<Actor Index="80" Category="ACTORCAT_BG" ID="ACTOR_EN_FLAMETHROWER" Key="en_flamethrower" Name="Stationary flame thrower statue" ObjectKey="object_hidan_objects"/>
+	<Actor Index="81" Category="ACTORCAT_BG" ID="ACTOR_EN_FLAMETHROWER_SPINNER" Key="en_flamethrower_spinner" Name="Spinning Stone flamethrower" ObjectKey="object_hidan_objects"/>
+	<Actor Index="82" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_FLARE_DANCER" Key="en_flare_dancer" Name="Flare Dancer (enflamed form)" ObjectKey="object_fw"/>
+	<Actor Index="83" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_FLARE_DANCER_CORE" Key="en_flare_dancer_core" Name="Flare Dancer Core" ObjectKey="object_fw"/>
+	<Actor Index="84" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_FLARE_DANCER_FIRE" Key="en_flare_dancer_fire" Name="Flare Dancer Fire" ObjectKey="object_gameplay_dangeon_keep"/>
+	<Actor Index="85" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_FLOOR_TILE" Key="en_floor_tile" Name="Flying floor tile" ObjectKey="object_yukabyun"/>
+	<Actor Index="86" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_FLOORMASTER" Key="en_floormaster" Name="Floormaster" ObjectKey="object_wallmaster"/>
+	<Actor Index="87" Category="ACTORCAT_PROP" ID="ACTOR_EN_FLYING_POT" Key="en_flying_pot" Name="Flying pot enemy" ObjectKey="object_gameplay_dangeon_keep"/>
+	<Actor Index="88" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_FREEZZARD" Key="en_freezzard" Name="Freezzard" ObjectKey="object_fz"/>
+	<Actor Index="89" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_GERUDO" Key="en_gerudo" Name="Gerudo fighter" ObjectKey="object_geldb"/>
+	<Actor Index="90" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_GOHMA_LARVA" Key="en_gohma_larva" Name="Gohma Larva" ObjectKey="object_gol"/>
+	<Actor Index="91" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_GUAY" Key="en_guay" Name="Guay" ObjectKey="object_crow"/>
+	<Actor Index="92" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_HINT_SCRUB" Key="en_hint_scrub" Name="Hint Deku Scrubs (Deku Tree)" ObjectKey="object_hintnuts"/>
+	<Actor Index="93" Category="ACTORCAT_BOSS" ID="ACTOR_EN_IRON_KNUCKLE" Key="en_iron_knuckle" Name="Iron Knuckle" ObjectKey="object_ik"/>
+	<Actor Index="94" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_KEESE" Key="en_keese" Name="Keese (Normal, Fire, Ice)" ObjectKey="object_firefly"/>
+	<Actor Index="95" Category="ACTORCAT_MISC" ID="ACTOR_EN_LEEVER" Key="en_leever" Name="Leever" ObjectKey="object_reeba"/>
+	<Actor Index="96" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_LIKELIKE" Key="en_likelike" Name="Like Like" ObjectKey="object_rr"/>
+	<Actor Index="97" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_LIZALFOS" Key="en_lizalfos" Name="Lizalfos and Dinolfos" ObjectKey="object_zf"/>
+	<Actor Index="98" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_MOBLIN" Key="en_moblin" Name="Moblins" ObjectKey="object_mb"/>
+	<Actor Index="99" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_MOLDORM" Key="en_moldorm" Name="Mini Moldorm" ObjectKey="object_moldorm"/>
+	<Actor Index="100" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_OCTOROK" Key="en_octorok" Name="Land Octorok" ObjectKey="object_octorok"/>
+	<Actor Index="101" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_OCTOROK_WATER" Key="en_octorok_water" Name="Octorok Water" ObjectKey="object_okuta"/>
+	<Actor Index="102" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_PEAHAT" Key="en_peahat" Name="Peahat" ObjectKey="object_peehat"/>
+	<Actor Index="103" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_POE" Key="en_poe" Name="Graveyard Poe" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="104" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_POE_SPAWN" Key="en_poe_spawn" Name="Field Poe" ObjectKey="object_po_field"/>
+	<Actor Index="105" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_REDEAD" Key="en_redead" Name="Redead" ObjectKey="object_rd"/>
+	<Actor Index="106" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_SHABOM" Key="en_shabom" Name="Shabom" ObjectKey="object_bubble"/>
+	<Actor Index="107" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_SHELL_BLADE" Key="en_shell_blade" Name="Shellblade" ObjectKey="object_sb"/>
+	<Actor Index="108" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_SKULLKID" Key="en_skullkid" Name="Skullkid" ObjectKey="object_skj"/>
+	<Actor Index="109" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_SKULLKID_NEEDLE" Key="en_skullkid_needle" Name="Skullkid Needle Attack" ObjectKey="object_skj"/>
+	<Actor Index="110" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_SKULLTULA" Key="en_skulltula" Name="Skulltula (normal, big, invisible)" ObjectKey="object_st"/>
+	<Actor Index="111" Category="ACTORCAT_NPC" ID="ACTOR_EN_SKULLWALLTULA" Key="en_skullwalltula" Name="Skullwalltula" ObjectKey="object_st"/>
+	<Actor Index="112" Category="ACTORCAT_PROP" ID="ACTOR_EN_SPAWNER" Key="en_spawner" Name="Spawner" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="113" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_SPIKE" Key="en_spike" Name="Spike" ObjectKey="object_ny"/>
+	<Actor Index="114" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_STALCHILD" Key="en_stalchild" Name="Stalchild" ObjectKey="object_skb"/>
+	<Actor Index="115" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_STALFOS" Key="en_stalfos" Name="Stalfos" ObjectKey="object_sk2"/>
+	<Actor Index="116" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_STINGER_AIR" Key="en_stinger_air" Name="Stinger Air" ObjectKey="object_ei"/>
+	<Actor Index="117" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_STINGER_WATER" Key="en_stinger_water" Name="Stinger (Water)" ObjectKey="object_ei"/>
+	<Actor Index="118" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_TAILPASARAN" Key="en_tailpasaran" Name="Electric Tailpasaran" ObjectKey="object_tp"/>
+	<Actor Index="119" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_TEKTITE" Key="en_tektite" Name="Tektite" ObjectKey="object_tite"/>
+	<Actor Index="120" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_TENTACLE" Key="en_tentacle" Name="Tentacle from inside Lord Jabu-Jabu" ObjectKey="object_bxa"/>
+	<Actor Index="121" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_TENTACLEX" Key="en_tentaclex" Name="Jabu-Jabu Electrified Tentacle" ObjectKey="object_bxa"/>
+	<Actor Index="122" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_TORCH_SLUG" Key="en_torch_slug" Name="Torch slug" ObjectKey="object_bw"/>
+	<Actor Index="123" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_WALLMASTER" Key="en_wallmaster" Name="Wallmaster (Ceiling monster)" ObjectKey="object_wallmaster"/>
+	<Actor Index="124" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_WITHERED_BABA" Key="en_withered_baba" Name="Withered Deku Baba" ObjectKey="object_dekubaba"/>
+	<Actor Index="125" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_WOLFOS" Key="en_wolfos" Name="Wolfos (Normal and White)" ObjectKey="object_wf"/>
+	<Actor Index="126" Category="ACTORCAT_ENEMY" ID="ACTOR_EN_ZOL" Key="en_zol" Name="Green and red Zol" ObjectKey="object_zol"/>
+	<Actor Index="127" Category="ACTORCAT_PROP" ID="ACTOR_TRAP_ARROW_MIRROR" Key="trap_arrow_mirror" Name="An unused trap that reflects arrows." ObjectKey="object_gameplay_keep"/>
+	<Actor Index="128" Category="ACTORCAT_PROP" ID="ACTOR_TRAP_EYE" Key="trap_eye" Name="Fake eye switches and Dampe flames" ObjectKey="object_gameplay_dangeon_keep"/>
+	<Actor Index="129" Category="ACTORCAT_PROP" ID="ACTOR_TRAP_SCYTHE_SPINNER" Key="trap_scythe_spinner" Name="Spinning Scythe Trap" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="130" Category="ACTORCAT_BG" ID="ACTOR_TRAP_SLIDE_SPIKE" Key="trap_slide_spike" Name="Metal Spike Trap" ObjectKey="object_trap"/>
+	<Actor Index="131" Category="ACTORCAT_BG" ID="ACTOR_TRAP_WATER_VORTEX" Key="trap_water_vortex" Name="Water Vortex" ObjectKey="object_stream"/>
+	<Actor Index="132" Category="ACTORCAT_PROP" ID="ACTOR_GAME_ALLEY_WALL" Key="game_alley_wall" Name="Bombchu Bowling Alley Wall" ObjectKey="object_bowl"/>
+	<Actor Index="133" Category="ACTORCAT_PROP" ID="ACTOR_GAME_ALLEY_WALL_BOMB" Key="game_alley_wall_bomb" Name="Bombchu Bowling Alley Walls" ObjectKey="object_bowl"/>
+	<Actor Index="134" Category="ACTORCAT_PROP" ID="ACTOR_GAME_ARCHERY_TARGET" Key="game_archery_target" Name="Horseback Archery Target (arrow hitbox)" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="135" Category="ACTORCAT_PROP" ID="ACTOR_GAME_BOWLING_BULLSEYE" Key="game_bowling_bullseye" Name="Bombchu Bowling Alley Bullseyes/Pits" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="136" Category="ACTORCAT_NPC" ID="ACTOR_GAME_BOWLING_LADY" Key="game_bowling_lady" Name="Bowling Lady" ObjectKey="object_bg"/>
+	<Actor Index="137" Category="ACTORCAT_PROP" ID="ACTOR_GAME_BOWLING_TARGET" Key="game_bowling_target" Name="Bowling Target" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="138" Category="ACTORCAT_PROP" ID="ACTOR_GAME_CHEST" Key="game_chest" Name="Treasure Box Shop Minigame" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="139" Category="ACTORCAT_NPC" ID="ACTOR_GAME_CHEST_MAN" Key="game_chest_man" Name="Treasure Chest Game Man" ObjectKey="object_ts"/>
+	<Actor Index="140" Category="ACTORCAT_PROP" ID="ACTOR_GAME_CUCCO" Key="game_cucco" Name="Hopping Cucco" ObjectKey="object_niw"/>
+	<Actor Index="141" Category="ACTORCAT_PROP" ID="ACTOR_GAME_DAMPE_COLLECT" Key="game_dampe_collect" Name="Dampe's Minigame digging spot hitboxes" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="142" Category="ACTORCAT_NPC" ID="ACTOR_GAME_DIVING" Key="game_diving" Name="Diving minigame" ObjectKey="object_zo"/>
+	<Actor Index="143" Category="ACTORCAT_NPC" ID="ACTOR_GAME_FISHING" Key="game_fishing" Name="Fishing Pond Elements (Owner, Fish, Props, Effects...)" ObjectKey="object_fish"/>
+	<Actor Index="144" Category="ACTORCAT_BG" ID="ACTOR_GAME_HORSE_RACE" Key="game_horse_race" Name="Horseback Minigames" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="145" Category="ACTORCAT_PROP" ID="ACTOR_GAME_PRIZE" Key="game_prize" Name="Minigame prize items" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="146" Category="ACTORCAT_PROP" ID="ACTOR_GAME_RUPEE" Key="game_rupee" Name="Rupee" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="147" Category="ACTORCAT_NPC" ID="ACTOR_NPC_BEAN_SHOP" Key="npc_bean_shop" Name="Magic Bean Salesman" ObjectKey="object_ms"/>
+	<Actor Index="148" Category="ACTORCAT_PROP" ID="ACTOR_NPC_BIRD" Key="npc_bird" Name="An unused brown bird" ObjectKey="object_bird"/>
+	<Actor Index="149" Category="ACTORCAT_NPC" ID="ACTOR_NPC_BONOORU" Key="npc_bonooru" Name="Bonooru the Scarecrow" ObjectKey="object_ka"/>
+	<Actor Index="150" Category="ACTORCAT_NPC" ID="ACTOR_NPC_BOW_WOW" Key="npc_bow_wow" Name="Bow Wow" ObjectKey="object_chain_chomps"/>
+	<Actor Index="151" Category="ACTORCAT_NPC" ID="ACTOR_NPC_CARPENTER_BOSS" Key="npc_carpenter_boss" Name="Boss Carpenter" ObjectKey="object_toryo"/>
+	<Actor Index="152" Category="ACTORCAT_NPC" ID="ACTOR_NPC_CARPENTER_SON" Key="npc_carpenter_son" Name="Carpenter's Son" ObjectKey="object_hs"/>
+	<Actor Index="153" Category="ACTORCAT_NPC" ID="ACTOR_NPC_CARPENTER_SON2" Key="npc_carpenter_son2" Name="Carpenter's Son (Child Link version)" ObjectKey="object_hs"/>
+	<Actor Index="154" Category="ACTORCAT_NPC" ID="ACTOR_NPC_CARPENTERS" Key="npc_carpenters" Name="Carpenters" ObjectKey="object_daiku"/>
+	<Actor Index="155" Category="ACTORCAT_NPC" ID="ACTOR_NPC_CARPET_MAN" Key="npc_carpet_man" Name="Magic Carpet Salesman" ObjectKey="object_js"/>
+	<Actor Index="156" Category="ACTORCAT_NPC" ID="ACTOR_NPC_COW" Key="npc_cow" Name="Cow" ObjectKey="object_cow"/>
+	<Actor Index="157" Category="ACTORCAT_PROP" ID="ACTOR_NPC_CUCCO" Key="npc_cucco" Name="Cucco" ObjectKey="object_niw"/>
+	<Actor Index="158" Category="ACTORCAT_NPC" ID="ACTOR_NPC_CUCCO_GIRL" Key="npc_cucco_girl" Name="Girl that chases a cuckoo around in Hyrule Market and Kakariko Village" ObjectKey="object_gr"/>
+	<Actor Index="159" Category="ACTORCAT_NPC" ID="ACTOR_NPC_CUCCO_LADY" Key="npc_cucco_lady" Name="Cucco Lady" ObjectKey="object_ane"/>
+	<Actor Index="160" Category="ACTORCAT_NPC" ID="ACTOR_NPC_CURED_FAMILY" Key="npc_cured_family" Name="Uncursed House of Skulltula People" ObjectKey="object_boj"/>
+	<Actor Index="161" Category="ACTORCAT_NPC" ID="ACTOR_NPC_DAMPE" Key="npc_dampe" Name="Dampe NPC from &quot;Dampe's Heart-Pounding Gravedigging Tour&quot;" ObjectKey="object_tk"/>
+	<Actor Index="162" Category="ACTORCAT_PROP" ID="ACTOR_NPC_DEKU" Key="npc_deku" Name="Lost Woods minigame scrubs" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="163" Category="ACTORCAT_NPC" ID="ACTOR_NPC_DOG" Key="npc_dog" Name="Dog" ObjectKey="object_dog"/>
+	<Actor Index="164" Category="ACTORCAT_BG" ID="ACTOR_NPC_EPONA" Key="npc_epona" Name="Rideable horses" ObjectKey="object_horse"/>
+	<Actor Index="165" Category="ACTORCAT_BG" ID="ACTOR_NPC_EPONA_CHILD" Key="npc_epona_child" Name="Young Epona" ObjectKey="object_horse_link_child"/>
+	<Actor Index="166" Category="ACTORCAT_ITEMACTION" ID="ACTOR_NPC_FAIRY" Key="npc_fairy" Name="Fairy" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="167" Category="ACTORCAT_ITEMACTION" ID="ACTOR_NPC_FISH" Key="npc_fish" Name="Fish" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="168" Category="ACTORCAT_NPC" ID="ACTOR_NPC_FROG" Key="npc_frog" Name="Frog" ObjectKey="object_fr"/>
+	<Actor Index="169" Category="ACTORCAT_NPC" ID="ACTOR_NPC_GERUDO_GUARD" Key="npc_gerudo_guard" Name="White-clothed Gerudo" ObjectKey="object_ge1"/>
+	<Actor Index="170" Category="ACTORCAT_NPC" ID="ACTOR_NPC_GERUDO_LEADER" Key="npc_gerudo_leader" Name="Gerudo giving you membership card" ObjectKey="object_geldb"/>
+	<Actor Index="171" Category="ACTORCAT_NPC" ID="ACTOR_NPC_GERUDO_PATROL" Key="npc_gerudo_patrol" Name="Purple-clothed Gerudo" ObjectKey="object_gla"/>
+	<Actor Index="172" Category="ACTORCAT_NPC" ID="ACTOR_NPC_GHOST_DAMPE" Key="npc_ghost_dampe" Name="Dampé's Ghost" ObjectKey="object_tk"/>
+	<Actor Index="173" Category="ACTORCAT_NPC" ID="ACTOR_NPC_GORON" Key="npc_goron" Name="Goron" ObjectKey="object_of1d_map"/>
+	<Actor Index="174" Category="ACTORCAT_NPC" ID="ACTOR_NPC_GORON2" Key="npc_goron2" Name="Goron2" ObjectKey="object_of1d_map"/>
+	<Actor Index="175" Category="ACTORCAT_NPC" ID="ACTOR_NPC_GRAVE_BOY" Key="npc_grave_boy" Name="Grave Boy" ObjectKey="object_cs"/>
+	<Actor Index="176" Category="ACTORCAT_NPC" ID="ACTOR_NPC_HAPPY_CUSTOMER" Key="npc_happy_customer" Name="Happy Mask Shop Customer" ObjectKey="object_boj"/>
+	<Actor Index="177" Category="ACTORCAT_BG" ID="ACTOR_NPC_HORSE" Key="npc_horse" Name="Non-rideable horses (Lon Lon Ranch and Stable)" ObjectKey="object_horse_normal"/>
+	<Actor Index="178" Category="ACTORCAT_BG" ID="ACTOR_NPC_HORSE_GANON" Key="npc_horse_ganon" Name="Ganondorf's Horse" ObjectKey="object_horse_ganon"/>
+	<Actor Index="179" Category="ACTORCAT_BG" ID="ACTOR_NPC_HORSE_ZELDA" Key="npc_horse_zelda" Name="Zelda's Horse" ObjectKey="object_horse_zelda"/>
+	<Actor Index="180" Category="ACTORCAT_NPC" ID="ACTOR_NPC_HYLIAN_CROWD" Key="npc_hylian_crowd" Name="Haggling townspeople" ObjectKey="object_mu"/>
+	<Actor Index="181" Category="ACTORCAT_NPC" ID="ACTOR_NPC_HYLIAN_GUARD" Key="npc_hylian_guard" Name="Hyrulian Guards" ObjectKey="object_sd"/>
+	<Actor Index="182" Category="ACTORCAT_NPC" ID="ACTOR_NPC_HYLIAN_GUARD2" Key="npc_hylian_guard2" Name="Hylian Guard2" ObjectKey="object_sd"/>
+	<Actor Index="183" Category="ACTORCAT_NPC" ID="ACTOR_NPC_INGO" Key="npc_ingo" Name="Ingo" ObjectKey="object_in"/>
+	<Actor Index="184" Category="ACTORCAT_ITEMACTION" ID="ACTOR_NPC_JABUJABU" Key="npc_jabujabu" Name="Lord Jabu-Jabu" ObjectKey="object_jj"/>
+	<Actor Index="185" Category="ACTORCAT_NPC" ID="ACTOR_NPC_JUDGE" Key="npc_judge" Name="Forest Stage scrub leader" ObjectKey="object_dns"/>
+	<Actor Index="186" Category="ACTORCAT_NPC" ID="ACTOR_NPC_KAK_CARPENTERS" Key="npc_kak_carpenters" Name="Kakariko Village Carpenters" ObjectKey="object_daiku"/>
+	<Actor Index="187" Category="ACTORCAT_NPC" ID="ACTOR_NPC_KING_ZORA" Key="npc_king_zora" Name="King Zora" ObjectKey="object_kz"/>
+	<Actor Index="188" Category="ACTORCAT_NPC" ID="ACTOR_NPC_KOKIRI" Key="npc_kokiri" Name="Kokiri children, and Fado" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="189" Category="ACTORCAT_NPC" ID="ACTOR_NPC_KOTAKE" Key="npc_kotake" Name="Koume and Kotake" ObjectKey="object_tr"/>
+	<Actor Index="190" Category="ACTORCAT_NPC" ID="ACTOR_NPC_LOVERS" Key="npc_lovers" Name="Dancing Couple" ObjectKey="object_mu"/>
+	<Actor Index="191" Category="ACTORCAT_NPC" ID="ACTOR_NPC_MALON" Key="npc_malon" Name="Malon" ObjectKey="object_ma2"/>
+	<Actor Index="192" Category="ACTORCAT_NPC" ID="ACTOR_NPC_MALON2" Key="npc_malon2" Name="Adult Malon (Ranch)" ObjectKey="object_ma2"/>
+	<Actor Index="193" Category="ACTORCAT_NPC" ID="ACTOR_NPC_MALON_CHILD" Key="npc_malon_child" Name="Child Malon" ObjectKey="object_ma1"/>
+	<Actor Index="194" Category="ACTORCAT_NPC" ID="ACTOR_NPC_MARKET" Key="npc_market" Name="Hylian NPCs" ObjectKey="object_cob"/>
+	<Actor Index="195" Category="ACTORCAT_NPC" ID="ACTOR_NPC_MEDIGORON" Key="npc_medigoron" Name="Medi-Goron" ObjectKey="object_of1d_map"/>
+	<Actor Index="196" Category="ACTORCAT_NPC" ID="ACTOR_NPC_MIDO" Key="npc_mido" Name="Mido" ObjectKey="object_md"/>
+	<Actor Index="197" Category="ACTORCAT_NPC" ID="ACTOR_NPC_NABOORU" Key="npc_nabooru" Name="Nabooru" ObjectKey="object_nb"/>
+	<Actor Index="198" Category="ACTORCAT_NPC" ID="ACTOR_NPC_OWL" Key="npc_owl" Name="Owl" ObjectKey="object_owl"/>
+	<Actor Index="199" Category="ACTORCAT_NPC" ID="ACTOR_NPC_PIERRE" Key="npc_pierre" Name="Pierre the Scarecrow" ObjectKey="object_ka"/>
+	<Actor Index="200" Category="ACTORCAT_NPC" ID="ACTOR_NPC_POE_COLLECTOR" Key="npc_poe_collector" Name="Poe Seller" ObjectKey="object_ps"/>
+	<Actor Index="201" Category="ACTORCAT_BG" ID="ACTOR_NPC_POE_GUIDE" Key="npc_poe_guide" Name="Guide Poe (Haunted Wasteland)" ObjectKey="object_po_field"/>
+	<Actor Index="202" Category="ACTORCAT_NPC" ID="ACTOR_NPC_PROFESSOR" Key="npc_professor" Name="Lakeside Professor" ObjectKey="object_mk"/>
+	<Actor Index="203" Category="ACTORCAT_NPC" ID="ACTOR_NPC_RAURU" Key="npc_rauru" Name="Rauru" ObjectKey="object_rl"/>
+	<Actor Index="204" Category="ACTORCAT_NPC" ID="ACTOR_NPC_ROOFMAN" Key="npc_roofman" Name="Kakariko Roof Guy" ObjectKey="object_ani"/>
+	<Actor Index="205" Category="ACTORCAT_NPC" ID="ACTOR_NPC_RUNNING_MAN" Key="npc_running_man" Name="Running Man (child)" ObjectKey="object_mm"/>
+	<Actor Index="206" Category="ACTORCAT_NPC" ID="ACTOR_NPC_RUNNING_MAN2" Key="npc_running_man2" Name="Running Man (adult)" ObjectKey="object_mm"/>
+	<Actor Index="207" Category="ACTORCAT_NPC" ID="ACTOR_NPC_RUTO" Key="npc_ruto" Name="Adult Ruto" ObjectKey="object_ru2"/>
+	<Actor Index="208" Category="ACTORCAT_NPC" ID="ACTOR_NPC_RUTO_CHILD" Key="npc_ruto_child" Name="Ruto (child)" ObjectKey="object_ru1"/>
+	<Actor Index="209" Category="ACTORCAT_BG" ID="ACTOR_NPC_SALE_SCRUB" Key="npc_sale_scrub" Name="Deku Salesman" ObjectKey="object_shopnuts"/>
+	<Actor Index="210" Category="ACTORCAT_ENEMY" ID="ACTOR_NPC_SHOP_SCRUB" Key="npc_shop_scrub" Name="Shop Scrub" ObjectKey="object_shopnuts"/>
+	<Actor Index="211" Category="ACTORCAT_NPC" ID="ACTOR_NPC_SHOPKEEPER" Key="npc_shopkeeper" Name="Shopkeeper" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="212" Category="ACTORCAT_NPC" ID="ACTOR_NPC_SKULL_FAMILY" Key="npc_skull_family" Name="Skull Family" ObjectKey="object_ssh"/>
+	<Actor Index="213" Category="ACTORCAT_NPC" ID="ACTOR_NPC_TALON" Key="npc_talon" Name="Talon" ObjectKey="object_ta"/>
+	<Actor Index="214" Category="ACTORCAT_NPC" ID="ACTOR_NPC_TREE_SPROUT" Key="npc_tree_sprout" Name="Deku Tree Sprout" ObjectKey="object_dekujr"/>
+	<Actor Index="215" Category="ACTORCAT_NPC" ID="ACTOR_NPC_UNUSED" Key="npc_unused" Name="Blue Navi Target Spot" ObjectKey="object_oe2"/>
+	<Actor Index="216" Category="ACTORCAT_NPC" ID="ACTOR_NPC_WITCH" Key="npc_witch" Name="Potion Shop Granny" ObjectKey="object_ds"/>
+	<Actor Index="217" Category="ACTORCAT_NPC" ID="ACTOR_NPC_ZELDA" Key="npc_zelda" Name="Adult Zelda" ObjectKey="object_zl2"/>
+	<Actor Index="218" Category="ACTORCAT_NPC" ID="ACTOR_NPC_ZELDA_CHILD" Key="npc_zelda_child" Name="Child Princess Zelda (at window)" ObjectKey="object_zl1"/>
+	<Actor Index="219" Category="ACTORCAT_NPC" ID="ACTOR_NPC_ZORA" Key="npc_zora" Name="Zora" ObjectKey="object_zo"/>
+	<Actor Index="220" Category="ACTORCAT_ITEMACTION" ID="ACTOR_OBJ_BEAN_GSKULLTULA" Key="obj_bean_gskulltula" Name="Skulltula Sprouting from Bean Spot" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="221" Category="ACTORCAT_BG" ID="ACTOR_OBJ_BEAN_SPOT" Key="obj_bean_spot" Name="Bean plant spot" ObjectKey="object_mamenoki"/>
+	<Actor Index="222" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_BEEHIVE" Key="obj_beehive" Name="Beehive" ObjectKey="object_gameplay_field_keep"/>
+	<Actor Index="223" Category="ACTORCAT_ITEMACTION" ID="ACTOR_OBJ_BLUE_FIRE" Key="obj_blue_fire" Name="The various types of Blue Fire" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="224" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_BOMB_BOULDER" Key="obj_bomb_boulder" Name="Round, brown, breakable boulder" ObjectKey="object_bombiwa"/>
+	<Actor Index="225" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_BOMB_FLOWER" Key="obj_bomb_flower" Name="Bomb Flower" ObjectKey="object_bombf"/>
+	<Actor Index="226" Category="ACTORCAT_BG" ID="ACTOR_OBJ_BOMB_ROCK_WALL" Key="obj_bomb_rock_wall" Name="Bombable Wall" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="227" Category="ACTORCAT_BG" ID="ACTOR_OBJ_BOMB_WALL" Key="obj_bomb_wall" Name="Bombable Wall" ObjectKey="object_gameplay_field_keep"/>
+	<Actor Index="228" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_BRONZE_BOULDER" Key="obj_bronze_boulder" Name="Bronze Boulder" ObjectKey="object_gameplay_field_keep"/>
+	<Actor Index="229" Category="ACTORCAT_ITEMACTION" ID="ACTOR_OBJ_BUG" Key="obj_bug" Name="Bugs" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="230" Category="ACTORCAT_ITEMACTION" ID="ACTOR_OBJ_BUG_GROUP" Key="obj_bug_group" Name="Spawns Fish, Bug, Butterfly" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="231" Category="ACTORCAT_ITEMACTION" ID="ACTOR_OBJ_BUTTERFLY" Key="obj_butterfly" Name="Butterfly" ObjectKey="object_gameplay_field_keep"/>
+	<Actor Index="232" Category="ACTORCAT_CHEST" ID="ACTOR_OBJ_CHEST" Key="obj_chest" Name="Chest" ObjectKey="object_box"/>
+	<Actor Index="233" Category="ACTORCAT_BG" ID="ACTOR_OBJ_COFFIN_LID" Key="obj_coffin_lid" Name="Coffin Lid" ObjectKey="object_hakach_objects"/>
+	<Actor Index="234" Category="ACTORCAT_BG" ID="ACTOR_OBJ_COLLAPSE_PLATFORM" Key="obj_collapse_platform" Name="Square, collapsing platform" ObjectKey="object_d_lift"/>
+	<Actor Index="235" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_COLLECTIBLE_ITEM" Key="obj_collectible_item" Name="Collectible Items" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="236" Category="ACTORCAT_BG" ID="ACTOR_OBJ_COLOR_BLOCK" Key="obj_color_block" Name="Color Block" ObjectKey="object_gameplay_dangeon_keep"/>
+	<Actor Index="237" Category="ACTORCAT_BG" ID="ACTOR_OBJ_CRATE_LARGE" Key="obj_crate_large" Name="Large crate" ObjectKey="object_kibako2"/>
+	<Actor Index="238" Category="ACTORCAT_BG" ID="ACTOR_OBJ_CRATE_MILK" Key="obj_crate_milk" Name="Milk Crate" ObjectKey="object_spot15_obj"/>
+	<Actor Index="239" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_CRATE_SMALL" Key="obj_crate_small" Name="Small wooden box" ObjectKey="object_gameplay_dangeon_keep"/>
+	<Actor Index="240" Category="ACTORCAT_BG" ID="ACTOR_OBJ_ELEVATOR" Key="obj_elevator" Name="Stone Elevator" ObjectKey="object_d_elevator"/>
+	<Actor Index="241" Category="ACTORCAT_BG" ID="ACTOR_OBJ_EYE_STATUE" Key="obj_eye_statue" Name="Eye platform eye switches" ObjectKey="object_menkuri_objects"/>
+	<Actor Index="242" Category="ACTORCAT_ENEMY" ID="ACTOR_OBJ_FIRE_ROCK" Key="obj_fire_rock" Name="Fire Rock" ObjectKey="object_efc_star_field"/>
+	<Actor Index="243" Category="ACTORCAT_BG" ID="ACTOR_OBJ_FIRE_WALL" Key="obj_fire_wall" Name="Proximity Triggered Flame Wall" ObjectKey="object_hidan_objects"/>
+	<Actor Index="244" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_FLAGPOLE" Key="obj_flagpole" Name="Wooden post with red cloth" ObjectKey="object_hata"/>
+	<Actor Index="245" Category="ACTORCAT_ITEMACTION" ID="ACTOR_OBJ_FLAME" Key="obj_flame" Name="Flame" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="246" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_GARDEN" Key="obj_garden" Name="Grave Flower" ObjectKey="object_gameplay_field_keep"/>
+	<Actor Index="247" Category="ACTORCAT_ITEMACTION" ID="ACTOR_OBJ_GATE" Key="obj_gate" Name="Death Mountain Trail Gate" ObjectKey="object_spot01_matoyab"/>
+	<Actor Index="248" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_GOSSIP_STONE" Key="obj_gossip_stone" Name="Gossip Stone" ObjectKey="object_gs"/>
+	<Actor Index="249" Category="ACTORCAT_BG" ID="ACTOR_OBJ_GRAVESTONE" Key="obj_gravestone" Name="Gravestone" ObjectKey="object_haka"/>
+	<Actor Index="250" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_GREENERY" Key="obj_greenery" Name="Trees, bushes, leaves" ObjectKey="object_wood02"/>
+	<Actor Index="251" Category="ACTORCAT_ITEMACTION" ID="ACTOR_OBJ_GROTTO_CHEST" Key="obj_grotto_chest" Name="Spawns a chest with the appropriate contents then unloads. Used in grottos." ObjectKey="object_gameplay_keep"/>
+	<Actor Index="252" Category="ACTORCAT_BG" ID="ACTOR_OBJ_HAMMER_STATUE" Key="obj_hammer_statue" Name="Hammerable Totem Pieces (Fire Temple)" ObjectKey="object_hidan_objects"/>
+	<Actor Index="253" Category="ACTORCAT_MISC" ID="ACTOR_OBJ_HEART_CONTAINER" Key="obj_heart_container" Name="Heart Container" ObjectKey="object_gi_hearts"/>
+	<Actor Index="254" Category="ACTORCAT_BG" ID="ACTOR_OBJ_HOOKSHOT_TARGET" Key="obj_hookshot_target" Name="Stone Hookshot Target" ObjectKey="object_d_hsblock"/>
+	<Actor Index="255" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_HORSE_FENCE" Key="obj_horse_fence" Name="Hoppable horse fence" ObjectKey="object_umajump"/>
+	<Actor Index="256" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_ICE_DOOR_LOCK" Key="obj_ice_door_lock" Name="Vertical Ice Bars (Doors) in Ice Cavern" ObjectKey="object_ice_objects"/>
+	<Actor Index="257" Category="ACTORCAT_BG" ID="ACTOR_OBJ_ICE_FLOAT" Key="obj_ice_float" Name="Floating ice platforms" ObjectKey="object_spot08_obj"/>
+	<Actor Index="258" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_ICE_SURROUND" Key="obj_ice_surround" Name="Ice / Frozen Actors" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="259" Category="ACTORCAT_SWITCH" ID="ACTOR_OBJ_JABU_SWITCH" Key="obj_jabu_switch" Name="Switches Inside Lord Jabu-Jabu" ObjectKey="object_bdan_objects"/>
+	<Actor Index="260" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_L_FIRE_WALL" Key="obj_l_fire_wall" Name="Large fire walls at Fire Temple (flame wall before bombable door and the one that chases the player in" ObjectKey="object_hidan_objects"/>
+	<Actor Index="261" Category="ACTORCAT_BG" ID="ACTOR_OBJ_LARGE_PILLAR" Key="obj_large_pillar" Name="Large block that can only be lifted with Golden Gauntlets" ObjectKey="object_heavy_object"/>
+	<Actor Index="262" Category="ACTORCAT_NPC" ID="ACTOR_OBJ_MAGIC_CARPET" Key="obj_magic_carpet" Name="Magic carpet man's carpet" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="263" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_METAL_GATE" Key="obj_metal_gate" Name="" ObjectKey="object_hidan_objects"/>
+	<Actor Index="264" Category="ACTORCAT_BG" ID="ACTOR_OBJ_PLATFORM_SPINNER" Key="obj_platform_spinner" Name="Large rotating stone ring used in Gerudo Training Grounds and Forest Temple." ObjectKey="object_menkuri_objects"/>
+	<Actor Index="265" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_POT" Key="obj_pot" Name="Breakable pot" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="266" Category="ACTORCAT_BG" ID="ACTOR_OBJ_PUSH_BLOCK" Key="obj_push_block" Name="Unused (and non functional) pushable block" ObjectKey="object_pu_box"/>
+	<Actor Index="267" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_PUSH_BLOCK2" Key="obj_push_block2" Name="Push Block" ObjectKey="object_gameplay_dangeon_keep"/>
+	<Actor Index="268" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_PUZZLE_BLOCK" Key="obj_puzzle_block" Name="Push Block puzzle (Hardcoded)" ObjectKey="object_gameplay_dangeon_keep"/>
+	<Actor Index="269" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_PUZZLE_RUPEE" Key="obj_puzzle_rupee" Name="Silver rupees, shooting gallery targets, and horseback archery pots" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="270" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_ROCK" Key="obj_rock" Name="Small and large gray rocks" ObjectKey="object_gameplay_field_keep"/>
+	<Actor Index="271" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_ROLLING_BOULDER" Key="obj_rolling_boulder" Name="Rolling Boulder" ObjectKey="object_goroiwa"/>
+	<Actor Index="272" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_ROLLING_BOULDER2" Key="obj_rolling_boulder2" Name="Rolling boulders" ObjectKey="object_goroiwa"/>
+	<Actor Index="273" Category="ACTORCAT_BG" ID="ACTOR_OBJ_RUPEE_GROUP" Key="obj_rupee_group" Name="Tower of Rupees" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="274" Category="ACTORCAT_ITEMACTION" ID="ACTOR_OBJ_SHIELD" Key="obj_shield" Name="Deku Shield" ObjectKey="object_link_child"/>
+	<Actor Index="275" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_SHOP_SHELVES" Key="obj_shop_shelves" Name="Shop Shelves" ObjectKey="object_shop_dungen"/>
+	<Actor Index="276" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_SHRUB" Key="obj_shrub" Name="Bush" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="277" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_SHRUB_GROUP" Key="obj_shrub_group" Name="Rock/Bush groups" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="278" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_SIGNPOST" Key="obj_signpost" Name="Cuttable square sign" ObjectKey="object_kanban"/>
+	<Actor Index="279" Category="ACTORCAT_BG" ID="ACTOR_OBJ_SKULL_JAR" Key="obj_skull_jar" Name="Shadow Temple Giant Skull Jar" ObjectKey="object_haka_objects"/>
+	<Actor Index="280" Category="ACTORCAT_ITEMACTION" ID="ACTOR_OBJ_SKULL_TOKEN" Key="obj_skull_token" Name="Gold Skulltula token" ObjectKey="object_st"/>
+	<Actor Index="281" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_SPIRIT_BLOCK" Key="obj_spirit_block" Name="Silver Block (Child Link)" ObjectKey="object_gameplay_dangeon_keep"/>
+	<Actor Index="282" Category="ACTORCAT_SWITCH" ID="ACTOR_OBJ_SUN_SWITCH" Key="obj_sun_switch" Name="Sun Emblem Trigger (Spirit Temple)" ObjectKey="object_lightswitch"/>
+	<Actor Index="283" Category="ACTORCAT_SWITCH" ID="ACTOR_OBJ_SWITCH" Key="obj_switch" Name="Switches" ObjectKey="object_gameplay_dangeon_keep"/>
+	<Actor Index="284" Category="ACTORCAT_ITEMACTION" ID="ACTOR_OBJ_TIME_BLOCK" Key="obj_time_block" Name="Song of Time Block" ObjectKey="object_timeblock"/>
+	<Actor Index="285" Category="ACTORCAT_ITEMACTION" ID="ACTOR_OBJ_TIME_BLOCK_HINT" Key="obj_time_block_hint" Name="Navi Infospot (Green, Time Block)" ObjectKey="object_timeblock"/>
+	<Actor Index="286" Category="ACTORCAT_ITEMACTION" ID="ACTOR_OBJ_TIME_OCARINA" Key="obj_time_ocarina" Name="Ocarina of Time" ObjectKey="object_gi_ocarina"/>
+	<Actor Index="287" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_TORCH" Key="obj_torch" Name="Torch" ObjectKey="object_syokudai"/>
+	<Actor Index="288" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_VASE" Key="obj_vase" Name="An unused, orange pot based on ALTTP. Lacks collision." ObjectKey="object_vase"/>
+	<Actor Index="289" Category="ACTORCAT_BG" ID="ACTOR_OBJ_WARP_PAD" Key="obj_warp_pad" Name="Warp Pad" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="290" Category="ACTORCAT_BG" ID="ACTOR_OBJ_WATER_SPOUT" Key="obj_water_spout" Name="Water Spout" ObjectKey="object_siofuki"/>
+	<Actor Index="291" Category="ACTORCAT_PROP" ID="ACTOR_OBJ_WATER_VORTEX" Key="obj_water_vortex" Name="Water Noise" ObjectKey="object_mizu_objects"/>
+	<Actor Index="292" Category="ACTORCAT_ITEMACTION" ID="ACTOR_ARROW" Key="arrow" Name="Arrow, Deku Seed, and Deku Nut Projectile" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="293" Category="ACTORCAT_ITEMACTION" ID="ACTOR_ARROW_FIRE" Key="arrow_fire" Name="Fire Arrow. Spawned as a child of a normal arrow." ObjectKey="object_gameplay_keep"/>
+	<Actor Index="294" Category="ACTORCAT_ITEMACTION" ID="ACTOR_ARROW_ICE" Key="arrow_ice" Name="Ice Arrow. Spawned as a child of a normal arrow." ObjectKey="object_gameplay_keep"/>
+	<Actor Index="295" Category="ACTORCAT_ITEMACTION" ID="ACTOR_ARROW_LIGHT" Key="arrow_light" Name="Light Arrow. Spawned as a child of a normal arrow." ObjectKey="object_gameplay_keep"/>
+	<Actor Index="296" Category="ACTORCAT_EXPLOSIVE" ID="ACTOR_BOMB" Key="bomb" Name="Bomb" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="297" Category="ACTORCAT_EXPLOSIVE" ID="ACTOR_BOMCHU" Key="bomchu" Name="Bomchu" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="298" Category="ACTORCAT_MISC" ID="ACTOR_BOOMERANG" Key="boomerang" Name="Thrown Boomerang. Actor spawns when thrown and is killed when caught." ObjectKey="object_gameplay_keep"/>
+	<Actor Index="299" Category="ACTORCAT_ITEMACTION" ID="ACTOR_HOOKSHOT" Key="hookshot" Name="Hookshot" ObjectKey="object_link_boy"/>
+	<Actor Index="300" Category="ACTORCAT_PLAYER" ID="ACTOR_LINK" Key="link" Name="Link" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="301" Category="ACTORCAT_ITEMACTION" ID="ACTOR_MAGIC_DARK" Key="magic_dark" Name="Guardian Acorn" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="302" Category="ACTORCAT_ITEMACTION" ID="ACTOR_MAGIC_FIRE" Key="magic_fire" Name="Piece of Power" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="303" Category="ACTORCAT_ITEMACTION" ID="ACTOR_MAGIC_WIND" Key="magic_wind" Name="Farore's Wind" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="304" Category="ACTORCAT_ITEMACTION" ID="ACTOR_PROP_CASTLE_GATE" Key="prop_castle_gate" Name="Hyrule Castle Gate" ObjectKey="object_spot15_obj"/>
+	<Actor Index="305" Category="ACTORCAT_PROP" ID="ACTOR_PROP_CAVERN_ENTRANCEROCK" Key="prop_cavern_entrancerock" Name="Cavern EntranceRock" ObjectKey="object_spot16_obj"/>
+	<Actor Index="306" Category="ACTORCAT_PROP" ID="ACTOR_PROP_COBRA_MIRROR" Key="prop_cobra_mirror" Name="Cobra Mirror" ObjectKey="object_jya_obj"/>
+	<Actor Index="307" Category="ACTORCAT_BG" ID="ACTOR_PROP_COLOSSUS_BOMBWALL" Key="prop_colossus_bombwall" Name="Destructible Wall (Desert Colossus)" ObjectKey="object_spot11_obj"/>
+	<Actor Index="308" Category="ACTORCAT_BG" ID="ACTOR_PROP_COLOSSUS_WALL" Key="prop_colossus_wall" Name="Destructible Wall (Zora's Fountain)" ObjectKey="object_spot08_obj"/>
+	<Actor Index="309" Category="ACTORCAT_BG" ID="ACTOR_PROP_CRATER_BOMBWALL" Key="prop_crater_bombwall" Name="Death Mountain Crater Bombable Wall" ObjectKey="object_spot17_obj"/>
+	<Actor Index="310" Category="ACTORCAT_SWITCH" ID="ACTOR_PROP_CRATER_SMOKE" Key="prop_crater_smoke" Name="Crater Smoke Cone" ObjectKey="object_spot17_obj"/>
+	<Actor Index="311" Category="ACTORCAT_BG" ID="ACTOR_PROP_DODONGO_JAW" Key="prop_dodongo_jaw" Name="Dodongo Head Statue in Dodongo's Cavern" ObjectKey="object_ddan_objects"/>
+	<Actor Index="312" Category="ACTORCAT_BG" ID="ACTOR_PROP_DODONGO_PILLAR" Key="prop_dodongo_pillar" Name="Rising stone platform (Dodongo's Cavern)" ObjectKey="object_ddan_objects"/>
+	<Actor Index="313" Category="ACTORCAT_BG" ID="ACTOR_PROP_DODONGO_STAIRS" Key="prop_dodongo_stairs" Name="Falling stairs in Dodongo's Cavern" ObjectKey="object_ddan_objects"/>
+	<Actor Index="314" Category="ACTORCAT_BG" ID="ACTOR_PROP_DOMAIN_OBJ" Key="prop_domain_obj" Name="Zora's Domain Waterfall and Ice" ObjectKey="object_spot07_object"/>
+	<Actor Index="315" Category="ACTORCAT_BG" ID="ACTOR_PROP_FIELD_DRAWBRIDGE" Key="prop_field_drawbridge" Name="Hyrule Field Drawbridge and Torches" ObjectKey="object_spot00_objects"/>
+	<Actor Index="316" Category="ACTORCAT_BG" ID="ACTOR_PROP_FIRE_BLOCK" Key="prop_fire_block" Name="Stone blocks (Fire Temple)" ObjectKey="object_hidan_objects"/>
+	<Actor Index="317" Category="ACTORCAT_BG" ID="ACTOR_PROP_FIRE_BOMB_WALL" Key="prop_fire_bomb_wall" Name="Fire Temple Bombable Walls and Floors" ObjectKey="object_hidan_objects"/>
+	<Actor Index="318" Category="ACTORCAT_BG" ID="ACTOR_PROP_FIRE_ELEVATOR" Key="prop_fire_elevator" Name="Hookshot Elevator" ObjectKey="object_hidan_objects"/>
+	<Actor Index="319" Category="ACTORCAT_BG" ID="ACTOR_PROP_FIRE_ELEVATORS" Key="prop_fire_elevators" Name="Stone Elevator in the Fire Temple" ObjectKey="object_hidan_objects"/>
+	<Actor Index="320" Category="ACTORCAT_BG" ID="ACTOR_PROP_FIRE_PLATFORM" Key="prop_fire_platform" Name="Huge stone spike platform (Fire Temple)" ObjectKey="object_hidan_objects"/>
+	<Actor Index="321" Category="ACTORCAT_BG" ID="ACTOR_PROP_FIRE_STEPS" Key="prop_fire_steps" Name="Stone Steps and Platforms (Fire Temple)" ObjectKey="object_hidan_objects"/>
+	<Actor Index="322" Category="ACTORCAT_BG" ID="ACTOR_PROP_FIRE_STONE_PLATFORM" Key="prop_fire_stone_platform" Name="Stone platform (Fire Temple)" ObjectKey="object_hidan_objects"/>
+	<Actor Index="323" Category="ACTORCAT_PROP" ID="ACTOR_PROP_FLAME_CIRCLE" Key="prop_flame_circle" Name="Flame circle" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="324" Category="ACTORCAT_BG" ID="ACTOR_PROP_FOREST_ELEVATOR" Key="prop_forest_elevator" Name="Forest Elevator" ObjectKey="object_mori_objects"/>
+	<Actor Index="325" Category="ACTORCAT_BG" ID="ACTOR_PROP_FOREST_FALLING_CEILING" Key="prop_forest_falling_ceiling" Name="Falling ceiling in Forest Temple" ObjectKey="object_mori_objects"/>
+	<Actor Index="326" Category="ACTORCAT_BG" ID="ACTOR_PROP_FOREST_LADDER" Key="prop_forest_ladder" Name="Falling ladder and clasp that holds it. Unused." ObjectKey="object_mori_objects"/>
+	<Actor Index="327" Category="ACTORCAT_BG" ID="ACTOR_PROP_FOREST_OBJ" Key="prop_forest_obj" Name="Forest Temple gates and rotating pillars" ObjectKey="object_mori_objects"/>
+	<Actor Index="328" Category="ACTORCAT_BG" ID="ACTOR_PROP_FOREST_PLATFORM" Key="prop_forest_platform" Name="Forest Temple falling platform and Stalfos fight" ObjectKey="object_mori_objects"/>
+	<Actor Index="329" Category="ACTORCAT_BG" ID="ACTOR_PROP_FOREST_TWISTEDHALL" Key="prop_forest_twistedhall" Name="Twisting hallway in Forest Temple" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="330" Category="ACTORCAT_BG" ID="ACTOR_PROP_FOREST_WALL_SPINNER" Key="prop_forest_wall_spinner" Name="Rotating wall in Forest Temple basement" ObjectKey="object_mori_objects"/>
+	<Actor Index="331" Category="ACTORCAT_BG" ID="ACTOR_PROP_FOREST_WATER" Key="prop_forest_water" Name="Square of water in Forest Temple well" ObjectKey="object_mori_objects"/>
+	<Actor Index="332" Category="ACTORCAT_BG" ID="ACTOR_PROP_FORTRESS_GATE" Key="prop_fortress_gate" Name="Haunted Wasteland Gate" ObjectKey="object_spot12_obj"/>
+	<Actor Index="333" Category="ACTORCAT_BG" ID="ACTOR_PROP_FORTRESS_TRAINGATE" Key="prop_fortress_traingate" Name="" ObjectKey="object_spot12_obj"/>
+	<Actor Index="334" Category="ACTORCAT_NPC" ID="ACTOR_PROP_GANON_BARS" Key="prop_ganon_bars" Name="Metal bars (Ganon's Castle)" ObjectKey="object_zg"/>
+	<Actor Index="335" Category="ACTORCAT_PROP" ID="ACTOR_PROP_GANON_FAKE_WALLS" Key="prop_ganon_fake_walls" Name="Ganon's Castle Fake Wall" ObjectKey="object_demo_kekkai"/>
+	<Actor Index="336" Category="ACTORCAT_PROP" ID="ACTOR_PROP_GANON_ICE_BLOCK" Key="prop_ganon_ice_block" Name="Pushable ice block (Inside Ganon's Castle)" ObjectKey="object_demo_kekkai"/>
+	<Actor Index="337" Category="ACTORCAT_PROP" ID="ACTOR_PROP_GANON_SINKING_FLOOR" Key="prop_ganon_sinking_floor" Name="Sinking lava platform (Ganon's Castle)" ObjectKey="object_demo_kekkai"/>
+	<Actor Index="338" Category="ACTORCAT_PROP" ID="ACTOR_PROP_GANON_WEB" Key="prop_ganon_web" Name="Web-Blocked Ceiling Hole (Inside Ganon's Castle)" ObjectKey="object_demo_kekkai"/>
+	<Actor Index="339" Category="ACTORCAT_ITEMACTION" ID="ACTOR_PROP_GERUDO_DOOR" Key="prop_gerudo_door" Name="Metal grate door" ObjectKey="object_door_gerudo"/>
+	<Actor Index="340" Category="ACTORCAT_PROP" ID="ACTOR_PROP_GORON_BIGPOT" Key="prop_goron_bigpot" Name="Goron BigPot" ObjectKey="object_spot18_obj"/>
+	<Actor Index="341" Category="ACTORCAT_PROP" ID="ACTOR_PROP_GORON_DOOR" Key="prop_goron_door" Name="" ObjectKey="object_spot18_obj"/>
+	<Actor Index="342" Category="ACTORCAT_PROP" ID="ACTOR_PROP_GORON_LID" Key="prop_goron_lid" Name="The lid to the spinning goron vase." ObjectKey="object_spot18_obj"/>
+	<Actor Index="343" Category="ACTORCAT_BG" ID="ACTOR_PROP_GORON_STATUE" Key="prop_goron_statue" Name="" ObjectKey="object_spot18_obj"/>
+	<Actor Index="344" Category="ACTORCAT_BG" ID="ACTOR_PROP_GRAVEYARD_OBJ" Key="prop_graveyard_obj" Name="Graveyard Actors" ObjectKey="object_spot02_objects"/>
+	<Actor Index="345" Category="ACTORCAT_PROP" ID="ACTOR_PROP_HYRULE_OBJ" Key="prop_hyrule_obj" Name="Broken drawbridge in Hyrule Field." ObjectKey="object_spot00_break"/>
+	<Actor Index="346" Category="ACTORCAT_PROP" ID="ACTOR_PROP_ICE_BLOCK" Key="prop_ice_block" Name="Pushable ice block (Ice Cavern)" ObjectKey="object_ice_objects"/>
+	<Actor Index="347" Category="ACTORCAT_BG" ID="ACTOR_PROP_ICE_CRYSTAL" Key="prop_ice_crystal" Name="Red Ice" ObjectKey="object_ice_objects"/>
+	<Actor Index="348" Category="ACTORCAT_PROP" ID="ACTOR_PROP_ICICLES" Key="prop_icicles" Name="Icicles" ObjectKey="object_ice_objects"/>
+	<Actor Index="349" Category="ACTORCAT_ENEMY" ID="ACTOR_PROP_JABU_BLOB" Key="prop_jabu_blob" Name="Flobbery Muscle Block (Jabu-Jabu's Belly)" ObjectKey="object_brob"/>
+	<Actor Index="350" Category="ACTORCAT_BG" ID="ACTOR_PROP_JABU_JABU_BELLY" Key="prop_jabu_jabu_belly" Name="Lord Jabu-Jabu Objects" ObjectKey="object_bdan_objects"/>
+	<Actor Index="351" Category="ACTORCAT_BG" ID="ACTOR_PROP_KAK_OBJ" Key="prop_kak_obj" Name="Kakariko Village Set Pieces" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="352" Category="ACTORCAT_BG" ID="ACTOR_PROP_KAK_WELLWATER" Key="prop_kak_wellwater" Name="Kakariko Village Well Water" ObjectKey="object_spot01_objects"/>
+	<Actor Index="353" Category="ACTORCAT_BG" ID="ACTOR_PROP_KAK_WELL_WALL" Key="prop_kak_well_wall" Name="Stone that blocks the entrance to Bottom of the Well" ObjectKey="object_spot01_matoya"/>
+	<Actor Index="354" Category="ACTORCAT_BG" ID="ACTOR_PROP_KAK_WINDMILL" Key="prop_kak_windmill" Name="Windmill Sails" ObjectKey="object_spot01_objects"/>
+	<Actor Index="355" Category="ACTORCAT_PROP" ID="ACTOR_PROP_LAKE_OBJ" Key="prop_lake_obj" Name="Lake Hylia Objects" ObjectKey="object_spot06_objects"/>
+	<Actor Index="356" Category="ACTORCAT_PROP" ID="ACTOR_PROP_MEADOW_GATE" Key="prop_meadow_gate" Name="Sacred Forest Meadow Entities" ObjectKey="object_spot05_objects"/>
+	<Actor Index="357" Category="ACTORCAT_PROP" ID="ACTOR_PROP_MOUNTAIN_CLOUD" Key="prop_mountain_cloud" Name="Death Mountain cloud circle" ObjectKey="object_efc_doughnut"/>
+	<Actor Index="358" Category="ACTORCAT_BG" ID="ACTOR_PROP_OASIS" Key="prop_oasis" Name="Refilling Oasis (Desert Colossus)" ObjectKey="object_spot11_obj"/>
+	<Actor Index="359" Category="ACTORCAT_BG" ID="ACTOR_PROP_POE_PUZZLE" Key="prop_poe_puzzle" Name="Poe sisters' paintings and puzzle blocks" ObjectKey="object_po_sisters"/>
+	<Actor Index="360" Category="ACTORCAT_PROP" ID="ACTOR_PROP_POE_TORCH" Key="prop_poe_torch" Name="Golden Torch Stand (Poe Sisters)" ObjectKey="object_syokudai"/>
+	<Actor Index="361" Category="ACTORCAT_PROP" ID="ACTOR_PROP_RANCH_GATE" Key="prop_ranch_gate" Name="Ingo's Gates (Lon Lon Ranch)" ObjectKey="object_ingate"/>
+	<Actor Index="362" Category="ACTORCAT_PROP" ID="ACTOR_PROP_SHADOW_BIRD_STATUE" Key="prop_shadow_bird_statue" Name="Statue and Wall (Shadow Temple)" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="363" Category="ACTORCAT_PROP" ID="ACTOR_PROP_SHADOW_FAKE_WALL" Key="prop_shadow_fake_wall" Name="Shadow Temple Fake Walls" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="364" Category="ACTORCAT_PROP" ID="ACTOR_PROP_SHADOW_PLATFORM" Key="prop_shadow_platform" Name="Shadow trial actors (invisible path, clear block, and timer)" ObjectKey="object_demo_kekkai"/>
+	<Actor Index="365" Category="ACTORCAT_BG" ID="ACTOR_PROP_SHADOW_PLATFORMS" Key="prop_shadow_platforms" Name="" ObjectKey="object_haka_objects"/>
+	<Actor Index="366" Category="ACTORCAT_BG" ID="ACTOR_PROP_SHADOW_SHIP" Key="prop_shadow_ship" Name="Shadow Temple Ship" ObjectKey="object_haka_objects"/>
+	<Actor Index="367" Category="ACTORCAT_PROP" ID="ACTOR_PROP_SHADOW_SPINNER" Key="prop_shadow_spinner" Name="Truth Spinner Puzzle (Shadow Temple)" ObjectKey="object_haka_objects"/>
+	<Actor Index="368" Category="ACTORCAT_BG" ID="ACTOR_PROP_SHADOW_TRAPS" Key="prop_shadow_traps" Name="Shadow Temple Objects" ObjectKey="object_haka_objects"/>
+	<Actor Index="369" Category="ACTORCAT_PROP" ID="ACTOR_PROP_SPIKE_LOG" Key="prop_spike_log" Name="Rotating spike log and falling ladder in Deku Tree" ObjectKey="object_ydan_objects"/>
+	<Actor Index="370" Category="ACTORCAT_BG" ID="ACTOR_PROP_SPIRIT_BIG_MIRROR" Key="prop_spirit_big_mirror" Name="Ceiling mirror and puzzle in Spirit Temple top rooms" ObjectKey="object_jya_obj"/>
+	<Actor Index="371" Category="ACTORCAT_BG" ID="ACTOR_PROP_SPIRIT_BOMB_WALL" Key="prop_spirit_bomb_wall" Name="Spirit Temple top room bombable wall" ObjectKey="object_jya_obj"/>
+	<Actor Index="372" Category="ACTORCAT_BG" ID="ACTOR_PROP_SPIRIT_BOMBCHU_ROCK" Key="prop_spirit_bombchu_rock" Name="Spirit Bombchu Rock" ObjectKey="object_jya_obj"/>
+	<Actor Index="373" Category="ACTORCAT_BG" ID="ACTOR_PROP_SPIRIT_BRIDGE" Key="prop_spirit_bridge" Name="Climbable grating/bridge (Spirit Temple)" ObjectKey="object_jya_obj"/>
+	<Actor Index="374" Category="ACTORCAT_BG" ID="ACTOR_PROP_SPIRIT_CHAIN_PLATFORM" Key="prop_spirit_chain_platform" Name="Chain Platform (Spirit Temple)" ObjectKey="object_jya_obj"/>
+	<Actor Index="375" Category="ACTORCAT_BG" ID="ACTOR_PROP_SPIRIT_ELEVATOR" Key="prop_spirit_elevator" Name="Shortcut Elevator used in the vanilla version of the Spirit Temple" ObjectKey="object_jya_obj"/>
+	<Actor Index="376" Category="ACTORCAT_BG" ID="ACTOR_PROP_SPIRIT_GOD_FACE" Key="prop_spirit_god_face" Name="Face of Spirit Temple Goddess Statue" ObjectKey="object_jya_obj"/>
+	<Actor Index="377" Category="ACTORCAT_BG" ID="ACTOR_PROP_SPIRIT_GRATE" Key="prop_spirit_grate" Name="Circular metal grate. Lifts up when you get close to it." ObjectKey="object_jya_obj"/>
+	<Actor Index="378" Category="ACTORCAT_BG" ID="ACTOR_PROP_SPIRIT_SLIDEWALL" Key="prop_spirit_slidewall" Name="Sliding, Climbable Brick Wall" ObjectKey="object_jya_obj"/>
+	<Actor Index="379" Category="ACTORCAT_PROP" ID="ACTOR_PROP_SPIRIT_THRONE" Key="prop_spirit_throne" Name="Destructable Iron Knuckle objects" ObjectKey="object_jya_iron"/>
+	<Actor Index="380" Category="ACTORCAT_PROP" ID="ACTOR_PROP_SPIRIT_THRONE_PART" Key="prop_spirit_throne_part" Name="Chunks of Iron Knucle Chair and Pillar" ObjectKey="object_jya_iron"/>
+	<Actor Index="381" Category="ACTORCAT_BG" ID="ACTOR_PROP_TIME_DOOR" Key="prop_time_door" Name="Door of Time Collision" ObjectKey="object_toki_objects"/>
+	<Actor Index="382" Category="ACTORCAT_BG" ID="ACTOR_PROP_TIME_WINDOW" Key="prop_time_window" Name="Temple of Time Windows" ObjectKey="object_toki_objects"/>
+	<Actor Index="383" Category="ACTORCAT_PROP" ID="ACTOR_PROP_TRAIN_FALSEWALL" Key="prop_train_falsewall" Name="False Stone Walls (Gerudo Training Grounds)" ObjectKey="object_menkuri_objects"/>
+	<Actor Index="384" Category="ACTORCAT_BG" ID="ACTOR_PROP_TREE_JAW" Key="prop_tree_jaw" Name="Great Deku Tree's Mouth" ObjectKey="object_spot04_objects"/>
+	<Actor Index="385" Category="ACTORCAT_BG" ID="ACTOR_PROP_TREE_OBJ" Key="prop_tree_obj" Name="Deku Tree Puzzle elements. Water plane and floating block in B1, and 3 blocks on 2F" ObjectKey="object_ydan_objects"/>
+	<Actor Index="386" Category="ACTORCAT_BG" ID="ACTOR_PROP_TREE_WEB" Key="prop_tree_web" Name="Webs" ObjectKey="object_ydan_objects"/>
+	<Actor Index="387" Category="ACTORCAT_BG" ID="ACTOR_PROP_VALLEY_OBJ" Key="prop_valley_obj" Name="" ObjectKey="object_spot09_obj"/>
+	<Actor Index="388" Category="ACTORCAT_BG" ID="ACTOR_PROP_WATER_BOMBWALL" Key="prop_water_bombwall" Name="Water Temple bombable walls" ObjectKey="object_mizu_objects"/>
+	<Actor Index="389" Category="ACTORCAT_PROP" ID="ACTOR_PROP_WATER_DOORLOCK" Key="prop_water_doorlock" Name="Water DoorLock" ObjectKey="object_mizu_objects"/>
+	<Actor Index="390" Category="ACTORCAT_PROP" ID="ACTOR_PROP_WATER_ILLUSION" Key="prop_water_illusion" Name="Dark Link's Illusion Room" ObjectKey="object_blkobj"/>
+	<Actor Index="391" Category="ACTORCAT_BG" ID="ACTOR_PROP_WATER_LEVEL" Key="prop_water_level" Name="Water plane in Water Temple. Changes height based on switches 0x1C, 0x1D, 0x1E." ObjectKey="object_mizu_objects"/>
+	<Actor Index="392" Category="ACTORCAT_BG" ID="ACTOR_PROP_WATER_OBJ" Key="prop_water_obj" Name="Water Temple Moving Objects" ObjectKey="object_mizu_objects"/>
+	<Actor Index="393" Category="ACTORCAT_PROP" ID="ACTOR_PROP_WELL_BEAM" Key="prop_well_beam" Name="Wooden beam above well in Kakariko Village" ObjectKey="object_spot01_objects"/>
+	<Actor Index="394" Category="ACTORCAT_PROP" ID="ACTOR_PROP_WELL_WATER" Key="prop_well_water" Name="Bottom of the Well water level changer" ObjectKey="object_hakach_objects"/>
+	<Actor Index="395" Category="ACTORCAT_BG" ID="ACTOR_PROP_WINDMILL_OBJ" Key="prop_windmill_obj" Name="Windmill Setpieces" ObjectKey="object_relay_objects"/>
+	<Actor Index="396" Category="ACTORCAT_BG" ID="ACTOR_PROP_ZORA_WATERFALL" Key="prop_zora_waterfall" Name="Zora's River Waterfall" ObjectKey="object_spot03_object"/>
+	<Actor Index="397" Category="ACTORCAT_PROP" ID="ACTOR_TEST_FLEXMESH" Key="test_flexmesh" Name="Test Overlay for Flex Skeletons, animation testing, collision configuration" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="398" Category="ACTORCAT_PROP" ID="ACTOR_UTL_ARROW_TARGET" Key="utl_arrow_target" Name="Lake Hylia Sun hitbox and Song of Storms Fairy spawner" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="399" Category="ACTORCAT_PROP" ID="ACTOR_UTL_BLOCK_STOPPER" Key="utl_block_stopper" Name="Stops blocks and sets relevant flags when the block is in position." ObjectKey="object_gameplay_keep"/>
+	<Actor Index="400" Category="ACTORCAT_PROP" ID="ACTOR_UTL_CHECK_DIALOGUE" Key="utl_check_dialogue" Name="Checkable spot (Green Navi)" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="401" Category="ACTORCAT_ITEMACTION" ID="ACTOR_UTL_DIALOGUE_MANAGER" Key="utl_dialogue_manager" Name="Dialog spot" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="402" Category="ACTORCAT_ITEMACTION" ID="ACTOR_UTL_ENDING" Key="utl_ending" Name="&quot;The End&quot; message" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="403" Category="ACTORCAT_PROP" ID="ACTOR_UTL_HIDDEN_COLLECTIBLE" Key="utl_hidden_collectible" Name="Invisible Collectable; Used in MQ to create &quot;Cow&quot; switches" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="404" Category="ACTORCAT_ITEMACTION" ID="ACTOR_UTL_HINTMSG" Key="utl_hintmsg" Name="Readable Navi call spot" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="405" Category="ACTORCAT_BG" ID="ACTOR_UTL_HINTMSG2" Key="utl_hintmsg2" Name="Targetable Navi check spot" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="406" Category="ACTORCAT_PROP" ID="ACTOR_UTL_PIERRE_SPAWN" Key="utl_pierre_spawn" Name="Pierre the Scarecrow Spawn" ObjectKey="object_ka"/>
+	<Actor Index="407" Category="ACTORCAT_ENEMY" ID="ACTOR_UTL_ROCK_SPAWNER" Key="utl_rock_spawner" Name="Rock Spawner" ObjectKey="object_efc_star_field"/>
+	<Actor Index="408" Category="ACTORCAT_PROP" ID="ACTOR_UTL_SCENE_CHANGE" Key="utl_scene_change" Name="Unknown (Broken Actor)" ObjectKey="object_jj"/>
+	<Actor Index="409" Category="ACTORCAT_BG" ID="ACTOR_UTL_SFX" Key="utl_sfx" Name="Controls various sounds. Includes sound effects and bgms" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="410" Category="ACTORCAT_BOSS" ID="ACTOR_UTL_SHADOW" Key="utl_shadow" Name="Dynamic shadow for Link" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="411" Category="ACTORCAT_PROP" ID="ACTOR_UTL_SHOP_ITEM" Key="utl_shop_item" Name="Shop Items" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="412" Category="ACTORCAT_PROP" ID="ACTOR_UTL_SONG_SPOT" Key="utl_song_spot" Name="Music Staff (Ocarina) spot" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="413" Category="ACTORCAT_ITEMACTION" ID="ACTOR_UTL_STORM_SONG" Key="utl_storm_song" Name="Manages the storm created when playing Song of Storms" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="414" Category="ACTORCAT_ENEMY" ID="ACTOR_UTL_TIMER" Key="utl_timer" Name="Starts Timer 1 with a value specified in params" ObjectKey="object_gameplay_keep"/>
+	<Actor Index="415" Category="ACTORCAT_PROP" ID="ACTOR_UTL_TITLE" Key="utl_title" Name="Title Screen Manager &amp; Logo" ObjectKey="object_mag"/>
+	<Actor Index="416" Category="ACTORCAT_ITEMACTION" ID="ACTOR_UTL_TOWER_VOID" Key="utl_tower_void" Name="Triggers a void out (used in the tower collapse sequence?)" ObjectKey="object_zl2"/>
+	<Actor Index="417" Category="ACTORCAT_PROP" ID="ACTOR_UTL_WEATHER" Key="utl_weather" Name="Proximity Activated Weather Effects" ObjectKey="object_gameplay_keep"/>
+</Table>

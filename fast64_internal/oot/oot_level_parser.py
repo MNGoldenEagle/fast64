@@ -33,7 +33,6 @@ from .oot_constants import (
     ootEnumMusicSeq,
     ootEnumMapLocation,
     ootEnumNaviHints,
-    ootEnumGlobalObject,
     ootEnumSkybox,
     ootEnumCloudiness,
     ootEnumSkyboxLighting,
@@ -53,6 +52,8 @@ from .oot_collision_classes import (
     ootEnumCollisionSound,
     ootEnumCameraSType,
 )
+
+ootEnumGlobalObject = ootData.objectData.globalObjects
 
 
 headerNames = ["childDayHeader", "childNightHeader", "adultDayHeader", "adultNightHeader"]
@@ -809,7 +810,7 @@ def parseSpawnList(
             spawnObj.name = "Entrance"
             spawnProp = spawnObj.ootEntranceProperty
             spawnProp.spawnIndex = spawnIndex
-            spawnProp.customActor = actorID != "ACTOR_PLAYER"
+            spawnProp.customActor = actorID != "ACTOR_LINK"
             actorProp = spawnProp.actor
             setCustomProperty(actorProp, "actorID", actorID, ootData.actorData.ootEnumActorID)
             actorProp.actorParam = actorParam

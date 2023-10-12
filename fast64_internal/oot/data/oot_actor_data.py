@@ -1,7 +1,7 @@
 from os import path
 from dataclasses import dataclass
 from .oot_getters import getXMLRoot
-from .oot_data import OoT_BaseElement
+from .oot_data import OoT_BaseElement, readJsonFile
 
 
 @dataclass
@@ -15,7 +15,7 @@ class OoT_ActorData:
 
     def __init__(self):
         # Path to the ``ActorList.xml`` file
-        actorXML = path.dirname(path.abspath(__file__)) + "/xml/ActorList.xml"
+        actorXML = path.dirname(path.abspath(__file__)) + "/../../../actors.xml"
         actorRoot = getXMLRoot(actorXML)
 
         # general actor list
@@ -37,12 +37,16 @@ class OoT_ActorData:
                     tiedObjects,
                 )
             )
+
         self.actorsByKey = {actor.key: actor for actor in self.actorList}
         self.actorsByID = {actor.id: actor for actor in self.actorList}
 
+        ootEnumTransitionActorID = [actor for actor in self.actorList if actor.id.startswith('ACTOR_DOOR')]
+
+        self.transitionActors = ootEnumTransitionActorID
+
         # list of tuples used by Blender's enum properties
-        lastIndex = max(1, *(actor.index for actor in self.actorList))
-        self.ootEnumActorID = [("None", f"{i} (Deleted from the XML)", "None") for i in range(lastIndex)]
+        self.ootEnumActorID = []
         self.ootEnumActorID.insert(0, ("Custom", "Custom Actor", "Custom"))
         for actor in self.actorList:
-            self.ootEnumActorID[actor.index] = (actor.id, actor.name, actor.id)
+            self.ootEnumActorID.append((actor.id, actor.name, actor.id))

@@ -57,7 +57,7 @@ class OOT_Properties(bpy.types.PropertyGroup):
     """Global OOT Scene Properties found under scene.fast64.oot"""
 
     version: bpy.props.IntProperty(name="OOT_Properties Version", default=0)
-    hackerFeaturesEnabled: bpy.props.BoolProperty(name="Enable HackerOOT Features")
+    hackerFeaturesEnabled: False
     headerTabAffectsVisibility: bpy.props.BoolProperty(
         default=False, name="Header Sets Actor Visibility", update=setAllActorsVisibility
     )

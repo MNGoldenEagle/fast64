@@ -20,7 +20,6 @@ def drawSceneHeader(box: bpy.types.UILayout, obj: bpy.types.Object):
     obj.ootSceneHeader.draw_props(box, None, None, objName)
     if obj.ootSceneHeader.menuTab == "Alternate":
         obj.ootAlternateSceneHeaders.draw_props(box, objName)
-    box.prop(obj.fast64.oot.scene, "write_dummy_room_list")
 
 
 def drawLODProperty(box, obj):

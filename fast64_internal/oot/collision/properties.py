@@ -4,7 +4,7 @@ from bpy.types import PropertyGroup, Camera, Object, Material, UILayout
 from bpy.utils import register_class, unregister_class
 from ...utility import prop_split
 from ..oot_utility import drawEnumWithCustom
-from ..oot_constants import ootEnumSceneID, ootEnumGlobalObject
+from ..oot_constants import ootEnumSceneID, ootData
 from ..oot_collision_classes import (
     ootEnumFloorSetting,
     ootEnumWallSetting,
@@ -16,6 +16,7 @@ from ..oot_collision_classes import (
     ootEnumCameraSType,
 )
 
+ootEnumGlobalObject = ootData.objectData.globalObjects
 
 class OOTCollisionExportSettings(PropertyGroup):
     isCustomFilename: BoolProperty(
@@ -29,7 +30,7 @@ class OOTCollisionExportSettings(PropertyGroup):
     customExport: BoolProperty(
         name="Custom Export Path", description="Determines whether or not to export to an explicitly specified folder"
     )
-    folder: StringProperty(name="Object Name", default=ootEnumGlobalObject[0])
+    folder: StringProperty(name="Object Name", default="OBJECT_GAMEPLAY_KEEP")
 
     def draw_props(self, layout: UILayout):
         layout.label(text="Object name used for export.", icon="INFO")

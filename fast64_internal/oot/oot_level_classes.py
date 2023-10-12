@@ -131,7 +131,6 @@ class OOTScene(OOTCommonCommands):
 
     def getAlternateHeaderScene(self, name):
         scene = OOTScene(name, self.model)
-        scene.write_dummy_room_list = self.write_dummy_room_list
         scene.rooms = self.rooms
         scene.collision = self.collision
         scene.exitList = []
@@ -226,8 +225,8 @@ class OOTScene(OOTCommonCommands):
 
     def sortEntrances(self):
         self.entranceList = sorted(self.entranceList, key=lambda x: x.startPositionIndex)
-        if self.appendNullEntrance:
-            self.entranceList.append(OOTEntrance(0, 0))
+        # if self.appendNullEntrance:
+        #     self.entranceList.append(OOTEntrance(0, 0))
 
         if self.childNightHeader is not None:
             self.childNightHeader.sortEntrances()

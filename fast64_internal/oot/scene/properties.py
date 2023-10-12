@@ -31,7 +31,6 @@ from ..oot_constants import (
     ootEnumSceneID,
     ootEnumTransitionAnims,
     ootEnumLightGroupMenu,
-    ootEnumGlobalObject,
     ootEnumNaviHints,
     ootEnumSkybox,
     ootEnumCloudiness,
@@ -45,8 +44,8 @@ from ..oot_constants import (
     ootEnumHeaderMenu,
     ootEnumDrawConfig,
     ootEnumHeaderMenuComplete,
+    ootData,
 )
-
 
 class OOTSceneCommon:
     ootEnumBootMode = [
@@ -60,14 +59,14 @@ class OOTSceneCommon:
 
 
 class OOTSceneProperties(PropertyGroup):
-    write_dummy_room_list: BoolProperty(
-        name="Dummy Room List",
-        default=False,
-        description=(
-            "When exporting the scene to C, use NULL for the pointers to room "
-            "start/end offsets, instead of the appropriate symbols"
-        ),
-    )
+    write_dummy_room_list: False #BoolProperty(
+    #     name="Dummy Room List",
+    #     default=False,
+    #     description=(
+    #         "When exporting the scene to C, use NULL for the pointers to room "
+    #         "start/end offsets, instead of the appropriate symbols"
+    #     ),
+    # )
 
 
 class OOTExitProperty(PropertyGroup):
@@ -221,7 +220,7 @@ class OOTSceneHeaderProperty(PropertyGroup):
     expandTab: BoolProperty(name="Expand Tab")
     usePreviousHeader: BoolProperty(name="Use Previous Header", default=True)
 
-    globalObject: EnumProperty(name="Global Object", default=ootEnumGlobalObject[1], items=ootEnumGlobalObject)
+    globalObject: EnumProperty(name="Global Object", default='object_gameplay_field_keep', items=ootData.objectData.globalObjectsKey)
     globalObjectCustom: StringProperty(name="Global Object Custom", default="0x00")
     naviCup: EnumProperty(name="Navi Hints", default="0x00", items=ootEnumNaviHints)
     naviCupCustom: StringProperty(name="Navi Hints Custom", default="0x00")

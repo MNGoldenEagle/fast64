@@ -1,5 +1,6 @@
 import json, os
 from .data import OoT_Data
+import os, json
 
 addon_path = os.path.dirname(os.path.realpath(os.path.join(__file__, '..', '..')))
 
@@ -83,15 +84,6 @@ ootEnumLightGroupMenu = [
 	("Dusk", "Dusk", "Dusk"),
 	("Night", "Night", "Night"),
 ]
-
-ootEnumActorID = [
-	("Custom", "Custom", "Custom"),
-	("ACTOR_PLAYER", "Player", "PLAYER"),
-	("ACTOR_EN_ITEM00", "Item00", "EN_ITEM00"),
-	("ACTOR_EN_A_OBJ", "A Obj", "EN_A_OBJ")
-] + readJsonFile('actors.json')
-
-ootEnumTransitionActorID = [actor for actor in ootEnumActorID if 'door' in actor[1].lower()]
 
 ootEnumLinkIdle = [
 	("Custom", "Custom", "Custom"),
@@ -213,14 +205,6 @@ ootEnumMusicSeq = [
 ootEnumNightSeq = [
 	("Custom", "Custom", "Custom")
 ] + readJsonFile('night_sounds.json')
-
-ootEnumObjectID = [
-	("Custom", "Custom", "Custom")
-] + readJsonFile('objects.json')
-
-ootEnumGlobalObject = [obj for obj in ootEnumObjectID if 'keep' in obj[1].lower() and obj[0] != 'OBJECT_GAMEPLAY_KEEP']
-
-ootEnumObjectID = [obj for obj in ootEnumObjectID if obj not in ootEnumGlobalObject]
 
 ootEnumNaviHints = [
 	("Custom", "Custom", "Custom"),

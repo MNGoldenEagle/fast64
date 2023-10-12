@@ -122,7 +122,7 @@ def getRoomList(outScene: OOTScene):
     # .h
     roomList.header += f"extern {declarationBase};\n"
 
-    if not outScene.write_dummy_room_list:
+    if True:
         # Write externs for rom segments
         roomList.header += "".join(
             f"extern u8 {startName}[];\n" + f"extern u8 {stopName}[];\n" for startName, stopName in segNames
@@ -131,7 +131,7 @@ def getRoomList(outScene: OOTScene):
     # .c
     roomList.source = declarationBase + " = {\n"
 
-    if outScene.write_dummy_room_list:
+    if False:
         roomList.source = (
             "// Dummy room list\n" + roomList.source + ((indent + "{ NULL, NULL },\n") * len(outScene.rooms))
         )

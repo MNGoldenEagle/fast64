@@ -108,7 +108,7 @@ def ootCombineSceneFiles(levelC):
 
 
 def ootExportSceneToC(
-    originalSceneObj, transformMatrix, f3dType, isHWv1, sceneName, DLFormat, savePNG, exportInfo, bootToSceneOptions
+    originalSceneObj, transformMatrix, f3dType, isHWv1, sceneName, DLFormat, savePNG, exportInfo,
 ):
     checkObjectReference(originalSceneObj, "Scene object")
     isCustomExport = exportInfo.isCustomExportPath
@@ -133,6 +133,12 @@ def ootExportSceneToC(
     print(exportSubdir)
     levelPath = ootGetPath(exportPath, isCustomExport, exportSubdir, sceneName, True, True)
     levelC = getSceneC(scene, TextureExportSettings(False, savePNG, sceneInclude, levelPath))
+
+    if not isCustomExport:
+        writeTextureArraysExistingScene(scene.model, exportPath, sceneInclude + sceneName + "_scene.h")
+    else:
+        textureArrayData = writeTextureArraysNew(scene.model, None)
+        levelC.sceneTexturesC.append(textureArrayData)
 
     # if bpy.context.scene.ootSceneSingleFile:
     # writeCDataSourceOnly(
@@ -177,36 +183,34 @@ def ootExportSceneToC(
     # Export the room segment .c files
     for roomName, roomMainC in levelC.roomMainC.items():
         writeCDataSourceOnly(
-            ootPreprendSceneIncludes(scene, roomMainC), os.path.join(levelPath, roomName + ".c")
+            ootPreprendSceneIncludes(scene, roomMainC), os.path.join(levelPath, roomName + "_main.c")
         )
-        with open(os.path.join(levelPath, roomName + ".c"), "a") as roomc:
-            roomc.write(f'#include "{exportSubdir}{sceneName}/{roomName}_model.c.inc"\n')
-            roomc.write(f'#include "{exportSubdir}{sceneName}/{roomName}_model_info.c.inc"\n')
-    for roomName, roomMeshInfoC in levelC.roomMeshInfoC.items():
+    for roomName, roomShapeInfoC in levelC.roomShapeInfoC.items():
         writeCDataSourceOnly(
-            ootPreprendSceneIncludes(scene, roomMeshInfoC), os.path.join(levelPath, roomName + "_model_info.c.inc")
+            ootPreprendSceneIncludes(scene, roomShapeInfoC), os.path.join(levelPath, roomName + "_model_info.c")
         )
-    for roomName, roomMeshC in levelC.roomMeshC.items():
+    for roomName, roomModelC in levelC.roomModelC.items():
         writeCDataSourceOnly(
-            ootPreprendSceneIncludes(scene, roomMeshC), os.path.join(levelPath, roomName + "_model.c.inc")
+            ootPreprendSceneIncludes(scene, roomModelC), os.path.join(levelPath, roomName + "_model.c")
         )
 
     # Export the scene .h file
     writeCDataHeaderOnly(ootCreateSceneHeader(levelC), os.path.join(levelPath, scene.sceneName() + ".h"))
 
-    writeExternalProperties(levelPath, f"{exportSubdir}{sceneName}", scene)
+    # Copy bg images
+    scene.copyBgImages(levelPath)
 
-#    if not isCustomExport:
-#        writeOtherSceneProperties(scene, exportInfo, levelC)
+    if not isCustomExport:
+        writeOtherSceneProperties(scene, exportInfo, levelC)
 
-    if bootToSceneOptions is not None and bootToSceneOptions.bootToScene:
-        setBootupScene(
-            os.path.join(exportPath, "include/config/config_debug.h")
-            if not isCustomExport
-            else os.path.join(levelPath, "config_bootup.h"),
-            "ENTR_" + sceneName.upper() + "_" + str(bootToSceneOptions.spawnIndex),
-            bootToSceneOptions,
-        )
+    # if bootToSceneOptions is not None and bootToSceneOptions.bootToScene:
+    #     setBootupScene(
+    #         os.path.join(exportPath, "include/config/config_debug.h")
+    #         if not isCustomExport
+    #         else os.path.join(levelPath, "config_bootup.h"),
+    #         "ENTR_" + sceneName.upper() + "_" + str(bootToSceneOptions.spawnIndex),
+    #         bootToSceneOptions,
+    #     )
 
 
 def writeExternalProperties(levelPath, relExportPath, scene):
@@ -271,8 +275,8 @@ def writeTextureArraysExistingScene(fModel: OOTModel, exportPath: str, sceneIncl
 
 
 def writeOtherSceneProperties(scene, exportInfo, levelC):
-    modifySceneTable(scene, exportInfo)
-    editSpecFile(scene, exportInfo, levelC)
+    # modifySceneTable(scene, exportInfo)
+    # editSpecFile(scene, exportInfo, levelC)
     modifySceneFiles(scene, exportInfo)
 
 
@@ -282,7 +286,6 @@ def readSceneData(
     sceneHeader: OOTSceneHeaderProperty,
     alternateSceneHeaders: OOTAlternateSceneHeaderProperty,
 ):
-    scene.write_dummy_room_list = scene_properties.write_dummy_room_list
     scene.sceneTableEntry.drawConfig = getCustomProperty(sceneHeader.sceneTableEntry, "drawConfig")
     scene.sceneTableEntry.titleCard = sceneHeader.sceneTableEntry.titleCard if sceneHeader.sceneTableEntry.hasTitle else None
     scene.sceneTableEntry.titleCardType = sceneHeader.sceneTableEntry.titleCardType
@@ -297,7 +300,6 @@ def readSceneData(
     scene.musicSeq = getCustomProperty(sceneHeader, "musicSeq")
     scene.nightSeq = getCustomProperty(sceneHeader, "nightSeq")
     scene.audioSessionPreset = getCustomProperty(sceneHeader, "audioSessionPreset")
-    scene.appendNullEntrance = sceneHeader.appendNullEntrance
 
     if (
         sceneHeader.skyboxLighting == "0x00"
@@ -881,7 +883,7 @@ def ootProcessEmpties(scene, room, sceneObj, obj, transformMatrix):
                 spawnIndex,
                 OOTActor(
                     "",
-                    "ACTOR_PLAYER" if not entranceProp.customActor else entranceProp.actor.actorIDCustom,
+                    "ACTOR_LINK" if not entranceProp.customActor else entranceProp.actor.actorIDCustom,
                     translation,
                     ", ".join(f"DEG_TO_BINANG({(rot * (180 / 0x8000)):.3f})" for rot in rotation),
                     entranceProp.actor.actorParam,

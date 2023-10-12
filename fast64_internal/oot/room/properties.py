@@ -30,7 +30,8 @@ from ..oot_constants import (
 
 class OOTObjectProperty(PropertyGroup):
     expandTab: BoolProperty(name="Expand Tab")
-    objectKey: EnumProperty(items=ootData.objectData.ootEnumObjectKey, default="obj_human")
+
+    objectKey: EnumProperty(items=ootData.objectData.ootEnumObjectKey, default="object_bombiwa")
     objectIDCustom: StringProperty(default="OBJECT_CUSTOM")
 
     @staticmethod

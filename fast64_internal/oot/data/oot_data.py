@@ -1,5 +1,14 @@
 from dataclasses import dataclass
+import os, json
 
+addon_path = os.path.dirname(os.path.realpath(os.path.join(__file__, '..', '..', '..')))
+
+def readJsonFile(filename):
+	with open(os.path.join(addon_path, filename)) as file:
+		result = json.load(file)
+	
+	result = [tuple(arr) for arr in result]
+	return result
 
 @dataclass
 class OoT_BaseElement:

@@ -3,7 +3,10 @@ from bpy.types import Operator
 from bpy.props import EnumProperty, StringProperty
 from bpy.utils import register_class, unregister_class
 from ...utility import PluginError
-from ..oot_constants import ootData, ootEnumTransitionActorID, ootEnumActorID
+from ..oot_constants import ootData
+
+ootEnumTransitionActorID = ootData.actorData.transitionActors
+ootEnumActorID = ootData.actorData.ootEnumActorID
 
 
 class OOT_SearchActorIDEnumOperator(Operator):
