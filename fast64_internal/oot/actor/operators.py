@@ -5,7 +5,7 @@ from bpy.utils import register_class, unregister_class
 from ...utility import PluginError
 from ..oot_constants import ootData
 
-ootEnumTransitionActorID = ootData.actorData.transitionActors
+ootEnumTransitionActorID = ootData.actorData.ootEnumTransitionActorID
 ootEnumActorID = ootData.actorData.ootEnumActorID
 
 
@@ -16,6 +16,8 @@ class OOT_SearchActorIDEnumOperator(Operator):
     bl_options = {"REGISTER", "UNDO"}
 
     def actorItems(self, _):
+        print(self.actorUser)
+        print(ootEnumTransitionActorID)
         return ootEnumTransitionActorID if self.actorUser == "Transition Actor" else ootEnumActorID
 
     actorUser: StringProperty(default="Actor")

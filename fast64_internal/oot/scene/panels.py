@@ -6,10 +6,12 @@ from ..oot_constants import ootEnumSceneID
 from ..oot_utility import getEnumName
 from .properties import (
     OOTExportSceneSettingsProperty,
+    OOTImportSceneSettingsProperty,
     OOTSceneCommon,
 )
 
 from .operators import (
+    OOT_ImportScene,
     OOT_ExportScene,
     OOT_SearchSceneEnumOperator,
 )
@@ -35,6 +37,18 @@ class OOT_ExportScenePanel(OOT_Panel):
         if not settings.customExport:
             self.drawSceneSearchOp(exportBox, settings.option, "Export")
         settings.draw_props(exportBox)
+
+        # Scene Importer
+        importBox = col.box().column()
+        importBox.label(text="Scene Importer")
+
+        importSettings: OOTImportSceneSettingsProperty = context.scene.ootSceneImportSettings
+
+        if not importSettings.isCustomDest:
+            self.drawSceneSearchOp(importBox, importSettings.option, "Import")
+
+        importSettings.draw_props(importBox, importSettings.option)
+        importBox.operator(OOT_ImportScene.bl_idname)
 
         # if context.scene.fast64.oot.hackerFeaturesEnabled:
         #     hackerOoTBox = exportBox.box().column()

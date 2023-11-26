@@ -1,6 +1,8 @@
 import json, os
 from .data import OoT_Data
 import os, json
+from oot_parse import parseEnumFile
+from ..utility import readFile
 
 addon_path = os.path.dirname(os.path.realpath(os.path.join(__file__, '..', '..')))
 
@@ -37,7 +39,7 @@ ootEnumSceneMenu = [
 	("Lighting", "Lighting", "Lighting"),
 	("Cutscene", "Cutscene", "Cutscene"),
 	("Exits", "Exits", "Exits"),
-	("Alternate", "Alternate", "Alternate"),
+	("Alternate", "Event Headers", "Alternate Headers by Event"),
 ]
 
 ootEnumRenderScene = [
@@ -55,7 +57,7 @@ ootEnumSceneMenuAlternate = [
 ootEnumRoomMenu = [
 	("General", "General", "General"),
 	("Objects", "Objects", "Objects"),
-	("Alternate", "Alternate", "Alternate"),
+	("Alternate", "Event Headers", "Alternate Headers by Event"),
 ]
 
 ootEnumRoomMenuAlternate = [
@@ -83,6 +85,13 @@ ootEnumLightGroupMenu = [
 	("Day", "Day", "Day"),
 	("Dusk", "Dusk", "Dusk"),
 	("Night", "Night", "Night"),
+]
+
+ootEnumSceneEventTestType = [
+	("SINGLE", "A Only", "Only tests if the first scenario flag has been set."),
+	("EITHER", "A | B", "Tests if either scenario flag has been set."),
+	("BOTH", "A & B", "Tests if both scenario flags have been set."),
+	("FIRST", "A & !B", "Tests if the first flag is set and the second is false.")
 ]
 
 ootEnumLinkIdle = [
@@ -365,6 +374,8 @@ ootEnumSceneSetupPreset = [
 	("All Scene Setups", "All Scene Setups", "All Scene Setups"),
 	("All Non-Cutscene Scene Setups", "All Non-Cutscene Scene Setups", "All Non-Cutscene Scene Setups"),
 ]
+
+ootEnumScenarioFlags = parseEnumFile(readFile("z64scenario.h"), "ScenarioFlags", "SC_FL")
 
 ootEnumDrawConfig = readJsonFile('draw_configs.json')
 

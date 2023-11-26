@@ -28,6 +28,8 @@ from ..oot_utility import (
 
 from ..oot_constants import (
     ootEnumMusicSeq,
+    ootEnumSceneEventTestType,
+    ootEnumScenarioFlags,
     ootEnumSceneID,
     ootEnumTransitionAnims,
     ootEnumLightGroupMenu,
@@ -372,47 +374,57 @@ class OOTSceneHeaderProperty(PropertyGroup):
                     drawAddButton(cutscene, 0, "extraCutscenes", 0, objName)
 
         elif menuTab == "Exits":
-            if headerIndex is None or headerIndex == 0:
-                exitBox = layout.column()
-                exitBox.box().label(text="Exit List")
-                for i in range(len(self.exitList)):
-                    self.exitList[i].draw_props(exitBox, i, headerIndex, objName)
+            exitBox = layout.column()
+            exitBox.box().label(text="Exit List")
+            for i in range(len(self.exitList)):
+                self.exitList[i].draw_props(exitBox, i, headerIndex, objName)
 
-                drawAddButton(exitBox, len(self.exitList), "Exit", headerIndex, objName)
-            else:
-                layout.label(text = "Exits are edited in main header.")
+            drawAddButton(exitBox, len(self.exitList), "Exit", headerIndex, objName)
+
+
+class OOTEventConditionProperty(PropertyGroup):
+    test: EnumProperty(name="Test", items=ootEnumSceneEventTestType)
+    invert: BoolProperty(name="Invert?", description="Inverts how the test is evaluated.")
+    flagA: EnumProperty(name="Flag A", items=ootEnumScenarioFlags)
+    flagB: EnumProperty(name="Flag B", items=ootEnumScenarioFlags)
+
+    def draw_props(self, layout: UILayout, objName: str):
+        box = layout.column()
+        testRow = box.row()
+        testRow.prop(self, "test")
+        testRow.prop(self, "invert")
+        flagRow = box.row()
+        flagRow.prop(self, "flagA")
+        flagRow.prop(self, "flagB")
+
+
+class OOTEventHeaderProperty(PropertyGroup):
+    friendlyName: StringProperty(name="Editor Name", description="Friendly name to refer to this event header by.")
+    eventTests: CollectionProperty(type=OOTEventConditionProperty)
+    anded: BoolProperty(name="And?", description="All tests must succeed for this header to render.")
+    ored: BoolProperty(name="Or?", description="At least one test must succeed for this header to render.")
+    header: PointerProperty(name="Event Header", type=OOTSceneHeaderProperty)
+
+    def draw_props(self, layout: UILayout, name: str, showExpandTab: bool, index: int, sceneHeaderIndex: int, objName: str):
+        eventBox = layout.column()
+        eventBox.box().label(text="Event Flag Tests")
+        for i in range(len(self.eventTests)):
+            self.eventTests[i].draw_props(eventBox, objName)
+
+        drawCollectionOps(eventBox, len(self.eventTests), "Events", sceneHeaderIndex, objName)
+        self.header.draw_props(eventBox, None, index, objName)
 
 
 class OOTAlternateSceneHeaderProperty(PropertyGroup):
-    childNightHeader: PointerProperty(name="Child Night Header", type=OOTSceneHeaderProperty)
-    adultDayHeader: PointerProperty(name="Adult Day Header", type=OOTSceneHeaderProperty)
-    adultNightHeader: PointerProperty(name="Adult Night Header", type=OOTSceneHeaderProperty)
-    cutsceneHeaders: CollectionProperty(type=OOTSceneHeaderProperty)
+    alternateHeaders: CollectionProperty(type=OOTSceneHeaderProperty)
 
     headerMenuTab: EnumProperty(name="Header Menu", items=ootEnumHeaderMenu, update=onHeaderMenuTabChange)
-    currentCutsceneIndex: IntProperty(min=4, default=4, update=onHeaderMenuTabChange)
 
     def draw_props(self, layout: UILayout, objName: str):
         headerSetup = layout.column()
-        # headerSetup.box().label(text = "Alternate Headers")
         headerSetupBox = headerSetup.column()
-
-        headerSetupBox.row().prop(self, "headerMenuTab", expand=True)
-        if self.headerMenuTab == "Child Night":
-            self.childNightHeader.draw_props(headerSetupBox, None, 1, objName)
-        elif self.headerMenuTab == "Adult Day":
-            self.adultDayHeader.draw_props(headerSetupBox, None, 2, objName)
-        elif self.headerMenuTab == "Adult Night":
-            self.adultNightHeader.draw_props(headerSetupBox, None, 3, objName)
-        elif self.headerMenuTab == "Cutscene":
-            prop_split(headerSetup, self, "currentCutsceneIndex", "Cutscene Index")
-            drawAddButton(headerSetup, len(self.cutsceneHeaders), "Scene", None, objName)
-            index = self.currentCutsceneIndex
-            if index - 4 < len(self.cutsceneHeaders):
-                self.cutsceneHeaders[index - 4].draw_props(headerSetup, None, index, objName)
-            else:
-                headerSetup.label(text="No cutscene header for this index.", icon="QUESTION")
-
+        for i in range(len(self.alternateHeaders)):
+            self.alternateHeaders[i].draw_props(headerSetupBox, )
 
 class OOTBootupSceneOptions(PropertyGroup):
     bootToScene: BoolProperty(default=False, name="Boot To Scene")
