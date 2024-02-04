@@ -1,4 +1,5 @@
-import os, bpy
+import bpy
+import os
 from bpy.types import PropertyGroup, Object, Light, UILayout, Scene
 from bpy.props import (
     EnumProperty,
@@ -12,8 +13,6 @@ from bpy.props import (
 from bpy.utils import register_class, unregister_class
 from ...render_settings import on_update_oot_render_settings
 from ...utility import prop_split, customExportWarning
-from ..cutscene.properties import OOTCSListProperty
-from ..cutscene.operators import drawCSListAddOp
 from ..cutscene.constants import ootEnumCSWriteType
 from ...f3d.f3d_enums import enumTexFormat
 
@@ -29,8 +28,6 @@ from ..oot_utility import (
 from ..oot_constants import (
     ootEnumMusicSeq,
     ootEnumSceneID,
-    ootEnumTransitionAnims,
-    ootEnumLightGroupMenu,
     ootEnumNaviHints,
     ootEnumSkybox,
     ootEnumCloudiness,
@@ -39,13 +36,39 @@ from ..oot_constants import (
     ootEnumCameraMode,
     ootEnumNightSeq,
     ootEnumAudioSessionPreset,
-    ootEnumSceneMenu,
-    ootEnumSceneMenuAlternate,
     ootEnumHeaderMenu,
     ootEnumDrawConfig,
     ootEnumHeaderMenuComplete,
     ootData,
+    readJsonFile,
 )
+
+ootEnumSceneMenuAlternate = [
+    ("General", "General", "General"),
+    ("Lighting", "Lighting", "Lighting"),
+    ("Cutscene", "Cutscene", "Cutscene"),
+    ("Exits", "Exits", "Exits"),
+]
+ootEnumSceneMenu = ootEnumSceneMenuAlternate + [
+    ("Alternate", "Alternate", "Alternate"),
+]
+
+ootEnumLightGroupMenu = [
+    ("Dawn", "Dawn", "Dawn"),
+    ("Day", "Day", "Day"),
+    ("Dusk", "Dusk", "Dusk"),
+    ("Night", "Night", "Night"),
+]
+
+ootEnumTransitionAnims = [
+	("Custom", "Custom", "Custom")
+] + readJsonFile('transitions.json')
+
+ootEnumExitIndex = [
+    ("Custom", "Custom", "Custom"),
+    ("Default", "Default", "Default"),
+]
+
 
 class OOTSceneCommon:
     ootEnumBootMode = [
@@ -55,7 +78,7 @@ class OOTSceneCommon:
     ]
 
     def isSceneObj(self, obj):
-        return obj.data is None and obj.ootEmptyType == "Scene"
+        return obj.type == "EMPTY" and obj.ootEmptyType == "Scene"
 
 
 class OOTSceneProperties(PropertyGroup):
@@ -213,7 +236,11 @@ class OOTSceneTableEntryProperty(PropertyGroup):
 
 
 class OOTExtraCutsceneProperty(PropertyGroup):
-    csObject: PointerProperty(name="Cutscene Object", type=Object)
+    csObject: PointerProperty(
+        name="Cutscene Object",
+        type=Object,
+        poll=lambda self, object: object.type == "EMPTY" and object.ootEmptyType == "Cutscene",
+    )
 
 
 class OOTSceneHeaderProperty(PropertyGroup):
@@ -256,23 +283,16 @@ class OOTSceneHeaderProperty(PropertyGroup):
     exitList: CollectionProperty(type=OOTExitProperty, name="Exit List")
 
     writeCutscene: BoolProperty(name="Write Cutscene")
-    csWriteType: EnumProperty(name="Cutscene Data Type", items=ootEnumCSWriteType, default="Embedded")
+    csWriteType: EnumProperty(name="Cutscene Data Type", items=ootEnumCSWriteType, default="Object")
     csWriteCustom: StringProperty(name="CS hdr var:", default="")
-    csWriteObject: PointerProperty(name="Cutscene Object", type=Object)
-
-    # These properties are for the deprecated "Embedded" cutscene type. They have
-    # not been removed as doing so would break any existing scenes made with this
-    # type of cutscene data.
-    csEndFrame: IntProperty(name="End Frame", min=0, default=100)
-    csUseDestination: BoolProperty(name="Write Terminator (Code Execution)")
-    csDestination: IntProperty(name="Index", min=0)
-    csDestinationStartFrame: IntProperty(name="Start Frm", min=0, default=99)
-    csLists: CollectionProperty(type=OOTCSListProperty, name="Cutscene Lists")
+    csWriteObject: PointerProperty(
+        name="Cutscene Object",
+        type=Object,
+        poll=lambda self, object: object.type == "EMPTY" and object.ootEmptyType == "Cutscene",
+    )
 
     extraCutscenes: CollectionProperty(type=OOTExtraCutsceneProperty, name="Extra Cutscenes")
-
     sceneTableEntry: PointerProperty(type=OOTSceneTableEntryProperty)
-
     menuTab: EnumProperty(name="Menu", items=ootEnumSceneMenu, update=onMenuTabChange)
     altMenuTab: EnumProperty(name="Menu", items=ootEnumSceneMenuAlternate)
 
@@ -341,26 +361,8 @@ class OOTSceneHeaderProperty(PropertyGroup):
                 r.prop(self, "csWriteType", text="Data")
                 if self.csWriteType == "Custom":
                     cutscene.prop(self, "csWriteCustom")
-                elif self.csWriteType == "Object":
-                    cutscene.prop(self, "csWriteObject")
                 else:
-                    # This is the GUI setup / drawing for the properties for the
-                    # deprecated "Embedded" cutscene type. They have not been removed
-                    # as doing so would break any existing scenes made with this type
-                    # of cutscene data.
-                    cutscene.label(text='Embedded cutscenes are deprecated. Please use "Object" instead.')
-                    cutscene.prop(self, "csEndFrame", text="End Frame")
-                    cutscene.prop(self, "csUseDestination", text="Write Terminator (Code Execution)")
-                    if self.csUseDestination:
-                        r = cutscene.row()
-                        r.prop(self, "csDestination", text="Index")
-                        r.prop(self, "csDestinationStartFrame", text="Start Frm")
-                    collectionType = "CSHdr." + str(0 if headerIndex is None else headerIndex)
-
-                    drawCSListAddOp(cutscene, objName, collectionType)
-
-                    for i, p in enumerate(self.csLists):
-                        p.draw_props(cutscene, i, objName, collectionType)
+                    cutscene.prop(self, "csWriteObject")
 
             if headerIndex is None or headerIndex == 0:
                 cutscene.label(text="Extra cutscenes (not in any header):")
@@ -499,6 +501,7 @@ class OOTImportSceneSettingsProperty(PropertyGroup):
     includeCameras: BoolProperty(name="Cameras", default=True)
     includePaths: BoolProperty(name="Paths", default=True)
     includeWaterBoxes: BoolProperty(name="Water Boxes", default=True)
+    includeCutscenes: BoolProperty(name="Cutscenes", default=False)
     option: EnumProperty(items=ootEnumSceneID, default="SCENE_MABE_VILLAGE")
 
     def draw_props(self, layout: UILayout, sceneOption: str):
@@ -506,17 +509,19 @@ class OOTImportSceneSettingsProperty(PropertyGroup):
         includeButtons1 = col.row(align=True)
         includeButtons1.prop(self, "includeMesh", toggle=1)
         includeButtons1.prop(self, "includeCollision", toggle=1)
+        includeButtons1.prop(self, "includeActors", toggle=1)
 
         includeButtons2 = col.row(align=True)
-        includeButtons2.prop(self, "includeActors", toggle=1)
         includeButtons2.prop(self, "includeCullGroups", toggle=1)
         includeButtons2.prop(self, "includeLights", toggle=1)
+        includeButtons2.prop(self, "includeCameras", toggle=1)
 
         includeButtons3 = col.row(align=True)
-        includeButtons3.prop(self, "includeCameras", toggle=1)
         includeButtons3.prop(self, "includePaths", toggle=1)
         includeButtons3.prop(self, "includeWaterBoxes", toggle=1)
+        includeButtons3.prop(self, "includeCutscenes", toggle=1)
         col.prop(self, "isCustomDest")
+
         if self.isCustomDest:
             prop_split(col, self, "destPath", "Directory")
             prop_split(col, self, "name", "Name")

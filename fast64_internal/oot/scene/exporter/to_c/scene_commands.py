@@ -63,14 +63,12 @@ def getLightSettingsCmd(outScene: OOTScene, headerIndex: int):
 
 def getCutsceneDataCmd(outScene: OOTScene, headerIndex: int):
     match outScene.csWriteType:
-        case "Embedded":
-            csDataName = outScene.cutsceneDataName(headerIndex)
         case "Object":
-            csDataName = outScene.csWriteObject.name
+            csDataName = outScene.csName
         case _:
             csDataName = outScene.csWriteCustom
 
-    return f"SCENE_CMD_CUTSCENE_DATA({csDataName})"
+    return indent + f"SCENE_CMD_CUTSCENE_DATA({csDataName})"
 
 
 def getSceneCommandList(outScene: OOTScene, headerIndex: int):

@@ -1,15 +1,15 @@
+import bpy
+
 from dataclasses import dataclass
+from typing import TYPE_CHECKING
 from bpy.types import Object, CollectionProperty
 from .data import OoT_ObjectData
 from .oot_utility import getEvalParams
-from .oot_constants import ootEnumMusicSeq
-from .cutscene.constants import (
-    ootEnumTextType,
-    ootEnumCSMiscType,
-    ootEnumOcarinaAction,
-    ootEnumCSTransitionType,
-    ootEnumCSDestinationType,
-)
+from .oot_constants import ootData
+from .cutscene.constants import ootEnumCSMotionCamMode
+
+if TYPE_CHECKING:
+    from .cutscene.properties import OOTCutsceneProperty
 
 
 #####################################
@@ -56,20 +56,23 @@ def upgradeRoomHeaders(roomObj: Object, objData: OoT_ObjectData):
 class Cutscene_UpgradeData:
     oldPropName: str
     newPropName: str
-    enumData: list[tuple[str, str, str]] # this is the list used for enum properties
+    enumData: list[tuple[str, str, str]]  # this is the list used for enum properties
 
 
 def transferOldDataToNew(data, oldDataToNewData: dict[str, str]):
     # conversion to the same prop type
     # simply transfer the old data to the new one
-    # special case for rumble subprops where it's a string to int conversion
     for oldName, newName in oldDataToNewData.items():
         if oldName in data:
             if newName is not None:
                 value = data[oldName]
 
+                # special case for rumble subprops where it's a string to int conversion
+                # another special case for light setting index where the value need to be minus one
                 if newName in ["rumbleSourceStrength", "rumbleDuration", "rumbleDecreaseRate"]:
                     value = int(getEvalParams(data[oldName]), base=16)
+                elif newName == "lightSettingsIndex":
+                    value -= 1
 
                 data[newName] = value
 
@@ -175,12 +178,12 @@ def upgradeCutsceneSubProps(csListSubProp):
 
     subPropsToEnum = [
         # TextBox
-        Cutscene_UpgradeData("ocarinaSongAction", "ocarinaAction", ootEnumOcarinaAction),
-        Cutscene_UpgradeData("type", "csTextType", ootEnumTextType),
+        Cutscene_UpgradeData("ocarinaSongAction", "ocarinaAction", ootData.enumData.ootEnumOcarinaSongActionId),
+        Cutscene_UpgradeData("type", "csTextType", ootData.enumData.ootEnumCsTextType),
         # Seq
-        Cutscene_UpgradeData("value", "csSeqID", ootEnumMusicSeq),
+        Cutscene_UpgradeData("value", "csSeqID", ootData.enumData.ootEnumSeqId),
         # Misc
-        Cutscene_UpgradeData("operation", "csMiscType", ootEnumCSMiscType),
+        Cutscene_UpgradeData("operation", "csMiscType", ootData.enumData.ootEnumCsMiscType),
     ]
 
     transferOldDataToNew(csListSubProp, subPropsOldToNew)
@@ -204,12 +207,12 @@ def upgradeCSListProps(csListProp):
     transferOldDataToNew(csListProp, csListPropOldToNew)
 
     # both are enums but the item list is different (the old one doesn't have a "custom" entry)
-    convertOldDataToEnumData(csListProp, [Cutscene_UpgradeData("fxType", "transitionType", ootEnumCSTransitionType)])
+    convertOldDataToEnumData(
+        csListProp, [Cutscene_UpgradeData("fxType", "transitionType", ootData.enumData.ootEnumCsTransitionType)]
+    )
 
 
-def upgradeCutsceneProperty(csProp):
-    # ``csProp`` type: ``OOTCutsceneProperty``
-
+def upgradeCutsceneProperty(csProp: "OOTCutsceneProperty"):
     csPropOldToNew = {
         "csWriteTerminator": "csUseDestination",
         "csTermStart": "csDestinationStartFrame",
@@ -217,4 +220,130 @@ def upgradeCutsceneProperty(csProp):
     }
 
     transferOldDataToNew(csProp, csPropOldToNew)
-    convertOldDataToEnumData(csProp, [Cutscene_UpgradeData("csTermIdx", "csDestination", ootEnumCSDestinationType)])
+    convertOldDataToEnumData(
+        csProp, [Cutscene_UpgradeData("csTermIdx", "csDestination", ootData.enumData.ootEnumCsDestination)]
+    )
+
+
+def upgradeCutsceneMotion(csMotionObj: Object):
+    """Main upgrade logic for Cutscene Motion data from zcamedit"""
+    objName = csMotionObj.name
+
+    if csMotionObj.type == "EMPTY":
+        csMotionProp = csMotionObj.ootCSMotionProperty
+
+        if "zc_alist" in csMotionObj and ("Preview." in objName or "ActionList." in objName):
+            legacyData = csMotionObj["zc_alist"]
+            emptyTypeSuffix = "List" if "ActionList." in objName else "Preview"
+            csMotionObj.ootEmptyType = f"CS {'Player' if 'Link' in objName else 'Actor'} Cue {emptyTypeSuffix}"
+
+            if "actor_id" in legacyData:
+                index = legacyData["actor_id"]
+                if index >= 0:
+                    cmdEnum = ootData.enumData.enumByKey["csCmd"]
+                    cmdType = cmdEnum.itemByIndex.get(index)
+                    if cmdType is not None:
+                        csMotionProp.actorCueListProp.commandType = cmdType.key
+                    else:
+                        csMotionProp.actorCueListProp.commandType = "Custom"
+                        csMotionProp.actorCueListProp.commandTypeCustom = f"0x{index:04X}"
+                del legacyData["actor_id"]
+
+            del csMotionObj["zc_alist"]
+
+        if "zc_apoint" in csMotionObj and "Point." in objName:
+            isPlayer = "Link" in csMotionObj.parent.name
+            legacyData = csMotionObj["zc_apoint"]
+            csMotionObj.ootEmptyType = f"CS {'Player' if isPlayer else 'Actor'} Cue"
+
+            if "start_frame" in legacyData:
+                csMotionProp.actorCueProp.cueStartFrame = legacyData["start_frame"]
+                del legacyData["start_frame"]
+
+            if "action_id" in legacyData:
+                playerEnum = ootData.enumData.enumByKey["csPlayerCueId"]
+                item = None
+                if isPlayer:
+                    item = playerEnum.itemByIndex.get(int(legacyData["action_id"], base=16))
+
+                if isPlayer and item is not None:
+                    csMotionProp.actorCueProp.playerCueID = item.key
+                else:
+                    csMotionProp.actorCueProp.cueActionID = legacyData["action_id"]
+                del legacyData["action_id"]
+
+            del csMotionObj["zc_apoint"]
+
+    if csMotionObj.type == "ARMATURE":
+        camShotProp = csMotionObj.data.ootCamShotProp
+
+        if "start_frame" in csMotionObj.data:
+            camShotProp.shotStartFrame = csMotionObj.data["start_frame"]
+            del csMotionObj.data["start_frame"]
+
+        if "cam_mode" in csMotionObj.data:
+            camShotProp.shotCamMode = ootEnumCSMotionCamMode[csMotionObj.data["cam_mode"]][0]
+            del csMotionObj.data["cam_mode"]
+
+        for bone in csMotionObj.data.bones:
+            camShotPointProp = bone.ootCamShotPointProp
+
+            if "frames" in bone:
+                camShotPointProp.shotPointFrame = bone["frames"]
+                del bone["frames"]
+
+            if "fov" in bone:
+                camShotPointProp.shotPointViewAngle = bone["fov"]
+                del bone["fov"]
+
+            if "camroll" in bone:
+                camShotPointProp.shotPointRoll = bone["camroll"]
+                del bone["camroll"]
+
+
+#####################################
+# Actors
+#####################################
+def upgradeActors(actorObj: Object):
+    if actorObj.ootEmptyType == "Entrance":
+        entranceProp = actorObj.ootEntranceProperty
+
+        for obj in bpy.data.objects:
+            if obj.type == "EMPTY" and obj.ootEmptyType == "Room":
+                if actorObj in obj.children_recursive:
+                    entranceProp.tiedRoom = obj
+                    break
+    elif actorObj.ootEmptyType == "Transition Actor":
+        # get room parent
+        roomParent = None
+        for obj in bpy.data.objects:
+            if obj.type == "EMPTY" and obj.ootEmptyType == "Room" and actorObj in obj.children_recursive:
+                roomParent = obj
+                break
+
+        # if it's ``None`` then this door actor is not parented to a room
+        if roomParent is None:
+            print("WARNING: Ignoring Door Actor not parented to a room")
+            return
+
+        transActorProp = actorObj.ootTransitionActorProperty
+        if "dontTransition" in transActorProp or "roomIndex" in transActorProp:
+            # look for old data since we don't want to overwrite newer existing data
+            transActorProp.fromRoom = roomParent
+
+        # upgrade old props if present
+        if "dontTransition" in transActorProp:
+            transActorProp.isRoomTransition = transActorProp["dontTransition"] == False
+            del transActorProp["dontTransition"]
+
+        if "roomIndex" in transActorProp:
+            for obj in bpy.data.objects:
+                if (
+                    obj != transActorProp.fromRoom
+                    and obj.type == "EMPTY"
+                    and obj.ootEmptyType == "Room"
+                    and obj.ootRoomHeader.roomIndex == transActorProp["roomIndex"]
+                ):
+                    transActorProp.toRoom = obj
+                    del transActorProp["roomIndex"]
+                    break

@@ -1,99 +1,49 @@
-from ...oot_utility import getCutsceneName, getCustomProperty
+import bpy
 
-from .classes import (
-    OOTCSList,
-    OOTCSText,
-    OOTCSLightSettings,
-    OOTCSTime,
-    OOTCSSeq,
-    OOTCSMisc,
-    OOTCSRumble,
-    OOTCutscene,
-)
+from bpy.types import Object
+from ....utility import PluginError
+from .classes import CutsceneExport
 
 
-def readCutsceneData(csParentOut, csParentIn):
-    for listIn in csParentIn.csLists:
-        listOut = OOTCSList()
-        listOut.listType = listIn.listType
+def getCutsceneObjects(csName: str):
+    """Returns the object list containing every object from the cutscene to export"""
 
-        listOut.transitionType, listOut.transitionStartFrame, listOut.transitionEndFrame = (
-            getCustomProperty(listIn, "transitionType"),
-            listIn.transitionStartFrame,
-            listIn.transitionEndFrame,
-        )
+    csObjects: dict[str, list[Object]] = {
+        "Cutscene": [],
+        "CS Actor Cue List": [],
+        "CS Player Cue List": [],
+        "camShot": [],
+    }
 
-        listData = []
-        if listOut.listType == "TextList":
-            for entryIn in listIn.textList:
-                entryOut = OOTCSText()
-                entryOut.textboxType = entryIn.textboxType
-                entryOut.textID = entryIn.textID
-                entryOut.ocarinaAction = getCustomProperty(entryIn, "ocarinaAction")
-                entryOut.startFrame = entryIn.startFrame
-                entryOut.endFrame = entryIn.endFrame
-                entryOut.textType = getCustomProperty(entryIn, "csTextType")
+    if csName is None:
+        raise PluginError("ERROR: The cutscene name is None!")
 
-                if entryOut.textType == "CS_TEXT_CHOICE":
-                    entryOut.topOptionTextID = entryIn.topOptionTextID
-                    entryOut.bottomOptionTextID = entryIn.bottomOptionTextID
+    for obj in bpy.data.objects:
+        isEmptyObj = obj.type == "EMPTY"
 
-                entryOut.ocarinaMessageId = entryIn.ocarinaMessageId
-                listOut.entries.append(entryOut)
-        elif listOut.listType == "LightSettingsList":
-            for entryIn in listIn.lightSettingsList:
-                entryOut = OOTCSLightSettings()
-                entryOut.lightSettingsIndex = entryIn.lightSettingsIndex
-                entryOut.startFrame = entryIn.startFrame
-                listOut.entries.append(entryOut)
-        elif listOut.listType == "TimeList":
-            for entryIn in listIn.timeList:
-                entryOut = OOTCSTime()
-                entryOut.startFrame = entryIn.startFrame
-                entryOut.hour = entryIn.hour
-                entryOut.minute = entryIn.minute
-                listOut.entries.append(entryOut)
-        elif listOut.listType in {"StartSeqList", "StopSeqList", "FadeOutSeqList"}:
-            for entryIn in listIn.seqList:
-                entryOut = OOTCSSeq()
-                entryOut.csSeqID = getCustomProperty(entryIn, "csSeqID")
-                entryOut.csSeqPlayer = getCustomProperty(entryIn, "csSeqPlayer")
-                print(entryOut.csSeqPlayer)
-                entryOut.startFrame = entryIn.startFrame
-                entryOut.endFrame = entryIn.endFrame
-                listOut.entries.append(entryOut)
-        elif listOut.listType == "MiscList":
-            for entryIn in listIn.miscList:
-                entryOut = OOTCSMisc()
-                entryOut.csMiscType = getCustomProperty(entryIn, "csMiscType")
-                entryOut.startFrame = entryIn.startFrame
-                entryOut.endFrame = entryIn.endFrame
-                listOut.entries.append(entryOut)
-        elif listOut.listType == "RumbleList":
-            for entryIn in listIn.rumbleList:
-                entryOut = OOTCSRumble()
-                entryOut.startFrame = entryIn.startFrame
-                entryOut.rumbleSourceStrength = entryIn.rumbleSourceStrength
+        # look for the cutscene object based on the cutscene name
+        parentCheck = obj.parent is not None and obj.parent.name == f"Cutscene.{csName}"
+        csObjCheck = isEmptyObj and obj.ootEmptyType == "Cutscene" and obj.name == f"Cutscene.{csName}"
+        if parentCheck or csObjCheck:
+            # add the relevant objects based on the empty type or if it's an armature
+            if isEmptyObj and obj.ootEmptyType in csObjects.keys():
+                csObjects[obj.ootEmptyType].append(obj)
 
-                # the duration's unit are vertical retraces, this happens 3 times per frame
-                # so we're multiplying the value by 3 to get a frame unit on the UI
-                # to keep consistency between start frame and duration
-                entryOut.rumbleDuration = entryIn.rumbleDuration * 3
+            if obj.type == "ARMATURE" and obj.parent.ootEmptyType == "Cutscene":
+                csObjects["camShot"].append(obj)
 
-                entryOut.rumbleDecreaseRate = entryIn.rumbleDecreaseRate
-                listOut.entries.append(entryOut)
-        csParentOut.csLists.append(listOut)
+    if len(csObjects["Cutscene"]) != 1:
+        raise PluginError(f"ERROR: Expected 1 Cutscene Object, found {len(csObjects['Cutscene'])} ({csName}).")
+
+    return csObjects
 
 
-def convertCutsceneObject(obj):
-    cs = OOTCutscene()
+def getNewCutsceneExport(csName: str, motionOnly: bool):
+    """Returns the initialised cutscene exporter"""
 
-    cs.name = getCutsceneName(obj)
-    csprop = obj.ootCutsceneProperty
-    cs.csEndFrame = getCustomProperty(csprop, "csEndFrame")
-    cs.csUseDestination = getCustomProperty(csprop, "csUseDestination")
-    cs.csDestination = getCustomProperty(csprop, "csDestination")
-    cs.csDestinationStartFrame = getCustomProperty(csprop, "csDestinationStartFrame")
-    readCutsceneData(cs, csprop)
-
-    return cs
+    # this allows us to change the exporter's variables to get what we need
+    return CutsceneExport(
+        getCutsceneObjects(csName),
+        bpy.context.scene.fast64.oot.hackerFeaturesEnabled or bpy.context.scene.useDecompFeatures,
+        motionOnly,
+    )
