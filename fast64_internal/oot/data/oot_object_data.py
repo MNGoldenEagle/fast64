@@ -20,7 +20,7 @@ class OoT_ObjectData:
         self.objectList: list[OoT_ObjectElement] = []
 
         # Path to the ``ObjectList.xml`` file
-        objectXML = path.dirname(path.abspath(__file__)) + "/../../../objects.xml"
+        objectXML = path.dirname(path.abspath(__file__)) + "/xml/objects.xml"
         objectRoot = getXMLRoot(objectXML)
 
         for obj in objectRoot.iterfind("Object"):

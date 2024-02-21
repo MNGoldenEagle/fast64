@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<Table Key="playerIdle" ID="PlayerIdleAnim" KeyType="System.UInt16" ValueType="System.String">
+	<Idle Index="0" Key="default" ID="PLAYER_IDLE_DEFAULT" Name="Default" Tooltip=""/>
+	<Idle Index="1" Key="sneezing" ID="PLAYER_IDLE_SNEEZING" Name="Sneezing" Tooltip=""/>
+	<Idle Index="2" Key="sweating" ID="PLAYER_IDLE_SWEATING" Name="Sweating" Tooltip=""/>
+	<Idle Index="4" Key="yawning" ID="PLAYER_IDLE_YAWNING" Name="Yawning" Tooltip=""/>
+	<Idle Index="7" Key="exhausted" ID="PLAYER_IDLE_EXHAUSTED" Name="Exhausted" Tooltip=""/>
+	<Idle Index="9" Key="wary_of_danger" ID="PLAYER_IDLE_WARY_OF_DANGER" Name="Wary Of Danger" Tooltip=""/>
+	<Idle Index="10" Key="pull_tunic" ID="PLAYER_IDLE_PULL_TUNIC" Name="Pull Tunic" Tooltip=""/>
+	<Idle Index="11" Key="hop_on_epona" ID="PLAYER_IDLE_HOP_ON_EPONA" Name="Hop On Epona" Tooltip=""/>
+</Table>

@@ -258,7 +258,7 @@ class OOT_SearchCSSeqOperator(Operator):
     bl_property = "seqId"
     bl_options = {"REGISTER", "UNDO"}
 
-    seqId: EnumProperty(items=ootData.enumData.ootEnumSeqId, default="general_sfx")
+    seqId: EnumProperty(items=ootData.enumData.ootEnumSeqId, default="sound_effects")
     itemIndex: IntProperty()
     listType: StringProperty()
 

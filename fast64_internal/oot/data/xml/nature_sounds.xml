@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<Table Key="natureId" ID="NatureAmbienceId" KeyType="System.UInt16" ValueType="System.String">
+	<Sound Index="0" Key="general_night" ID="NATURE_ID_GENERAL_NIGHT" Name="General Night" Tooltip=""/>
+	<Sound Index="1" Key="market_entrance" ID="NATURE_ID_MARKET_ENTRANCE" Name="Market Entrance" Tooltip=""/>
+	<Sound Index="2" Key="kakariko_region" ID="NATURE_ID_KAKARIKO_REGION" Name="Kakariko Region" Tooltip=""/>
+	<Sound Index="3" Key="market_ruins" ID="NATURE_ID_MARKET_RUINS" Name="Market Ruins" Tooltip=""/>
+	<Sound Index="4" Key="kokiri_region" ID="NATURE_ID_KOKIRI_REGION" Name="Kokiri Region" Tooltip=""/>
+	<Sound Index="5" Key="market_night" ID="NATURE_ID_MARKET_NIGHT" Name="Market Night" Tooltip=""/>
+	<Sound Index="6" Key="06" ID="NATURE_ID_06" Name="06" Tooltip=""/>
+	<Sound Index="7" Key="ganons_lair" ID="NATURE_ID_GANONS_LAIR" Name="Ganons Lair" Tooltip=""/>
+	<Sound Index="8" Key="08" ID="NATURE_ID_08" Name="08" Tooltip=""/>
+	<Sound Index="9" Key="09" ID="NATURE_ID_09" Name="09" Tooltip=""/>
+	<Sound Index="10" Key="wasteland" ID="NATURE_ID_WASTELAND" Name="Wasteland" Tooltip=""/>
+	<Sound Index="11" Key="colossus" ID="NATURE_ID_COLOSSUS" Name="Colossus" Tooltip=""/>
+	<Sound Index="12" Key="death_mountain_trail" ID="NATURE_ID_DEATH_MOUNTAIN_TRAIL" Name="Death Mountain Trail" Tooltip=""/>
+	<Sound Index="13" Key="0d" ID="NATURE_ID_0D" Name="0D" Tooltip=""/>
+	<Sound Index="14" Key="0e" ID="NATURE_ID_0E" Name="0E" Tooltip=""/>
+	<Sound Index="15" Key="0f" ID="NATURE_ID_0F" Name="0F" Tooltip=""/>
+	<Sound Index="16" Key="10" ID="NATURE_ID_10" Name="10" Tooltip=""/>
+	<Sound Index="17" Key="11" ID="NATURE_ID_11" Name="11" Tooltip=""/>
+	<Sound Index="18" Key="12" ID="NATURE_ID_12" Name="12" Tooltip=""/>
+	<Sound Index="19" Key="none" ID="NATURE_ID_NONE" Name="None" Tooltip=""/>
+	<Sound Index="20" Key="disabled" ID="NATURE_ID_DISABLED" Name="Disabled" Tooltip=""/>
+</Table>

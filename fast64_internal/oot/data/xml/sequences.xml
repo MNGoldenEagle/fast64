@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<Table ID="SeqId" Key="seqId" KeyType="System.UInt16" ValueType="System.String">
+	<Sequence Index="0" Key="sound_effects" ID="NA_BGM_SOUND_EFFECTS" Name="Sound Effects"/>
+	<Sequence Index="1" Key="overworld" ID="NA_BGM_OVERWORLD" Name="Overworld"/>
+	<Sequence Index="2" Key="mabe_village" ID="NA_BGM_MABE_VILLAGE" Name="Mabe Village"/>
+	<Sequence Index="3" Key="toronbo_shore" ID="NA_BGM_TORONBO_SHORE" Name="Toronbo Shore"/>
+	<Sequence Index="4" Key="mysterious_woods" ID="NA_BGM_MYSTERIOUS_WOODS" Name="Mysterious Woods"/>
+	<Sequence Index="5" Key="gopongo_swamp" ID="NA_BGM_GOPONGO_SWAMP" Name="Gopongo Swamp"/>
+	<Sequence Index="6" Key="house_theme" ID="NA_BGM_HOUSE_THEME" Name="House Theme"/>
+	<Sequence Index="7" Key="owl_theme" ID="NA_BGM_OWL_THEME" Name="Owl Theme"/>
+	<Sequence Index="8" Key="anticipating_treasure" ID="NA_BGM_ANTICIPATING_TREASURE" Name="Anticipating Treasure"/>
+	<Sequence Index="9" Key="got_powerup" ID="NA_BGM_GOT_POWERUP" Name="Got Powerup"/>
+	<Sequence Index="10" Key="got_item" ID="NA_BGM_GOT_ITEM" Name="Got Item"/>
+	<Sequence Index="11" Key="got_key_item" ID="NA_BGM_GOT_KEY_ITEM" Name="Got Key Item"/>
+	<Sequence Index="12" Key="got_heart_container" ID="NA_BGM_GOT_HEART_CONTAINER" Name="Got Heart Container"/>
+	<Sequence Index="13" Key="got_instrument" ID="NA_BGM_GOT_INSTRUMENT" Name="Got Instrument"/>
+	<Sequence Index="14" Key="battle" ID="NA_BGM_BATTLE" Name="Battle"/>
+	<Sequence Index="15" Key="mini_boss_battle" ID="NA_BGM_MINI_BOSS_BATTLE" Name="Mini Boss Battle"/>
+	<Sequence Index="16" Key="boss_battle" ID="NA_BGM_BOSS_BATTLE" Name="Boss Battle"/>
+	<Sequence Index="17" Key="boss_defeated" ID="NA_BGM_BOSS_DEFEATED" Name="Boss Defeated"/>
+	<Sequence Index="18" Key="game_over" ID="NA_BGM_GAME_OVER" Name="Game Over"/>
+	<Sequence Index="19" Key="song_of_awakening" ID="NA_BGM_SONG_OF_AWAKENING" Name="Song of Awakening"/>
+	<Sequence Index="20" Key="manbos_mambo" ID="NA_BGM_MANBOS_MAMBO" Name="Manbos Mambo"/>
+	<Sequence Index="21" Key="song_of_soul" ID="NA_BGM_SONG_OF_SOUL" Name="Song of Soul"/>
+	<Sequence Index="22" Key="failed_song" ID="NA_BGM_FAILED_SONG" Name="Failed Song"/>
+	<Sequence Index="23" Key="oca_song_of_awakening" ID="NA_BGM_OCA_SONG_OF_AWAKENING" Name="Oca Song of Awakening"/>
+	<Sequence Index="24" Key="oca_manbos_mambo" ID="NA_BGM_OCA_MANBOS_MAMBO" Name="Oca Manbos Mambo"/>
+	<Sequence Index="25" Key="oca_song_of_soul" ID="NA_BGM_OCA_SONG_OF_SOUL" Name="Oca Song of Soul"/>
+	<Sequence Index="26" Key="shipwrecked" ID="NA_BGM_SHIPWRECKED" Name="Shipwrecked"/>
+	<Sequence Index="27" Key="calm_before_the_storm" ID="NA_BGM_CALM_BEFORE_THE_STORM" Name="Calm Before the Storm"/>
+	<Sequence Index="28" Key="timed_minigame" ID="NA_BGM_TIMED_MINIGAME" Name="Timed Minigame"/>
+	<Sequence Index="29" Key="fairy_fountain" ID="NA_BGM_FAIRY_FOUNTAIN" Name="Fairy Fountain"/>
+	<Sequence Index="30" Key="shop" ID="NA_BGM_SHOP" Name="Shop"/>
+	<Sequence Index="31" Key="minigame_shop" ID="NA_BGM_MINIGAME_SHOP" Name="Minigame Shop"/>
+	<Sequence Index="32" Key="potion_shop" ID="NA_BGM_POTION_SHOP" Name="Potion Shop"/>
+	<Sequence Index="33" Key="tail_cave" ID="NA_BGM_TAIL_CAVE" Name="Tail Cave"/>
+	<Sequence Index="34" Key="cutscene_effects" ID="NA_BGM_CUTSCENE_EFFECTS" Name="Cutscene Effects"/>
+	<Sequence Index="35" Key="tal_tal_heights" ID="NA_BGM_TAL_TAL_HEIGHTS" Name="tal tal heights"/>
+	<Sequence Index="36" Key="troubled_realm" ID="NA_BGM_TROUBLED_REALM" Name="Troubled Realm"/>
+	<Sequence Index="37" Key="dream_shrine" ID="NA_BGM_DREAM_SHRINE" Name="Dream Shrine"/>
+	<Sequence Index="38" Key="song_of_storms_fanfare" ID="NA_BGM_SONG_OF_STORMS_FANFARE" Name="Song Of Storms Fanfare"/>
+	<Sequence Index="39" Key="hyrule_field_program" ID="NA_BGM_HYRULE_FIELD_PROGRAM" Name="Hyrule Field Program"/>
+	<Sequence Index="40" Key="ambient_effects" ID="NA_BGM_AMBIENT_EFFECTS" Name="Ambient Effects"/>
+</Table>

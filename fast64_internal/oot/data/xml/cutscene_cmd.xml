@@ -1,0 +1,133 @@
+<?xml version="1.0" ?>
+<Table Key="csCmd" ID="CutsceneCmd" KeyType="System.UInt16" ValueType="System.String">
+	<Cmd Index="1" Key="cam_eye_spline" ID="CS_CMD_CAM_EYE_SPLINE" Name="Cam Eye Spline" Tooltip=""/>
+	<Cmd Index="2" Key="cam_at_spline" ID="CS_CMD_CAM_AT_SPLINE" Name="Cam At Spline" Tooltip=""/>
+	<Cmd Index="3" Key="misc" ID="CS_CMD_MISC" Name="Misc" Tooltip=""/>
+	<Cmd Index="4" Key="light_setting" ID="CS_CMD_LIGHT_SETTING" Name="Light Setting" Tooltip=""/>
+	<Cmd Index="5" Key="cam_eye_spline_rel_to_player" ID="CS_CMD_CAM_EYE_SPLINE_REL_TO_PLAYER" Name="Cam Eye Spline Rel To Player" Tooltip=""/>
+	<Cmd Index="6" Key="cam_at_spline_rel_to_player" ID="CS_CMD_CAM_AT_SPLINE_REL_TO_PLAYER" Name="Cam At Spline Rel To Player" Tooltip=""/>
+	<Cmd Index="7" Key="cam_eye" ID="CS_CMD_CAM_EYE" Name="Cam Eye" Tooltip=""/>
+	<Cmd Index="8" Key="cam_at" ID="CS_CMD_CAM_AT" Name="Cam At" Tooltip=""/>
+	<Cmd Index="9" Key="rumble_controller" ID="CS_CMD_RUMBLE_CONTROLLER" Name="Rumble Controller" Tooltip=""/>
+	<Cmd Index="10" Key="player_cue" ID="CS_CMD_PLAYER_CUE" Name="Player Cue" Tooltip=""/>
+	<Cmd Index="11" Key="unimplemented_b" ID="CS_CMD_UNIMPLEMENTED_B" Name="Unimplemented B" Tooltip=""/>
+	<Cmd Index="13" Key="unimplemented_d" ID="CS_CMD_UNIMPLEMENTED_D" Name="Unimplemented D" Tooltip=""/>
+	<Cmd Index="14" Key="actor_cue_1_0" ID="CS_CMD_ACTOR_CUE_1_0" Name="Actor Cue 1 0" Tooltip=""/>
+	<Cmd Index="15" Key="actor_cue_0_0" ID="CS_CMD_ACTOR_CUE_0_0" Name="Actor Cue 0 0" Tooltip=""/>
+	<Cmd Index="16" Key="actor_cue_1_1" ID="CS_CMD_ACTOR_CUE_1_1" Name="Actor Cue 1 1" Tooltip=""/>
+	<Cmd Index="17" Key="actor_cue_0_1" ID="CS_CMD_ACTOR_CUE_0_1" Name="Actor Cue 0 1" Tooltip=""/>
+	<Cmd Index="18" Key="actor_cue_0_2" ID="CS_CMD_ACTOR_CUE_0_2" Name="Actor Cue 0 2" Tooltip=""/>
+	<Cmd Index="19" Key="text" ID="CS_CMD_TEXT" Name="Text" Tooltip=""/>
+	<Cmd Index="21" Key="unimplemented_15" ID="CS_CMD_UNIMPLEMENTED_15" Name="Unimplemented 15" Tooltip=""/>
+	<Cmd Index="22" Key="unimplemented_16" ID="CS_CMD_UNIMPLEMENTED_16" Name="Unimplemented 16" Tooltip=""/>
+	<Cmd Index="23" Key="actor_cue_0_3" ID="CS_CMD_ACTOR_CUE_0_3" Name="Actor Cue 0 3" Tooltip=""/>
+	<Cmd Index="24" Key="actor_cue_1_2" ID="CS_CMD_ACTOR_CUE_1_2" Name="Actor Cue 1 2" Tooltip=""/>
+	<Cmd Index="25" Key="actor_cue_2_0" ID="CS_CMD_ACTOR_CUE_2_0" Name="Actor Cue 2 0" Tooltip=""/>
+	<Cmd Index="27" Key="unimplemented_1b" ID="CS_CMD_UNIMPLEMENTED_1B" Name="Unimplemented 1B" Tooltip=""/>
+	<Cmd Index="28" Key="unimplemented_1c" ID="CS_CMD_UNIMPLEMENTED_1C" Name="Unimplemented 1C" Tooltip=""/>
+	<Cmd Index="29" Key="actor_cue_3_0" ID="CS_CMD_ACTOR_CUE_3_0" Name="Actor Cue 3 0" Tooltip=""/>
+	<Cmd Index="30" Key="actor_cue_4_0" ID="CS_CMD_ACTOR_CUE_4_0" Name="Actor Cue 4 0" Tooltip=""/>
+	<Cmd Index="31" Key="actor_cue_6_0" ID="CS_CMD_ACTOR_CUE_6_0" Name="Actor Cue 6 0" Tooltip=""/>
+	<Cmd Index="32" Key="unimplemented_20" ID="CS_CMD_UNIMPLEMENTED_20" Name="Unimplemented 20" Tooltip=""/>
+	<Cmd Index="33" Key="unimplemented_21" ID="CS_CMD_UNIMPLEMENTED_21" Name="Unimplemented 21" Tooltip=""/>
+	<Cmd Index="34" Key="actor_cue_0_4" ID="CS_CMD_ACTOR_CUE_0_4" Name="Actor Cue 0 4" Tooltip=""/>
+	<Cmd Index="35" Key="actor_cue_1_3" ID="CS_CMD_ACTOR_CUE_1_3" Name="Actor Cue 1 3" Tooltip=""/>
+	<Cmd Index="36" Key="actor_cue_2_1" ID="CS_CMD_ACTOR_CUE_2_1" Name="Actor Cue 2 1" Tooltip=""/>
+	<Cmd Index="37" Key="actor_cue_3_1" ID="CS_CMD_ACTOR_CUE_3_1" Name="Actor Cue 3 1" Tooltip=""/>
+	<Cmd Index="38" Key="actor_cue_4_1" ID="CS_CMD_ACTOR_CUE_4_1" Name="Actor Cue 4 1" Tooltip=""/>
+	<Cmd Index="39" Key="actor_cue_0_5" ID="CS_CMD_ACTOR_CUE_0_5" Name="Actor Cue 0 5" Tooltip=""/>
+	<Cmd Index="40" Key="actor_cue_1_4" ID="CS_CMD_ACTOR_CUE_1_4" Name="Actor Cue 1 4" Tooltip=""/>
+	<Cmd Index="41" Key="actor_cue_2_2" ID="CS_CMD_ACTOR_CUE_2_2" Name="Actor Cue 2 2" Tooltip=""/>
+	<Cmd Index="42" Key="actor_cue_3_2" ID="CS_CMD_ACTOR_CUE_3_2" Name="Actor Cue 3 2" Tooltip=""/>
+	<Cmd Index="43" Key="actor_cue_4_2" ID="CS_CMD_ACTOR_CUE_4_2" Name="Actor Cue 4 2" Tooltip=""/>
+	<Cmd Index="44" Key="actor_cue_5_0" ID="CS_CMD_ACTOR_CUE_5_0" Name="Actor Cue 5 0" Tooltip=""/>
+	<Cmd Index="45" Key="transition" ID="CS_CMD_TRANSITION" Name="Transition" Tooltip=""/>
+	<Cmd Index="46" Key="actor_cue_0_6" ID="CS_CMD_ACTOR_CUE_0_6" Name="Actor Cue 0 6" Tooltip=""/>
+	<Cmd Index="47" Key="actor_cue_4_3" ID="CS_CMD_ACTOR_CUE_4_3" Name="Actor Cue 4 3" Tooltip=""/>
+	<Cmd Index="48" Key="actor_cue_1_5" ID="CS_CMD_ACTOR_CUE_1_5" Name="Actor Cue 1 5" Tooltip=""/>
+	<Cmd Index="49" Key="actor_cue_7_0" ID="CS_CMD_ACTOR_CUE_7_0" Name="Actor Cue 7 0" Tooltip=""/>
+	<Cmd Index="50" Key="actor_cue_2_3" ID="CS_CMD_ACTOR_CUE_2_3" Name="Actor Cue 2 3" Tooltip=""/>
+	<Cmd Index="51" Key="actor_cue_3_3" ID="CS_CMD_ACTOR_CUE_3_3" Name="Actor Cue 3 3" Tooltip=""/>
+	<Cmd Index="52" Key="actor_cue_6_1" ID="CS_CMD_ACTOR_CUE_6_1" Name="Actor Cue 6 1" Tooltip=""/>
+	<Cmd Index="53" Key="actor_cue_3_4" ID="CS_CMD_ACTOR_CUE_3_4" Name="Actor Cue 3 4" Tooltip=""/>
+	<Cmd Index="54" Key="actor_cue_4_4" ID="CS_CMD_ACTOR_CUE_4_4" Name="Actor Cue 4 4" Tooltip=""/>
+	<Cmd Index="55" Key="actor_cue_5_1" ID="CS_CMD_ACTOR_CUE_5_1" Name="Actor Cue 5 1" Tooltip=""/>
+	<Cmd Index="57" Key="actor_cue_6_2" ID="CS_CMD_ACTOR_CUE_6_2" Name="Actor Cue 6 2" Tooltip=""/>
+	<Cmd Index="58" Key="actor_cue_6_3" ID="CS_CMD_ACTOR_CUE_6_3" Name="Actor Cue 6 3" Tooltip=""/>
+	<Cmd Index="59" Key="unimplemented_3b" ID="CS_CMD_UNIMPLEMENTED_3B" Name="Unimplemented 3B" Tooltip=""/>
+	<Cmd Index="60" Key="actor_cue_7_1" ID="CS_CMD_ACTOR_CUE_7_1" Name="Actor Cue 7 1" Tooltip=""/>
+	<Cmd Index="61" Key="unimplemented_3d" ID="CS_CMD_UNIMPLEMENTED_3D" Name="Unimplemented 3D" Tooltip=""/>
+	<Cmd Index="62" Key="actor_cue_8_0" ID="CS_CMD_ACTOR_CUE_8_0" Name="Actor Cue 8 0" Tooltip=""/>
+	<Cmd Index="63" Key="actor_cue_3_5" ID="CS_CMD_ACTOR_CUE_3_5" Name="Actor Cue 3 5" Tooltip=""/>
+	<Cmd Index="64" Key="actor_cue_1_6" ID="CS_CMD_ACTOR_CUE_1_6" Name="Actor Cue 1 6" Tooltip=""/>
+	<Cmd Index="65" Key="actor_cue_3_6" ID="CS_CMD_ACTOR_CUE_3_6" Name="Actor Cue 3 6" Tooltip=""/>
+	<Cmd Index="66" Key="actor_cue_3_7" ID="CS_CMD_ACTOR_CUE_3_7" Name="Actor Cue 3 7" Tooltip=""/>
+	<Cmd Index="67" Key="actor_cue_2_4" ID="CS_CMD_ACTOR_CUE_2_4" Name="Actor Cue 2 4" Tooltip=""/>
+	<Cmd Index="68" Key="actor_cue_1_7" ID="CS_CMD_ACTOR_CUE_1_7" Name="Actor Cue 1 7" Tooltip=""/>
+	<Cmd Index="69" Key="actor_cue_2_5" ID="CS_CMD_ACTOR_CUE_2_5" Name="Actor Cue 2 5" Tooltip=""/>
+	<Cmd Index="70" Key="actor_cue_1_8" ID="CS_CMD_ACTOR_CUE_1_8" Name="Actor Cue 1 8" Tooltip=""/>
+	<Cmd Index="71" Key="unimplemented_47" ID="CS_CMD_UNIMPLEMENTED_47" Name="Unimplemented 47" Tooltip=""/>
+	<Cmd Index="72" Key="actor_cue_2_6" ID="CS_CMD_ACTOR_CUE_2_6" Name="Actor Cue 2 6" Tooltip=""/>
+	<Cmd Index="73" Key="unimplemented_49" ID="CS_CMD_UNIMPLEMENTED_49" Name="Unimplemented 49" Tooltip=""/>
+	<Cmd Index="74" Key="actor_cue_2_7" ID="CS_CMD_ACTOR_CUE_2_7" Name="Actor Cue 2 7" Tooltip=""/>
+	<Cmd Index="75" Key="actor_cue_3_8" ID="CS_CMD_ACTOR_CUE_3_8" Name="Actor Cue 3 8" Tooltip=""/>
+	<Cmd Index="76" Key="actor_cue_0_7" ID="CS_CMD_ACTOR_CUE_0_7" Name="Actor Cue 0 7" Tooltip=""/>
+	<Cmd Index="77" Key="actor_cue_5_2" ID="CS_CMD_ACTOR_CUE_5_2" Name="Actor Cue 5 2" Tooltip=""/>
+	<Cmd Index="78" Key="actor_cue_1_9" ID="CS_CMD_ACTOR_CUE_1_9" Name="Actor Cue 1 9" Tooltip=""/>
+	<Cmd Index="79" Key="actor_cue_4_5" ID="CS_CMD_ACTOR_CUE_4_5" Name="Actor Cue 4 5" Tooltip=""/>
+	<Cmd Index="80" Key="actor_cue_1_10" ID="CS_CMD_ACTOR_CUE_1_10" Name="Actor Cue 1 10" Tooltip=""/>
+	<Cmd Index="81" Key="actor_cue_2_8" ID="CS_CMD_ACTOR_CUE_2_8" Name="Actor Cue 2 8" Tooltip=""/>
+	<Cmd Index="82" Key="actor_cue_3_9" ID="CS_CMD_ACTOR_CUE_3_9" Name="Actor Cue 3 9" Tooltip=""/>
+	<Cmd Index="83" Key="actor_cue_4_6" ID="CS_CMD_ACTOR_CUE_4_6" Name="Actor Cue 4 6" Tooltip=""/>
+	<Cmd Index="84" Key="actor_cue_5_3" ID="CS_CMD_ACTOR_CUE_5_3" Name="Actor Cue 5 3" Tooltip=""/>
+	<Cmd Index="85" Key="actor_cue_0_8" ID="CS_CMD_ACTOR_CUE_0_8" Name="Actor Cue 0 8" Tooltip=""/>
+	<Cmd Index="86" Key="start_seq" ID="CS_CMD_START_SEQ" Name="Start Seq" Tooltip=""/>
+	<Cmd Index="87" Key="stop_seq" ID="CS_CMD_STOP_SEQ" Name="Stop Seq" Tooltip=""/>
+	<Cmd Index="88" Key="actor_cue_6_4" ID="CS_CMD_ACTOR_CUE_6_4" Name="Actor Cue 6 4" Tooltip=""/>
+	<Cmd Index="89" Key="actor_cue_7_2" ID="CS_CMD_ACTOR_CUE_7_2" Name="Actor Cue 7 2" Tooltip=""/>
+	<Cmd Index="90" Key="actor_cue_5_4" ID="CS_CMD_ACTOR_CUE_5_4" Name="Actor Cue 5 4" Tooltip=""/>
+	<Cmd Index="93" Key="actor_cue_0_9" ID="CS_CMD_ACTOR_CUE_0_9" Name="Actor Cue 0 9" Tooltip=""/>
+	<Cmd Index="94" Key="actor_cue_1_11" ID="CS_CMD_ACTOR_CUE_1_11" Name="Actor Cue 1 11" Tooltip=""/>
+	<Cmd Index="105" Key="actor_cue_0_10" ID="CS_CMD_ACTOR_CUE_0_10" Name="Actor Cue 0 10" Tooltip=""/>
+	<Cmd Index="106" Key="actor_cue_2_9" ID="CS_CMD_ACTOR_CUE_2_9" Name="Actor Cue 2 9" Tooltip=""/>
+	<Cmd Index="107" Key="actor_cue_0_11" ID="CS_CMD_ACTOR_CUE_0_11" Name="Actor Cue 0 11" Tooltip=""/>
+	<Cmd Index="108" Key="actor_cue_3_10" ID="CS_CMD_ACTOR_CUE_3_10" Name="Actor Cue 3 10" Tooltip=""/>
+	<Cmd Index="109" Key="unimplemented_6d" ID="CS_CMD_UNIMPLEMENTED_6D" Name="Unimplemented 6D" Tooltip=""/>
+	<Cmd Index="110" Key="actor_cue_0_12" ID="CS_CMD_ACTOR_CUE_0_12" Name="Actor Cue 0 12" Tooltip=""/>
+	<Cmd Index="111" Key="actor_cue_7_3" ID="CS_CMD_ACTOR_CUE_7_3" Name="Actor Cue 7 3" Tooltip=""/>
+	<Cmd Index="112" Key="unimplemented_70" ID="CS_CMD_UNIMPLEMENTED_70" Name="Unimplemented 70" Tooltip=""/>
+	<Cmd Index="113" Key="unimplemented_71" ID="CS_CMD_UNIMPLEMENTED_71" Name="Unimplemented 71" Tooltip=""/>
+	<Cmd Index="114" Key="actor_cue_7_4" ID="CS_CMD_ACTOR_CUE_7_4" Name="Actor Cue 7 4" Tooltip=""/>
+	<Cmd Index="115" Key="actor_cue_6_5" ID="CS_CMD_ACTOR_CUE_6_5" Name="Actor Cue 6 5" Tooltip=""/>
+	<Cmd Index="116" Key="actor_cue_1_12" ID="CS_CMD_ACTOR_CUE_1_12" Name="Actor Cue 1 12" Tooltip=""/>
+	<Cmd Index="117" Key="actor_cue_2_10" ID="CS_CMD_ACTOR_CUE_2_10" Name="Actor Cue 2 10" Tooltip=""/>
+	<Cmd Index="118" Key="actor_cue_1_13" ID="CS_CMD_ACTOR_CUE_1_13" Name="Actor Cue 1 13" Tooltip=""/>
+	<Cmd Index="119" Key="actor_cue_0_13" ID="CS_CMD_ACTOR_CUE_0_13" Name="Actor Cue 0 13" Tooltip=""/>
+	<Cmd Index="120" Key="actor_cue_1_14" ID="CS_CMD_ACTOR_CUE_1_14" Name="Actor Cue 1 14" Tooltip=""/>
+	<Cmd Index="121" Key="actor_cue_2_11" ID="CS_CMD_ACTOR_CUE_2_11" Name="Actor Cue 2 11" Tooltip=""/>
+	<Cmd Index="123" Key="actor_cue_0_14" ID="CS_CMD_ACTOR_CUE_0_14" Name="Actor Cue 0 14" Tooltip=""/>
+	<Cmd Index="124" Key="fade_out_seq" ID="CS_CMD_FADE_OUT_SEQ" Name="Fade Out Seq" Tooltip=""/>
+	<Cmd Index="125" Key="actor_cue_1_15" ID="CS_CMD_ACTOR_CUE_1_15" Name="Actor Cue 1 15" Tooltip=""/>
+	<Cmd Index="126" Key="actor_cue_2_12" ID="CS_CMD_ACTOR_CUE_2_12" Name="Actor Cue 2 12" Tooltip=""/>
+	<Cmd Index="127" Key="actor_cue_3_11" ID="CS_CMD_ACTOR_CUE_3_11" Name="Actor Cue 3 11" Tooltip=""/>
+	<Cmd Index="128" Key="actor_cue_4_7" ID="CS_CMD_ACTOR_CUE_4_7" Name="Actor Cue 4 7" Tooltip=""/>
+	<Cmd Index="129" Key="actor_cue_5_5" ID="CS_CMD_ACTOR_CUE_5_5" Name="Actor Cue 5 5" Tooltip=""/>
+	<Cmd Index="130" Key="actor_cue_6_6" ID="CS_CMD_ACTOR_CUE_6_6" Name="Actor Cue 6 6" Tooltip=""/>
+	<Cmd Index="131" Key="actor_cue_1_16" ID="CS_CMD_ACTOR_CUE_1_16" Name="Actor Cue 1 16" Tooltip=""/>
+	<Cmd Index="132" Key="actor_cue_2_13" ID="CS_CMD_ACTOR_CUE_2_13" Name="Actor Cue 2 13" Tooltip=""/>
+	<Cmd Index="133" Key="actor_cue_3_12" ID="CS_CMD_ACTOR_CUE_3_12" Name="Actor Cue 3 12" Tooltip=""/>
+	<Cmd Index="134" Key="actor_cue_7_5" ID="CS_CMD_ACTOR_CUE_7_5" Name="Actor Cue 7 5" Tooltip=""/>
+	<Cmd Index="135" Key="actor_cue_4_8" ID="CS_CMD_ACTOR_CUE_4_8" Name="Actor Cue 4 8" Tooltip=""/>
+	<Cmd Index="136" Key="actor_cue_5_6" ID="CS_CMD_ACTOR_CUE_5_6" Name="Actor Cue 5 6" Tooltip=""/>
+	<Cmd Index="137" Key="actor_cue_6_7" ID="CS_CMD_ACTOR_CUE_6_7" Name="Actor Cue 6 7" Tooltip=""/>
+	<Cmd Index="138" Key="actor_cue_0_15" ID="CS_CMD_ACTOR_CUE_0_15" Name="Actor Cue 0 15" Tooltip=""/>
+	<Cmd Index="139" Key="actor_cue_0_16" ID="CS_CMD_ACTOR_CUE_0_16" Name="Actor Cue 0 16" Tooltip=""/>
+	<Cmd Index="140" Key="time" ID="CS_CMD_TIME" Name="Time" Tooltip=""/>
+	<Cmd Index="141" Key="actor_cue_1_17" ID="CS_CMD_ACTOR_CUE_1_17" Name="Actor Cue 1 17" Tooltip=""/>
+	<Cmd Index="142" Key="actor_cue_7_6" ID="CS_CMD_ACTOR_CUE_7_6" Name="Actor Cue 7 6" Tooltip=""/>
+	<Cmd Index="143" Key="actor_cue_9_0" ID="CS_CMD_ACTOR_CUE_9_0" Name="Actor Cue 9 0" Tooltip=""/>
+	<Cmd Index="144" Key="actor_cue_0_17" ID="CS_CMD_ACTOR_CUE_0_17" Name="Actor Cue 0 17" Tooltip=""/>
+	<Cmd Index="145" Key="textwave" ID="CS_CMD_TEXTWAVE" Name="Textwave" Tooltip=""/>
+	<Cmd Index="1000" Key="destination" ID="CS_CMD_DESTINATION" Name="Destination" Tooltip=""/>
+	<Cmd Index="1001" Key="end" ID="CS_CMD_END" Name="End" Tooltip=""/>
+</Table>

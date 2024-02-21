@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<Table Key="sceneCam" ID="SceneCamType" KeyType="System.UInt16" ValueType="System.String">
+	<CamMode Index="0" Key="default" ID="SCENE_CAM_TYPE_DEFAULT" Name="Default" Tooltip=""/>
+	<CamMode Index="16" Key="fixed_shop_viewpoint" ID="SCENE_CAM_TYPE_FIXED_SHOP_VIEWPOINT" Name="Fixed Shop Viewpoint" Tooltip="Camera exhibits fixed behaviors and viewpoint changing is handled by shops"/>
+	<CamMode Index="32" Key="fixed_toggle_viewpoint" ID="SCENE_CAM_TYPE_FIXED_TOGGLE_VIEWPOINT" Name="Fixed Toggle Viewpoint" Tooltip="Camera exhibits fixed behaviors and viewpoint can be toggled with c-up"/>
+	<CamMode Index="48" Key="fixed" ID="SCENE_CAM_TYPE_FIXED" Name="Fixed" Tooltip="Camera exhibits fixed behaviors (see `Play_CamIsNotFixed` usages for examples)"/>
+	<CamMode Index="64" Key="fixed_market" ID="SCENE_CAM_TYPE_FIXED_MARKET" Name="Fixed Market" Tooltip="Camera exhibits fixed behaviors and delays textboxes by a small amount before they start to appear"/>
+	<CamMode Index="80" Key="shooting_gallery" ID="SCENE_CAM_TYPE_SHOOTING_GALLERY" Name="Shooting Gallery" Tooltip="Unreferenced in code, used only by the main layer of the shooting gallery scene"/>
+</Table>

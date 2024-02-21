@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<Table Key="sceneSkybox" ID="SceneSkyboxType" KeyType="System.UInt16" ValueType="System.String">
+	<Skybox Index="0" Key="disabled" ID="SCENE_SKYBOX_DISABLED" Name="Disabled" Tooltip=""/>
+	<Skybox Index="1" Key="sky" ID="SCENE_SKYBOX_SKY" Name="Sky" Tooltip=""/>
+	<Skybox Index="2" Key="hylian_bazaar" ID="SCENE_SKYBOX_HYLIAN_BAZAAR" Name="Hylian Bazaar" Tooltip=""/>
+	<Skybox Index="3" Key="brown_cloudy_sky" ID="SCENE_SKYBOX_BROWN_CLOUDY_SKY" Name="Brown Cloudy Sky" Tooltip=""/>
+	<Skybox Index="4" Key="market_ruins" ID="SCENE_SKYBOX_MARKET_RUINS" Name="Market Ruins" Tooltip=""/>
+	<Skybox Index="5" Key="black_cloudy_night" ID="SCENE_SKYBOX_BLACK_CLOUDY_NIGHT" Name="Black Cloudy Night" Tooltip=""/>
+	<Skybox Index="6" Key="link_house" ID="SCENE_SKYBOX_LINK_HOUSE" Name="Link House" Tooltip=""/>
+	<Skybox Index="7" Key="market_day" ID="SCENE_SKYBOX_MARKET_DAY" Name="Market Day" Tooltip=""/>
+	<Skybox Index="8" Key="market_night" ID="SCENE_SKYBOX_MARKET_NIGHT" Name="Market Night" Tooltip=""/>
+	<Skybox Index="9" Key="happy_mask_shop" ID="SCENE_SKYBOX_HAPPY_MASK_SHOP" Name="Happy Mask Shop" Tooltip=""/>
+	<Skybox Index="10" Key="know_it_all_house" ID="SCENE_SKYBOX_KNOW_IT_ALL_HOUSE" Name="Know It All House" Tooltip=""/>
+	<Skybox Index="11" Key="twins_house" ID="SCENE_SKYBOX_TWINS_HOUSE" Name="Twins House" Tooltip=""/>
+	<Skybox Index="12" Key="stable" ID="SCENE_SKYBOX_STABLE" Name="Stable" Tooltip=""/>
+	<Skybox Index="13" Key="stew_lady_house" ID="SCENE_SKYBOX_STEW_LADY_HOUSE" Name="Stew Lady House" Tooltip=""/>
+	<Skybox Index="14" Key="kokiri_shop" ID="SCENE_SKYBOX_KOKIRI_SHOP" Name="Kokiri Shop" Tooltip=""/>
+	<Skybox Index="15" Key="goron_shop" ID="SCENE_SKYBOX_GORON_SHOP" Name="Goron Shop" Tooltip=""/>
+	<Skybox Index="16" Key="zora_shop" ID="SCENE_SKYBOX_ZORA_SHOP" Name="Zora Shop" Tooltip=""/>
+	<Skybox Index="17" Key="kakariko_potion_shop" ID="SCENE_SKYBOX_KAKARIKO_POTION_SHOP" Name="Kakariko Potion Shop" Tooltip=""/>
+	<Skybox Index="18" Key="hyrule_potion_shop" ID="SCENE_SKYBOX_HYRULE_POTION_SHOP" Name="Hyrule Potion Shop" Tooltip=""/>
+	<Skybox Index="19" Key="bomb_shop" ID="SCENE_SKYBOX_BOMB_SHOP" Name="Bomb Shop" Tooltip=""/>
+	<Skybox Index="20" Key="dog_lady_house" ID="SCENE_SKYBOX_DOG_LADY_HOUSE" Name="Dog Lady House" Tooltip=""/>
+	<Skybox Index="21" Key="impa_house" ID="SCENE_SKYBOX_IMPA_HOUSE" Name="Impa House" Tooltip=""/>
+	<Skybox Index="22" Key="gerudo_tent" ID="SCENE_SKYBOX_GERUDO_TENT" Name="Gerudo Tent" Tooltip=""/>
+	<Skybox Index="23" Key="environment_color" ID="SCENE_SKYBOX_ENVIRONMENT_COLOR" Name="Environment Color" Tooltip=""/>
+	<Skybox Index="24" Key="mido_house" ID="SCENE_SKYBOX_MIDO_HOUSE" Name="Mido House" Tooltip=""/>
+	<Skybox Index="25" Key="saria_house" ID="SCENE_SKYBOX_SARIA_HOUSE" Name="Saria House" Tooltip=""/>
+	<Skybox Index="26" Key="hylian_guy_house" ID="SCENE_SKYBOX_HYLIAN_GUY_HOUSE" Name="Hylian Guy House" Tooltip=""/>
+</Table>

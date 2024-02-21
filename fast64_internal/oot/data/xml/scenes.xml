@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<Table Key="sceneId" ID="SceneID" KeyType="System.UInt16" ValueType="System.String">
+	<Scene Index="0" Key="hideout" ID="SCENE_HIDEOUT" Name="Hideout"/>
+	<Scene Index="1" Key="mabe_homes" ID="SCENE_MABE_HOMES" Name="Mabe Homes"/>
+	<Scene Index="2" Key="mabe_library" ID="SCENE_MABE_LIBRARY" Name="Mabe Library"/>
+	<Scene Index="3" Key="mabe_meowmeow" ID="SCENE_MABE_MEOWMEOW" Name="Mabe Meowmeow"/>
+	<Scene Index="4" Key="mabe_quintuplets" ID="SCENE_MABE_QUINTUPLETS" Name="Mabe Quintuplets"/>
+	<Scene Index="5" Key="mabe_tarin" ID="SCENE_MABE_TARIN" Name="Mabe Tarin"/>
+	<Scene Index="6" Key="mabe_ulrira" ID="SCENE_MABE_ULRIRA" Name="Mabe Ulrira"/>
+	<Scene Index="7" Key="windfish_demo" ID="SCENE_WINDFISH_DEMO" Name="Windfish Demo"/>
+	<Scene Index="8" Key="graveyard" ID="SCENE_GRAVEYARD" Name="Graveyard"/>
+	<Scene Index="9" Key="kanalet_castle" ID="SCENE_KANALET_CASTLE" Name="Kanalet Castle"/>
+	<Scene Index="10" Key="mabe_village" ID="SCENE_MABE_VILLAGE" Name="Mabe Village"/>
+	<Scene Index="11" Key="mysterious_woods" ID="SCENE_MYSTERIOUS_WOODS" Name="Mysterious Woods"/>
+	<Scene Index="12" Key="south_of_mabe" ID="SCENE_SOUTH_OF_MABE" Name="South Of Mabe"/>
+	<Scene Index="13" Key="tal_tal_heights" ID="SCENE_TAL_TAL_HEIGHTS" Name="Tal Tal Heights"/>
+	<Scene Index="14" Key="toronbo2" ID="SCENE_TORONBO2" Name="Toronbo2"/>
+	<Scene Index="15" Key="toronbo_shore" ID="SCENE_TORONBO_SHORE" Name="Toronbo Shore"/>
+	<Scene Index="16" Key="dungeon" ID="SCENE_DUNGEON" Name="Dungeon"/>
+	<Scene Index="17" Key="eagle_test_field" ID="SCENE_EAGLE_TEST_FIELD" Name="Eagle Test Field"/>
+	<Scene Index="18" Key="forest_boss" ID="SCENE_FOREST_BOSS" Name="Forest Boss"/>
+	<Scene Index="19" Key="suya_test" ID="SCENE_SUYA_TEST" Name="Suya Test"/>
+	<Scene Index="20" Key="testz" ID="SCENE_TESTZ" Name="Testz"/>
+	<Scene Index="254" Key="scene_spc_return" ID="SCENE_SPC_RETURN" Name="Return from Grotto" Tooltip="Return from Grotto"/>
+</Table>

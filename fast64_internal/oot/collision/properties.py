@@ -25,7 +25,7 @@ class OOTCollisionExportSettings(PropertyGroup):
     filename: StringProperty(name="Filename")
     exportPath: StringProperty(name="Directory", subtype="FILE_PATH")
     includeChildren: BoolProperty(name="Include child objects", default=True)
-    levelName: StringProperty(name="Name", default="SCENE_MABE_VILLAGE")
+    levelName: StringProperty(name="Name", default="mabe_village")
     customExport: BoolProperty(
         name="Custom Export Path", description="Determines whether or not to export to an explicitly specified folder"
     )

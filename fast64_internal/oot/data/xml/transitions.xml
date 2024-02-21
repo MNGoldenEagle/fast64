@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<Table Key="transitions" ID="Transitions" KeyType="System.UInt16" ValueType="System.String">
+	<Transition Index="0" Key="wipe" ID="TRANS_TYPE_WIPE" Name="Scratchy Wipe Effect" Tooltip="Scratchy Wipe Effect"/>
+	<Transition Index="1" Key="triforce" ID="TRANS_TYPE_TRIFORCE" Name="Triforce" Tooltip="Triforce"/>
+	<Transition Index="2" Key="fade_black" ID="TRANS_TYPE_FADE_BLACK" Name="Fade to Black" Tooltip="Fade to Black"/>
+	<Transition Index="3" Key="fade_white" ID="TRANS_TYPE_FADE_WHITE" Name="Fade to White" Tooltip="Fade to White"/>
+	<Transition Index="4" Key="fade_black_fast" ID="TRANS_TYPE_FADE_BLACK_FAST" Name="Fade to Black (Fast)" Tooltip="Fade to Black (Fast)"/>
+	<Transition Index="5" Key="fade_white_fast" ID="TRANS_TYPE_FADE_WHITE_FAST" Name="Fade to White (Fast)" Tooltip="Fade to White (Fast)"/>
+	<Transition Index="6" Key="fade_black_slow" ID="TRANS_TYPE_FADE_BLACK_SLOW" Name="Fade to Black (Slow)" Tooltip="Fade to Black (Slow)"/>
+	<Transition Index="7" Key="fade_white_slow" ID="TRANS_TYPE_FADE_WHITE_SLOW" Name="Fade to White (Slow)" Tooltip="Fade to White (Slow)"/>
+	<Transition Index="8" Key="wipe_fast" ID="TRANS_TYPE_WIPE_FAST" Name="Wipe Fast" Tooltip="Scratchy Wipe Effect (Fast)"/>
+	<Transition Index="9" Key="fill_white_fast" ID="TRANS_TYPE_FILL_WHITE_FAST" Name="Fill White Fast" Tooltip="Cutscene Fade To White (Fast)"/>
+	<Transition Index="10" Key="fill_white" ID="TRANS_TYPE_FILL_WHITE" Name="Cutscene Fade to White" Tooltip="Cutscene Fade to White"/>
+	<Transition Index="11" Key="instant" ID="TRANS_TYPE_INSTANT" Name="Instant" Tooltip="Cutscene Instant Fade (From Black)"/>
+	<Transition Index="12" Key="fill_sand" ID="TRANS_TYPE_FILL_SAND" Name="Fade to Sand" Tooltip="Fade to Sand"/>
+	<Transition Index="13" Key="fade_white_cs_delayed" ID="TRANS_TYPE_FADE_WHITE_CS_DELAYED" Name="Fade White Cs Delayed" Tooltip="Cutscene Fade to White (Fade Controlled by Code)"/>
+	<Transition Index="14" Key="sandstorm_persist" ID="TRANS_TYPE_SANDSTORM_PERSIST" Name="Sandstorm (Persistent)" Tooltip="Sandstorm (Persistent)"/>
+	<Transition Index="15" Key="sandstorm_end" ID="TRANS_TYPE_SANDSTORM_END" Name="Sandstorm (End)" Tooltip="Sandstorm (End)"/>
+	<Transition Index="16" Key="cs_black_fill" ID="TRANS_TYPE_CS_BLACK_FILL" Name="Cs Black Fill" Tooltip="Cutscene Fade to Black (Fade Controlled By Code)"/>
+	<Transition Index="17" Key="fade_white_instant" ID="TRANS_TYPE_FADE_WHITE_INSTANT" Name="Fade White Instant" Tooltip="Cutscene Instant Fade (From White)"/>
+	<Transition Index="18" Key="fade_forest" ID="TRANS_TYPE_FADE_FOREST" Name="Fade to Light Green" Tooltip="Fade to Light Green"/>
+	<Transition Index="19" Key="fade_water" ID="TRANS_TYPE_FADE_WATER" Name="Fade to Light Blue" Tooltip="Fade to Light Blue"/>
+	<Transition Index="32" Key="circle_normal_black_fast" ID="TRANS_TYPE_CIRCLE(TCA_NORMAL, TCC_BLACK, TCS_FAST)" Name="Normal (Black, Fast)" Tooltip=""/>
+	<Transition Index="33" Key="circle_normal_black_slow" ID="TRANS_TYPE_CIRCLE(TCA_NORMAL, TCC_BLACK, TCS_SLOW)" Name="Normal (Black, Slow)" Tooltip=""/>
+	<Transition Index="40" Key="circle_normal_white_fast" ID="TRANS_TYPE_CIRCLE(TCA_NORMAL, TCC_WHITE, TCS_FAST)" Name="Normal (White, Fast)" Tooltip=""/>
+	<Transition Index="41" Key="circle_normal_white_slow" ID="TRANS_TYPE_CIRCLE(TCA_NORMAL, TCC_WHITE, TCS_SLOW)" Name="Normal (White, Slow)" Tooltip=""/>
+	<Transition Index="48" Key="circle_normal_gray_fast" ID="TRANS_TYPE_CIRCLE(TCA_NORMAL, TCC_GRAY, TCS_FAST)" Name="Normal (Gray, Fast)" Tooltip=""/>
+	<Transition Index="49" Key="circle_normal_gray_slow" ID="TRANS_TYPE_CIRCLE(TCA_NORMAL, TCC_GRAY, TCS_SLOW)" Name="Normal (Gray, Slow)" Tooltip=""/>
+	<Transition Index="56" Key="circle_normal_special_fast" ID="TRANS_TYPE_CIRCLE(TCA_NORMAL, TCC_SPECIAL, TCS_FAST)" Name="Normal (Special, Fast)" Tooltip=""/>
+	<Transition Index="57" Key="circle_normal_special_slow" ID="TRANS_TYPE_CIRCLE(TCA_NORMAL, TCC_SPECIAL, TCS_SLOW)" Name="Normal (Special, Slow)" Tooltip=""/>
+	<Transition Index="34" Key="circle_wave_black_fast" ID="TRANS_TYPE_CIRCLE(TCA_WAVE, TCC_BLACK, TCS_FAST)" Name="Wave (Black, Fast)" Tooltip=""/>
+	<Transition Index="35" Key="circle_wave_black_slow" ID="TRANS_TYPE_CIRCLE(TCA_WAVE, TCC_BLACK, TCS_SLOW)" Name="Wave (Black, Slow)" Tooltip=""/>
+	<Transition Index="42" Key="circle_wave_white_fast" ID="TRANS_TYPE_CIRCLE(TCA_WAVE, TCC_WHITE, TCS_FAST)" Name="Wave (White, Fast)" Tooltip=""/>
+	<Transition Index="43" Key="circle_wave_white_slow" ID="TRANS_TYPE_CIRCLE(TCA_WAVE, TCC_WHITE, TCS_SLOW)" Name="Wave (White, Slow)" Tooltip=""/>
+	<Transition Index="50" Key="circle_wave_gray_fast" ID="TRANS_TYPE_CIRCLE(TCA_WAVE, TCC_GRAY, TCS_FAST)" Name="Wave (Gray, Fast)" Tooltip=""/>
+	<Transition Index="51" Key="circle_wave_gray_slow" ID="TRANS_TYPE_CIRCLE(TCA_WAVE, TCC_GRAY, TCS_SLOW)" Name="Wave (Gray, Slow)" Tooltip=""/>
+	<Transition Index="58" Key="circle_wave_special_fast" ID="TRANS_TYPE_CIRCLE(TCA_WAVE, TCC_SPECIAL, TCS_FAST)" Name="Wave (Special, Fast)" Tooltip=""/>
+	<Transition Index="59" Key="circle_wave_special_slow" ID="TRANS_TYPE_CIRCLE(TCA_WAVE, TCC_SPECIAL, TCS_SLOW)" Name="Wave (Special, Slow)" Tooltip=""/>
+	<Transition Index="36" Key="circle_ripple_black_fast" ID="TRANS_TYPE_CIRCLE(TCA_RIPPLE, TCC_BLACK, TCS_FAST)" Name="Ripple (Black, Fast)" Tooltip=""/>
+	<Transition Index="37" Key="circle_ripple_black_slow" ID="TRANS_TYPE_CIRCLE(TCA_RIPPLE, TCC_BLACK, TCS_SLOW)" Name="Ripple (Black, Slow)" Tooltip=""/>
+	<Transition Index="44" Key="circle_ripple_white_fast" ID="TRANS_TYPE_CIRCLE(TCA_RIPPLE, TCC_WHITE, TCS_FAST)" Name="Ripple (White, Fast)" Tooltip=""/>
+	<Transition Index="45" Key="circle_ripple_white_slow" ID="TRANS_TYPE_CIRCLE(TCA_RIPPLE, TCC_WHITE, TCS_SLOW)" Name="Ripple (White, Slow)" Tooltip=""/>
+	<Transition Index="52" Key="circle_ripple_gray_fast" ID="TRANS_TYPE_CIRCLE(TCA_RIPPLE, TCC_GRAY, TCS_FAST)" Name="Ripple (Gray, Fast)" Tooltip=""/>
+	<Transition Index="53" Key="circle_ripple_gray_slow" ID="TRANS_TYPE_CIRCLE(TCA_RIPPLE, TCC_GRAY, TCS_SLOW)" Name="Ripple (Gray, Slow)" Tooltip=""/>
+	<Transition Index="60" Key="circle_ripple_special_fast" ID="TRANS_TYPE_CIRCLE(TCA_RIPPLE, TCC_SPECIAL, TCS_FAST)" Name="Ripple (Special, Fast)" Tooltip=""/>
+	<Transition Index="61" Key="circle_ripple_special_slow" ID="TRANS_TYPE_CIRCLE(TCA_RIPPLE, TCC_SPECIAL, TCS_SLOW)" Name="Ripple (Special, Slow)" Tooltip=""/>
+	<Transition Index="38" Key="circle_starburst_black_fast" ID="TRANS_TYPE_CIRCLE(TCA_STARBURST, TCC_BLACK, TCS_FAST)" Name="Starburst (Black, Fast)" Tooltip=""/>
+	<Transition Index="39" Key="circle_starburst_black_slow" ID="TRANS_TYPE_CIRCLE(TCA_STARBURST, TCC_BLACK, TCS_SLOW)" Name="Starburst (Black, Slow)" Tooltip=""/>
+	<Transition Index="46" Key="circle_starburst_white_fast" ID="TRANS_TYPE_CIRCLE(TCA_STARBURST, TCC_WHITE, TCS_FAST)" Name="Starburst (White, Fast)" Tooltip=""/>
+	<Transition Index="47" Key="circle_starburst_white_slow" ID="TRANS_TYPE_CIRCLE(TCA_STARBURST, TCC_WHITE, TCS_SLOW)" Name="Starburst (White, Slow)" Tooltip=""/>
+	<Transition Index="54" Key="circle_starburst_gray_fast" ID="TRANS_TYPE_CIRCLE(TCA_STARBURST, TCC_GRAY, TCS_FAST)" Name="Starburst (Gray, Fast)" Tooltip=""/>
+	<Transition Index="55" Key="circle_starburst_gray_slow" ID="TRANS_TYPE_CIRCLE(TCA_STARBURST, TCC_GRAY, TCS_SLOW)" Name="Starburst (Gray, Slow)" Tooltip=""/>
+	<Transition Index="62" Key="circle_starburst_special_fast" ID="TRANS_TYPE_CIRCLE(TCA_STARBURST, TCC_SPECIAL, TCS_FAST)" Name="Starburst (Special, Fast)" Tooltip=""/>
+	<Transition Index="63" Key="circle_starburst_special_slow" ID="TRANS_TYPE_CIRCLE(TCA_STARBURST, TCC_SPECIAL, TCS_SLOW)" Name="Starburst (Special, Slow)" Tooltip=""/>
+</Table>

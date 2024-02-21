@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<Table Key="ocarinaSongActionId" ID="OcarinaSongActionId" KeyType="System.UInt16" ValueType="System.String">
+	<Action Index="0" Key="unk_0" ID="OCARINA_ACTION_UNK_0" Name="Unk 0" Tooltip="acts like free play but never set"/>
+	<Action Index="1" Key="free_play" ID="OCARINA_ACTION_FREE_PLAY" Name="Free Play" Tooltip=""/>
+	<Action Index="2" Key="teach_minuet" ID="OCARINA_ACTION_TEACH_MINUET" Name="Teach Minuet" Tooltip="Song demonstrations by teachers"/>
+	<Action Index="3" Key="teach_bolero" ID="OCARINA_ACTION_TEACH_BOLERO" Name="Teach Bolero" Tooltip=""/>
+	<Action Index="4" Key="teach_serenade" ID="OCARINA_ACTION_TEACH_SERENADE" Name="Teach Serenade" Tooltip=""/>
+	<Action Index="5" Key="teach_requiem" ID="OCARINA_ACTION_TEACH_REQUIEM" Name="Teach Requiem" Tooltip=""/>
+	<Action Index="6" Key="teach_nocturne" ID="OCARINA_ACTION_TEACH_NOCTURNE" Name="Teach Nocturne" Tooltip=""/>
+	<Action Index="7" Key="teach_prelude" ID="OCARINA_ACTION_TEACH_PRELUDE" Name="Teach Prelude" Tooltip=""/>
+	<Action Index="8" Key="teach_saria" ID="OCARINA_ACTION_TEACH_SARIA" Name="Teach Saria" Tooltip=""/>
+	<Action Index="9" Key="teach_epona" ID="OCARINA_ACTION_TEACH_EPONA" Name="Teach Epona" Tooltip=""/>
+	<Action Index="10" Key="teach_lullaby" ID="OCARINA_ACTION_TEACH_LULLABY" Name="Teach Lullaby" Tooltip=""/>
+	<Action Index="11" Key="teach_suns" ID="OCARINA_ACTION_TEACH_SUNS" Name="Teach Suns" Tooltip=""/>
+	<Action Index="12" Key="teach_time" ID="OCARINA_ACTION_TEACH_TIME" Name="Teach Time" Tooltip=""/>
+	<Action Index="13" Key="teach_storms" ID="OCARINA_ACTION_TEACH_STORMS" Name="Teach Storms" Tooltip=""/>
+	<Action Index="14" Key="unk_e" ID="OCARINA_ACTION_UNK_E" Name="Unk E" Tooltip=""/>
+	<Action Index="15" Key="playback_minuet" ID="OCARINA_ACTION_PLAYBACK_MINUET" Name="Playback Minuet" Tooltip="Playing back a particular song"/>
+	<Action Index="16" Key="playback_bolero" ID="OCARINA_ACTION_PLAYBACK_BOLERO" Name="Playback Bolero" Tooltip=""/>
+	<Action Index="17" Key="playback_serenade" ID="OCARINA_ACTION_PLAYBACK_SERENADE" Name="Playback Serenade" Tooltip=""/>
+	<Action Index="18" Key="playback_requiem" ID="OCARINA_ACTION_PLAYBACK_REQUIEM" Name="Playback Requiem" Tooltip=""/>
+	<Action Index="19" Key="playback_nocturne" ID="OCARINA_ACTION_PLAYBACK_NOCTURNE" Name="Playback Nocturne" Tooltip=""/>
+	<Action Index="20" Key="playback_prelude" ID="OCARINA_ACTION_PLAYBACK_PRELUDE" Name="Playback Prelude" Tooltip=""/>
+	<Action Index="21" Key="playback_saria" ID="OCARINA_ACTION_PLAYBACK_SARIA" Name="Playback Saria" Tooltip=""/>
+	<Action Index="22" Key="playback_epona" ID="OCARINA_ACTION_PLAYBACK_EPONA" Name="Playback Epona" Tooltip=""/>
+	<Action Index="23" Key="playback_lullaby" ID="OCARINA_ACTION_PLAYBACK_LULLABY" Name="Playback Lullaby" Tooltip=""/>
+	<Action Index="24" Key="playback_suns" ID="OCARINA_ACTION_PLAYBACK_SUNS" Name="Playback Suns" Tooltip=""/>
+	<Action Index="25" Key="playback_time" ID="OCARINA_ACTION_PLAYBACK_TIME" Name="Playback Time" Tooltip=""/>
+	<Action Index="26" Key="playback_storms" ID="OCARINA_ACTION_PLAYBACK_STORMS" Name="Playback Storms" Tooltip=""/>
+	<Action Index="27" Key="unk_1b" ID="OCARINA_ACTION_UNK_1B" Name="Unk 1B" Tooltip=""/>
+	<Action Index="28" Key="check_minuet" ID="OCARINA_ACTION_CHECK_MINUET" Name="Check Minuet" Tooltip="Playing songs for check spots"/>
+	<Action Index="29" Key="check_bolero" ID="OCARINA_ACTION_CHECK_BOLERO" Name="Check Bolero" Tooltip=""/>
+	<Action Index="30" Key="check_serenade" ID="OCARINA_ACTION_CHECK_SERENADE" Name="Check Serenade" Tooltip=""/>
+	<Action Index="31" Key="check_requiem" ID="OCARINA_ACTION_CHECK_REQUIEM" Name="Check Requiem" Tooltip=""/>
+	<Action Index="32" Key="check_nocturne" ID="OCARINA_ACTION_CHECK_NOCTURNE" Name="Check Nocturne" Tooltip=""/>
+	<Action Index="33" Key="check_prelude" ID="OCARINA_ACTION_CHECK_PRELUDE" Name="Check Prelude" Tooltip=""/>
+	<Action Index="34" Key="check_saria" ID="OCARINA_ACTION_CHECK_SARIA" Name="Check Saria" Tooltip=""/>
+	<Action Index="35" Key="check_epona" ID="OCARINA_ACTION_CHECK_EPONA" Name="Check Epona" Tooltip=""/>
+	<Action Index="36" Key="check_lullaby" ID="OCARINA_ACTION_CHECK_LULLABY" Name="Check Lullaby" Tooltip=""/>
+	<Action Index="37" Key="check_suns" ID="OCARINA_ACTION_CHECK_SUNS" Name="Check Suns" Tooltip=""/>
+	<Action Index="38" Key="check_time" ID="OCARINA_ACTION_CHECK_TIME" Name="Check Time" Tooltip=""/>
+	<Action Index="39" Key="check_storms" ID="OCARINA_ACTION_CHECK_STORMS" Name="Check Storms" Tooltip=""/>
+	<Action Index="40" Key="check_scarecrow_spawn" ID="OCARINA_ACTION_CHECK_SCARECROW_SPAWN" Name="Check Scarecrow Spawn" Tooltip="Playing back the song as adult that was set as child"/>
+	<Action Index="41" Key="free_play_done" ID="OCARINA_ACTION_FREE_PLAY_DONE" Name="Free Play Done" Tooltip=""/>
+	<Action Index="42" Key="scarecrow_long_recording" ID="OCARINA_ACTION_SCARECROW_LONG_RECORDING" Name="Scarecrow Long Recording" Tooltip=""/>
+	<Action Index="43" Key="scarecrow_long_playback" ID="OCARINA_ACTION_SCARECROW_LONG_PLAYBACK" Name="Scarecrow Long Playback" Tooltip=""/>
+	<Action Index="44" Key="scarecrow_spawn_recording" ID="OCARINA_ACTION_SCARECROW_SPAWN_RECORDING" Name="Scarecrow Spawn Recording" Tooltip=""/>
+	<Action Index="45" Key="scarecrow_spawn_playback" ID="OCARINA_ACTION_SCARECROW_SPAWN_PLAYBACK" Name="Scarecrow Spawn Playback" Tooltip=""/>
+	<Action Index="46" Key="memory_game" ID="OCARINA_ACTION_MEMORY_GAME" Name="Memory Game" Tooltip=""/>
+	<Action Index="47" Key="frogs" ID="OCARINA_ACTION_FROGS" Name="Frogs" Tooltip=""/>
+	<Action Index="48" Key="check_nowarp" ID="OCARINA_ACTION_CHECK_NOWARP" Name="Check Nowarp" Tooltip="Check for any of sarias - storms"/>
+	<Action Index="49" Key="check_nowarp_done" ID="OCARINA_ACTION_CHECK_NOWARP_DONE" Name="Check Nowarp Done" Tooltip=""/>
+</Table>

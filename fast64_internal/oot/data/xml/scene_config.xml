@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<Table Key="sceneDrawConfig" ID="SceneDrawConfig" KeyType="System.UInt16" ValueType="System.String">
+	<Config Index="0" Key="default" ID="SDC_DEFAULT" Name="Default" Tooltip=""/>
+	<Config Index="1" Key="bmori1" ID="SDC_BMORI1" Name="Bmori1" Tooltip=""/>
+	<Config Index="2" Key="tokinoma" ID="SDC_TOKINOMA" Name="Tokinoma" Tooltip=""/>
+	<Config Index="3" Key="kenjyanoma" ID="SDC_KENJYANOMA" Name="Kenjyanoma" Tooltip=""/>
+	<Config Index="4" Key="great_fairy_fountain" ID="SDC_GREAT_FAIRY_FOUNTAIN" Name="Great Fairy Fountain" Tooltip="used for both Great Fairy Fountains scenes"/>
+	<Config Index="5" Key="fairy_fountain" ID="SDC_FAIRY_FOUNTAIN" Name="Fairy Fountain" Tooltip="used for both Fairy Fountains scenes"/>
+	<Config Index="6" Key="hylia_labo" ID="SDC_HYLIA_LABO" Name="Hylia Labo" Tooltip=""/>
+	<Config Index="7" Key="calm_water" ID="SDC_CALM_WATER" Name="Calm Water" Tooltip="used for Castle Courtyard (with Zelda), Sacred Forest Meadow, and debug Jungle Gym"/>
+	<Config Index="8" Key="grave_exit_light_shining" ID="SDC_GRAVE_EXIT_LIGHT_SHINING" Name="Grave Exit Light Shining" Tooltip="used for one grave scene and the Dampé race scene"/>
+</Table>

@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<Table Key="csTransitionType" ID="CutsceneTransitionType" KeyType="System.UInt16" ValueType="System.String">
+	<Transition Index="1" Key="gray_fill_in" ID="CS_TRANS_GRAY_FILL_IN" Name="Gray Fill In" Tooltip="has hardcoded sounds for some scenes"/>
+	<Transition Index="2" Key="blue_fill_in" ID="CS_TRANS_BLUE_FILL_IN" Name="Blue Fill In" Tooltip=""/>
+	<Transition Index="3" Key="red_fill_out" ID="CS_TRANS_RED_FILL_OUT" Name="Red Fill Out" Tooltip=""/>
+	<Transition Index="4" Key="green_fill_out" ID="CS_TRANS_GREEN_FILL_OUT" Name="Green Fill Out" Tooltip=""/>
+	<Transition Index="5" Key="gray_fill_out" ID="CS_TRANS_GRAY_FILL_OUT" Name="Gray Fill Out" Tooltip=""/>
+	<Transition Index="6" Key="blue_fill_out" ID="CS_TRANS_BLUE_FILL_OUT" Name="Blue Fill Out" Tooltip=""/>
+	<Transition Index="7" Key="red_fill_in" ID="CS_TRANS_RED_FILL_IN" Name="Red Fill In" Tooltip=""/>
+	<Transition Index="8" Key="green_fill_in" ID="CS_TRANS_GREEN_FILL_IN" Name="Green Fill In" Tooltip=""/>
+	<Transition Index="9" Key="trigger_instance" ID="CS_TRANS_TRIGGER_INSTANCE" Name="Trigger Instance" Tooltip="used with `TRANS_MODE_INSTANCE_WAIT`"/>
+	<Transition Index="10" Key="black_fill_out" ID="CS_TRANS_BLACK_FILL_OUT" Name="Black Fill Out" Tooltip=""/>
+	<Transition Index="11" Key="black_fill_in" ID="CS_TRANS_BLACK_FILL_IN" Name="Black Fill In" Tooltip=""/>
+	<Transition Index="12" Key="black_fill_out_to_half" ID="CS_TRANS_BLACK_FILL_OUT_TO_HALF" Name="Black Fill Out To Half" Tooltip="used with `TRANS_MODE_CS_BLACK_FILL`"/>
+	<Transition Index="13" Key="black_fill_in_from_half" ID="CS_TRANS_BLACK_FILL_IN_FROM_HALF" Name="Black Fill In From Half" Tooltip=""/>
+</Table>

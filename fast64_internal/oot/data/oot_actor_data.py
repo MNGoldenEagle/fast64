@@ -1,7 +1,7 @@
 from os import path
 from dataclasses import dataclass
 from .oot_getters import getXMLRoot
-from .oot_data import OoT_BaseElement, readJsonFile
+from .oot_data import OoT_BaseElement
 
 
 @dataclass
@@ -15,7 +15,7 @@ class OoT_ActorData:
 
     def __init__(self):
         # Path to the ``ActorList.xml`` file
-        actorXML = path.dirname(path.abspath(__file__)) + "/../../../actors.xml"
+        actorXML = path.dirname(path.abspath(__file__)) + "/xml/actors.xml"
         actorRoot = getXMLRoot(actorXML)
 
         # general actor list

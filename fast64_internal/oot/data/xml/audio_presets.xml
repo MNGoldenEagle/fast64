@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<Table Key="audioPreset" ID="AudioPreset" KeyType="System.UInt16" ValueType="System.String">
+	<Preset Index="0" Key="default" ID="AUDIO_PRESET_DEFAULT" Name="Default" Tooltip=""/>
+</Table>

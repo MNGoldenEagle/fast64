@@ -49,7 +49,7 @@ class OOT_SearchSceneEnumOperator(Operator):
     bl_property = "ootSceneID"
     bl_options = {"REGISTER", "UNDO"}
 
-    ootSceneID: EnumProperty(items=ootEnumSceneID, default="SCENE_MABE_VILLAGE")
+    ootSceneID: EnumProperty(items=ootEnumSceneID, default="mabe_village")
     opName: StringProperty(default="Export")
 
     def execute(self, context):
@@ -70,7 +70,7 @@ class OOT_SearchMusicSeqEnumOperator(Operator):
     bl_property = "ootMusicSeq"
     bl_options = {"REGISTER", "UNDO"}
 
-    ootMusicSeq: EnumProperty(items=ootEnumMusicSeq, default="NA_BGM_OVERWORLD")
+    ootMusicSeq: EnumProperty(items=ootEnumMusicSeq, default="overworld")
     headerIndex: IntProperty(default=0, min=0)
     objName: StringProperty()
 

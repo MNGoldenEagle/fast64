@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<Table Key="roomEffects" ID="RoomEffects" KeyType="System.UInt16" ValueType="System.String">
+	<Effect Index="0" Key="overworld" ID="ROOM_EFFECTS_OVERWORLD" Name="Overworld" Tooltip="Use field camera, minimap mode, time can advance with Sun's Song"/>
+	<Effect Index="1" Key="dungeon" ID="ROOM_EFFECTS_DUNGEON" Name="Dungeon" Tooltip="Use dungeon camera, minimap mode, Sun's Song doesn't advance time"/>
+	<Effect Index="2" Key="no_jump" ID="ROOM_EFFECTS_NO_JUMP" Name="No Jump" Tooltip=""/>
+	<Effect Index="3" Key="no_dithering" ID="ROOM_EFFECTS_NO_DITHERING" Name="No Dithering" Tooltip=""/>
+	<Effect Index="4" Key="no_horse_cam" ID="ROOM_EFFECTS_NO_HORSE_CAM" Name="No Horse Cam" Tooltip=""/>
+	<Effect Index="5" Key="ignore_lighting" ID="ROOM_EFFECTS_IGNORE_LIGHTING" Name="Ignore Lighting" Tooltip=""/>
+</Table>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<Table Key="csTextType" ID="CutsceneTextType" KeyType="System.UInt16" ValueType="System.String">
+	<CsText Index="0" Key="normal" ID="CS_TEXT_NORMAL" Name="Normal" Tooltip=""/>
+	<CsText Index="1" Key="choice" ID="CS_TEXT_CHOICE" Name="Choice" Tooltip=""/>
+	<CsText Index="2" Key="ocarina_action" ID="CS_TEXT_OCARINA_ACTION" Name="Ocarina Action" Tooltip=""/>
+	<CsText Index="3" Key="goron_ruby" ID="CS_TEXT_GORON_RUBY" Name="Goron Ruby" Tooltip="use `altTextId1` in the ruby cutscene if sapphire is already obtained"/>
+	<CsText Index="4" Key="zora_sapphire" ID="CS_TEXT_ZORA_SAPPHIRE" Name="Zora Sapphire" Tooltip="use `altTextId1` in the sapphire cutscene if ruby is already obtained"/>
+</Table>

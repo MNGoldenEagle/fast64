@@ -40,7 +40,6 @@ from ..oot_constants import (
     ootEnumDrawConfig,
     ootEnumHeaderMenuComplete,
     ootData,
-    readJsonFile,
 )
 
 ootEnumSceneMenuAlternate = [
@@ -60,9 +59,7 @@ ootEnumLightGroupMenu = [
     ("Night", "Night", "Night"),
 ]
 
-ootEnumTransitionAnims = [
-	("Custom", "Custom", "Custom")
-] + readJsonFile('transitions.json')
+ootEnumTransitionAnims = ootData.enumData.ootEnumTransitions
 
 ootEnumExitIndex = [
     ("Custom", "Custom", "Custom"),
@@ -95,10 +92,10 @@ class OOTSceneProperties(PropertyGroup):
 class OOTExitProperty(PropertyGroup):
     expandTab: BoolProperty(name="Expand Tab")
 
-    scene: EnumProperty(items=ootEnumSceneID, default="SCENE_MABE_VILLAGE")
+    scene: EnumProperty(items=ootEnumSceneID, default="mabe_village")
     entranceId: IntProperty(min=0, max=255)
     continueBGM: BoolProperty(default=False)
-    fadeOutAnim: EnumProperty(items=ootEnumTransitionAnims, default="TRANS_TYPE_FADE_BLACK")
+    fadeOutAnim: EnumProperty(items=ootEnumTransitionAnims, default="fade_black")
     fadeOutAnimCustom: StringProperty(default="0")
 
     def draw_props(self, layout: UILayout, index: int, headerIndex: int, objName: str):
@@ -218,7 +215,7 @@ class OOTLightGroupProperty(PropertyGroup):
 
 
 class OOTSceneTableEntryProperty(PropertyGroup):
-    drawConfig: EnumProperty(items=ootEnumDrawConfig, name="Scene Draw Config", default="SDC_DEFAULT")
+    drawConfig: EnumProperty(items=ootEnumDrawConfig, name="Scene Draw Config", default="default")
     drawConfigCustom: StringProperty(name="Scene Draw Config Custom")
     hasTitle: BoolProperty(name="Has Title Card?", default=False)
     titleCard: StringProperty(name="Title Card File", subtype="FILE_PATH")
@@ -249,33 +246,33 @@ class OOTSceneHeaderProperty(PropertyGroup):
 
     globalObject: EnumProperty(name="Global Object", default='object_gameplay_field_keep', items=ootData.objectData.globalObjectsKey)
     globalObjectCustom: StringProperty(name="Global Object Custom", default="0x00")
-    naviCup: EnumProperty(name="Navi Hints", default="0x00", items=ootEnumNaviHints)
+    naviCup: EnumProperty(name="Navi Hints", default="none", items=ootEnumNaviHints)
     naviCupCustom: StringProperty(name="Navi Hints Custom", default="0x00")
 
-    skyboxID: EnumProperty(name="Skybox", items=ootEnumSkybox, default="0x01")
+    skyboxID: EnumProperty(name="Skybox", items=ootEnumSkybox, default="disabled")
     skyboxIDCustom: StringProperty(name="Skybox ID", default="0")
     skyboxCloudiness: EnumProperty(name="Cloudiness", items=ootEnumCloudiness, default="0x00")
     skyboxCloudinessCustom: StringProperty(name="Cloudiness ID", default="0x00")
     skyboxLighting: EnumProperty(
         name="Skybox Lighting",
         items=ootEnumSkyboxLighting,
-        default="LIGHT_MODE_TIME",
+        default="time",
         update=on_update_oot_render_settings,
     )
     skyboxLightingCustom: StringProperty(
         name="Skybox Lighting Custom", default="0x00", update=on_update_oot_render_settings
     )
 
-    mapLocation: EnumProperty(name="Map Location", items=ootEnumMapLocation, default="0x00")
+    mapLocation: EnumProperty(name="Map Location", items=ootEnumMapLocation, default="kakariko_village")
     mapLocationCustom: StringProperty(name="Skybox Lighting Custom", default="0x00")
-    cameraMode: EnumProperty(name="Camera Mode", items=ootEnumCameraMode, default="0x00")
+    cameraMode: EnumProperty(name="Camera Mode", items=ootEnumCameraMode, default="default")
     cameraModeCustom: StringProperty(name="Camera Mode Custom", default="0x00")
 
-    musicSeq: EnumProperty(name="Music Sequence", items=ootEnumMusicSeq, default="NA_BGM_OVERWORLD")
+    musicSeq: EnumProperty(name="Music Sequence", items=ootEnumMusicSeq, default="overworld")
     musicSeqCustom: StringProperty(name="Music Sequence ID", default="0x00")
-    nightSeq: EnumProperty(name="Nighttime SFX", items=ootEnumNightSeq, default="NATURE_ID_GENERAL_NIGHT")
+    nightSeq: EnumProperty(name="Nighttime SFX", items=ootEnumNightSeq, default="general_night")
     nightSeqCustom: StringProperty(name="Nighttime SFX ID", default="0x00")
-    audioSessionPreset: EnumProperty(name="Audio Session Preset", items=ootEnumAudioSessionPreset, default="0x00")
+    audioSessionPreset: EnumProperty(name="Audio Session Preset", items=ootEnumAudioSessionPreset, default="default")
     audioSessionPresetCustom: StringProperty(name="Audio Session Preset", default="0x00")
 
     timeOfDayLights: PointerProperty(type=OOTLightGroupProperty, name="Time Of Day Lighting")
@@ -452,7 +449,7 @@ class OOTRemoveSceneSettingsProperty(PropertyGroup):
     name: StringProperty(name="Name", default="spot03")
     subFolder: StringProperty(name="Subfolder", default="overworld")
     customExport: BoolProperty(name="Custom Export Path")
-    option: EnumProperty(items=ootEnumSceneID, default="SCENE_MABE_VILLAGE")
+    option: EnumProperty(items=ootEnumSceneID, default="mabe_village")
 
     def draw_props(self, layout: UILayout):
         if self.option == "Custom":
@@ -470,7 +467,7 @@ class OOTExportSceneSettingsProperty(PropertyGroup):
         default=False,
         description="Does not split the scene and rooms into multiple files.",
     )
-    option: EnumProperty(items=ootEnumSceneID, default="SCENE_MABE_VILLAGE")
+    option: EnumProperty(items=ootEnumSceneID, default="mabe_village")
 
     def draw_props(self, layout: UILayout):
         if self.customExport:
@@ -502,7 +499,7 @@ class OOTImportSceneSettingsProperty(PropertyGroup):
     includePaths: BoolProperty(name="Paths", default=True)
     includeWaterBoxes: BoolProperty(name="Water Boxes", default=True)
     includeCutscenes: BoolProperty(name="Cutscenes", default=False)
-    option: EnumProperty(items=ootEnumSceneID, default="SCENE_MABE_VILLAGE")
+    option: EnumProperty(items=ootEnumSceneID, default="mabe_village")
 
     def draw_props(self, layout: UILayout, sceneOption: str):
         col = layout.column()

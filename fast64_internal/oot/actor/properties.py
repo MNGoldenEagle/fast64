@@ -209,7 +209,7 @@ class OOTTransitionActorProperty(PropertyGroup):
 class OOTEntranceProperty(PropertyGroup):
     # This is also used in entrance list.
     spawnIndex: IntProperty(min=0, max=255)
-    fadeInAnim: EnumProperty(items=ootEnumTransitionAnims, default='TRANS_TYPE_FADE_BLACK')
+    fadeInAnim: EnumProperty(items=ootEnumTransitionAnims, default='fade_black')
     customActor: BoolProperty(name="Use Custom Actor")
     actor: PointerProperty(type=OOTActorProperty)
 

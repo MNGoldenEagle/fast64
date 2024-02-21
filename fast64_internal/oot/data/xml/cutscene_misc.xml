@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<Table Key="csMiscType" ID="CutsceneMiscType" KeyType="System.UInt16" ValueType="System.String">
+	<Misc Index="0" Key="unimplemented_0" ID="CS_MISC_UNIMPLEMENTED_0" Name="Unimplemented 0" Tooltip=""/>
+	<Misc Index="1" Key="rain" ID="CS_MISC_RAIN" Name="Rain" Tooltip=""/>
+	<Misc Index="2" Key="lightning" ID="CS_MISC_LIGHTNING" Name="Lightning" Tooltip=""/>
+	<Misc Index="3" Key="set_csflag_0" ID="CS_MISC_SET_CSFLAG_0" Name="Set Csflag 0" Tooltip="Sets flag 2 when in Temple of Time"/>
+	<Misc Index="4" Key="unimplemented_4" ID="CS_MISC_UNIMPLEMENTED_4" Name="Unimplemented 4" Tooltip=""/>
+	<Misc Index="5" Key="unimplemented_5" ID="CS_MISC_UNIMPLEMENTED_5" Name="Unimplemented 5" Tooltip=""/>
+	<Misc Index="6" Key="lift_fog" ID="CS_MISC_LIFT_FOG" Name="Lift Fog" Tooltip=""/>
+	<Misc Index="7" Key="cloudy_sky" ID="CS_MISC_CLOUDY_SKY" Name="Cloudy Sky" Tooltip=""/>
+	<Misc Index="8" Key="fade_kokiri_grass_env_alpha" ID="CS_MISC_FADE_KOKIRI_GRASS_ENV_ALPHA" Name="Fade Kokiri Grass Env Alpha" Tooltip=""/>
+	<Misc Index="9" Key="snow" ID="CS_MISC_SNOW" Name="Snow" Tooltip=""/>
+	<Misc Index="10" Key="set_csflag_1" ID="CS_MISC_SET_CSFLAG_1" Name="Set Csflag 1" Tooltip=""/>
+	<Misc Index="11" Key="deku_tree_death" ID="CS_MISC_DEKU_TREE_DEATH" Name="Deku Tree Death" Tooltip=""/>
+	<Misc Index="12" Key="stop_cutscene" ID="CS_MISC_STOP_CUTSCENE" Name="Stop Cutscene" Tooltip=""/>
+	<Misc Index="13" Key="triforce_flash" ID="CS_MISC_TRIFORCE_FLASH" Name="Triforce Flash" Tooltip=""/>
+	<Misc Index="14" Key="set_locked_viewpoint" ID="CS_MISC_SET_LOCKED_VIEWPOINT" Name="Set Locked Viewpoint" Tooltip=""/>
+	<Misc Index="15" Key="show_title_card" ID="CS_MISC_SHOW_TITLE_CARD" Name="Show Title Card" Tooltip=""/>
+	<Misc Index="16" Key="quake_start" ID="CS_MISC_QUAKE_START" Name="Quake Start" Tooltip=""/>
+	<Misc Index="17" Key="quake_stop" ID="CS_MISC_QUAKE_STOP" Name="Quake Stop" Tooltip=""/>
+	<Misc Index="18" Key="stop_storm_and_advance_to_day" ID="CS_MISC_STOP_STORM_AND_ADVANCE_TO_DAY" Name="Stop Storm And Advance To Day" Tooltip=""/>
+	<Misc Index="19" Key="set_flag_fast_windmill" ID="CS_MISC_SET_FLAG_FAST_WINDMILL" Name="Set Flag Fast Windmill" Tooltip=""/>
+	<Misc Index="20" Key="set_flag_well_drained" ID="CS_MISC_SET_FLAG_WELL_DRAINED" Name="Set Flag Well Drained" Tooltip=""/>
+	<Misc Index="21" Key="set_flag_lake_hylia_restored" ID="CS_MISC_SET_FLAG_LAKE_HYLIA_RESTORED" Name="Set Flag Lake Hylia Restored" Tooltip=""/>
+	<Misc Index="22" Key="vismono_black_and_white" ID="CS_MISC_VISMONO_BLACK_AND_WHITE" Name="Vismono Black And White" Tooltip=""/>
+	<Misc Index="23" Key="vismono_sepia" ID="CS_MISC_VISMONO_SEPIA" Name="Vismono Sepia" Tooltip=""/>
+	<Misc Index="24" Key="hide_room" ID="CS_MISC_HIDE_ROOM" Name="Hide Room" Tooltip=""/>
+	<Misc Index="25" Key="time_advance_to_night" ID="CS_MISC_TIME_ADVANCE_TO_NIGHT" Name="Time Advance To Night" Tooltip=""/>
+	<Misc Index="26" Key="set_time_based_light_setting" ID="CS_MISC_SET_TIME_BASED_LIGHT_SETTING" Name="Set Time Based Light Setting" Tooltip=""/>
+	<Misc Index="27" Key="red_pulsating_lights" ID="CS_MISC_RED_PULSATING_LIGHTS" Name="Red Pulsating Lights" Tooltip=""/>
+	<Misc Index="28" Key="halt_all_actors" ID="CS_MISC_HALT_ALL_ACTORS" Name="Halt All Actors" Tooltip=""/>
+	<Misc Index="29" Key="resume_all_actors" ID="CS_MISC_RESUME_ALL_ACTORS" Name="Resume All Actors" Tooltip=""/>
+	<Misc Index="30" Key="set_csflag_3" ID="CS_MISC_SET_CSFLAG_3" Name="Set Csflag 3" Tooltip=""/>
+	<Misc Index="31" Key="set_csflag_4" ID="CS_MISC_SET_CSFLAG_4" Name="Set Csflag 4" Tooltip=""/>
+	<Misc Index="32" Key="sandstorm_fill" ID="CS_MISC_SANDSTORM_FILL" Name="Sandstorm Fill" Tooltip=""/>
+	<Misc Index="33" Key="sunssong_start" ID="CS_MISC_SUNSSONG_START" Name="Sunssong Start" Tooltip=""/>
+	<Misc Index="34" Key="freeze_time" ID="CS_MISC_FREEZE_TIME" Name="Freeze Time" Tooltip=""/>
+	<Misc Index="35" Key="long_scarecrow_song" ID="CS_MISC_LONG_SCARECROW_SONG" Name="Long Scarecrow Song" Tooltip=""/>
+</Table>

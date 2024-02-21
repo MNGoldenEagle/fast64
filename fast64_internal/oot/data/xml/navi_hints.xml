@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<Table Key="naviQuestHintType" ID="NaviQuestHintFileId" KeyType="System.UInt16" ValueType="System.String">
+	<HintFile Index="0" Key="none" ID="NAVI_QUEST_HINTS_NONE" Name="None" Tooltip=""/>
+	<HintFile Index="1" Key="overworld" ID="NAVI_QUEST_HINTS_OVERWORLD" Name="Overworld" Tooltip=""/>
+	<HintFile Index="2" Key="dungeon" ID="NAVI_QUEST_HINTS_DUNGEON" Name="Dungeon" Tooltip=""/>
+</Table>

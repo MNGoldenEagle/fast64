@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<Table Key="sceneLoc" ID="SceneMapLocation" KeyType="System.UInt16" ValueType="System.String">
+	<Location Index="0" Key="hyrule_field" ID="SCENE_LOCATION_HYRULE_FIELD" Name="Hyrule Field" Tooltip=""/>
+	<Location Index="1" Key="kakariko_village" ID="SCENE_LOCATION_KAKARIKO_VILLAGE" Name="Kakariko Village" Tooltip=""/>
+	<Location Index="2" Key="graveyard" ID="SCENE_LOCATION_GRAVEYARD" Name="Graveyard" Tooltip=""/>
+	<Location Index="3" Key="zora_river" ID="SCENE_LOCATION_ZORA_RIVER" Name="Zora River" Tooltip=""/>
+	<Location Index="4" Key="kokiri_forest" ID="SCENE_LOCATION_KOKIRI_FOREST" Name="Kokiri Forest" Tooltip=""/>
+	<Location Index="5" Key="sacred_meadow" ID="SCENE_LOCATION_SACRED_MEADOW" Name="Sacred Meadow" Tooltip=""/>
+	<Location Index="6" Key="lake_hylia" ID="SCENE_LOCATION_LAKE_HYLIA" Name="Lake Hylia" Tooltip=""/>
+	<Location Index="7" Key="zora_domain" ID="SCENE_LOCATION_ZORA_DOMAIN" Name="Zora Domain" Tooltip=""/>
+	<Location Index="8" Key="zora_fountain" ID="SCENE_LOCATION_ZORA_FOUNTAIN" Name="Zora Fountain" Tooltip=""/>
+	<Location Index="9" Key="gerudo_valley" ID="SCENE_LOCATION_GERUDO_VALLEY" Name="Gerudo Valley" Tooltip=""/>
+	<Location Index="10" Key="lost_woods" ID="SCENE_LOCATION_LOST_WOODS" Name="Lost Woods" Tooltip=""/>
+	<Location Index="11" Key="desert_colossus" ID="SCENE_LOCATION_DESERT_COLOSSUS" Name="Desert Colossus" Tooltip=""/>
+	<Location Index="12" Key="haunted_wasteland" ID="SCENE_LOCATION_HAUNTED_WASTELAND" Name="Haunted Wasteland" Tooltip=""/>
+	<Location Index="13" Key="market" ID="SCENE_LOCATION_MARKET" Name="Market" Tooltip=""/>
+	<Location Index="14" Key="hyrule_castle" ID="SCENE_LOCATION_HYRULE_CASTLE" Name="Hyrule Castle" Tooltip=""/>
+	<Location Index="15" Key="death_mountain_trail" ID="SCENE_LOCATION_DEATH_MOUNTAIN_TRAIL" Name="Death Mountain Trail" Tooltip=""/>
+	<Location Index="16" Key="death_mountain_crater" ID="SCENE_LOCATION_DEATH_MOUNTAIN_CRATER" Name="Death Mountain Crater" Tooltip=""/>
+	<Location Index="17" Key="goron_city" ID="SCENE_LOCATION_GORON_CITY" Name="Goron City" Tooltip=""/>
+	<Location Index="18" Key="lon_lon_ranch" ID="SCENE_LOCATION_LON_LON_RANCH" Name="Lon Lon Ranch" Tooltip=""/>
+	<Location Index="19" Key="mystery" ID="SCENE_LOCATION_MYSTERY" Name="Mystery" Tooltip=""/>
+	<Location Index="20" Key="ganon_castle" ID="SCENE_LOCATION_GANON_CASTLE" Name="Ganon Castle" Tooltip=""/>
+	<Location Index="21" Key="grottos" ID="SCENE_LOCATION_GROTTOS" Name="Grottos" Tooltip=""/>
+</Table>

@@ -152,10 +152,10 @@ class OOTCSTimeProperty(OOTCutsceneCommon, PropertyGroup):
 class OOTCSSeqProperty(OOTCutsceneCommon, PropertyGroup):
     attrName = "seqList"
     subprops = ["csSeqID", "startFrame", "endFrame"]
-    csSeqID: EnumProperty(name="Seq ID", items=ootData.enumData.ootEnumSeqId, default="NA_BGM_SOUND_EFFECTS")
+    csSeqID: EnumProperty(name="Seq ID", items=ootData.enumData.ootEnumSeqId, default="sound_effects")
     csSeqIDCustom: StringProperty(default="NA_BGM_CUSTOM")
     csSeqPlayer: EnumProperty(
-        name="Seq Player", items=ootData.enumData.ootEnumCsFadeOutSeqPlayer, default="fade_out_fanfare"
+        name="Seq Player", items=ootData.enumData.ootEnumCsFadeOutSeqPlayer, default="fanfare"
     )
     csSeqPlayerCustom: StringProperty(default="CS_FADE_OUT_CUSTOM")
 

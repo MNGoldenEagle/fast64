@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<Table Key="csDestination" ID="CutsceneDestination" KeyType="System.UInt16" ValueType="System.String">
+	<Destination Index="0" Key="unimplemented_0" ID="CS_DEST_UNIMPLEMENTED_0" Name="Unimplemented 0" Tooltip=""/>
+	<Destination Index="1" Key="cutscene_map_ganon_horse" ID="CS_DEST_CUTSCENE_MAP_GANON_HORSE" Name="Cutscene Map Ganon Horse" Tooltip=""/>
+	<Destination Index="2" Key="cutscene_map_three_goddesses" ID="CS_DEST_CUTSCENE_MAP_THREE_GODDESSES" Name="Cutscene Map Three Goddesses" Tooltip=""/>
+	<Destination Index="3" Key="gerudo_valley_din_part_1" ID="CS_DEST_GERUDO_VALLEY_DIN_PART_1" Name="Gerudo Valley Din Part 1" Tooltip=""/>
+	<Destination Index="4" Key="death_mountain_trail_nayru" ID="CS_DEST_DEATH_MOUNTAIN_TRAIL_NAYRU" Name="Death Mountain Trail Nayru" Tooltip=""/>
+	<Destination Index="5" Key="kokiri_forest_farore" ID="CS_DEST_KOKIRI_FOREST_FARORE" Name="Kokiri Forest Farore" Tooltip=""/>
+	<Destination Index="6" Key="cutscene_map_triforce_creation" ID="CS_DEST_CUTSCENE_MAP_TRIFORCE_CREATION" Name="Cutscene Map Triforce Creation" Tooltip=""/>
+	<Destination Index="7" Key="kokiri_forest_receive_kokiri_emerald" ID="CS_DEST_KOKIRI_FOREST_RECEIVE_KOKIRI_EMERALD" Name="Kokiri Forest Receive Kokiri Emerald" Tooltip=""/>
+	<Destination Index="8" Key="temple_of_time_from_master_sword" ID="CS_DEST_TEMPLE_OF_TIME_FROM_MASTER_SWORD" Name="Temple Of Time From Master Sword" Tooltip=""/>
+	<Destination Index="9" Key="gerudo_valley_din_part_2" ID="CS_DEST_GERUDO_VALLEY_DIN_PART_2" Name="Gerudo Valley Din Part 2" Tooltip=""/>
+	<Destination Index="10" Key="links_house_intro" ID="CS_DEST_LINKS_HOUSE_INTRO" Name="Links House Intro" Tooltip=""/>
+	<Destination Index="11" Key="kokiri_forest_intro" ID="CS_DEST_KOKIRI_FOREST_INTRO" Name="Kokiri Forest Intro" Tooltip=""/>
+	<Destination Index="12" Key="death_mountain_trail_from_goron_ruby" ID="CS_DEST_DEATH_MOUNTAIN_TRAIL_FROM_GORON_RUBY" Name="Death Mountain Trail From Goron Ruby" Tooltip=""/>
+	<Destination Index="13" Key="zoras_fountain_from_zoras_sapphire" ID="CS_DEST_ZORAS_FOUNTAIN_FROM_ZORAS_SAPPHIRE" Name="Zoras Fountain From Zoras Sapphire" Tooltip=""/>
+	<Destination Index="14" Key="kokiri_forest_from_kokiri_emerald" ID="CS_DEST_KOKIRI_FOREST_FROM_KOKIRI_EMERALD" Name="Kokiri Forest From Kokiri Emerald" Tooltip=""/>
+	<Destination Index="15" Key="temple_of_time_kokiri_emerald_restored" ID="CS_DEST_TEMPLE_OF_TIME_KOKIRI_EMERALD_RESTORED" Name="unused" Tooltip="unused"/>
+	<Destination Index="16" Key="temple_of_time_goron_ruby_restored" ID="CS_DEST_TEMPLE_OF_TIME_GORON_RUBY_RESTORED" Name="unused" Tooltip="unused"/>
+	<Destination Index="17" Key="temple_of_time_zoras_sapphire_restored" ID="CS_DEST_TEMPLE_OF_TIME_ZORAS_SAPPHIRE_RESTORED" Name="unused" Tooltip="unused"/>
+	<Destination Index="18" Key="temple_of_time_after_light_medallion" ID="CS_DEST_TEMPLE_OF_TIME_AFTER_LIGHT_MEDALLION" Name="Temple Of Time After Light Medallion" Tooltip=""/>
+	<Destination Index="19" Key="death_mountain_trail" ID="CS_DEST_DEATH_MOUNTAIN_TRAIL" Name="unused" Tooltip="unused"/>
+	<Destination Index="20" Key="unimplemented_14" ID="CS_DEST_UNIMPLEMENTED_14" Name="Unimplemented 14" Tooltip=""/>
+	<Destination Index="21" Key="lake_hylia_water_restored" ID="CS_DEST_LAKE_HYLIA_WATER_RESTORED" Name="Lake Hylia Water Restored" Tooltip=""/>
+	<Destination Index="22" Key="desert_colossus_requiem" ID="CS_DEST_DESERT_COLOSSUS_REQUIEM" Name="unused" Tooltip="unused"/>
+	<Destination Index="23" Key="cutscene_map_ganondorf_defeated_credits" ID="CS_DEST_CUTSCENE_MAP_GANONDORF_DEFEATED_CREDITS" Name="Cutscene Map Ganondorf Defeated Credits" Tooltip=""/>
+	<Destination Index="24" Key="jabu_jabu" ID="CS_DEST_JABU_JABU" Name="Jabu Jabu" Tooltip=""/>
+	<Destination Index="25" Key="chamber_of_sages_light_medallion" ID="CS_DEST_CHAMBER_OF_SAGES_LIGHT_MEDALLION" Name="Chamber Of Sages Light Medallion" Tooltip=""/>
+	<Destination Index="26" Key="temple_of_time_kokiri_emerald_restored_2" ID="CS_DEST_TEMPLE_OF_TIME_KOKIRI_EMERALD_RESTORED_2" Name="unused" Tooltip="unused"/>
+	<Destination Index="27" Key="temple_of_time_goron_ruby_restored_2" ID="CS_DEST_TEMPLE_OF_TIME_GORON_RUBY_RESTORED_2" Name="unused" Tooltip="unused"/>
+	<Destination Index="28" Key="temple_of_time_zoras_sapphire_restored_2" ID="CS_DEST_TEMPLE_OF_TIME_ZORAS_SAPPHIRE_RESTORED_2" Name="unused" Tooltip="unused"/>
+	<Destination Index="29" Key="chamber_of_sages_forest_medallion" ID="CS_DEST_CHAMBER_OF_SAGES_FOREST_MEDALLION" Name="Chamber Of Sages Forest Medallion" Tooltip=""/>
+	<Destination Index="30" Key="chamber_of_sages_fire_medallion" ID="CS_DEST_CHAMBER_OF_SAGES_FIRE_MEDALLION" Name="Chamber Of Sages Fire Medallion" Tooltip=""/>
+	<Destination Index="31" Key="chamber_of_sages_water_medallion" ID="CS_DEST_CHAMBER_OF_SAGES_WATER_MEDALLION" Name="Chamber Of Sages Water Medallion" Tooltip=""/>
+	<Destination Index="32" Key="hyrule_field_flashback" ID="CS_DEST_HYRULE_FIELD_FLASHBACK" Name="Hyrule Field Flashback" Tooltip=""/>
+	<Destination Index="33" Key="hyrule_field_from_zelda_escape" ID="CS_DEST_HYRULE_FIELD_FROM_ZELDA_ESCAPE" Name="Hyrule Field From Zelda Escape" Tooltip=""/>
+	<Destination Index="34" Key="cutscene_map_ganondorf_from_master_sword" ID="CS_DEST_CUTSCENE_MAP_GANONDORF_FROM_MASTER_SWORD" Name="unused" Tooltip="unused"/>
+	<Destination Index="35" Key="hyrule_field_intro_dream" ID="CS_DEST_HYRULE_FIELD_INTRO_DREAM" Name="Hyrule Field Intro Dream" Tooltip=""/>
+	<Destination Index="36" Key="unimplemented_24" ID="CS_DEST_UNIMPLEMENTED_24" Name="Unimplemented 24" Tooltip=""/>
+	<Destination Index="37" Key="unimplemented_25" ID="CS_DEST_UNIMPLEMENTED_25" Name="Unimplemented 25" Tooltip=""/>
+	<Destination Index="38" Key="cutscene_map_sheikah_legend" ID="CS_DEST_CUTSCENE_MAP_SHEIKAH_LEGEND" Name="Cutscene Map Sheikah Legend" Tooltip=""/>
+	<Destination Index="39" Key="temple_of_time_zelda_reveal" ID="CS_DEST_TEMPLE_OF_TIME_ZELDA_REVEAL" Name="Temple Of Time Zelda Reveal" Tooltip=""/>
+	<Destination Index="40" Key="temple_of_time_get_light_arrows" ID="CS_DEST_TEMPLE_OF_TIME_GET_LIGHT_ARROWS" Name="Temple Of Time Get Light Arrows" Tooltip=""/>
+	<Destination Index="41" Key="lake_hylia_from_lake_restored" ID="CS_DEST_LAKE_HYLIA_FROM_LAKE_RESTORED" Name="Lake Hylia From Lake Restored" Tooltip=""/>
+	<Destination Index="42" Key="kakariko_village_drain_well" ID="CS_DEST_KAKARIKO_VILLAGE_DRAIN_WELL" Name="Kakariko Village Drain Well" Tooltip=""/>
+	<Destination Index="43" Key="windmill_from_well_drained" ID="CS_DEST_WINDMILL_FROM_WELL_DRAINED" Name="Windmill From Well Drained" Tooltip=""/>
+	<Destination Index="44" Key="temple_of_time_from_all_stones_restored" ID="CS_DEST_TEMPLE_OF_TIME_FROM_ALL_STONES_RESTORED" Name="Temple Of Time From All Stones Restored" Tooltip=""/>
+	<Destination Index="45" Key="unimplemented_2d" ID="CS_DEST_UNIMPLEMENTED_2D" Name="Unimplemented 2D" Tooltip=""/>
+	<Destination Index="46" Key="temple_of_time_after_light_medallion_alt" ID="CS_DEST_TEMPLE_OF_TIME_AFTER_LIGHT_MEDALLION_ALT" Name="Temple Of Time After Light Medallion Alt" Tooltip="unused, uses a different transition"/>
+	<Destination Index="47" Key="kakariko_village_nocturne_part_2" ID="CS_DEST_KAKARIKO_VILLAGE_NOCTURNE_PART_2" Name="Kakariko Village Nocturne Part 2" Tooltip=""/>
+	<Destination Index="48" Key="desert_colossus_from_requiem" ID="CS_DEST_DESERT_COLOSSUS_FROM_REQUIEM" Name="Desert Colossus From Requiem" Tooltip=""/>
+	<Destination Index="49" Key="temple_of_time_from_light_arrows" ID="CS_DEST_TEMPLE_OF_TIME_FROM_LIGHT_ARROWS" Name="Temple Of Time From Light Arrows" Tooltip=""/>
+	<Destination Index="50" Key="kakariko_village_from_nocturne" ID="CS_DEST_KAKARIKO_VILLAGE_FROM_NOCTURNE" Name="Kakariko Village From Nocturne" Tooltip=""/>
+	<Destination Index="51" Key="hyrule_field_from_zeldas_courtyard" ID="CS_DEST_HYRULE_FIELD_FROM_ZELDAS_COURTYARD" Name="Hyrule Field From Zeldas Courtyard" Tooltip=""/>
+	<Destination Index="52" Key="temple_of_time_song_of_time" ID="CS_DEST_TEMPLE_OF_TIME_SONG_OF_TIME" Name="Temple Of Time Song Of Time" Tooltip=""/>
+	<Destination Index="53" Key="hyrule_field_from_song_of_time" ID="CS_DEST_HYRULE_FIELD_FROM_SONG_OF_TIME" Name="Hyrule Field From Song Of Time" Tooltip=""/>
+	<Destination Index="54" Key="gerudo_valley_credits" ID="CS_DEST_GERUDO_VALLEY_CREDITS" Name="Gerudo Valley Credits" Tooltip=""/>
+	<Destination Index="55" Key="gerudo_fortress_credits" ID="CS_DEST_GERUDO_FORTRESS_CREDITS" Name="Gerudo Fortress Credits" Tooltip=""/>
+	<Destination Index="56" Key="kakariko_village_credits" ID="CS_DEST_KAKARIKO_VILLAGE_CREDITS" Name="Kakariko Village Credits" Tooltip=""/>
+	<Destination Index="57" Key="death_mountain_trail_credits_part_1" ID="CS_DEST_DEATH_MOUNTAIN_TRAIL_CREDITS_PART_1" Name="Death Mountain Trail Credits Part 1" Tooltip=""/>
+	<Destination Index="58" Key="goron_city_credits" ID="CS_DEST_GORON_CITY_CREDITS" Name="Goron City Credits" Tooltip=""/>
+	<Destination Index="59" Key="lake_hylia_credits" ID="CS_DEST_LAKE_HYLIA_CREDITS" Name="Lake Hylia Credits" Tooltip=""/>
+	<Destination Index="60" Key="zoras_fountain_credits" ID="CS_DEST_ZORAS_FOUNTAIN_CREDITS" Name="unused, crashes" Tooltip="unused, crashes"/>
+	<Destination Index="61" Key="zoras_domain_credits" ID="CS_DEST_ZORAS_DOMAIN_CREDITS" Name="Zoras Domain Credits" Tooltip=""/>
+	<Destination Index="62" Key="kokiri_forest_credits_part_1" ID="CS_DEST_KOKIRI_FOREST_CREDITS_PART_1" Name="Kokiri Forest Credits Part 1" Tooltip=""/>
+	<Destination Index="63" Key="kokiri_forest_credits_part_2" ID="CS_DEST_KOKIRI_FOREST_CREDITS_PART_2" Name="Kokiri Forest Credits Part 2" Tooltip=""/>
+	<Destination Index="64" Key="hyrule_field_credits" ID="CS_DEST_HYRULE_FIELD_CREDITS" Name="Hyrule Field Credits" Tooltip=""/>
+	<Destination Index="65" Key="lon_lon_ranch_credits_part_1_alt" ID="CS_DEST_LON_LON_RANCH_CREDITS_PART_1_ALT" Name="unused" Tooltip="unused"/>
+	<Destination Index="66" Key="kakariko_village_from_trail_owl" ID="CS_DEST_KAKARIKO_VILLAGE_FROM_TRAIL_OWL" Name="Kakariko Village From Trail Owl" Tooltip=""/>
+	<Destination Index="67" Key="hyrule_field_from_lake_hylia_owl" ID="CS_DEST_HYRULE_FIELD_FROM_LAKE_HYLIA_OWL" Name="Hyrule Field From Lake Hylia Owl" Tooltip=""/>
+	<Destination Index="68" Key="cutscene_map_deku_sprout_part_2" ID="CS_DEST_CUTSCENE_MAP_DEKU_SPROUT_PART_2" Name="Cutscene Map Deku Sprout Part 2" Tooltip=""/>
+	<Destination Index="69" Key="kokiri_forest_deku_sprout_part_3" ID="CS_DEST_KOKIRI_FOREST_DEKU_SPROUT_PART_3" Name="Kokiri Forest Deku Sprout Part 3" Tooltip=""/>
+	<Destination Index="70" Key="death_mountain_trail_credits_part_2" ID="CS_DEST_DEATH_MOUNTAIN_TRAIL_CREDITS_PART_2" Name="Death Mountain Trail Credits Part 2" Tooltip=""/>
+	<Destination Index="71" Key="temple_of_time_credits" ID="CS_DEST_TEMPLE_OF_TIME_CREDITS" Name="Temple Of Time Credits" Tooltip=""/>
+	<Destination Index="72" Key="zeldas_courtyard_credits" ID="CS_DEST_ZELDAS_COURTYARD_CREDITS" Name="Zeldas Courtyard Credits" Tooltip=""/>
+	<Destination Index="73" Key="lon_lon_ranch_credits_part_1" ID="CS_DEST_LON_LON_RANCH_CREDITS_PART_1" Name="Lon Lon Ranch Credits Part 1" Tooltip=""/>
+	<Destination Index="74" Key="lon_lon_ranch_credits_part_2" ID="CS_DEST_LON_LON_RANCH_CREDITS_PART_2" Name="Lon Lon Ranch Credits Part 2" Tooltip=""/>
+	<Destination Index="75" Key="lon_lon_ranch_credits_part_3" ID="CS_DEST_LON_LON_RANCH_CREDITS_PART_3" Name="Lon Lon Ranch Credits Part 3" Tooltip=""/>
+	<Destination Index="76" Key="lon_lon_ranch_credits_part_4" ID="CS_DEST_LON_LON_RANCH_CREDITS_PART_4" Name="Lon Lon Ranch Credits Part 4" Tooltip=""/>
+	<Destination Index="77" Key="lon_lon_ranch_credits_part_5" ID="CS_DEST_LON_LON_RANCH_CREDITS_PART_5" Name="Lon Lon Ranch Credits Part 5" Tooltip=""/>
+	<Destination Index="78" Key="lon_lon_ranch_credits_part_6" ID="CS_DEST_LON_LON_RANCH_CREDITS_PART_6" Name="Lon Lon Ranch Credits Part 6" Tooltip=""/>
+	<Destination Index="79" Key="lon_lon_ranch_1" ID="CS_DEST_LON_LON_RANCH_1" Name="unused" Tooltip="unused"/>
+	<Destination Index="80" Key="lon_lon_ranch_2" ID="CS_DEST_LON_LON_RANCH_2" Name="unused" Tooltip="unused"/>
+	<Destination Index="81" Key="lon_lon_ranch_3" ID="CS_DEST_LON_LON_RANCH_3" Name="unused" Tooltip="unused"/>
+	<Destination Index="82" Key="lon_lon_ranch_4" ID="CS_DEST_LON_LON_RANCH_4" Name="unused" Tooltip="unused"/>
+	<Destination Index="83" Key="lon_lon_ranch_5" ID="CS_DEST_LON_LON_RANCH_5" Name="unused" Tooltip="unused"/>
+	<Destination Index="84" Key="lon_lon_ranch_6" ID="CS_DEST_LON_LON_RANCH_6" Name="unused" Tooltip="unused"/>
+	<Destination Index="85" Key="lon_lon_ranch_7" ID="CS_DEST_LON_LON_RANCH_7" Name="unused" Tooltip="unused"/>
+	<Destination Index="86" Key="lon_lon_ranch_8" ID="CS_DEST_LON_LON_RANCH_8" Name="unused" Tooltip="unused"/>
+	<Destination Index="87" Key="lon_lon_ranch_9" ID="CS_DEST_LON_LON_RANCH_9" Name="unused" Tooltip="unused"/>
+	<Destination Index="88" Key="lon_lon_ranch_10" ID="CS_DEST_LON_LON_RANCH_10" Name="unused" Tooltip="unused"/>
+	<Destination Index="89" Key="lon_lon_ranch_11" ID="CS_DEST_LON_LON_RANCH_11" Name="unused" Tooltip="unused"/>
+	<Destination Index="90" Key="lon_lon_ranch_12" ID="CS_DEST_LON_LON_RANCH_12" Name="unused" Tooltip="unused"/>
+	<Destination Index="91" Key="lon_lon_ranch_13" ID="CS_DEST_LON_LON_RANCH_13" Name="unused" Tooltip="unused"/>
+	<Destination Index="92" Key="lon_lon_ranch_14" ID="CS_DEST_LON_LON_RANCH_14" Name="unused" Tooltip="unused"/>
+	<Destination Index="93" Key="lon_lon_ranch_15" ID="CS_DEST_LON_LON_RANCH_15" Name="unused" Tooltip="unused"/>
+	<Destination Index="94" Key="lon_lon_ranch_from_eponas_song" ID="CS_DEST_LON_LON_RANCH_FROM_EPONAS_SONG" Name="Lon Lon Ranch From Eponas Song" Tooltip=""/>
+	<Destination Index="95" Key="stones_restored_conditional" ID="CS_DEST_STONES_RESTORED_CONDITIONAL" Name="unused" Tooltip="unused"/>
+	<Destination Index="96" Key="desert_colossus_from_chamber_of_sages" ID="CS_DEST_DESERT_COLOSSUS_FROM_CHAMBER_OF_SAGES" Name="Desert Colossus From Chamber Of Sages" Tooltip=""/>
+	<Destination Index="97" Key="graveyard_from_chamber_of_sages" ID="CS_DEST_GRAVEYARD_FROM_CHAMBER_OF_SAGES" Name="Graveyard From Chamber Of Sages" Tooltip=""/>
+	<Destination Index="98" Key="death_mountain_crater_from_chamber_of_sages" ID="CS_DEST_DEATH_MOUNTAIN_CRATER_FROM_CHAMBER_OF_SAGES" Name="Death Mountain Crater From Chamber Of Sages" Tooltip=""/>
+	<Destination Index="99" Key="sacred_forest_meadow_warp_pad" ID="CS_DEST_SACRED_FOREST_MEADOW_WARP_PAD" Name="unused" Tooltip="unused"/>
+	<Destination Index="100" Key="kokiri_forest_from_chamber_of_sages" ID="CS_DEST_KOKIRI_FOREST_FROM_CHAMBER_OF_SAGES" Name="Kokiri Forest From Chamber Of Sages" Tooltip=""/>
+	<Destination Index="101" Key="desert_colossus_from_nabooru_capture" ID="CS_DEST_DESERT_COLOSSUS_FROM_NABOORU_CAPTURE" Name="Desert Colossus From Nabooru Capture" Tooltip=""/>
+	<Destination Index="102" Key="temple_of_time_front_of_pedestal" ID="CS_DEST_TEMPLE_OF_TIME_FRONT_OF_PEDESTAL" Name="unused" Tooltip="unused"/>
+	<Destination Index="103" Key="hyrule_field_title_screen" ID="CS_DEST_HYRULE_FIELD_TITLE_SCREEN" Name="Hyrule Field Title Screen" Tooltip=""/>
+	<Destination Index="104" Key="title_screen_demo" ID="CS_DEST_TITLE_SCREEN_DEMO" Name="Title Screen Demo" Tooltip=""/>
+	<Destination Index="105" Key="graveyard_suns_song_part_2" ID="CS_DEST_GRAVEYARD_SUNS_SONG_PART_2" Name="Graveyard Suns Song Part 2" Tooltip=""/>
+	<Destination Index="106" Key="royal_familys_tomb_suns_song_part_3" ID="CS_DEST_ROYAL_FAMILYS_TOMB_SUNS_SONG_PART_3" Name="Royal Familys Tomb Suns Song Part 3" Tooltip=""/>
+	<Destination Index="107" Key="ganons_castle_dispel_forest_beam" ID="CS_DEST_GANONS_CASTLE_DISPEL_FOREST_BEAM" Name="Ganons Castle Dispel Forest Beam" Tooltip=""/>
+	<Destination Index="108" Key="ganons_castle_dispel_water_beam" ID="CS_DEST_GANONS_CASTLE_DISPEL_WATER_BEAM" Name="Ganons Castle Dispel Water Beam" Tooltip=""/>
+	<Destination Index="109" Key="ganons_castle_dispel_shadow_beam" ID="CS_DEST_GANONS_CASTLE_DISPEL_SHADOW_BEAM" Name="Ganons Castle Dispel Shadow Beam" Tooltip=""/>
+	<Destination Index="110" Key="ganons_castle_dispel_fire_beam" ID="CS_DEST_GANONS_CASTLE_DISPEL_FIRE_BEAM" Name="Ganons Castle Dispel Fire Beam" Tooltip=""/>
+	<Destination Index="111" Key="ganons_castle_dispel_light_beam" ID="CS_DEST_GANONS_CASTLE_DISPEL_LIGHT_BEAM" Name="Ganons Castle Dispel Light Beam" Tooltip=""/>
+	<Destination Index="112" Key="ganons_castle_dispel_spirit_beam" ID="CS_DEST_GANONS_CASTLE_DISPEL_SPIRIT_BEAM" Name="Ganons Castle Dispel Spirit Beam" Tooltip=""/>
+	<Destination Index="113" Key="ganons_castle_dispel_barrier_conditonal" ID="CS_DEST_GANONS_CASTLE_DISPEL_BARRIER_CONDITONAL" Name="Ganons Castle Dispel Barrier Conditonal" Tooltip=""/>
+	<Destination Index="114" Key="hyrule_field_from_fairy_ocarina" ID="CS_DEST_HYRULE_FIELD_FROM_FAIRY_OCARINA" Name="Hyrule Field From Fairy Ocarina" Tooltip=""/>
+	<Destination Index="115" Key="hyrule_field_from_impa_escort" ID="CS_DEST_HYRULE_FIELD_FROM_IMPA_ESCORT" Name="Hyrule Field From Impa Escort" Tooltip=""/>
+	<Destination Index="116" Key="from_rauru_final_message_conditional" ID="CS_DEST_FROM_RAURU_FINAL_MESSAGE_CONDITIONAL" Name="From Rauru Final Message Conditional" Tooltip=""/>
+	<Destination Index="117" Key="hyrule_field_credits_sky" ID="CS_DEST_HYRULE_FIELD_CREDITS_SKY" Name="Hyrule Field Credits Sky" Tooltip=""/>
+	<Destination Index="118" Key="ganon_battle_tower_collapse" ID="CS_DEST_GANON_BATTLE_TOWER_COLLAPSE" Name="Ganon Battle Tower Collapse" Tooltip=""/>
+	<Destination Index="119" Key="zeldas_courtyard_receive_letter" ID="CS_DEST_ZELDAS_COURTYARD_RECEIVE_LETTER" Name="Zeldas Courtyard Receive Letter" Tooltip=""/>
+</Table>

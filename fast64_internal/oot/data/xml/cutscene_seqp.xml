@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<Table Key="seqId" ID="CutsceneFadeOutSeqPlayer" KeyType="System.UInt16" ValueType="System.String">
+	<SeqPlayer Index="3" Key="fanfare" ID="CS_FADE_OUT_FANFARE" Name="Fanfare" Tooltip=""/>
+	<SeqPlayer Index="4" Key="bgm_main" ID="CS_FADE_OUT_BGM_MAIN" Name="Bgm Main" Tooltip=""/>
+</Table>

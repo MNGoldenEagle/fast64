@@ -34,7 +34,7 @@ def createNewActorCueList(csObj: Object, isPlayer: bool):
         newActorCueObj = objFactory.getNewActorCueObject(
             f"{csPrefix}.{playerOrActor} Cue {index:02}.{nameSuffix}",
             i,
-            "cueid_none" if isPlayer else "0x0000",
+            "none" if isPlayer else "0x0000",
             [0, 0, 0],
             ["0x0", "0x0", "0x0"],
             newActorCueListObj,
@@ -152,7 +152,7 @@ class CutsceneCmdAddActorCue(Operator):
                 newActorCueObj = objFactory.getNewActorCueObject(
                     f"New {'Player' if self.isPlayer else 'Actor'} Cue",
                     0,
-                    "cueid_none" if self.isPlayer else "0x0000",
+                    "none" if self.isPlayer else "0x0000",
                     [0, 0, 0],
                     ["0x0", "0x0", "0x0"],
                     None,
@@ -318,7 +318,7 @@ class OOT_SearchPlayerCueIdEnumOperator(Operator):
     bl_property = "playerCueID"
     bl_options = {"REGISTER", "UNDO"}
 
-    playerCueID: EnumProperty(items=ootData.enumData.ootEnumCsPlayerCueId, default="cueid_none")
+    playerCueID: EnumProperty(items=ootData.enumData.ootEnumCsPlayerCueId, default="none")
     objName: StringProperty()
 
     def execute(self, context):

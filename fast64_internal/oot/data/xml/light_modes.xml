@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<Table Key="lightMode" ID="LightMode" KeyType="System.UInt16" ValueType="System.String">
+	<Mode Index="0" Key="time" ID="LIGHT_MODE_TIME" Name="Time" Tooltip="environment lights use `lightConfig` and change based on time of day"/>
+	<Mode Index="1" Key="settings" ID="LIGHT_MODE_SETTINGS" Name="Settings" Tooltip="environment lights use `lightSetting`"/>
+</Table>

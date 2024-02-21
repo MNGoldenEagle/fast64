@@ -86,7 +86,7 @@ class CutsceneCmdActorCueProperty(PropertyGroup):
         get=lambda self: getNextCuesStartFrame(self),
     )
 
-    playerCueID: EnumProperty(items=ootData.enumData.ootEnumCsPlayerCueId, default="cueid_none")
+    playerCueID: EnumProperty(items=ootData.enumData.ootEnumCsPlayerCueId, default="none")
     cueActionID: StringProperty(
         name="Action ID", default="0x0001", description="Actor action. Meaning is unique for each different actor."
     )

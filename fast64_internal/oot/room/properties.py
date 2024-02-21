@@ -93,11 +93,11 @@ class OOTRoomHeaderProperty(PropertyGroup):
     usePreviousHeader: BoolProperty(name="Use Previous Header", default=True)
 
     roomIndex: IntProperty(name="Room Index", default=0, min=0)
-    roomBehaviour: EnumProperty(items=ootEnumRoomBehaviour, default="0x00")
+    roomBehaviour: EnumProperty(items=ootEnumRoomBehaviour, default="overworld")
     roomBehaviourCustom: StringProperty(default="0x00")
     disableWarpSongs: BoolProperty(name="Disable Warp Songs")
     showInvisibleActors: BoolProperty(name="Show Invisible Actors")
-    linkIdleMode: EnumProperty(name="Link Idle Mode", items=ootEnumLinkIdle, default="0x00")
+    linkIdleMode: EnumProperty(name="Link Idle Mode", items=ootEnumLinkIdle, default="default")
     linkIdleModeCustom: StringProperty(name="Link Idle Mode Custom", default="0x00")
     roomIsHot: BoolProperty(
         name="Use Hot Room Behavior",
@@ -121,7 +121,7 @@ class OOTRoomHeaderProperty(PropertyGroup):
 
     objectList: CollectionProperty(type=OOTObjectProperty)
 
-    roomShape: EnumProperty(items=ootEnumRoomShapeType, default="ROOM_SHAPE_TYPE_NORMAL")
+    roomShape: EnumProperty(items=ootEnumRoomShapeType, default="normal")
     defaultCullDistance: IntProperty(name="Default Cull Distance", min=1, default=100)
     bgImageList: CollectionProperty(type=OOTBGProperty)
     bgImageTab: BoolProperty(name="BG Images")
