@@ -20,6 +20,7 @@
 	<Scene Index="17" Key="eagle_test_field" ID="SCENE_EAGLE_TEST_FIELD" Name="Eagle Test Field"/>
 	<Scene Index="18" Key="forest_boss" ID="SCENE_FOREST_BOSS" Name="Forest Boss"/>
 	<Scene Index="19" Key="suya_test" ID="SCENE_SUYA_TEST" Name="Suya Test"/>
-	<Scene Index="20" Key="testz" ID="SCENE_TESTZ" Name="Testz"/>
+	<Scene Index="20" Key="tail_cave_boss_demo_test" ID="SCENE_TAIL_CAVE_BOSS_DEMO_TEST" Name="Tail Cave Boss Demo Test"/>
+	<Scene Index="21" Key="testz" ID="SCENE_TESTZ" Name="Testz"/>
 	<Scene Index="254" Key="scene_spc_return" ID="SCENE_SPC_RETURN" Name="Return from Grotto" Tooltip="Return from Grotto"/>
 </Table>

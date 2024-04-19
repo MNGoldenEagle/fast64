@@ -41,12 +41,13 @@ class OoT_ActorData:
         self.actorsByKey = {actor.key: actor for actor in self.actorList}
         self.actorsByID = {actor.id: actor for actor in self.actorList}
 
-        ootEnumTransitionActorID = [actor for actor in self.actorList if actor.id.startswith('ACTOR_DOOR')]
-
-        self.transitionActors = ootEnumTransitionActorID
-
         # list of tuples used by Blender's enum properties
         self.ootEnumActorID = []
         self.ootEnumActorID.insert(0, ("Custom", "Custom Actor", "Custom"))
         for actor in self.actorList:
             self.ootEnumActorID.append((actor.id, actor.name, actor.id))
+
+        print(self.ootEnumActorID)
+        ootEnumTransitionActorID = [actor for actor in self.ootEnumActorID if actor[0].startswith('ACTOR_DOOR_')]
+
+        self.transitionActors = ootEnumTransitionActorID

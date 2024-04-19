@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<Table KeyType="System.UInt16" ValueType="System.String">
+	<Scenario Index="0" ID="SC_FL_LINK_AWAKE" Key="link_awake" Name="link awake"/>
+	<Scenario Index="1" ID="SC_FL_GOT_SHIELD_BACK" Key="got_shield_back" Name="got shield back"/>
+	<Scenario Index="2" ID="SC_FL_GOT_SWORD_BACK" Key="got_sword_back" Name="got sword back"/>
+	<Scenario Index="3" ID="SC_FL_GOT_MUSHROOM" Key="got_mushroom" Name="got mushroom"/>
+	<Scenario Index="4" ID="SC_FL_TARIN_WARP_TAUNT" Key="tarin_warp_taunt" Name="tarin warp taunt"/>
+	<Scenario Index="5" ID="SC_FL_TARINS_UNCURSED" Key="tarins_uncursed" Name="tarins uncursed"/>
+	<Scenario Index="6" ID="SC_FL_TAIL_KEY" Key="tail_key" Name="tail key"/>
+	<Scenario Index="7" ID="SC_FL_TAIL_CAVE_UNLOCKED" Key="tail_cave_unlocked" Name="tail cave unlocked"/>
+	<Scenario Index="8" ID="SC_FL_MOLDORM_BEATEN" Key="moldorm_beaten" Name="moldorm beaten"/>
+	<Scenario Index="9" ID="SC_FL_GOT_CELLO" Key="got_cello" Name="got cello"/>
+</Table>

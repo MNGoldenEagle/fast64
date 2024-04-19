@@ -63,331 +63,332 @@
 	<Object Index="61" ID="OBJECT_DS" Key="object_ds" Name="ds"/>
 	<Object Index="62" ID="OBJECT_DS2" Key="object_ds2" Name="ds2"/>
 	<Object Index="63" ID="OBJECT_DU" Key="object_du" Name="du"/>
-	<Object Index="64" ID="OBJECT_DY_OBJ" Key="object_dy_obj" Name="dy obj"/>
-	<Object Index="65" ID="OBJECT_EC" Key="object_ec" Name="ec"/>
-	<Object Index="66" ID="OBJECT_EFC_CRYSTAL_LIGHT" Key="object_efc_crystal_light" Name="efc crystal light"/>
-	<Object Index="67" ID="OBJECT_EFC_DOUGHNUT" Key="object_efc_doughnut" Name="efc doughnut"/>
-	<Object Index="68" ID="OBJECT_EFC_ERUPC" Key="object_efc_erupc" Name="efc erupc"/>
-	<Object Index="69" ID="OBJECT_EFC_FIRE_BALL" Key="object_efc_fire_ball" Name="efc fire ball"/>
-	<Object Index="70" ID="OBJECT_EFC_FLASH" Key="object_efc_flash" Name="efc flash"/>
-	<Object Index="71" ID="OBJECT_EFC_LGT_SHOWER" Key="object_efc_lgt_shower" Name="efc lgt shower"/>
-	<Object Index="72" ID="OBJECT_EFC_STAR_FIELD" Key="object_efc_star_field" Name="efc star field"/>
-	<Object Index="73" ID="OBJECT_EFC_TW" Key="object_efc_tw" Name="efc tw"/>
-	<Object Index="74" ID="OBJECT_EI" Key="object_ei" Name="ei"/>
-	<Object Index="75" ID="OBJECT_FA" Key="object_fa" Name="fa"/>
-	<Object Index="76" ID="OBJECT_FD" Key="object_fd" Name="fd"/>
-	<Object Index="77" ID="OBJECT_FD2" Key="object_fd2" Name="fd2"/>
-	<Object Index="78" ID="OBJECT_FHG" Key="object_fhg" Name="fhg"/>
-	<Object Index="79" ID="OBJECT_FIRE" Key="object_fire" Name="fire"/>
-	<Object Index="80" ID="OBJECT_FIREFLY" Key="object_firefly" Name="firefly"/>
-	<Object Index="81" ID="OBJECT_FISH" Key="object_fish" Name="fish"/>
-	<Object Index="82" ID="OBJECT_FR" Key="object_fr" Name="fr"/>
-	<Object Index="83" ID="OBJECT_FU" Key="object_fu" Name="fu"/>
-	<Object Index="84" ID="OBJECT_FW" Key="object_fw" Name="fw"/>
-	<Object Index="85" ID="OBJECT_FZ" Key="object_fz" Name="fz"/>
-	<Object Index="86" ID="OBJECT_GANON" Key="object_ganon" Name="ganon"/>
-	<Object Index="87" ID="OBJECT_GANON2" Key="object_ganon2" Name="ganon2"/>
-	<Object Index="88" ID="OBJECT_GANON_ANIME1" Key="object_ganon_anime1" Name="ganon anime1"/>
-	<Object Index="89" ID="OBJECT_GANON_ANIME2" Key="object_ganon_anime2" Name="ganon anime2"/>
-	<Object Index="90" ID="OBJECT_GANON_ANIME3" Key="object_ganon_anime3" Name="ganon anime3"/>
-	<Object Index="91" ID="OBJECT_GANON_OBJECTS" Key="object_ganon_objects" Name="ganon objects"/>
-	<Object Index="92" ID="OBJECT_GE1" Key="object_ge1" Name="ge1"/>
-	<Object Index="93" ID="OBJECT_GEFF" Key="object_geff" Name="geff"/>
-	<Object Index="94" ID="OBJECT_GELDB" Key="object_geldb" Name="geldb"/>
-	<Object Index="95" ID="OBJECT_GI_ARROW" Key="object_gi_arrow" Name="gi arrow"/>
-	<Object Index="96" ID="OBJECT_GI_ARROWCASE" Key="object_gi_arrowcase" Name="gi arrowcase"/>
-	<Object Index="97" ID="OBJECT_GI_BOMB_1" Key="object_gi_bomb_1" Name="gi bomb 1"/>
-	<Object Index="98" ID="OBJECT_GI_BOMB_2" Key="object_gi_bomb_2" Name="gi bomb 2"/>
-	<Object Index="99" ID="OBJECT_GI_BOMBPOUCH" Key="object_gi_bombpouch" Name="gi bombpouch"/>
-	<Object Index="100" ID="OBJECT_GI_BOOMERANG" Key="object_gi_boomerang" Name="gi boomerang"/>
-	<Object Index="101" ID="OBJECT_GI_BOOTS_2" Key="object_gi_boots_2" Name="gi boots 2"/>
-	<Object Index="102" ID="OBJECT_GI_BOSSKEY" Key="object_gi_bosskey" Name="gi bosskey"/>
-	<Object Index="103" ID="OBJECT_GI_BOTTLE" Key="object_gi_bottle" Name="gi bottle"/>
-	<Object Index="104" ID="OBJECT_GI_BOTTLE_LETTER" Key="object_gi_bottle_letter" Name="gi bottle letter"/>
-	<Object Index="105" ID="OBJECT_GI_BOW" Key="object_gi_bow" Name="gi bow"/>
-	<Object Index="106" ID="OBJECT_GI_BRACELET" Key="object_gi_bracelet" Name="gi bracelet"/>
-	<Object Index="107" ID="OBJECT_GI_BROKENSWORD" Key="object_gi_brokensword" Name="gi brokensword"/>
-	<Object Index="108" ID="OBJECT_GI_BUTTERFLY" Key="object_gi_butterfly" Name="gi butterfly"/>
-	<Object Index="109" ID="OBJECT_GI_CLOTHES" Key="object_gi_clothes" Name="gi clothes"/>
-	<Object Index="110" ID="OBJECT_GI_COIN" Key="object_gi_coin" Name="gi coin"/>
-	<Object Index="111" ID="OBJECT_GI_COMPASS" Key="object_gi_compass" Name="gi compass"/>
-	<Object Index="112" ID="OBJECT_GI_DEKUPOUCH" Key="object_gi_dekupouch" Name="gi dekupouch"/>
-	<Object Index="113" ID="OBJECT_GI_EGG" Key="object_gi_egg" Name="gi egg"/>
-	<Object Index="114" ID="OBJECT_GI_EYE_LOTION" Key="object_gi_eye_lotion" Name="gi eye lotion"/>
-	<Object Index="115" ID="OBJECT_GI_FEATHER" Key="object_gi_feather" Name="gi feather"/>
-	<Object Index="116" ID="OBJECT_GI_FIRE" Key="object_gi_fire" Name="gi fire"/>
-	<Object Index="117" ID="OBJECT_GI_FISH" Key="object_gi_fish" Name="gi fish"/>
-	<Object Index="118" ID="OBJECT_GI_FROG" Key="object_gi_frog" Name="gi frog"/>
-	<Object Index="119" ID="OBJECT_GI_GERUDO" Key="object_gi_gerudo" Name="gi gerudo"/>
-	<Object Index="120" ID="OBJECT_GI_GERUDOMASK" Key="object_gi_gerudomask" Name="gi gerudomask"/>
-	<Object Index="121" ID="OBJECT_GI_GHOST" Key="object_gi_ghost" Name="gi ghost"/>
-	<Object Index="122" ID="OBJECT_GI_GLASSES" Key="object_gi_glasses" Name="gi glasses"/>
-	<Object Index="123" ID="OBJECT_GI_GLOVES" Key="object_gi_gloves" Name="gi gloves"/>
-	<Object Index="124" ID="OBJECT_GI_GODDESS" Key="object_gi_goddess" Name="gi goddess"/>
-	<Object Index="125" ID="OBJECT_GI_GOLONMASK" Key="object_gi_golonmask" Name="gi golonmask"/>
-	<Object Index="126" ID="OBJECT_GI_GRASS" Key="object_gi_grass" Name="gi grass"/>
-	<Object Index="127" ID="OBJECT_GI_GUARDIAN_ACORN" Key="object_gi_guardian_acorn" Name="gi guardian acorn"/>
-	<Object Index="128" ID="OBJECT_GI_HAMMER" Key="object_gi_hammer" Name="gi hammer"/>
-	<Object Index="129" ID="OBJECT_GI_HEART" Key="object_gi_heart" Name="gi heart"/>
-	<Object Index="130" ID="OBJECT_GI_HEARTS" Key="object_gi_hearts" Name="gi hearts"/>
-	<Object Index="131" ID="OBJECT_GI_HOOKSHOT" Key="object_gi_hookshot" Name="gi hookshot"/>
-	<Object Index="132" ID="OBJECT_GI_HOVERBOOTS" Key="object_gi_hoverboots" Name="gi hoverboots"/>
-	<Object Index="133" ID="OBJECT_GI_INSECT" Key="object_gi_insect" Name="gi insect"/>
-	<Object Index="134" ID="OBJECT_GI_JEWEL" Key="object_gi_jewel" Name="gi jewel"/>
-	<Object Index="135" ID="OBJECT_GI_KEY" Key="object_gi_key" Name="gi key"/>
-	<Object Index="136" ID="OBJECT_GI_KI_TAN_MASK" Key="object_gi_ki_tan_mask" Name="gi ki tan mask"/>
-	<Object Index="137" ID="OBJECT_GI_LETTER" Key="object_gi_letter" Name="gi letter"/>
-	<Object Index="138" ID="OBJECT_GI_LIQUID" Key="object_gi_liquid" Name="gi liquid"/>
-	<Object Index="139" ID="OBJECT_GI_LONGSWORD" Key="object_gi_longsword" Name="gi longsword"/>
-	<Object Index="140" ID="OBJECT_GI_M_ARROW" Key="object_gi_m_arrow" Name="gi m arrow"/>
-	<Object Index="141" ID="OBJECT_GI_MAGICPOT" Key="object_gi_magicpot" Name="gi magicpot"/>
-	<Object Index="142" ID="OBJECT_GI_MAP" Key="object_gi_map" Name="gi map"/>
-	<Object Index="143" ID="OBJECT_GI_MEDAL" Key="object_gi_medal" Name="gi medal"/>
-	<Object Index="144" ID="OBJECT_GI_MELODY" Key="object_gi_melody" Name="gi melody"/>
-	<Object Index="145" ID="OBJECT_GI_MILK" Key="object_gi_milk" Name="gi milk"/>
-	<Object Index="146" ID="OBJECT_GI_MUSHROOM" Key="object_gi_mushroom" Name="gi mushroom"/>
-	<Object Index="147" ID="OBJECT_GI_NIWATORI" Key="object_gi_niwatori" Name="gi niwatori"/>
-	<Object Index="148" ID="OBJECT_GI_NUTS" Key="object_gi_nuts" Name="gi nuts"/>
-	<Object Index="149" ID="OBJECT_GI_OCARINA" Key="object_gi_ocarina" Name="gi ocarina"/>
-	<Object Index="150" ID="OBJECT_GI_OCARINA_0" Key="object_gi_ocarina_0" Name="gi ocarina 0"/>
-	<Object Index="151" ID="OBJECT_GI_PACHINKO" Key="object_gi_pachinko" Name="gi pachinko"/>
-	<Object Index="152" ID="OBJECT_GI_PIECE_OF_POWER" Key="object_gi_piece_of_power" Name="gi piece of power"/>
-	<Object Index="153" ID="OBJECT_GI_POWDER" Key="object_gi_powder" Name="gi powder"/>
-	<Object Index="154" ID="OBJECT_GI_PRESCRIPTION" Key="object_gi_prescription" Name="gi prescription"/>
-	<Object Index="155" ID="OBJECT_GI_PURSE" Key="object_gi_purse" Name="gi purse"/>
-	<Object Index="156" ID="OBJECT_GI_RABIT_MASK" Key="object_gi_rabit_mask" Name="gi rabit mask"/>
-	<Object Index="157" ID="OBJECT_GI_REDEAD_MASK" Key="object_gi_redead_mask" Name="gi redead mask"/>
-	<Object Index="158" ID="OBJECT_GI_RUPY" Key="object_gi_rupy" Name="gi rupy"/>
-	<Object Index="159" ID="OBJECT_GI_SAW" Key="object_gi_saw" Name="gi saw"/>
-	<Object Index="160" ID="OBJECT_GI_SCALE" Key="object_gi_scale" Name="gi scale"/>
-	<Object Index="161" ID="OBJECT_GI_SEED" Key="object_gi_seed" Name="gi seed"/>
-	<Object Index="162" ID="OBJECT_GI_SHIELD_1" Key="object_gi_shield_1" Name="gi shield 1"/>
-	<Object Index="163" ID="OBJECT_GI_SHIELD_2" Key="object_gi_shield_2" Name="gi shield 2"/>
-	<Object Index="164" ID="OBJECT_GI_SHIELD_3" Key="object_gi_shield_3" Name="gi shield 3"/>
-	<Object Index="165" ID="OBJECT_GI_SKJ_MASK" Key="object_gi_skj_mask" Name="gi skj mask"/>
-	<Object Index="166" ID="OBJECT_GI_SOLDOUT" Key="object_gi_soldout" Name="gi soldout"/>
-	<Object Index="167" ID="OBJECT_GI_SOUL" Key="object_gi_soul" Name="gi soul"/>
-	<Object Index="168" ID="OBJECT_GI_STICK" Key="object_gi_stick" Name="gi stick"/>
-	<Object Index="169" ID="OBJECT_GI_SUTARU" Key="object_gi_sutaru" Name="gi sutaru"/>
-	<Object Index="170" ID="OBJECT_GI_SWORD_1" Key="object_gi_sword_1" Name="gi sword 1"/>
-	<Object Index="171" ID="OBJECT_GI_TICKETSTONE" Key="object_gi_ticketstone" Name="gi ticketstone"/>
-	<Object Index="172" ID="OBJECT_GI_TRUTH_MASK" Key="object_gi_truth_mask" Name="gi truth mask"/>
-	<Object Index="173" ID="OBJECT_GI_ZORAMASK" Key="object_gi_zoramask" Name="gi zoramask"/>
-	<Object Index="174" ID="OBJECT_GJ" Key="object_gj" Name="gj"/>
-	<Object Index="175" ID="OBJECT_GJYO_OBJECTS" Key="object_gjyo_objects" Name="gjyo objects"/>
-	<Object Index="176" ID="OBJECT_GLA" Key="object_gla" Name="gla"/>
-	<Object Index="177" ID="OBJECT_GM" Key="object_gm" Name="gm"/>
-	<Object Index="178" ID="OBJECT_GND" Key="object_gnd" Name="gnd"/>
-	<Object Index="179" ID="OBJECT_GND_MAGIC" Key="object_gnd_magic" Name="gnd magic"/>
-	<Object Index="180" ID="OBJECT_GNDD" Key="object_gndd" Name="gndd"/>
-	<Object Index="181" ID="OBJECT_GOD_LGT" Key="object_god_lgt" Name="god lgt"/>
-	<Object Index="182" ID="OBJECT_GOL" Key="object_gol" Name="gol"/>
-	<Object Index="183" ID="OBJECT_GOMA" Key="object_goma" Name="goma"/>
-	<Object Index="184" ID="OBJECT_GOROIWA" Key="object_goroiwa" Name="goroiwa"/>
-	<Object Index="185" ID="OBJECT_GR" Key="object_gr" Name="gr"/>
-	<Object Index="186" ID="OBJECT_GS" Key="object_gs" Name="gs"/>
-	<Object Index="187" ID="OBJECT_GT" Key="object_gt" Name="gt"/>
-	<Object Index="188" ID="OBJECT_HAKA" Key="object_haka" Name="haka"/>
-	<Object Index="189" ID="OBJECT_HAKA_DOOR" Key="object_haka_door" Name="haka door"/>
-	<Object Index="190" ID="OBJECT_HAKA_OBJECTS" Key="object_haka_objects" Name="haka objects"/>
-	<Object Index="191" ID="OBJECT_HAKACH_OBJECTS" Key="object_hakach_objects" Name="hakach objects"/>
-	<Object Index="192" ID="OBJECT_HATA" Key="object_hata" Name="hata"/>
-	<Object Index="193" ID="OBJECT_HEAVY_OBJECT" Key="object_heavy_object" Name="heavy object"/>
-	<Object Index="194" ID="OBJECT_HIDAN_OBJECTS" Key="object_hidan_objects" Name="hidan objects"/>
-	<Object Index="195" ID="OBJECT_HINTNUTS" Key="object_hintnuts" Name="hintnuts"/>
-	<Object Index="196" ID="OBJECT_HNI" Key="object_hni" Name="hni"/>
-	<Object Index="197" ID="OBJECT_HORSE" Key="object_horse" Name="horse"/>
-	<Object Index="198" ID="OBJECT_HORSE_GANON" Key="object_horse_ganon" Name="horse ganon"/>
-	<Object Index="199" ID="OBJECT_HORSE_LINK_CHILD" Key="object_horse_link_child" Name="horse link child"/>
-	<Object Index="200" ID="OBJECT_HORSE_NORMAL" Key="object_horse_normal" Name="horse normal"/>
-	<Object Index="201" ID="OBJECT_HORSE_ZELDA" Key="object_horse_zelda" Name="horse zelda"/>
-	<Object Index="202" ID="OBJECT_HS" Key="object_hs" Name="hs"/>
-	<Object Index="203" ID="OBJECT_HUMAN" Key="object_human" Name="human"/>
-	<Object Index="204" ID="OBJECT_ICE_OBJECTS" Key="object_ice_objects" Name="ice objects"/>
-	<Object Index="205" ID="OBJECT_IK" Key="object_ik" Name="ik"/>
-	<Object Index="206" ID="OBJECT_IM" Key="object_im" Name="im"/>
-	<Object Index="207" ID="OBJECT_IN" Key="object_in" Name="in"/>
-	<Object Index="208" ID="OBJECT_INGATE" Key="object_ingate" Name="ingate"/>
-	<Object Index="209" ID="OBJECT_JJ" Key="object_jj" Name="jj"/>
-	<Object Index="210" ID="OBJECT_JS" Key="object_js" Name="js"/>
-	<Object Index="211" ID="OBJECT_JYA_DOOR" Key="object_jya_door" Name="jya door"/>
-	<Object Index="212" ID="OBJECT_JYA_IRON" Key="object_jya_iron" Name="jya iron"/>
-	<Object Index="213" ID="OBJECT_JYA_OBJ" Key="object_jya_obj" Name="jya obj"/>
-	<Object Index="214" ID="OBJECT_KA" Key="object_ka" Name="ka"/>
-	<Object Index="215" ID="OBJECT_KANBAN" Key="object_kanban" Name="kanban"/>
-	<Object Index="216" ID="OBJECT_KIBAKO2" Key="object_kibako2" Name="kibako2"/>
-	<Object Index="217" ID="OBJECT_KINGDODONGO" Key="object_kingdodongo" Name="kingdodongo"/>
-	<Object Index="218" ID="OBJECT_KM1" Key="object_km1" Name="km1"/>
-	<Object Index="219" ID="OBJECT_KUSA" Key="object_kusa" Name="kusa"/>
-	<Object Index="220" ID="OBJECT_KW1" Key="object_kw1" Name="kw1"/>
-	<Object Index="221" ID="OBJECT_KZ" Key="object_kz" Name="kz"/>
-	<Object Index="222" ID="OBJECT_LIGHT_RING" Key="object_light_ring" Name="light ring"/>
-	<Object Index="223" ID="OBJECT_LIGHTBOX" Key="object_lightbox" Name="lightbox"/>
-	<Object Index="224" ID="OBJECT_LIGHTSWITCH" Key="object_lightswitch" Name="lightswitch"/>
-	<Object Index="225" ID="OBJECT_MA1" Key="object_ma1" Name="ma1"/>
-	<Object Index="226" ID="OBJECT_MA2" Key="object_ma2" Name="ma2"/>
-	<Object Index="227" ID="OBJECT_MAG" Key="object_mag" Name="mag"/>
-	<Object Index="228" ID="OBJECT_MAMENOKI" Key="object_mamenoki" Name="mamenoki"/>
-	<Object Index="229" ID="OBJECT_MASTERGOLON" Key="object_mastergolon" Name="mastergolon"/>
-	<Object Index="230" ID="OBJECT_MASTERKOKIRI" Key="object_masterkokiri" Name="masterkokiri"/>
-	<Object Index="231" ID="OBJECT_MASTERKOKIRIHEAD" Key="object_masterkokirihead" Name="masterkokirihead"/>
-	<Object Index="232" ID="OBJECT_MASTERZOORA" Key="object_masterzoora" Name="masterzoora"/>
-	<Object Index="233" ID="OBJECT_MB" Key="object_mb" Name="mb"/>
-	<Object Index="234" ID="OBJECT_MD" Key="object_md" Name="md"/>
-	<Object Index="235" ID="OBJECT_MEDAL" Key="object_medal" Name="medal"/>
-	<Object Index="236" ID="OBJECT_MENKURI_OBJECTS" Key="object_menkuri_objects" Name="menkuri objects"/>
-	<Object Index="237" ID="OBJECT_MIR_RAY" Key="object_mir_ray" Name="mir ray"/>
-	<Object Index="238" ID="OBJECT_MIZU_OBJECTS" Key="object_mizu_objects" Name="mizu objects"/>
-	<Object Index="239" ID="OBJECT_MJIN" Key="object_mjin" Name="mjin"/>
-	<Object Index="240" ID="OBJECT_MJIN_DARK" Key="object_mjin_dark" Name="mjin dark"/>
-	<Object Index="241" ID="OBJECT_MJIN_FLAME" Key="object_mjin_flame" Name="mjin flame"/>
-	<Object Index="242" ID="OBJECT_MJIN_FLASH" Key="object_mjin_flash" Name="mjin flash"/>
-	<Object Index="243" ID="OBJECT_MJIN_ICE" Key="object_mjin_ice" Name="mjin ice"/>
-	<Object Index="244" ID="OBJECT_MJIN_OKA" Key="object_mjin_oka" Name="mjin oka"/>
-	<Object Index="245" ID="OBJECT_MJIN_SOUL" Key="object_mjin_soul" Name="mjin soul"/>
-	<Object Index="246" ID="OBJECT_MJIN_WIND" Key="object_mjin_wind" Name="mjin wind"/>
-	<Object Index="247" ID="OBJECT_MK" Key="object_mk" Name="mk"/>
-	<Object Index="248" ID="OBJECT_MM" Key="object_mm" Name="mm"/>
-	<Object Index="249" ID="OBJECT_MO" Key="object_mo" Name="mo"/>
-	<Object Index="250" ID="OBJECT_MOLDORM" Key="object_moldorm" Name="moldorm"/>
-	<Object Index="251" ID="OBJECT_MORI_HINERI1" Key="object_mori_hineri1" Name="mori hineri1"/>
-	<Object Index="252" ID="OBJECT_MORI_HINERI1A" Key="object_mori_hineri1a" Name="mori hineri1a"/>
-	<Object Index="253" ID="OBJECT_MORI_HINERI2" Key="object_mori_hineri2" Name="mori hineri2"/>
-	<Object Index="254" ID="OBJECT_MORI_HINERI2A" Key="object_mori_hineri2a" Name="mori hineri2a"/>
-	<Object Index="255" ID="OBJECT_MORI_OBJECTS" Key="object_mori_objects" Name="mori objects"/>
-	<Object Index="256" ID="OBJECT_MORI_TEX" Key="object_mori_tex" Name="mori tex"/>
-	<Object Index="257" ID="OBJECT_MS" Key="object_ms" Name="ms"/>
-	<Object Index="258" ID="OBJECT_MU" Key="object_mu" Name="mu"/>
-	<Object Index="259" ID="OBJECT_NB" Key="object_nb" Name="nb"/>
-	<Object Index="260" ID="OBJECT_NIW" Key="object_niw" Name="niw"/>
-	<Object Index="261" ID="OBJECT_NWC" Key="object_nwc" Name="nwc"/>
-	<Object Index="262" ID="OBJECT_NY" Key="object_ny" Name="ny"/>
-	<Object Index="263" ID="OBJECT_OA1" Key="object_oa1" Name="oA1"/>
-	<Object Index="264" ID="OBJECT_OA10" Key="object_oa10" Name="oA10"/>
-	<Object Index="265" ID="OBJECT_OA11" Key="object_oa11" Name="oA11"/>
-	<Object Index="266" ID="OBJECT_OA2" Key="object_oa2" Name="oA2"/>
-	<Object Index="267" ID="OBJECT_OA3" Key="object_oa3" Name="oA3"/>
-	<Object Index="268" ID="OBJECT_OA4" Key="object_oa4" Name="oA4"/>
-	<Object Index="269" ID="OBJECT_OA5" Key="object_oa5" Name="oA5"/>
-	<Object Index="270" ID="OBJECT_OA6" Key="object_oa6" Name="oA6"/>
-	<Object Index="271" ID="OBJECT_OA7" Key="object_oa7" Name="oA7"/>
-	<Object Index="272" ID="OBJECT_OA8" Key="object_oa8" Name="oA8"/>
-	<Object Index="273" ID="OBJECT_OA9" Key="object_oa9" Name="oA9"/>
-	<Object Index="274" ID="OBJECT_OB1" Key="object_ob1" Name="oB1"/>
-	<Object Index="275" ID="OBJECT_OB2" Key="object_ob2" Name="oB2"/>
-	<Object Index="276" ID="OBJECT_OB3" Key="object_ob3" Name="oB3"/>
-	<Object Index="277" ID="OBJECT_OB4" Key="object_ob4" Name="oB4"/>
-	<Object Index="278" ID="OBJECT_OE1" Key="object_oe1" Name="oE1"/>
-	<Object Index="279" ID="OBJECT_OE10" Key="object_oe10" Name="oE10"/>
-	<Object Index="280" ID="OBJECT_OE11" Key="object_oe11" Name="oE11"/>
-	<Object Index="281" ID="OBJECT_OE12" Key="object_oe12" Name="oE12"/>
-	<Object Index="282" ID="OBJECT_OE1S" Key="object_oe1s" Name="oE1s"/>
-	<Object Index="283" ID="OBJECT_OE2" Key="object_oe2" Name="oE2"/>
-	<Object Index="284" ID="OBJECT_OE3" Key="object_oe3" Name="oE3"/>
-	<Object Index="285" ID="OBJECT_OE4" Key="object_oe4" Name="oE4"/>
-	<Object Index="286" ID="OBJECT_OE4S" Key="object_oe4s" Name="oE4s"/>
-	<Object Index="287" ID="OBJECT_OE5" Key="object_oe5" Name="oE5"/>
-	<Object Index="288" ID="OBJECT_OE6" Key="object_oe6" Name="oE6"/>
-	<Object Index="289" ID="OBJECT_OE7" Key="object_oe7" Name="oE7"/>
-	<Object Index="290" ID="OBJECT_OE8" Key="object_oe8" Name="oE8"/>
-	<Object Index="291" ID="OBJECT_OE9" Key="object_oe9" Name="oE9"/>
-	<Object Index="292" ID="OBJECT_OE_ANIME" Key="object_oe_anime" Name="oE anime"/>
-	<Object Index="293" ID="OBJECT_OF1D_MAP" Key="object_of1d_map" Name="oF1d map"/>
-	<Object Index="294" ID="OBJECT_OF1S" Key="object_of1s" Name="oF1s"/>
-	<Object Index="295" ID="OBJECT_O_ANIME" Key="object_o_anime" Name="o anime"/>
-	<Object Index="296" ID="OBJECT_OCTOROK" Key="object_octorok" Name="octorok"/>
-	<Object Index="297" ID="OBJECT_OKUTA" Key="object_okuta" Name="okuta"/>
-	<Object Index="298" ID="OBJECT_OPENING_DEMO1" Key="object_opening_demo1" Name="opening demo1"/>
-	<Object Index="299" ID="OBJECT_OS" Key="object_os" Name="os"/>
-	<Object Index="300" ID="OBJECT_OS_ANIME" Key="object_os_anime" Name="os anime"/>
-	<Object Index="301" ID="OBJECT_OSSAN" Key="object_ossan" Name="ossan"/>
-	<Object Index="302" ID="OBJECT_OUKE_HAKA" Key="object_ouke_haka" Name="ouke haka"/>
-	<Object Index="303" ID="OBJECT_OWL" Key="object_owl" Name="owl"/>
-	<Object Index="304" ID="OBJECT_PEEHAT" Key="object_peehat" Name="peehat"/>
-	<Object Index="305" ID="OBJECT_PO_COMPOSER" Key="object_po_composer" Name="po composer"/>
-	<Object Index="306" ID="OBJECT_PO_FIELD" Key="object_po_field" Name="po field"/>
-	<Object Index="307" ID="OBJECT_PO_SISTERS" Key="object_po_sisters" Name="po sisters"/>
-	<Object Index="308" ID="OBJECT_POH" Key="object_poh" Name="poh"/>
-	<Object Index="309" ID="OBJECT_PS" Key="object_ps" Name="ps"/>
-	<Object Index="310" ID="OBJECT_PU_BOX" Key="object_pu_box" Name="pu box"/>
-	<Object Index="311" ID="OBJECT_RD" Key="object_rd" Name="rd"/>
-	<Object Index="312" ID="OBJECT_REEBA" Key="object_reeba" Name="reeba"/>
-	<Object Index="313" ID="OBJECT_RELAY_OBJECTS" Key="object_relay_objects" Name="relay objects"/>
-	<Object Index="314" ID="OBJECT_RL" Key="object_rl" Name="rl"/>
-	<Object Index="315" ID="OBJECT_ROLLING_BONES" Key="object_rolling_bones" Name="rolling bones"/>
-	<Object Index="316" ID="OBJECT_RR" Key="object_rr" Name="rr"/>
-	<Object Index="317" ID="OBJECT_RS" Key="object_rs" Name="rs"/>
-	<Object Index="318" ID="OBJECT_RU1" Key="object_ru1" Name="ru1"/>
-	<Object Index="319" ID="OBJECT_RU2" Key="object_ru2" Name="ru2"/>
-	<Object Index="320" ID="OBJECT_SA" Key="object_sa" Name="sa"/>
-	<Object Index="321" ID="OBJECT_SB" Key="object_sb" Name="sb"/>
-	<Object Index="322" ID="OBJECT_SD" Key="object_sd" Name="sd"/>
-	<Object Index="323" ID="OBJECT_SHOP_DUNGEN" Key="object_shop_dungen" Name="shop dungen"/>
-	<Object Index="324" ID="OBJECT_SHOPNUTS" Key="object_shopnuts" Name="shopnuts"/>
-	<Object Index="325" ID="OBJECT_SIOFUKI" Key="object_siofuki" Name="siofuki"/>
-	<Object Index="326" ID="OBJECT_SK2" Key="object_sk2" Name="sk2"/>
-	<Object Index="327" ID="OBJECT_SKB" Key="object_skb" Name="skb"/>
-	<Object Index="328" ID="OBJECT_SKJ" Key="object_skj" Name="skj"/>
-	<Object Index="329" ID="OBJECT_SPOT00_BREAK" Key="object_spot00_break" Name="spot00 break"/>
-	<Object Index="330" ID="OBJECT_SPOT00_OBJECTS" Key="object_spot00_objects" Name="spot00 objects"/>
-	<Object Index="331" ID="OBJECT_SPOT01_MATOYA" Key="object_spot01_matoya" Name="spot01 matoya"/>
-	<Object Index="332" ID="OBJECT_SPOT01_MATOYAB" Key="object_spot01_matoyab" Name="spot01 matoyab"/>
-	<Object Index="333" ID="OBJECT_SPOT01_OBJECTS" Key="object_spot01_objects" Name="spot01 objects"/>
-	<Object Index="334" ID="OBJECT_SPOT01_OBJECTS2" Key="object_spot01_objects2" Name="spot01 objects2"/>
-	<Object Index="335" ID="OBJECT_SPOT02_OBJECTS" Key="object_spot02_objects" Name="spot02 objects"/>
-	<Object Index="336" ID="OBJECT_SPOT03_OBJECT" Key="object_spot03_object" Name="spot03 object"/>
-	<Object Index="337" ID="OBJECT_SPOT04_OBJECTS" Key="object_spot04_objects" Name="spot04 objects"/>
-	<Object Index="338" ID="OBJECT_SPOT05_OBJECTS" Key="object_spot05_objects" Name="spot05 objects"/>
-	<Object Index="339" ID="OBJECT_SPOT06_OBJECTS" Key="object_spot06_objects" Name="spot06 objects"/>
-	<Object Index="340" ID="OBJECT_SPOT07_OBJECT" Key="object_spot07_object" Name="spot07 object"/>
-	<Object Index="341" ID="OBJECT_SPOT08_OBJ" Key="object_spot08_obj" Name="spot08 obj"/>
-	<Object Index="342" ID="OBJECT_SPOT09_OBJ" Key="object_spot09_obj" Name="spot09 obj"/>
-	<Object Index="343" ID="OBJECT_SPOT11_OBJ" Key="object_spot11_obj" Name="spot11 obj"/>
-	<Object Index="344" ID="OBJECT_SPOT12_OBJ" Key="object_spot12_obj" Name="spot12 obj"/>
-	<Object Index="345" ID="OBJECT_SPOT15_OBJ" Key="object_spot15_obj" Name="spot15 obj"/>
-	<Object Index="346" ID="OBJECT_SPOT16_OBJ" Key="object_spot16_obj" Name="spot16 obj"/>
-	<Object Index="347" ID="OBJECT_SPOT17_OBJ" Key="object_spot17_obj" Name="spot17 obj"/>
-	<Object Index="348" ID="OBJECT_SPOT18_OBJ" Key="object_spot18_obj" Name="spot18 obj"/>
-	<Object Index="349" ID="OBJECT_SSH" Key="object_ssh" Name="ssh"/>
-	<Object Index="350" ID="OBJECT_SST" Key="object_sst" Name="sst"/>
-	<Object Index="351" ID="OBJECT_ST" Key="object_st" Name="st"/>
-	<Object Index="352" ID="OBJECT_STREAM" Key="object_stream" Name="stream"/>
-	<Object Index="353" ID="OBJECT_SYOKUDAI" Key="object_syokudai" Name="syokudai"/>
-	<Object Index="354" ID="OBJECT_TA" Key="object_ta" Name="ta"/>
-	<Object Index="355" ID="OBJECT_TIMEBLOCK" Key="object_timeblock" Name="timeblock"/>
-	<Object Index="356" ID="OBJECT_TITE" Key="object_tite" Name="tite"/>
-	<Object Index="357" ID="OBJECT_TK" Key="object_tk" Name="tk"/>
-	<Object Index="358" ID="OBJECT_TOKI_OBJECTS" Key="object_toki_objects" Name="toki objects"/>
-	<Object Index="359" ID="OBJECT_TORCH2" Key="object_torch2" Name="torch2"/>
-	<Object Index="360" ID="OBJECT_TORYO" Key="object_toryo" Name="toryo"/>
-	<Object Index="361" ID="OBJECT_TP" Key="object_tp" Name="tp"/>
-	<Object Index="362" ID="OBJECT_TR" Key="object_tr" Name="tr"/>
-	<Object Index="363" ID="OBJECT_TRAP" Key="object_trap" Name="trap"/>
-	<Object Index="364" ID="OBJECT_TRIFORCE_SPOT" Key="object_triforce_spot" Name="triforce spot"/>
-	<Object Index="365" ID="OBJECT_TS" Key="object_ts" Name="ts"/>
-	<Object Index="366" ID="OBJECT_TSUBO" Key="object_tsubo" Name="tsubo"/>
-	<Object Index="367" ID="OBJECT_TW" Key="object_tw" Name="tw"/>
-	<Object Index="368" ID="OBJECT_UMAJUMP" Key="object_umajump" Name="umajump"/>
-	<Object Index="369" ID="OBJECT_VALI" Key="object_vali" Name="vali"/>
-	<Object Index="370" ID="OBJECT_VASE" Key="object_vase" Name="vase"/>
-	<Object Index="371" ID="OBJECT_VM" Key="object_vm" Name="vm"/>
-	<Object Index="372" ID="OBJECT_WALLMASTER" Key="object_wallmaster" Name="wallmaster"/>
-	<Object Index="373" ID="OBJECT_WARP1" Key="object_warp1" Name="warp1"/>
-	<Object Index="374" ID="OBJECT_WARP2" Key="object_warp2" Name="warp2"/>
-	<Object Index="375" ID="OBJECT_WF" Key="object_wf" Name="wf"/>
-	<Object Index="376" ID="OBJECT_WINDFISH" Key="object_windfish" Name="windfish"/>
-	<Object Index="377" ID="OBJECT_WOOD02" Key="object_wood02" Name="wood02"/>
-	<Object Index="378" ID="OBJECT_XC" Key="object_xc" Name="xc"/>
-	<Object Index="379" ID="OBJECT_YABUSAME_POINT" Key="object_yabusame_point" Name="yabusame point"/>
-	<Object Index="380" ID="OBJECT_YDAN_OBJECTS" Key="object_ydan_objects" Name="ydan objects"/>
-	<Object Index="381" ID="OBJECT_YUKABYUN" Key="object_yukabyun" Name="yukabyun"/>
-	<Object Index="382" ID="OBJECT_ZF" Key="object_zf" Name="zf"/>
-	<Object Index="383" ID="OBJECT_ZG" Key="object_zg" Name="zg"/>
-	<Object Index="384" ID="OBJECT_ZL1" Key="object_zl1" Name="zl1"/>
-	<Object Index="385" ID="OBJECT_ZL2" Key="object_zl2" Name="zl2"/>
-	<Object Index="386" ID="OBJECT_ZL2_ANIME1" Key="object_zl2_anime1" Name="zl2 anime1"/>
-	<Object Index="387" ID="OBJECT_ZL2_ANIME2" Key="object_zl2_anime2" Name="zl2 anime2"/>
-	<Object Index="388" ID="OBJECT_ZL4" Key="object_zl4" Name="zl4"/>
-	<Object Index="389" ID="OBJECT_ZO" Key="object_zo" Name="zo"/>
-	<Object Index="390" ID="OBJECT_ZOL" Key="object_zol" Name="zol"/>
+	<Object Index="64" ID="OBJECT_DUMMY" Key="object_dummy" Name="dummy"/>
+	<Object Index="65" ID="OBJECT_DY_OBJ" Key="object_dy_obj" Name="dy obj"/>
+	<Object Index="66" ID="OBJECT_EC" Key="object_ec" Name="ec"/>
+	<Object Index="67" ID="OBJECT_EFC_CRYSTAL_LIGHT" Key="object_efc_crystal_light" Name="efc crystal light"/>
+	<Object Index="68" ID="OBJECT_EFC_DOUGHNUT" Key="object_efc_doughnut" Name="efc doughnut"/>
+	<Object Index="69" ID="OBJECT_EFC_ERUPC" Key="object_efc_erupc" Name="efc erupc"/>
+	<Object Index="70" ID="OBJECT_EFC_FIRE_BALL" Key="object_efc_fire_ball" Name="efc fire ball"/>
+	<Object Index="71" ID="OBJECT_EFC_FLASH" Key="object_efc_flash" Name="efc flash"/>
+	<Object Index="72" ID="OBJECT_EFC_LGT_SHOWER" Key="object_efc_lgt_shower" Name="efc lgt shower"/>
+	<Object Index="73" ID="OBJECT_EFC_STAR_FIELD" Key="object_efc_star_field" Name="efc star field"/>
+	<Object Index="74" ID="OBJECT_EFC_TW" Key="object_efc_tw" Name="efc tw"/>
+	<Object Index="75" ID="OBJECT_EI" Key="object_ei" Name="ei"/>
+	<Object Index="76" ID="OBJECT_FA" Key="object_fa" Name="fa"/>
+	<Object Index="77" ID="OBJECT_FD" Key="object_fd" Name="fd"/>
+	<Object Index="78" ID="OBJECT_FD2" Key="object_fd2" Name="fd2"/>
+	<Object Index="79" ID="OBJECT_FHG" Key="object_fhg" Name="fhg"/>
+	<Object Index="80" ID="OBJECT_FIRE" Key="object_fire" Name="fire"/>
+	<Object Index="81" ID="OBJECT_FIREFLY" Key="object_firefly" Name="firefly"/>
+	<Object Index="82" ID="OBJECT_FISH" Key="object_fish" Name="fish"/>
+	<Object Index="83" ID="OBJECT_FR" Key="object_fr" Name="fr"/>
+	<Object Index="84" ID="OBJECT_FU" Key="object_fu" Name="fu"/>
+	<Object Index="85" ID="OBJECT_FW" Key="object_fw" Name="fw"/>
+	<Object Index="86" ID="OBJECT_FZ" Key="object_fz" Name="fz"/>
+	<Object Index="87" ID="OBJECT_GANON" Key="object_ganon" Name="ganon"/>
+	<Object Index="88" ID="OBJECT_GANON2" Key="object_ganon2" Name="ganon2"/>
+	<Object Index="89" ID="OBJECT_GANON_ANIME1" Key="object_ganon_anime1" Name="ganon anime1"/>
+	<Object Index="90" ID="OBJECT_GANON_ANIME2" Key="object_ganon_anime2" Name="ganon anime2"/>
+	<Object Index="91" ID="OBJECT_GANON_ANIME3" Key="object_ganon_anime3" Name="ganon anime3"/>
+	<Object Index="92" ID="OBJECT_GANON_OBJECTS" Key="object_ganon_objects" Name="ganon objects"/>
+	<Object Index="93" ID="OBJECT_GE1" Key="object_ge1" Name="ge1"/>
+	<Object Index="94" ID="OBJECT_GEFF" Key="object_geff" Name="geff"/>
+	<Object Index="95" ID="OBJECT_GELDB" Key="object_geldb" Name="geldb"/>
+	<Object Index="96" ID="OBJECT_GI_ARROW" Key="object_gi_arrow" Name="gi arrow"/>
+	<Object Index="97" ID="OBJECT_GI_ARROWCASE" Key="object_gi_arrowcase" Name="gi arrowcase"/>
+	<Object Index="98" ID="OBJECT_GI_BOMB_1" Key="object_gi_bomb_1" Name="gi bomb 1"/>
+	<Object Index="99" ID="OBJECT_GI_BOMB_2" Key="object_gi_bomb_2" Name="gi bomb 2"/>
+	<Object Index="100" ID="OBJECT_GI_BOMBPOUCH" Key="object_gi_bombpouch" Name="gi bombpouch"/>
+	<Object Index="101" ID="OBJECT_GI_BOOMERANG" Key="object_gi_boomerang" Name="gi boomerang"/>
+	<Object Index="102" ID="OBJECT_GI_BOOTS_2" Key="object_gi_boots_2" Name="gi boots 2"/>
+	<Object Index="103" ID="OBJECT_GI_BOSSKEY" Key="object_gi_bosskey" Name="gi bosskey"/>
+	<Object Index="104" ID="OBJECT_GI_BOTTLE" Key="object_gi_bottle" Name="gi bottle"/>
+	<Object Index="105" ID="OBJECT_GI_BOTTLE_LETTER" Key="object_gi_bottle_letter" Name="gi bottle letter"/>
+	<Object Index="106" ID="OBJECT_GI_BOW" Key="object_gi_bow" Name="gi bow"/>
+	<Object Index="107" ID="OBJECT_GI_BRACELET" Key="object_gi_bracelet" Name="gi bracelet"/>
+	<Object Index="108" ID="OBJECT_GI_BROKENSWORD" Key="object_gi_brokensword" Name="gi brokensword"/>
+	<Object Index="109" ID="OBJECT_GI_BUTTERFLY" Key="object_gi_butterfly" Name="gi butterfly"/>
+	<Object Index="110" ID="OBJECT_GI_CLOTHES" Key="object_gi_clothes" Name="gi clothes"/>
+	<Object Index="111" ID="OBJECT_GI_COIN" Key="object_gi_coin" Name="gi coin"/>
+	<Object Index="112" ID="OBJECT_GI_COMPASS" Key="object_gi_compass" Name="gi compass"/>
+	<Object Index="113" ID="OBJECT_GI_DEKUPOUCH" Key="object_gi_dekupouch" Name="gi dekupouch"/>
+	<Object Index="114" ID="OBJECT_GI_EGG" Key="object_gi_egg" Name="gi egg"/>
+	<Object Index="115" ID="OBJECT_GI_EYE_LOTION" Key="object_gi_eye_lotion" Name="gi eye lotion"/>
+	<Object Index="116" ID="OBJECT_GI_FEATHER" Key="object_gi_feather" Name="gi feather"/>
+	<Object Index="117" ID="OBJECT_GI_FIRE" Key="object_gi_fire" Name="gi fire"/>
+	<Object Index="118" ID="OBJECT_GI_FISH" Key="object_gi_fish" Name="gi fish"/>
+	<Object Index="119" ID="OBJECT_GI_FROG" Key="object_gi_frog" Name="gi frog"/>
+	<Object Index="120" ID="OBJECT_GI_GERUDO" Key="object_gi_gerudo" Name="gi gerudo"/>
+	<Object Index="121" ID="OBJECT_GI_GERUDOMASK" Key="object_gi_gerudomask" Name="gi gerudomask"/>
+	<Object Index="122" ID="OBJECT_GI_GHOST" Key="object_gi_ghost" Name="gi ghost"/>
+	<Object Index="123" ID="OBJECT_GI_GLASSES" Key="object_gi_glasses" Name="gi glasses"/>
+	<Object Index="124" ID="OBJECT_GI_GLOVES" Key="object_gi_gloves" Name="gi gloves"/>
+	<Object Index="125" ID="OBJECT_GI_GODDESS" Key="object_gi_goddess" Name="gi goddess"/>
+	<Object Index="126" ID="OBJECT_GI_GOLONMASK" Key="object_gi_golonmask" Name="gi golonmask"/>
+	<Object Index="127" ID="OBJECT_GI_GRASS" Key="object_gi_grass" Name="gi grass"/>
+	<Object Index="128" ID="OBJECT_GI_GUARDIAN_ACORN" Key="object_gi_guardian_acorn" Name="gi guardian acorn"/>
+	<Object Index="129" ID="OBJECT_GI_HAMMER" Key="object_gi_hammer" Name="gi hammer"/>
+	<Object Index="130" ID="OBJECT_GI_HEART" Key="object_gi_heart" Name="gi heart"/>
+	<Object Index="131" ID="OBJECT_GI_HEARTS" Key="object_gi_hearts" Name="gi hearts"/>
+	<Object Index="132" ID="OBJECT_GI_HOOKSHOT" Key="object_gi_hookshot" Name="gi hookshot"/>
+	<Object Index="133" ID="OBJECT_GI_HOVERBOOTS" Key="object_gi_hoverboots" Name="gi hoverboots"/>
+	<Object Index="134" ID="OBJECT_GI_INSECT" Key="object_gi_insect" Name="gi insect"/>
+	<Object Index="135" ID="OBJECT_GI_JEWEL" Key="object_gi_jewel" Name="gi jewel"/>
+	<Object Index="136" ID="OBJECT_GI_KEY" Key="object_gi_key" Name="gi key"/>
+	<Object Index="137" ID="OBJECT_GI_KI_TAN_MASK" Key="object_gi_ki_tan_mask" Name="gi ki tan mask"/>
+	<Object Index="138" ID="OBJECT_GI_LETTER" Key="object_gi_letter" Name="gi letter"/>
+	<Object Index="139" ID="OBJECT_GI_LIQUID" Key="object_gi_liquid" Name="gi liquid"/>
+	<Object Index="140" ID="OBJECT_GI_LONGSWORD" Key="object_gi_longsword" Name="gi longsword"/>
+	<Object Index="141" ID="OBJECT_GI_M_ARROW" Key="object_gi_m_arrow" Name="gi m arrow"/>
+	<Object Index="142" ID="OBJECT_GI_MAGICPOT" Key="object_gi_magicpot" Name="gi magicpot"/>
+	<Object Index="143" ID="OBJECT_GI_MAP" Key="object_gi_map" Name="gi map"/>
+	<Object Index="144" ID="OBJECT_GI_MEDAL" Key="object_gi_medal" Name="gi medal"/>
+	<Object Index="145" ID="OBJECT_GI_MELODY" Key="object_gi_melody" Name="gi melody"/>
+	<Object Index="146" ID="OBJECT_GI_MILK" Key="object_gi_milk" Name="gi milk"/>
+	<Object Index="147" ID="OBJECT_GI_MUSHROOM" Key="object_gi_mushroom" Name="gi mushroom"/>
+	<Object Index="148" ID="OBJECT_GI_NIWATORI" Key="object_gi_niwatori" Name="gi niwatori"/>
+	<Object Index="149" ID="OBJECT_GI_NUTS" Key="object_gi_nuts" Name="gi nuts"/>
+	<Object Index="150" ID="OBJECT_GI_OCARINA" Key="object_gi_ocarina" Name="gi ocarina"/>
+	<Object Index="151" ID="OBJECT_GI_OCARINA_0" Key="object_gi_ocarina_0" Name="gi ocarina 0"/>
+	<Object Index="152" ID="OBJECT_GI_PACHINKO" Key="object_gi_pachinko" Name="gi pachinko"/>
+	<Object Index="153" ID="OBJECT_GI_PIECE_OF_POWER" Key="object_gi_piece_of_power" Name="gi piece of power"/>
+	<Object Index="154" ID="OBJECT_GI_POWDER" Key="object_gi_powder" Name="gi powder"/>
+	<Object Index="155" ID="OBJECT_GI_PRESCRIPTION" Key="object_gi_prescription" Name="gi prescription"/>
+	<Object Index="156" ID="OBJECT_GI_PURSE" Key="object_gi_purse" Name="gi purse"/>
+	<Object Index="157" ID="OBJECT_GI_RABIT_MASK" Key="object_gi_rabit_mask" Name="gi rabit mask"/>
+	<Object Index="158" ID="OBJECT_GI_REDEAD_MASK" Key="object_gi_redead_mask" Name="gi redead mask"/>
+	<Object Index="159" ID="OBJECT_GI_RUPY" Key="object_gi_rupy" Name="gi rupy"/>
+	<Object Index="160" ID="OBJECT_GI_SAW" Key="object_gi_saw" Name="gi saw"/>
+	<Object Index="161" ID="OBJECT_GI_SCALE" Key="object_gi_scale" Name="gi scale"/>
+	<Object Index="162" ID="OBJECT_GI_SEED" Key="object_gi_seed" Name="gi seed"/>
+	<Object Index="163" ID="OBJECT_GI_SHIELD_1" Key="object_gi_shield_1" Name="gi shield 1"/>
+	<Object Index="164" ID="OBJECT_GI_SHIELD_2" Key="object_gi_shield_2" Name="gi shield 2"/>
+	<Object Index="165" ID="OBJECT_GI_SHIELD_3" Key="object_gi_shield_3" Name="gi shield 3"/>
+	<Object Index="166" ID="OBJECT_GI_SKJ_MASK" Key="object_gi_skj_mask" Name="gi skj mask"/>
+	<Object Index="167" ID="OBJECT_GI_SOLDOUT" Key="object_gi_soldout" Name="gi soldout"/>
+	<Object Index="168" ID="OBJECT_GI_SOUL" Key="object_gi_soul" Name="gi soul"/>
+	<Object Index="169" ID="OBJECT_GI_STICK" Key="object_gi_stick" Name="gi stick"/>
+	<Object Index="170" ID="OBJECT_GI_SUTARU" Key="object_gi_sutaru" Name="gi sutaru"/>
+	<Object Index="171" ID="OBJECT_GI_SWORD_1" Key="object_gi_sword_1" Name="gi sword 1"/>
+	<Object Index="172" ID="OBJECT_GI_TICKETSTONE" Key="object_gi_ticketstone" Name="gi ticketstone"/>
+	<Object Index="173" ID="OBJECT_GI_TRUTH_MASK" Key="object_gi_truth_mask" Name="gi truth mask"/>
+	<Object Index="174" ID="OBJECT_GI_ZORAMASK" Key="object_gi_zoramask" Name="gi zoramask"/>
+	<Object Index="175" ID="OBJECT_GJ" Key="object_gj" Name="gj"/>
+	<Object Index="176" ID="OBJECT_GJYO_OBJECTS" Key="object_gjyo_objects" Name="gjyo objects"/>
+	<Object Index="177" ID="OBJECT_GLA" Key="object_gla" Name="gla"/>
+	<Object Index="178" ID="OBJECT_GM" Key="object_gm" Name="gm"/>
+	<Object Index="179" ID="OBJECT_GND" Key="object_gnd" Name="gnd"/>
+	<Object Index="180" ID="OBJECT_GND_MAGIC" Key="object_gnd_magic" Name="gnd magic"/>
+	<Object Index="181" ID="OBJECT_GNDD" Key="object_gndd" Name="gndd"/>
+	<Object Index="182" ID="OBJECT_GOD_LGT" Key="object_god_lgt" Name="god lgt"/>
+	<Object Index="183" ID="OBJECT_GOL" Key="object_gol" Name="gol"/>
+	<Object Index="184" ID="OBJECT_GOMA" Key="object_goma" Name="goma"/>
+	<Object Index="185" ID="OBJECT_GOROIWA" Key="object_goroiwa" Name="goroiwa"/>
+	<Object Index="186" ID="OBJECT_GR" Key="object_gr" Name="gr"/>
+	<Object Index="187" ID="OBJECT_GS" Key="object_gs" Name="gs"/>
+	<Object Index="188" ID="OBJECT_GT" Key="object_gt" Name="gt"/>
+	<Object Index="189" ID="OBJECT_HAKA" Key="object_haka" Name="haka"/>
+	<Object Index="190" ID="OBJECT_HAKA_DOOR" Key="object_haka_door" Name="haka door"/>
+	<Object Index="191" ID="OBJECT_HAKA_OBJECTS" Key="object_haka_objects" Name="haka objects"/>
+	<Object Index="192" ID="OBJECT_HAKACH_OBJECTS" Key="object_hakach_objects" Name="hakach objects"/>
+	<Object Index="193" ID="OBJECT_HATA" Key="object_hata" Name="hata"/>
+	<Object Index="194" ID="OBJECT_HEAVY_OBJECT" Key="object_heavy_object" Name="heavy object"/>
+	<Object Index="195" ID="OBJECT_HIDAN_OBJECTS" Key="object_hidan_objects" Name="hidan objects"/>
+	<Object Index="196" ID="OBJECT_HINTNUTS" Key="object_hintnuts" Name="hintnuts"/>
+	<Object Index="197" ID="OBJECT_HNI" Key="object_hni" Name="hni"/>
+	<Object Index="198" ID="OBJECT_HORSE" Key="object_horse" Name="horse"/>
+	<Object Index="199" ID="OBJECT_HORSE_GANON" Key="object_horse_ganon" Name="horse ganon"/>
+	<Object Index="200" ID="OBJECT_HORSE_LINK_CHILD" Key="object_horse_link_child" Name="horse link child"/>
+	<Object Index="201" ID="OBJECT_HORSE_NORMAL" Key="object_horse_normal" Name="horse normal"/>
+	<Object Index="202" ID="OBJECT_HORSE_ZELDA" Key="object_horse_zelda" Name="horse zelda"/>
+	<Object Index="203" ID="OBJECT_HS" Key="object_hs" Name="hs"/>
+	<Object Index="204" ID="OBJECT_HUMAN" Key="object_human" Name="human"/>
+	<Object Index="205" ID="OBJECT_ICE_OBJECTS" Key="object_ice_objects" Name="ice objects"/>
+	<Object Index="206" ID="OBJECT_IK" Key="object_ik" Name="ik"/>
+	<Object Index="207" ID="OBJECT_IM" Key="object_im" Name="im"/>
+	<Object Index="208" ID="OBJECT_IN" Key="object_in" Name="in"/>
+	<Object Index="209" ID="OBJECT_INGATE" Key="object_ingate" Name="ingate"/>
+	<Object Index="210" ID="OBJECT_JJ" Key="object_jj" Name="jj"/>
+	<Object Index="211" ID="OBJECT_JS" Key="object_js" Name="js"/>
+	<Object Index="212" ID="OBJECT_JYA_DOOR" Key="object_jya_door" Name="jya door"/>
+	<Object Index="213" ID="OBJECT_JYA_IRON" Key="object_jya_iron" Name="jya iron"/>
+	<Object Index="214" ID="OBJECT_JYA_OBJ" Key="object_jya_obj" Name="jya obj"/>
+	<Object Index="215" ID="OBJECT_KA" Key="object_ka" Name="ka"/>
+	<Object Index="216" ID="OBJECT_KANBAN" Key="object_kanban" Name="kanban"/>
+	<Object Index="217" ID="OBJECT_KIBAKO2" Key="object_kibako2" Name="kibako2"/>
+	<Object Index="218" ID="OBJECT_KINGDODONGO" Key="object_kingdodongo" Name="kingdodongo"/>
+	<Object Index="219" ID="OBJECT_KM1" Key="object_km1" Name="km1"/>
+	<Object Index="220" ID="OBJECT_KUSA" Key="object_kusa" Name="kusa"/>
+	<Object Index="221" ID="OBJECT_KW1" Key="object_kw1" Name="kw1"/>
+	<Object Index="222" ID="OBJECT_KZ" Key="object_kz" Name="kz"/>
+	<Object Index="223" ID="OBJECT_LIGHT_RING" Key="object_light_ring" Name="light ring"/>
+	<Object Index="224" ID="OBJECT_LIGHTBOX" Key="object_lightbox" Name="lightbox"/>
+	<Object Index="225" ID="OBJECT_LIGHTSWITCH" Key="object_lightswitch" Name="lightswitch"/>
+	<Object Index="226" ID="OBJECT_MA1" Key="object_ma1" Name="ma1"/>
+	<Object Index="227" ID="OBJECT_MA2" Key="object_ma2" Name="ma2"/>
+	<Object Index="228" ID="OBJECT_MAG" Key="object_mag" Name="mag"/>
+	<Object Index="229" ID="OBJECT_MAMENOKI" Key="object_mamenoki" Name="mamenoki"/>
+	<Object Index="230" ID="OBJECT_MASTERGOLON" Key="object_mastergolon" Name="mastergolon"/>
+	<Object Index="231" ID="OBJECT_MASTERKOKIRI" Key="object_masterkokiri" Name="masterkokiri"/>
+	<Object Index="232" ID="OBJECT_MASTERKOKIRIHEAD" Key="object_masterkokirihead" Name="masterkokirihead"/>
+	<Object Index="233" ID="OBJECT_MASTERZOORA" Key="object_masterzoora" Name="masterzoora"/>
+	<Object Index="234" ID="OBJECT_MB" Key="object_mb" Name="mb"/>
+	<Object Index="235" ID="OBJECT_MD" Key="object_md" Name="md"/>
+	<Object Index="236" ID="OBJECT_MEDAL" Key="object_medal" Name="medal"/>
+	<Object Index="237" ID="OBJECT_MENKURI_OBJECTS" Key="object_menkuri_objects" Name="menkuri objects"/>
+	<Object Index="238" ID="OBJECT_MIR_RAY" Key="object_mir_ray" Name="mir ray"/>
+	<Object Index="239" ID="OBJECT_MIZU_OBJECTS" Key="object_mizu_objects" Name="mizu objects"/>
+	<Object Index="240" ID="OBJECT_MJIN" Key="object_mjin" Name="mjin"/>
+	<Object Index="241" ID="OBJECT_MJIN_DARK" Key="object_mjin_dark" Name="mjin dark"/>
+	<Object Index="242" ID="OBJECT_MJIN_FLAME" Key="object_mjin_flame" Name="mjin flame"/>
+	<Object Index="243" ID="OBJECT_MJIN_FLASH" Key="object_mjin_flash" Name="mjin flash"/>
+	<Object Index="244" ID="OBJECT_MJIN_ICE" Key="object_mjin_ice" Name="mjin ice"/>
+	<Object Index="245" ID="OBJECT_MJIN_OKA" Key="object_mjin_oka" Name="mjin oka"/>
+	<Object Index="246" ID="OBJECT_MJIN_SOUL" Key="object_mjin_soul" Name="mjin soul"/>
+	<Object Index="247" ID="OBJECT_MJIN_WIND" Key="object_mjin_wind" Name="mjin wind"/>
+	<Object Index="248" ID="OBJECT_MK" Key="object_mk" Name="mk"/>
+	<Object Index="249" ID="OBJECT_MM" Key="object_mm" Name="mm"/>
+	<Object Index="250" ID="OBJECT_MO" Key="object_mo" Name="mo"/>
+	<Object Index="251" ID="OBJECT_MOLDORM" Key="object_moldorm" Name="moldorm"/>
+	<Object Index="252" ID="OBJECT_MORI_HINERI1" Key="object_mori_hineri1" Name="mori hineri1"/>
+	<Object Index="253" ID="OBJECT_MORI_HINERI1A" Key="object_mori_hineri1a" Name="mori hineri1a"/>
+	<Object Index="254" ID="OBJECT_MORI_HINERI2" Key="object_mori_hineri2" Name="mori hineri2"/>
+	<Object Index="255" ID="OBJECT_MORI_HINERI2A" Key="object_mori_hineri2a" Name="mori hineri2a"/>
+	<Object Index="256" ID="OBJECT_MORI_OBJECTS" Key="object_mori_objects" Name="mori objects"/>
+	<Object Index="257" ID="OBJECT_MORI_TEX" Key="object_mori_tex" Name="mori tex"/>
+	<Object Index="258" ID="OBJECT_MS" Key="object_ms" Name="ms"/>
+	<Object Index="259" ID="OBJECT_MU" Key="object_mu" Name="mu"/>
+	<Object Index="260" ID="OBJECT_NB" Key="object_nb" Name="nb"/>
+	<Object Index="261" ID="OBJECT_NIW" Key="object_niw" Name="niw"/>
+	<Object Index="262" ID="OBJECT_NWC" Key="object_nwc" Name="nwc"/>
+	<Object Index="263" ID="OBJECT_NY" Key="object_ny" Name="ny"/>
+	<Object Index="264" ID="OBJECT_OA1" Key="object_oa1" Name="oA1"/>
+	<Object Index="265" ID="OBJECT_OA10" Key="object_oa10" Name="oA10"/>
+	<Object Index="266" ID="OBJECT_OA11" Key="object_oa11" Name="oA11"/>
+	<Object Index="267" ID="OBJECT_OA2" Key="object_oa2" Name="oA2"/>
+	<Object Index="268" ID="OBJECT_OA3" Key="object_oa3" Name="oA3"/>
+	<Object Index="269" ID="OBJECT_OA4" Key="object_oa4" Name="oA4"/>
+	<Object Index="270" ID="OBJECT_OA5" Key="object_oa5" Name="oA5"/>
+	<Object Index="271" ID="OBJECT_OA6" Key="object_oa6" Name="oA6"/>
+	<Object Index="272" ID="OBJECT_OA7" Key="object_oa7" Name="oA7"/>
+	<Object Index="273" ID="OBJECT_OA8" Key="object_oa8" Name="oA8"/>
+	<Object Index="274" ID="OBJECT_OA9" Key="object_oa9" Name="oA9"/>
+	<Object Index="275" ID="OBJECT_OB1" Key="object_ob1" Name="oB1"/>
+	<Object Index="276" ID="OBJECT_OB2" Key="object_ob2" Name="oB2"/>
+	<Object Index="277" ID="OBJECT_OB3" Key="object_ob3" Name="oB3"/>
+	<Object Index="278" ID="OBJECT_OB4" Key="object_ob4" Name="oB4"/>
+	<Object Index="279" ID="OBJECT_OE1" Key="object_oe1" Name="oE1"/>
+	<Object Index="280" ID="OBJECT_OE10" Key="object_oe10" Name="oE10"/>
+	<Object Index="281" ID="OBJECT_OE11" Key="object_oe11" Name="oE11"/>
+	<Object Index="282" ID="OBJECT_OE12" Key="object_oe12" Name="oE12"/>
+	<Object Index="283" ID="OBJECT_OE1S" Key="object_oe1s" Name="oE1s"/>
+	<Object Index="284" ID="OBJECT_OE2" Key="object_oe2" Name="oE2"/>
+	<Object Index="285" ID="OBJECT_OE3" Key="object_oe3" Name="oE3"/>
+	<Object Index="286" ID="OBJECT_OE4" Key="object_oe4" Name="oE4"/>
+	<Object Index="287" ID="OBJECT_OE4S" Key="object_oe4s" Name="oE4s"/>
+	<Object Index="288" ID="OBJECT_OE5" Key="object_oe5" Name="oE5"/>
+	<Object Index="289" ID="OBJECT_OE6" Key="object_oe6" Name="oE6"/>
+	<Object Index="290" ID="OBJECT_OE7" Key="object_oe7" Name="oE7"/>
+	<Object Index="291" ID="OBJECT_OE8" Key="object_oe8" Name="oE8"/>
+	<Object Index="292" ID="OBJECT_OE9" Key="object_oe9" Name="oE9"/>
+	<Object Index="293" ID="OBJECT_OE_ANIME" Key="object_oe_anime" Name="oE anime"/>
+	<Object Index="294" ID="OBJECT_OF1D_MAP" Key="object_of1d_map" Name="oF1d map"/>
+	<Object Index="295" ID="OBJECT_OF1S" Key="object_of1s" Name="oF1s"/>
+	<Object Index="296" ID="OBJECT_O_ANIME" Key="object_o_anime" Name="o anime"/>
+	<Object Index="297" ID="OBJECT_OCTOROK" Key="object_octorok" Name="octorok"/>
+	<Object Index="298" ID="OBJECT_OKUTA" Key="object_okuta" Name="okuta"/>
+	<Object Index="299" ID="OBJECT_OPENING_DEMO1" Key="object_opening_demo1" Name="opening demo1"/>
+	<Object Index="300" ID="OBJECT_OS" Key="object_os" Name="os"/>
+	<Object Index="301" ID="OBJECT_OS_ANIME" Key="object_os_anime" Name="os anime"/>
+	<Object Index="302" ID="OBJECT_OSSAN" Key="object_ossan" Name="ossan"/>
+	<Object Index="303" ID="OBJECT_OUKE_HAKA" Key="object_ouke_haka" Name="ouke haka"/>
+	<Object Index="304" ID="OBJECT_OWL" Key="object_owl" Name="owl"/>
+	<Object Index="305" ID="OBJECT_PEEHAT" Key="object_peehat" Name="peehat"/>
+	<Object Index="306" ID="OBJECT_PO_COMPOSER" Key="object_po_composer" Name="po composer"/>
+	<Object Index="307" ID="OBJECT_PO_FIELD" Key="object_po_field" Name="po field"/>
+	<Object Index="308" ID="OBJECT_PO_SISTERS" Key="object_po_sisters" Name="po sisters"/>
+	<Object Index="309" ID="OBJECT_POH" Key="object_poh" Name="poh"/>
+	<Object Index="310" ID="OBJECT_PS" Key="object_ps" Name="ps"/>
+	<Object Index="311" ID="OBJECT_PU_BOX" Key="object_pu_box" Name="pu box"/>
+	<Object Index="312" ID="OBJECT_RD" Key="object_rd" Name="rd"/>
+	<Object Index="313" ID="OBJECT_REEBA" Key="object_reeba" Name="reeba"/>
+	<Object Index="314" ID="OBJECT_RELAY_OBJECTS" Key="object_relay_objects" Name="relay objects"/>
+	<Object Index="315" ID="OBJECT_RL" Key="object_rl" Name="rl"/>
+	<Object Index="316" ID="OBJECT_ROLLING_BONES" Key="object_rolling_bones" Name="rolling bones"/>
+	<Object Index="317" ID="OBJECT_RR" Key="object_rr" Name="rr"/>
+	<Object Index="318" ID="OBJECT_RS" Key="object_rs" Name="rs"/>
+	<Object Index="319" ID="OBJECT_RU1" Key="object_ru1" Name="ru1"/>
+	<Object Index="320" ID="OBJECT_RU2" Key="object_ru2" Name="ru2"/>
+	<Object Index="321" ID="OBJECT_SA" Key="object_sa" Name="sa"/>
+	<Object Index="322" ID="OBJECT_SB" Key="object_sb" Name="sb"/>
+	<Object Index="323" ID="OBJECT_SD" Key="object_sd" Name="sd"/>
+	<Object Index="324" ID="OBJECT_SHOP_DUNGEN" Key="object_shop_dungen" Name="shop dungen"/>
+	<Object Index="325" ID="OBJECT_SHOPNUTS" Key="object_shopnuts" Name="shopnuts"/>
+	<Object Index="326" ID="OBJECT_SIOFUKI" Key="object_siofuki" Name="siofuki"/>
+	<Object Index="327" ID="OBJECT_SK2" Key="object_sk2" Name="sk2"/>
+	<Object Index="328" ID="OBJECT_SKB" Key="object_skb" Name="skb"/>
+	<Object Index="329" ID="OBJECT_SKJ" Key="object_skj" Name="skj"/>
+	<Object Index="330" ID="OBJECT_SPOT00_BREAK" Key="object_spot00_break" Name="spot00 break"/>
+	<Object Index="331" ID="OBJECT_SPOT00_OBJECTS" Key="object_spot00_objects" Name="spot00 objects"/>
+	<Object Index="332" ID="OBJECT_SPOT01_MATOYA" Key="object_spot01_matoya" Name="spot01 matoya"/>
+	<Object Index="333" ID="OBJECT_SPOT01_MATOYAB" Key="object_spot01_matoyab" Name="spot01 matoyab"/>
+	<Object Index="334" ID="OBJECT_SPOT01_OBJECTS" Key="object_spot01_objects" Name="spot01 objects"/>
+	<Object Index="335" ID="OBJECT_SPOT01_OBJECTS2" Key="object_spot01_objects2" Name="spot01 objects2"/>
+	<Object Index="336" ID="OBJECT_SPOT02_OBJECTS" Key="object_spot02_objects" Name="spot02 objects"/>
+	<Object Index="337" ID="OBJECT_SPOT03_OBJECT" Key="object_spot03_object" Name="spot03 object"/>
+	<Object Index="338" ID="OBJECT_SPOT04_OBJECTS" Key="object_spot04_objects" Name="spot04 objects"/>
+	<Object Index="339" ID="OBJECT_SPOT05_OBJECTS" Key="object_spot05_objects" Name="spot05 objects"/>
+	<Object Index="340" ID="OBJECT_SPOT06_OBJECTS" Key="object_spot06_objects" Name="spot06 objects"/>
+	<Object Index="341" ID="OBJECT_SPOT07_OBJECT" Key="object_spot07_object" Name="spot07 object"/>
+	<Object Index="342" ID="OBJECT_SPOT08_OBJ" Key="object_spot08_obj" Name="spot08 obj"/>
+	<Object Index="343" ID="OBJECT_SPOT09_OBJ" Key="object_spot09_obj" Name="spot09 obj"/>
+	<Object Index="344" ID="OBJECT_SPOT11_OBJ" Key="object_spot11_obj" Name="spot11 obj"/>
+	<Object Index="345" ID="OBJECT_SPOT12_OBJ" Key="object_spot12_obj" Name="spot12 obj"/>
+	<Object Index="346" ID="OBJECT_SPOT15_OBJ" Key="object_spot15_obj" Name="spot15 obj"/>
+	<Object Index="347" ID="OBJECT_SPOT16_OBJ" Key="object_spot16_obj" Name="spot16 obj"/>
+	<Object Index="348" ID="OBJECT_SPOT17_OBJ" Key="object_spot17_obj" Name="spot17 obj"/>
+	<Object Index="349" ID="OBJECT_SPOT18_OBJ" Key="object_spot18_obj" Name="spot18 obj"/>
+	<Object Index="350" ID="OBJECT_SSH" Key="object_ssh" Name="ssh"/>
+	<Object Index="351" ID="OBJECT_SST" Key="object_sst" Name="sst"/>
+	<Object Index="352" ID="OBJECT_ST" Key="object_st" Name="st"/>
+	<Object Index="353" ID="OBJECT_STREAM" Key="object_stream" Name="stream"/>
+	<Object Index="354" ID="OBJECT_SYOKUDAI" Key="object_syokudai" Name="syokudai"/>
+	<Object Index="355" ID="OBJECT_TA" Key="object_ta" Name="ta"/>
+	<Object Index="356" ID="OBJECT_TIMEBLOCK" Key="object_timeblock" Name="timeblock"/>
+	<Object Index="357" ID="OBJECT_TITE" Key="object_tite" Name="tite"/>
+	<Object Index="358" ID="OBJECT_TK" Key="object_tk" Name="tk"/>
+	<Object Index="359" ID="OBJECT_TOKI_OBJECTS" Key="object_toki_objects" Name="toki objects"/>
+	<Object Index="360" ID="OBJECT_TORCH2" Key="object_torch2" Name="torch2"/>
+	<Object Index="361" ID="OBJECT_TORYO" Key="object_toryo" Name="toryo"/>
+	<Object Index="362" ID="OBJECT_TP" Key="object_tp" Name="tp"/>
+	<Object Index="363" ID="OBJECT_TR" Key="object_tr" Name="tr"/>
+	<Object Index="364" ID="OBJECT_TRAP" Key="object_trap" Name="trap"/>
+	<Object Index="365" ID="OBJECT_TRIFORCE_SPOT" Key="object_triforce_spot" Name="triforce spot"/>
+	<Object Index="366" ID="OBJECT_TS" Key="object_ts" Name="ts"/>
+	<Object Index="367" ID="OBJECT_TSUBO" Key="object_tsubo" Name="tsubo"/>
+	<Object Index="368" ID="OBJECT_TW" Key="object_tw" Name="tw"/>
+	<Object Index="369" ID="OBJECT_UMAJUMP" Key="object_umajump" Name="umajump"/>
+	<Object Index="370" ID="OBJECT_VALI" Key="object_vali" Name="vali"/>
+	<Object Index="371" ID="OBJECT_VASE" Key="object_vase" Name="vase"/>
+	<Object Index="372" ID="OBJECT_VM" Key="object_vm" Name="vm"/>
+	<Object Index="373" ID="OBJECT_WALLMASTER" Key="object_wallmaster" Name="wallmaster"/>
+	<Object Index="374" ID="OBJECT_WARP1" Key="object_warp1" Name="warp1"/>
+	<Object Index="375" ID="OBJECT_WARP2" Key="object_warp2" Name="warp2"/>
+	<Object Index="376" ID="OBJECT_WF" Key="object_wf" Name="wf"/>
+	<Object Index="377" ID="OBJECT_WINDFISH" Key="object_windfish" Name="windfish"/>
+	<Object Index="378" ID="OBJECT_WOOD02" Key="object_wood02" Name="wood02"/>
+	<Object Index="379" ID="OBJECT_XC" Key="object_xc" Name="xc"/>
+	<Object Index="380" ID="OBJECT_YABUSAME_POINT" Key="object_yabusame_point" Name="yabusame point"/>
+	<Object Index="381" ID="OBJECT_YDAN_OBJECTS" Key="object_ydan_objects" Name="ydan objects"/>
+	<Object Index="382" ID="OBJECT_YUKABYUN" Key="object_yukabyun" Name="yukabyun"/>
+	<Object Index="383" ID="OBJECT_ZF" Key="object_zf" Name="zf"/>
+	<Object Index="384" ID="OBJECT_ZG" Key="object_zg" Name="zg"/>
+	<Object Index="385" ID="OBJECT_ZL1" Key="object_zl1" Name="zl1"/>
+	<Object Index="386" ID="OBJECT_ZL2" Key="object_zl2" Name="zl2"/>
+	<Object Index="387" ID="OBJECT_ZL2_ANIME1" Key="object_zl2_anime1" Name="zl2 anime1"/>
+	<Object Index="388" ID="OBJECT_ZL2_ANIME2" Key="object_zl2_anime2" Name="zl2 anime2"/>
+	<Object Index="389" ID="OBJECT_ZL4" Key="object_zl4" Name="zl4"/>
+	<Object Index="390" ID="OBJECT_ZO" Key="object_zo" Name="zo"/>
+	<Object Index="391" ID="OBJECT_ZOL" Key="object_zol" Name="zol"/>
 </Table>

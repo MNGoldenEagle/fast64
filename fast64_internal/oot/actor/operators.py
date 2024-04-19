@@ -8,6 +8,7 @@ from ..oot_constants import ootData
 ootEnumTransitionActorID = ootData.actorData.transitionActors
 ootEnumActorID = ootData.actorData.ootEnumActorID
 
+print(ootEnumTransitionActorID)
 
 class OOT_SearchActorIDEnumOperator(Operator):
     bl_idname = "object.oot_search_actor_id_enum_operator"
@@ -16,6 +17,9 @@ class OOT_SearchActorIDEnumOperator(Operator):
     bl_options = {"REGISTER", "UNDO"}
 
     def actorItems(self, _):
+        print("actorItems:::")
+        print(self.actorUser)
+        print(ootEnumTransitionActorID)
         return ootEnumTransitionActorID if self.actorUser == "Transition Actor" else ootEnumActorID
 
     actorUser: StringProperty(default="Actor")
@@ -23,6 +27,8 @@ class OOT_SearchActorIDEnumOperator(Operator):
     objName: StringProperty()
 
     def execute(self, context):
+        print("execute:::")
+        print(self.actorUser)
         obj = bpy.data.objects[self.objName]
         if self.actorUser == "Transition Actor":
             obj.ootTransitionActorProperty.actor.actorID = self.actorID
